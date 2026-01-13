@@ -1,0 +1,245 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../app/settings.dart';
+import '../../data/word_pack_repository.dart';
+import '../../domain/models/word_pack.dart';
+
+class SettingsScreen extends ConsumerWidget {
+  const SettingsScreen({super.key});
+
+  static const locales = ['es-AR', 'es-ES', 'es-MX', 'en-US', 'en-GB'];
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final settingsAsync = ref.watch(settingsNotifierProvider);
+    final packAsync = ref.watch(currentWordPackProvider);
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Settings'),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () => context.pop(),
+        ),
+      ),
+      body: settingsAsync.when(
+        loading: () => const Center(child: CircularProgressIndicator()),
+        error: (e, _) => Center(child: Text('Failed to load settings: $e')),
+        data: (settings) {
+          final List<WordCategory> categories = packAsync.maybeWhen(
+            data: (result) => result.pack.categories,
+            orElse: () => const <WordCategory>[],
+          );
+          final recommended = suggestImpostors(
+            players: settings.players,
+            difficulty: settings.difficulty,
+          );
+          final invalidImpostors = settings.impostors >= settings.players;
+          final List<DropdownMenuItem<String>> categoryOptions = [
+            const DropdownMenuItem<String>(
+              value: SettingsState.randomCategory,
+              child: Text('Random'),
+            ),
+            ...categories.map(
+              (c) => DropdownMenuItem<String>(
+                value: c.id,
+                child: Text(c.displayName),
+              ),
+            ),
+          ];
+
+          final notifier = ref.read(settingsNotifierProvider.notifier);
+
+          // Auto-fix category if locale changed and current category missing.
+          final hasCategory = categories.any((c) => c.id == settings.categoryId);
+          if (!hasCategory && settings.categoryId != SettingsState.randomCategory) {
+            notifier.setCategory(SettingsState.randomCategory);
+          }
+
+          return Padding(
+            padding: const EdgeInsets.all(16),
+            child: ListView(
+              children: [
+                _Section(
+                  title: 'Locale',
+                  child: DropdownButtonFormField<String>(
+                    value: settings.locale,
+                    items: locales
+                        .map((l) => DropdownMenuItem(
+                              value: l,
+                              child: Text(l),
+                            ))
+                        .toList(),
+                    onChanged: (value) {
+                      if (value != null) notifier.setLocale(value);
+                    },
+                  ),
+                ),
+                const SizedBox(height: 12),
+                _Section(
+                  title: 'Difficulty',
+                  child: SegmentedButton<Difficulty>(
+                    segments: const [
+                      ButtonSegment(
+                        value: Difficulty.easy,
+                        label: Text('Easy'),
+                      ),
+                      ButtonSegment(
+                        value: Difficulty.medium,
+                        label: Text('Medium'),
+                      ),
+                      ButtonSegment(
+                        value: Difficulty.hard,
+                        label: Text('Hard'),
+                      ),
+                    ],
+                    selected: {settings.difficulty},
+                    onSelectionChanged: (selection) =>
+                        notifier.setDifficulty(selection.first),
+                  ),
+                ),
+                const SizedBox(height: 12),
+                _Section(
+                  title: 'Players',
+                  child: _StepperRow(
+                    value: settings.players,
+                    min: SettingsState.minPlayers,
+                    max: SettingsState.maxPlayers,
+                    onChanged: notifier.setPlayers,
+                  ),
+                ),
+                const SizedBox(height: 12),
+                _Section(
+                  title: 'Impostors',
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      _StepperRow(
+                        value: settings.impostors,
+                        min: SettingsState.minImpostors,
+                        max: SettingsState.maxImpostors,
+                        onChanged: notifier.setImpostors,
+                      ),
+                      const SizedBox(height: 8),
+                      Text('Recommended: $recommended'),
+                      const SizedBox(height: 4),
+                      OutlinedButton(
+                        onPressed: settings.impostors == recommended
+                            ? null
+                            : notifier.useRecommendedImpostors,
+                        child: const Text('Use recommended'),
+                      ),
+                      const SizedBox(height: 4),
+                      if (invalidImpostors)
+                        Text(
+                          'Impostors must be less than players.',
+                          style: TextStyle(
+                            color: Theme.of(context).colorScheme.error,
+                          ),
+                        ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 12),
+                _Section(
+                  title: 'Auto impostors',
+                  child: SwitchListTile(
+                    contentPadding: EdgeInsets.zero,
+                    value: settings.autoImpostors,
+                    onChanged: notifier.setAutoImpostors,
+                    title: const Text('Auto adjust based on players & difficulty'),
+                  ),
+                ),
+                const SizedBox(height: 12),
+                _Section(
+                  title: 'Category',
+                  child: DropdownButtonFormField<String>(
+                    value: hasCategory ? settings.categoryId : SettingsState.randomCategory,
+                    items: categoryOptions,
+                    onChanged: (value) {
+                      if (value != null) notifier.setCategory(value);
+                    },
+                  ),
+                ),
+                const SizedBox(height: 12),
+                if (packAsync.isLoading)
+                  const Padding(
+                    padding: EdgeInsets.only(top: 8),
+                    child: LinearProgressIndicator(),
+                  )
+                else if (packAsync.hasError)
+                  Text(
+                    'Failed to load word pack for ${settings.locale}',
+                    style: TextStyle(color: Theme.of(context).colorScheme.error),
+                  ),
+              ],
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+
+class _Section extends StatelessWidget {
+  const _Section({required this.title, required this.child});
+
+  final String title;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          title,
+          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+        ),
+        const SizedBox(height: 8),
+        child,
+      ],
+    );
+  }
+}
+
+class _StepperRow extends StatelessWidget {
+  const _StepperRow({
+    required this.value,
+    required this.min,
+    required this.max,
+    required this.onChanged,
+  });
+
+  final int value;
+  final int min;
+  final int max;
+  final void Function(int) onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        IconButton(
+          onPressed: value > min ? () => onChanged(value - 1) : null,
+          icon: const Icon(Icons.remove),
+        ),
+        Expanded(
+          child: Center(
+            child: Text(
+              '$value',
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+            ),
+          ),
+        ),
+        IconButton(
+          onPressed: value < max ? () => onChanged(value + 1) : null,
+          icon: const Icon(Icons.add),
+        ),
+      ],
+    );
+  }
+}
+
