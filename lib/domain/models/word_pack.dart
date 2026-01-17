@@ -1,29 +1,56 @@
 enum WordDifficulty { easy, medium, hard }
 
+class WordEntry {
+  const WordEntry({
+    required this.text,
+    required this.difficulty,
+    this.revealHint,
+  });
+
+  final String text;
+  final WordDifficulty difficulty;
+  final String? revealHint;
+
+  factory WordEntry.fromJson(Map<String, dynamic> json) {
+    final difficultyName = (json['difficulty'] as String?)?.toLowerCase() ?? 'medium';
+    final difficulty = WordDifficulty.values.firstWhere(
+      (d) => d.name == difficultyName,
+      orElse: () => WordDifficulty.medium,
+    );
+    return WordEntry(
+      text: json['text'] as String,
+      difficulty: difficulty,
+      revealHint: json['reveal_hint'] as String?,
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'text': text,
+      'difficulty': difficulty.name,
+      if (revealHint != null) 'reveal_hint': revealHint,
+    };
+  }
+}
+
 class WordCategory {
   const WordCategory({
     required this.id,
     required this.displayName,
     required this.words,
-    this.difficulty,
   });
 
   final String id;
   final String displayName;
-  final List<String> words;
-  final WordDifficulty? difficulty;
+  final List<WordEntry> words;
 
   factory WordCategory.fromJson(Map<String, dynamic> json) {
     return WordCategory(
       id: json['id'] as String,
       displayName: json['displayName'] as String,
-      words: (json['words'] as List<dynamic>).map((e) => e as String).toList(),
-      difficulty: json['difficulty'] != null
-          ? WordDifficulty.values.firstWhere(
-              (d) => d.name == (json['difficulty'] as String).toLowerCase(),
-              orElse: () => WordDifficulty.medium,
-            )
-          : null,
+      words: (json['words'] as List<dynamic>)
+          .map((e) => WordEntry.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
   }
 
@@ -31,8 +58,7 @@ class WordCategory {
     return {
       'id': id,
       'displayName': displayName,
-      'words': words,
-      if (difficulty != null) 'difficulty': difficulty!.name,
+      'words': words.map((e) => e.toJson()).toList(),
     };
   }
 }

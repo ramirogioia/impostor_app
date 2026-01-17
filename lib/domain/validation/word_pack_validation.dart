@@ -52,15 +52,15 @@ class WordPackValidator {
       final duplicates = <String>[];
       final short = <String>[];
 
-      for (final word in category.words) {
-        final trimmed = word.trim();
+      for (final entry in category.words) {
+        final trimmed = entry.text.trim();
         if (trimmed.length < 2) {
-          short.add(word);
+          short.add(entry.text);
           continue;
         }
         final normalized = trimmed.toLowerCase();
         if (seen.contains(normalized)) {
-          duplicates.add(word);
+          duplicates.add(entry.text);
         } else {
           seen.add(normalized);
         }

@@ -21,9 +21,21 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  image_path: assets/images/icon_square.png
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  min_sdk_android: 21
 
 flutter:
   uses-material-design: true
   assets:
     - assets/words/
+    - assets/images/
+    - assets/images/splash_portrait.png
+    - assets/images/splash_landscape.png
+    - assets/images/logo_icon.png
 

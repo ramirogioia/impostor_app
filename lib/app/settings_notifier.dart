@@ -26,9 +26,9 @@ class SettingsNotifier extends AsyncNotifier<SettingsState> {
     final players = _clamp(value, SettingsState.minPlayers, SettingsState.maxPlayers);
     var impostors = current.impostors;
 
-    if (current.autoImpostors) {
-      impostors = suggestImpostors(players: players, difficulty: current.difficulty);
-    } else if (impostors >= players) {
+    // Do not auto-apply suggested impostors when player count changes.
+    // Only clamp if current impostors becomes invalid.
+    if (impostors >= players) {
       impostors = _clamp(players - 1, SettingsState.minImpostors, SettingsState.maxImpostors);
     }
 
@@ -49,10 +49,10 @@ class SettingsNotifier extends AsyncNotifier<SettingsState> {
 
   Future<void> setDifficulty(Difficulty difficulty) async {
     final current = state.value ?? SettingsState.initial();
+    // Do not auto-change impostors on difficulty change to avoid UX jumps.
+    // Only clamp if the current value becomes invalid.
     var impostors = current.impostors;
-    if (current.autoImpostors) {
-      impostors = suggestImpostors(players: current.players, difficulty: difficulty);
-    } else if (impostors >= current.players) {
+    if (impostors >= current.players) {
       impostors = _clamp(current.players - 1, SettingsState.minImpostors, SettingsState.maxImpostors);
     }
     await _updateState(current.copyWith(difficulty: difficulty, impostors: impostors));

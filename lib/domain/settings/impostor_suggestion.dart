@@ -17,10 +17,11 @@ int suggestImpostors({
   required int players,
   required Difficulty difficulty,
 }) {
+  // Tweaked ratios to give 2 impostors earlier (e.g., 8 players on medium).
   final baseRatio = switch (difficulty) {
-    Difficulty.easy => 0.12,
-    Difficulty.medium => 0.18,
-    Difficulty.hard => 0.25,
+    Difficulty.easy => 0.14,
+    Difficulty.medium => 0.20,
+    Difficulty.hard => 0.27,
   };
 
   int recommended = (players * baseRatio).round();
@@ -37,6 +38,11 @@ int suggestImpostors({
       Difficulty.hard => 2,
     };
     recommended = _clamp(recommended, 1, maxByBracket);
+  }
+
+  // For 8+ players, ensure at least 2 impostors on medium/hard.
+  if (players >= 8 && difficulty != Difficulty.easy) {
+    recommended = _clamp(recommended, 2, _min(6, players - 1));
   }
 
   if (players >= 15 && difficulty == Difficulty.hard) {

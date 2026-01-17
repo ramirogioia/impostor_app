@@ -20,10 +20,10 @@ class SettingsState {
 
   factory SettingsState.initial() {
     return const SettingsState(
-      players: 6,
+      players: 3,
       impostors: 1,
       difficulty: Difficulty.medium,
-      locale: 'en-US',
+      locale: 'es-AR',
       categoryId: randomCategory,
       autoImpostors: true,
     );

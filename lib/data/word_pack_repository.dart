@@ -28,11 +28,13 @@ class WordPackRepository {
     'es-MX': 'assets/words/es-MX.json',
     'en-US': 'assets/words/en-US.json',
     'en-GB': 'assets/words/en-GB.json',
+    'pt-BR': 'assets/words/pt-BR.json',
   };
 
   static const Map<String, String> _languageFallback = {
     'es': 'es-AR',
     'en': 'en-US',
+    'pt': 'pt-BR',
   };
 
   Future<WordPackLoadResult> loadPack(String locale) async {
