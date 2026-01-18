@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../../app/settings.dart';
 import '../../app/strings.dart';
 import '../widgets/logo_mark.dart';
+import '../widgets/rate_us_dialog.dart';
 
 class LocaleSelectionScreen extends ConsumerStatefulWidget {
   const LocaleSelectionScreen({super.key});
@@ -14,8 +15,7 @@ class LocaleSelectionScreen extends ConsumerStatefulWidget {
       _LocaleSelectionScreenState();
 }
 
-class _LocaleSelectionScreenState
-    extends ConsumerState<LocaleSelectionScreen> {
+class _LocaleSelectionScreenState extends ConsumerState<LocaleSelectionScreen> {
   static const Map<String, String> _languages = {
     'es': 'Español',
     'en': 'English',
@@ -61,9 +61,11 @@ class _LocaleSelectionScreenState
 
     final isLoading = settingsAsync.isLoading || _isSaving;
     final regions = _regionsByLanguage[_language] ?? const <String>['US'];
-    final currentRegion =
-        regions.contains(_region) ? _region : (regions.isNotEmpty ? regions.first : null);
-    final strings = Strings.fromLocale('${_language.toLowerCase()}-${currentRegion ?? 'US'}');
+    final currentRegion = regions.contains(_region)
+        ? _region
+        : (regions.isNotEmpty ? regions.first : null);
+    final strings = Strings.fromLocale(
+        '${_language.toLowerCase()}-${currentRegion ?? 'US'}');
 
     return Scaffold(
       body: SafeArea(
@@ -122,8 +124,8 @@ class _LocaleSelectionScreenState
                               if (value == null) return;
                               setState(() {
                                 _language = value;
-                                final newRegions =
-                                    _regionsByLanguage[value] ?? const <String>['US'];
+                                final newRegions = _regionsByLanguage[value] ??
+                                    const <String>['US'];
                                 _region = newRegions.first;
                               });
                             },
@@ -146,32 +148,7 @@ class _LocaleSelectionScreenState
                                   Text(_regionLabels[region] ?? region),
                                   if (region == 'AR') ...[
                                     const SizedBox(width: 6),
-                                    Container(
-                                      padding: const EdgeInsets.all(3),
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        gradient: const LinearGradient(
-                                          colors: [
-                                            Color(0xFFFF7043),
-                                            Color(0xFFFF9800),
-                                          ],
-                                          begin: Alignment.topLeft,
-                                          end: Alignment.bottomRight,
-                                        ),
-                                        boxShadow: [
-                                          BoxShadow(
-                                            color: Colors.deepOrangeAccent.withOpacity(0.45),
-                                            blurRadius: 8,
-                                            offset: const Offset(0, 2),
-                                          ),
-                                        ],
-                                      ),
-                                      child: const Icon(
-                                        Icons.local_fire_department,
-                                        size: 14,
-                                        color: Colors.white,
-                                      ),
-                                    ),
+                                    _HotBadge(),
                                   ],
                                 ],
                               ),
@@ -205,6 +182,22 @@ class _LocaleSelectionScreenState
                   ],
                 ),
               ),
+              const Spacer(),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () {
+                    RateUsDialog.show(
+                      context: context,
+                      title: strings.rateUsTitle,
+                      message: strings.rateUsMessage,
+                      primaryLabel: strings.rateUsCta,
+                      secondaryLabel: strings.rateUsLater,
+                    );
+                  },
+                  child: Text(strings.rateUsCta),
+                ),
+              ),
             ],
           ),
         ),
@@ -219,6 +212,92 @@ class _LocaleSelectionScreenState
     if (!mounted) return;
     setState(() => _isSaving = false);
     context.go('/setup');
+  }
+}
+
+class _HotBadge extends StatefulWidget {
+  const _HotBadge();
+
+  @override
+  State<_HotBadge> createState() => _HotBadgeState();
+}
+
+class _HotBadgeState extends State<_HotBadge>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1200),
+    )..repeat(reverse: true);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: _controller,
+      builder: (context, child) {
+        final t = _controller.value;
+        return Container(
+          padding: const EdgeInsets.all(2),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(999),
+            gradient: const LinearGradient(
+              colors: [
+                Color(0xFFFF4D6D),
+                Color(0xFFFF7A18),
+                Color(0xFFFFC107),
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: const Color(0xFFFF6A3D).withOpacity(0.35 + (0.35 * t)),
+                blurRadius: 8 + (10 * t),
+                spreadRadius: 0.5 + (1.5 * t),
+                offset: const Offset(0, 3),
+              ),
+            ],
+          ),
+          child: Container(
+            width: 22,
+            height: 22,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(999),
+              color: const Color(0xFF1A1F2E),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.white.withOpacity(0.06 + (0.08 * t)),
+                  blurRadius: 6,
+                  spreadRadius: -1,
+                ),
+              ],
+            ),
+            child: Center(
+              child: Text(
+                'HOT',
+                style: TextStyle(
+                  fontSize: 8.5,
+                  fontWeight: FontWeight.w800,
+                  color: Colors.white.withOpacity(0.9 + (0.1 * t)),
+                  letterSpacing: 0.5,
+                ),
+              ),
+            ),
+          ),
+        );
+      },
+    );
   }
 }
 

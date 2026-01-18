@@ -15,6 +15,9 @@ class SetupScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final settingsAsync = ref.watch(settingsNotifierProvider);
     final packAsync = ref.watch(currentWordPackProvider);
+    final tooltipStrings = settingsAsync.valueOrNull == null
+        ? Strings.fromLocale('es-AR')
+        : Strings.fromLocale(settingsAsync.value!.locale);
 
     return Scaffold(
       body: SafeArea(
@@ -26,6 +29,17 @@ class SetupScreen extends ConsumerWidget {
               child: IconButton(
                 icon: const Icon(Icons.arrow_back, color: Colors.white),
                 onPressed: () => context.go('/select-locale'),
+              ),
+            ),
+            Positioned(
+              top: 8,
+              right: 8,
+              child: Tooltip(
+                message: tooltipStrings.isEs ? 'Reglas de juego' : 'Game rules',
+                child: IconButton(
+                  icon: const Icon(Icons.info_outline, color: Colors.white),
+                  onPressed: () => context.go('/rules'),
+                ),
               ),
             ),
             settingsAsync.when(

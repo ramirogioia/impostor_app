@@ -9,6 +9,7 @@ import '../../app/strings.dart';
 import '../../data/word_pack_repository.dart';
 import '../../domain/models/word_pack.dart';
 import '../widgets/logo_mark.dart';
+import 'player_reveal_screen.dart';
 
 class GameScreen extends ConsumerStatefulWidget {
   const GameScreen({super.key, this.playerNames = const []});
@@ -31,173 +32,200 @@ class _GameScreenState extends ConsumerState<GameScreen> {
     final packAsync = ref.watch(currentWordPackProvider);
 
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () => context.go('/setup'),
-        ),
-        title: const SizedBox.shrink(),
-        elevation: 0,
-        centerTitle: true,
-      ),
-      body: settingsAsync.when(
-        loading: () => const Center(child: CircularProgressIndicator()),
-        error: (e, _) => Center(child: Text('Failed to load settings: $e')),
-        data: (settings) {
-          final strings = Strings.fromLocale(settings.locale);
-          return packAsync.when(
-            loading: () => const Center(child: CircularProgressIndicator()),
-            error: (e, _) => Center(child: Text('${strings.loadingFailed}: $e')),
-            data: (result) {
-              _ensureSession(settings, result.pack);
-              final session = _session!;
-              final names = _normalizeNames(session.players);
+      body: SafeArea(
+        child: Stack(
+          children: [
+            Positioned(
+              top: 8,
+              left: 8,
+              child: IconButton(
+                icon: const Icon(Icons.arrow_back, color: Colors.white),
+                onPressed: () => context.go('/setup'),
+              ),
+            ),
+            settingsAsync.when(
+              loading: () => const Center(child: CircularProgressIndicator()),
+              error: (e, _) =>
+                  Center(child: Text('Failed to load settings: $e')),
+              data: (settings) {
+                final strings = Strings.fromLocale(settings.locale);
+                return packAsync.when(
+                  loading: () =>
+                      const Center(child: CircularProgressIndicator()),
+                  error: (e, _) =>
+                      Center(child: Text('${strings.loadingFailed}: $e')),
+                  data: (result) {
+                    _ensureSession(settings, result.pack);
+                    final session = _session!;
+                    final names = _normalizeNames(session.players);
 
-              final gridItems = List.generate(session.players, (i) => i);
-              return Padding(
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Center(
-                      child: SizedBox(
-                        height: 120,
-                        child: Image.asset(
-                          'assets/images/icon_square.png',
-                          fit: BoxFit.contain,
-                          errorBuilder: (_, __, ___) => const LogoMark(size: 120),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 12),
-                    Center(
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(24),
-                        ),
-                        child: Text.rich(
-                          TextSpan(
-                            style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                                  fontWeight: FontWeight.w800,
-                                  color: Colors.black87,
+                    final gridItems = List.generate(session.players, (i) => i);
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 16),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const SizedBox(height: 8),
+                          Center(
+                            child: SizedBox(
+                              height: 120,
+                              child: Image.asset(
+                                'assets/images/icon_square.png',
+                                fit: BoxFit.contain,
+                                errorBuilder: (_, __, ___) =>
+                                    const LogoMark(size: 120),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          Center(
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 16, vertical: 8),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(24),
+                              ),
+                              child: Text.rich(
+                                TextSpan(
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .titleMedium
+                                      ?.copyWith(
+                                        fontWeight: FontWeight.w800,
+                                        color: Colors.black87,
+                                      ),
+                                  children: [
+                                    TextSpan(text: '${strings.startsLabel} '),
+                                    TextSpan(
+                                      text: names[session.startingIndex],
+                                      style: const TextStyle(
+                                        fontWeight: FontWeight.w900,
+                                        decoration: TextDecoration.underline,
+                                        color: Color(
+                                            0xFF1E88E5), // darker visible blue
+                                      ),
+                                    ),
+                                    WidgetSpan(
+                                      alignment: PlaceholderAlignment.middle,
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(left: 6),
+                                        child: Icon(
+                                          Icons.notifications_active_outlined,
+                                          size: 18,
+                                          color: const Color(
+                                              0xFF1E88E5), // match name color
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          Center(
+                            child: Text(
+                              strings.tapCardsToReveal.toUpperCase(),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleSmall
+                                  ?.copyWith(
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 12),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+                          Center(
+                            child: Text(
+                              '${strings.categoryLabel}: ${session.categoryName}',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyMedium
+                                  ?.copyWith(color: Colors.white70),
+                            ),
+                          ),
+                          const SizedBox(height: 18),
+                          Expanded(
+                            child: LayoutBuilder(
+                              builder: (context, constraints) {
+                                final width = constraints.maxWidth;
+                                final crossAxisCount = width > 900
+                                    ? 4
+                                    : width > 600
+                                        ? 3
+                                        : 2;
+                                return GridView.builder(
+                                  itemCount: gridItems.length,
+                                  gridDelegate:
+                                      SliverGridDelegateWithFixedCrossAxisCount(
+                                    crossAxisCount: crossAxisCount,
+                                    crossAxisSpacing: 12,
+                                    mainAxisSpacing: 12,
+                                    childAspectRatio: 1,
+                                  ),
+                                  itemBuilder: (context, index) {
+                                    final isRevealed =
+                                        _revealed[index] ?? false;
+                                    final isImpostor =
+                                        session.impostors.contains(index);
+                                    final title = names[index];
+                                    return _PlayerCard(
+                                      title: title,
+                                      revealed: isRevealed,
+                                      isImpostor: isImpostor,
+                                      revealLabel: strings.revealCardLabel,
+                                      revealedLabel: strings.revealDone,
+                                      onTap: () {
+                                        _openReveal(
+                                          index,
+                                          title,
+                                          session.categoryName,
+                                          session.word,
+                                          isImpostor,
+                                        );
+                                      },
+                                    );
+                                  },
+                                );
+                              },
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+                          Row(
                             children: [
-                              TextSpan(text: '${strings.startsLabel} '),
-                              TextSpan(
-                                text: names[session.startingIndex],
-                                style: const TextStyle(
-                                  fontWeight: FontWeight.w900,
-                                  decoration: TextDecoration.underline,
-                                  color: Color(0xFF1E88E5), // darker visible blue
+                              Expanded(
+                                child: OutlinedButton(
+                                  onPressed: () => _startNewRandomRound(
+                                      settings, result.pack),
+                                  child: Text(strings.newWord),
                                 ),
                               ),
-                              WidgetSpan(
-                                alignment: PlaceholderAlignment.middle,
-                                child: Padding(
-                                  padding: const EdgeInsets.only(left: 6),
-                                  child: Icon(
-                                    Icons.notifications_active_outlined,
-                                    size: 18,
-                                    color: const Color(0xFF1E88E5), // match name color
-                                  ),
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: OutlinedButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      _revealed.clear();
+                                    });
+                                  },
+                                  child: Text(strings.hideAll),
                                 ),
                               ),
                             ],
                           ),
-                          textAlign: TextAlign.center,
-                        ),
+                        ],
                       ),
-                    ),
-                    const SizedBox(height: 6),
-                    Center(
-                      child: Text(
-                        strings.tapCardsToReveal.toUpperCase(),
-                        style: Theme.of(context)
-                            .textTheme
-                            .titleSmall
-                            ?.copyWith(fontWeight: FontWeight.w700),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    const SizedBox(height: 16),
-                    Center(
-                      child: Text(
-                        '${strings.categoryLabel}: ${session.categoryName}',
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyMedium
-                            ?.copyWith(color: Colors.white70),
-                      ),
-                    ),
-                    const SizedBox(height: 12),
-                    Expanded(
-                      child: LayoutBuilder(
-                        builder: (context, constraints) {
-                          final width = constraints.maxWidth;
-                          final crossAxisCount =
-                              width > 900 ? 4 : width > 600 ? 3 : 2;
-                          return GridView.builder(
-                            itemCount: gridItems.length,
-                            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: crossAxisCount,
-                              crossAxisSpacing: 12,
-                              mainAxisSpacing: 12,
-                              childAspectRatio: 1,
-                            ),
-                            itemBuilder: (context, index) {
-                              final isRevealed = _revealed[index] ?? false;
-                              final isImpostor = session.impostors.contains(index);
-                              final title = names[index];
-                              final revealText =
-                                  isImpostor ? strings.impostorRole : session.word;
-                              return _PlayerCard(
-                                title: title,
-                                revealed: isRevealed,
-                                revealText: revealText,
-                                isImpostor: isImpostor,
-                                revealLabel: strings.revealCardLabel,
-                                onTap: () {
-                                  setState(() {
-                                    _revealed[index] = !isRevealed;
-                                  });
-                                },
-                              );
-                            },
-                          );
-                        },
-                      ),
-                    ),
-                    const SizedBox(height: 12),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: OutlinedButton(
-                            onPressed: () =>
-                                _startNewRandomRound(settings, result.pack),
-                            child: Text(strings.newWord),
-                          ),
-                        ),
-                        const SizedBox(width: 12),
-                        Expanded(
-                          child: OutlinedButton(
-                            onPressed: () {
-                              setState(() {
-                                _revealed.clear();
-                              });
-                            },
-                            child: Text(strings.hideAll),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              );
-            },
-          );
-        },
+                    );
+                  },
+                );
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -262,7 +290,10 @@ class _GameScreenState extends ConsumerState<GameScreen> {
   }
 
   List<String> _normalizeNames(int count) {
-    final base = widget.playerNames.map((e) => e.trim()).where((e) => e.isNotEmpty).toList();
+    final base = widget.playerNames
+        .map((e) => e.trim())
+        .where((e) => e.isNotEmpty)
+        .toList();
     while (base.length < count) {
       base.add('Player ${base.length + 1}');
     }
@@ -270,6 +301,31 @@ class _GameScreenState extends ConsumerState<GameScreen> {
       base.removeRange(count, base.length);
     }
     return base;
+  }
+
+  Future<void> _openReveal(
+    int index,
+    String playerName,
+    String categoryName,
+    String word,
+    bool isImpostor,
+  ) async {
+    if (_revealed[index] ?? false) return;
+    final didConfirm = await context.push<bool>(
+      '/reveal',
+      extra: PlayerRevealArgs(
+        playerName: playerName,
+        categoryName: categoryName,
+        word: word,
+        isImpostor: isImpostor,
+      ),
+    );
+    if (!mounted) return;
+    if (didConfirm == true) {
+      setState(() {
+        _revealed[index] = true;
+      });
+    }
   }
 }
 
@@ -293,36 +349,34 @@ class _PlayerCard extends StatelessWidget {
   const _PlayerCard({
     required this.title,
     required this.revealed,
-    required this.revealText,
     required this.isImpostor,
     required this.revealLabel,
+    required this.revealedLabel,
     required this.onTap,
   });
 
   final String title;
   final bool revealed;
-  final String revealText;
   final bool isImpostor;
   final String revealLabel;
+  final String revealedLabel;
   final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    final impostorColor = colorScheme.error;
     final cardColor = Theme.of(context).cardColor;
 
     return GestureDetector(
-      onTap: onTap,
+      onTap: revealed ? null : onTap,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 160),
         decoration: BoxDecoration(
-          color: revealed ? (isImpostor ? impostorColor.withOpacity(0.14) : cardColor) : cardColor,
+          color: revealed ? cardColor.withOpacity(0.7) : cardColor,
           borderRadius: BorderRadius.circular(16),
           border: Border.all(
-            color: revealed
-                ? (isImpostor ? impostorColor : colorScheme.primary)
-                : Colors.white.withOpacity(0.08),
+            color:
+                revealed ? colorScheme.primary : Colors.white.withOpacity(0.08),
             width: 1.4,
           ),
           boxShadow: [
@@ -338,20 +392,36 @@ class _PlayerCard extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              SizedBox(
+                height: 44,
+                width: 44,
+                child: Image.asset(
+                  'assets/images/player_silhouette.png',
+                  fit: BoxFit.contain,
+                  color: Colors.white70,
+                  errorBuilder: (_, __, ___) => Icon(
+                    Icons.person_outline,
+                    color: Colors.white70,
+                    size: 32,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 10),
               Text(
                 title,
-                style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
+                style:
+                    const TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
               ),
               const SizedBox(height: 12),
               AnimatedCrossFade(
                 firstChild: Text(revealLabel),
                 secondChild: Text(
-                  revealText,
+                  revealedLabel,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 16,
                     fontWeight: FontWeight.w800,
-                    color: isImpostor ? impostorColor : Colors.white,
+                    color: colorScheme.primary,
                   ),
                 ),
                 crossFadeState: revealed

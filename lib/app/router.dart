@@ -8,6 +8,8 @@ import '../ui/screens/splash_screen.dart';
 import '../ui/screens/setup_screen.dart';
 import '../ui/screens/game_screen.dart';
 import '../ui/screens/player_names_screen.dart';
+import '../ui/screens/game_rules_screen.dart';
+import '../ui/screens/player_reveal_screen.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
   return GoRouter(
@@ -29,6 +31,11 @@ final routerProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => const SetupScreen(),
       ),
       GoRoute(
+        path: '/rules',
+        name: 'rules',
+        builder: (context, state) => const GameRulesScreen(),
+      ),
+      GoRoute(
         path: '/players',
         name: 'players',
         builder: (context, state) => const PlayerNamesScreen(),
@@ -38,6 +45,13 @@ final routerProvider = Provider<GoRouter>((ref) {
         name: 'game',
         builder: (context, state) => GameScreen(
           playerNames: (state.extra as List<String>?) ?? const [],
+        ),
+      ),
+      GoRoute(
+        path: '/reveal',
+        name: 'reveal',
+        builder: (context, state) => PlayerRevealScreen(
+          args: state.extra as PlayerRevealArgs,
         ),
       ),
       GoRoute(
