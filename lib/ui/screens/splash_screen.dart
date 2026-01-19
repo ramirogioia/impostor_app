@@ -39,12 +39,13 @@ class _SplashScreenState extends State<SplashScreen> {
           final asset = isLandscape
               ? 'assets/images/splash_landscape.png'
               : 'assets/images/splash_portrait.png';
-          return Stack(
-            fit: StackFit.expand,
-            children: [
-              Image.asset(
+          return ColoredBox(
+            color: const Color(0xFF06070E),
+            child: SizedBox.expand(
+              child: Image.asset(
                 asset,
                 fit: BoxFit.cover,
+                alignment: const Alignment(0, 0.4),
                 errorBuilder: (_, __, ___) {
                   return const ColoredBox(
                     color: Colors.black,
@@ -52,7 +53,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   );
                 },
               ),
-            ],
+            ),
           );
         },
       ),
