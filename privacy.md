@@ -28,5 +28,5 @@ Si actualizamos esta política, cambiaremos la fecha de "Última actualización"
 Versión publicada para compartir: https://www.notion.so/Pol-tica-de-Privacidad-Impostor-2ec9fd95a62b80b28ea4f7243e6ed9e6?source=copy_link
 
 ## Contacto
-Si tenés consultas, podés escribir a: **contacto@tudominio.com**
+Si tenés consultas, podés escribir a: **giftera.store.info@gmail.com**
 
