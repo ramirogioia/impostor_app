@@ -8,6 +8,7 @@ import '../../app/settings.dart';
 import '../../app/strings.dart';
 import '../../data/word_pack_repository.dart';
 import '../../domain/models/word_pack.dart';
+import '../widgets/category_pill.dart';
 import '../widgets/logo_mark.dart';
 import 'player_reveal_screen.dart';
 
@@ -40,7 +41,7 @@ class _GameScreenState extends ConsumerState<GameScreen> {
               left: 8,
               child: IconButton(
                 icon: const Icon(Icons.arrow_back, color: Colors.white),
-                onPressed: () => context.go('/setup'),
+                onPressed: () => context.go('/players'),
               ),
             ),
             settingsAsync.when(
@@ -140,12 +141,10 @@ class _GameScreenState extends ConsumerState<GameScreen> {
                           ),
                           const SizedBox(height: 12),
                           Center(
-                            child: Text(
-                              '${strings.categoryLabel}: ${session.categoryName}',
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodyMedium
-                                  ?.copyWith(color: Colors.white70),
+                            child: CategoryPill(
+                              categoryName: session.categoryName,
+                              categoryId: session.categoryId,
+                              locale: settings.locale,
                             ),
                           ),
                           const SizedBox(height: 18),
@@ -184,6 +183,7 @@ class _GameScreenState extends ConsumerState<GameScreen> {
                                           index,
                                           title,
                                           session.categoryName,
+                                          session.categoryId,
                                           session.word,
                                           isImpostor,
                                         );
@@ -283,6 +283,7 @@ class _GameScreenState extends ConsumerState<GameScreen> {
     return _GameSession(
       word: entry.text,
       categoryName: category.displayName,
+      categoryId: category.id,
       players: settings.players,
       impostors: impostorIndexes,
       startingIndex: rand.nextInt(settings.players),
@@ -307,6 +308,7 @@ class _GameScreenState extends ConsumerState<GameScreen> {
     int index,
     String playerName,
     String categoryName,
+    String categoryId,
     String word,
     bool isImpostor,
   ) async {
@@ -316,6 +318,7 @@ class _GameScreenState extends ConsumerState<GameScreen> {
       extra: PlayerRevealArgs(
         playerName: playerName,
         categoryName: categoryName,
+        categoryId: categoryId,
         word: word,
         isImpostor: isImpostor,
       ),
@@ -333,6 +336,7 @@ class _GameSession {
   _GameSession({
     required this.word,
     required this.categoryName,
+    required this.categoryId,
     required this.players,
     required this.impostors,
     required this.startingIndex,
@@ -340,6 +344,7 @@ class _GameSession {
 
   final String word;
   final String categoryName;
+  final String categoryId;
   final int players;
   final Set<int> impostors;
   final int startingIndex;

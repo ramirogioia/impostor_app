@@ -107,6 +107,7 @@ class Strings {
   String enterPlayersSubtitle(int count) => isEs
       ? 'Ingresa los $count nombres y empezamos'
       : 'Add all $count names to start';
+  String get resetUsers => isEs ? 'Reset users' : 'Reset users';
 
   // Category dropdown label
   String get categoryFieldLabel => isEs ? 'Categoría' : 'Category';
@@ -119,4 +120,12 @@ class Strings {
   String get newRoundTitle => isEs ? 'Nueva ronda' : 'New round';
   String get confirm => isEs ? 'Confirmar' : 'Confirm';
   String get cancel => isEs ? 'Cancelar' : 'Cancel';
+
+  // Update
+  String get updateAvailable => isEs ? 'Actualización disponible' : 'Update available';
+  String get updateMessage => isEs
+      ? 'Hay una nueva versión disponible. ¿Querés actualizar ahora?'
+      : 'A new version is available. Would you like to update now?';
+  String get updateButton => isEs ? 'Actualizar' : 'Update';
+  String get updateLater => isEs ? 'Más tarde' : 'Later';
 }

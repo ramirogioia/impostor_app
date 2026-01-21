@@ -1,0 +1,1282 @@
+================================================================================
+PALABRAS POR CATEGORIA - ARGENTINA (es-AR) - ACTUALIZADO
+================================================================================
+
+================================================================================
+Lugares (lugares)
+================================================================================
+Total: 97 palabras
+
+  FACIL (34):
+    - Obelisco
+    - Casa Rosada
+    - Congreso
+    - Teatro Colón
+    - Caminito
+    - Puerto Madero
+    - Mar del Plata
+    - Bariloche
+    - Iguazú
+    - Mendoza
+    - La Bombonera
+    - El Monumental
+    - Avenida Corrientes
+    - Patagonia
+    - El Calafate
+    - Tigre
+    - San Telmo
+    - Palermo
+    - Recoleta
+    - Rosario
+    - Córdoba
+    - La Plata
+    - Ushuaia
+    - Salta
+    - Tucumán
+    - Neuquén
+    - San Juan
+    - San Luis
+    - Santa Fe
+    - Posadas
+    - Resistencia
+    - Río Gallegos
+    - Comodoro Rivadavia
+    - Jujuy
+
+  MEDIO (28):
+    - Tilcara
+    - Córdoba Capital
+    - San Rafael
+    - Pinamar
+    - Cariló
+    - Salinas Grandes
+    - Villa Carlos Paz
+    - Aconcagua
+    - Perito Moreno (glaciar)
+    - Cafayate
+    - San Martín de los Andes
+    - Puerto Madryn
+    - La Quiaca
+    - Parque Chaco
+    - Laguna Brava
+    - Villa La Angostura
+    - San Isidro
+    - Luján
+    - Tandil
+    - Merlo (San Luis)
+    - El Bolsón
+    - Villa Gesell
+    - Las Grutas
+    - Villa General Belgrano
+    - Capilla del Monte
+    - Potrero de los Funes
+    - San Pedro (Buenos Aires)
+    - Paraná
+
+  DIFICIL (35):
+    - Bosque de Arrayanes (Islote en Nahuel Huapi con árboles canela)
+    - Famatina (Cordón riojano buscado por mineros)
+    - Quebrada de las Conchas (Formaciones rojas camino a Cafayate)
+    - Purmamarca (Pueblo del cerro de los 7 colores)
+    - Paso Jama (Cruce jujeño hacia Atacama)
+    - Embalse El Cadillal (Dique tucumano para deportes náuticos)
+    - Villa Pehuenia (Neuquén, paraíso de pehuenes)
+    - Moquehuá (Localidad bonaerense famosa por salamines)
+    - Península Valdés (Ballenas en Chubut)
+    - Los Antiguos (Capital de la cereza santacruceña)
+    - Villa Epecuén (Pueblo inundado y resurgido)
+    - La Angostura (Tucumán) (Portal a los Valles Calchaquíes)
+    - Bialet Massé (Localidad cordobesa del Dique San Roque)
+    - Concordia (Termas y citrus en Entre Ríos)
+    - Esquina (Pesca deportiva en Corrientes)
+    - Saldungaray (Pórtico circular del cementerio)
+    - Gaiman (Té galés en el valle del Chubut)
+    - Rafaela (Ciudad santafesina del TC)
+    - Chascomús (Laguna famosa para escapadas)
+    - Roque Pérez (Pueblo bonaerense de turismo rural)
+    - Ischigualasto (Parque de Valle de la Luna sanjuanino)
+    - Isla Martín García (Isla histórica en el Río de la Plata)
+    - Sierras de la Ventana (Cordón serrano bonaerense)
+    - Volcán Lanín (Nevado neuquino del parque nacional)
+    - Parque Nacional Iberá (Esteros correntinos y yacarés)
+    - Cerro Uritorco (Cerro místico de Capilla del Monte)
+    - Campo de Piedra Pómez (Paisaje blanco volcánico en Catamarca)
+    - Sierra de las Quijadas (Parque de cañones en San Luis)
+    - Quebrada del Condorito (Avistaje de cóndores en Córdoba)
+    - Valle de Uco (Zona vitivinícola mendocina)
+    - Dique Los Molinos (Embalse turístico cordobés)
+    - Laguna de los Tres (Sendero al Fitz Roy)
+    - Bahía Lapataia (Fin de la Ruta 3 en Tierra del Fuego)
+    - Cueva de las Manos (Arte rupestre en Santa Cruz)
+    - Salto del Agrio (Cascada con anfiteatro basáltico)
+
+
+================================================================================
+Famosos (famosos)
+================================================================================
+Total: 104 palabras
+
+  FACIL (35):
+    - Lionel Messi
+    - Diego Maradona
+    - Ricardo Darín
+    - Mirtha Legrand
+    - Susana Giménez
+    - Carlos Gardel
+    - Charly García
+    - Fito Páez
+    - Gustavo Cerati
+    - Juana Viale
+    - Abel Pintos
+    - Tini Stoessel
+    - Paulo Londra
+    - Lali Espósito
+    - María Becerra
+    - Duki
+    - Carlos Tévez
+    - Ángel Di María
+    - Javier Milei
+    - Sergio Massa
+    - Lionel Scaloni
+    - Bizarrap
+    - Nicki Nicole
+    - Emilia Mernes
+    - Nathy Peluso
+    - Wos
+    - Franco Colapinto
+    - Paulo Dybala
+    - Alexis Mac Allister
+    - Julián Álvarez
+    - Enzo Fernández
+    - Rodrigo De Paul
+    - Luis Brandoni
+    - Diego Peretti
+    - Andrés Calamaro
+
+  MEDIO (34):
+    - Norma Aleandro
+    - Darío Grandinetti
+    - Peter Capusotto
+    - Florencia Peña
+    - Guillermo Francella
+    - Adrián Suar
+    - Marley
+    - Andy Kusnetzoff
+    - Carmen Barbieri
+    - Pampita Ardohain
+    - Marcelo Bielsa
+    - Gabriela Sabatini
+    - Manu Ginóbili
+    - Luisana Lopilato
+    - Diego Torres
+    - Babasónicos
+    - El Dipy
+    - Mauro Viale
+    - Marcelo Polino
+    - Moria Casán
+    - Carla Peterson
+    - China Suárez
+    - Cazzu
+    - Luciano Castro
+    - Julieta Díaz
+    - Dolores Fonzi
+    - Pablo Echarri
+    - Luis Majul
+    - Jorge Lanata
+    - Ricardo Iorio
+    - Zeta Bosio
+    - Hilda Lizarazu
+    - Nito Artaza
+    - Horacio Pagani
+
+  DIFICIL (35):
+    - Zulma Lobato (Figura de TV bizarra de los 2000)
+    - Pocho La Pantera (Cumbia de “El hijo de Cuca”)
+    - Jacobo Winograd (Panelista de chimentos, escándalos)
+    - Ricardo Fort (Chocolatero millonario, reality y “miameeee”)
+    - Pato Cabrera (Golfista cordobés campeón US Open 2007)
+    - Cris Morena (Productora de Chiquititas y Rebelde Way)
+    - Andrea del Boca (Protagonista de Perla Negra)
+    - Pachu Peña (Humorista de Videomatch)
+    - Yayo Guridi (Sketchea el Top Forro en Videomatch)
+    - Cacho Castaña (Cantó “Café La Humedad”)
+    - Soledad Silveyra (Conductora de Gran Hermano 2007)
+    - Araceli González (Modelo y actriz de los 90)
+    - Sandro (El Gitano de la bata roja)
+    - Chano Moreno (Líder de Tan Biónica)
+    - Calu Rivero (Actriz que se renombró Dignity)
+    - Victoria Onetto (Actriz y funcionaria cultural)
+    - Guido Kaczka (Conductor de “A todo o nada”)
+    - Puma Goity (Actor de comedia, Tiempo Final)
+    - Rodolfo Ranni (Actor italo-argentino de novelas 80s)
+    - Claudia Villafañe (Ex de Maradona y ganadora MasterChef)
+    - Hugo Gatti (Arquero showman apodado El Loco)
+    - Fabián Bielinsky (Director de Nueve Reinas)
+    - Tita Merello (Actriz y cantora del tango)
+    - Palito Ortega (Cantante y ex gobernador tucumano)
+    - César Menotti (DT campeón mundial 1978)
+    - Graciela Borges (Actriz de cine argentino clásico)
+    - Roberto Galán (Conductor de Si lo sabe cante)
+    - Leonardo Favio (Cantante y cineasta)
+    - Niní Marshall (Humorista pionera del cine)
+    - Alberto Olmedo (Capocómico rosarino)
+    - Nacha Guevara (Actriz y cantante teatral)
+    - Tristán (Humorista de pizzería Porteña)
+    - Juan Carlos Calabró (Johnny Tolengo)
+    - María Elena Walsh (Poeta y compositora infantil)
+    - Pepe Soriano (Actor de La Nona y cine social)
+
+
+================================================================================
+Objetos (objetos)
+================================================================================
+Total: 104 palabras
+
+  FACIL (33):
+    - Mate
+    - Bombilla
+    - Termo
+    - Asador
+    - Fasito
+    - Remera
+    - Ojota
+    - Bolso de lona
+    - Alpargata
+    - Chomba
+    - Gorra
+    - Heladera
+    - Parrilla
+    - Sillón
+    - Campera de jean
+    - Botella retornable
+    - Plancha de pelo
+    - Cuaderno Rivadavia
+    - Guardapolvo blanco
+    - Pelota de fútbol
+    - Escarbadiente
+    - Gatorey de vidrio
+    - Sifón
+    - Balde
+    - Escurridor
+    - Repasador
+    - Esponja
+    - Jabón en pan
+    - Cepillo de dientes
+    - Peine
+    - Secador de pelo
+    - Plancha
+    - Trapo de piso
+
+  MEDIO (36):
+    - Soda sifón
+    - Bidet
+    - Tele de tubo
+    - Radio Spica
+    - Pulsera roja
+    - Picadillo
+    - Tupper con salsa
+    - Bolso matero
+    - Cartuchera de lata
+    - Guardapolvo pintado
+    - Chinela
+    - Pava de aluminio
+    - Cuchillo Tramontina
+    - Sartén Essen
+    - Rejilla de soda
+    - Ganchera de ropa
+    - Patines Roller
+    - Licuadora Liliana
+    - Pelopincho
+    - Tarjeta SUBE
+    - Llavero del club
+    - Botella térmica
+    - Vaso térmico
+    - Set de mate
+    - Porta DNI
+    - Bombilla de alpaca
+    - Yerbera
+    - Azucarera
+    - Cuchillo de asado
+    - Tenedor de asado
+    - Pinza de asado
+    - Espátula
+    - Tabla de picar
+    - Colador
+    - Rallador
+    - Sacacorchos
+
+  DIFICIL (35):
+    - Piedra Pómez (Para talones en ducha)
+    - Ajustasilencio (Clip para enrollar cuerda del toldo)
+    - Lata de membrillo (Postre casero + queso)
+    - Pochoclera de calle (Calesita: carrito rojo con caramelo)
+    - Telefunken (Marca de TV ochentosa)
+    - Walkman Noblex (Cassettes en bondi)
+    - Pochoclo dulce rosado (Bolsa celeste en plazas)
+    - Carpeta Gloria (A3 con hojas cuadriculadas)
+    - Manta de vicuña (Souvenir andino)
+    - Radio a galena (Armar tu primer receptor)
+    - Fichero de CDs (Organizador de auto)
+    - Cenicero de vidrio pesado (Mesa de living de los 90)
+    - Durlock (Placa de yeso para dividir ambientes)
+    - Birome Kilométrica (La bic que duraba muchísimo)
+    - Pava de porcelana florida (Casa de la abuela)
+    - Cartera Prüne noventosa (Logo ovalado metálico)
+    - Agenda Filofax (Organizador de cuero con anillas)
+    - Portarretrato digital (Fotos rotando en mesa)
+    - Florerito de Once (Violetas de plástico)
+    - Disco rígido IDE (Cinta plana de datos)
+    - Bomba de pie (Inflador manual de pelotas)
+    - Cinta de embalar (Rollo transparente de mudanza)
+    - La gotita (Pegamento instantáneo clásico)
+    - Pelapapas (Utensilio de cocina para pelar)
+    - Cortaplumas (Navaja multiuso pequeña)
+    - Abrelatas (Manija giratoria para latas)
+    - Reja mosquitera (Malla para ventanas)
+    - Sifón Drago (Sifón metálico vintage)
+    - Pasacassettes (Adaptador cassette para auto)
+    - Sello de goma (Para marcar papeles)
+    - Calibrador (Instrumento de medida de taller)
+    - Porta llaves magnético (Imán para colgar llaves)
+    - Velador táctil (Lámpara que se prende tocando)
+    - Bolsita de sílica (Sobre anti humedad en cajas)
+    - Regla T (Regla de dibujo técnico)
+
+
+================================================================================
+Comida y Bebida (comida_bebida)
+================================================================================
+Total: 123 palabras
+
+  FACIL (46):
+    - Asado
+    - Empanada salteña
+    - Milanesa
+    - Fernet con coca
+    - Dulce de leche
+    - Alfajor
+    - Choripán
+    - Provoleta
+    - Matambre a la pizza
+    - Ñoquis del 29
+    - Locro
+    - Humita
+    - Carbonada
+    - Sorrentinos
+    - Ravioles
+    - Guiso de lentejas
+    - Polenta con tuco
+    - Vitel toné
+    - Turrón de maní
+    - Chocotorta
+    - Milanesa napolitana
+    - Pizza muzzarella
+    - Helado
+    - Facturas
+    - Tarta pascualina
+    - Pastel de papa
+    - Canelones
+    - Tallarines
+    - Flan con dulce
+    - Budín de pan
+    - Galletitas surtidas
+    - Churros
+    - Licuado de banana
+    - Mate cocido
+    - Arroz con pollo
+    - Pebete
+    - Fernet
+    - Gancia
+    - Vodka
+    - Malbec
+    - Vino
+    - Soda
+    - Coca-Cola
+    - Pepsi
+    - Agua
+    - Jugo
+
+  MEDIO (43):
+    - Bizcochuelo Exquisita
+    - Pastafrola
+    - Sandwich de miga
+    - Postre Balcarce
+    - Lomito cordobés
+    - Fainá
+    - Calabresa
+    - Sánguche de milanesa tucumano
+    - Torta Rogel
+    - Medialuna de grasa
+    - Facturas de dulce de leche
+    - Helado de dulce de leche granizado
+    - Cerdo a la parrilla
+    - Berenjena en escabeche
+    - Picada con salamín tandilero
+    - Vino Malbec
+    - Quilmes
+    - Gancia batido
+    - Café cortado
+    - Submarino
+    - Ensalada rusa
+    - Tarta de ricota
+    - Arrollado de pionono
+    - Pollo al disco
+    - Zapallitos rellenos
+    - Carne al horno
+    - Milanesa a la suiza
+    - Sopa crema
+    - Lentejas estofadas
+    - Empanada tucumana
+    - Tortilla de papa
+    - Picada de quesos
+    - Sándwich de bondiola
+    - Licor de Melón
+    - Cerveza
+    - Vino tinto
+    - Vino blanco
+    - Champagne
+    - Whisky
+    - Ron
+    - Gin
+    - Aperol
+    - Campari
+
+  DIFICIL (34):
+    - Chinchulín (Achura crocante del asado)
+    - Morcilla vasca (Achura con nuez o almendra)
+    - Araña (achura) (Músculo de la cadera muy sabroso)
+    - Lengua a la vinagreta (Entrada fría con ajo y perejil)
+    - Riñón a la provenzal (Achura con ajo y perejil)
+    - Mondongo a la española (Guiso de tripa y garbanzos)
+    - Tapa de asado (Corte delantero jugoso)
+    - Matambre arrollado (Relleno con huevo y zanahoria)
+    - Bagna cauda (Salsa piamontesa de anchoas y ajo)
+    - Sopa paraguaya (Torta salada de maíz y queso)
+    - Chipa guazú (Pastel húmedo de choclo)
+    - Sanguche de migas con palmitos (Clásico de confitería)
+    - Clericó (Ponche de vino blanco y frutas)
+    - Licor Legui (A base de caña y caramelos)
+    - Cola de cuadril (Picanha versión local)
+    - Arrope de uva (Dulce norteño concentrado)
+    - Cuaresmillos en almíbar (Duraznillos de Cuyo)
+    - Charqui (Carne seca salada andina)
+    - Pan casero al horno de barro (Infaltable en el campo)
+    - Pastelitos criollos (Fritura patria con membrillo)
+    - Vigilante (Postre de queso y dulce)
+    - Bife de chorizo (Corte grueso a la parrilla)
+    - Ossobuco (Corte con caracú)
+    - Pastelitos de batata (Frititos de 25 de mayo)
+    - Mollejas (Achura suave de ternera)
+    - Choripán con chimi (Clásico de cancha y parrilla)
+    - Choclo con manteca (Mazorca hervida)
+    - Fugazzeta rellena (Pizza con cebolla y queso)
+    - Sándwich de vacío (Carne asada en pan)
+    - Bondiola braseada (Cerdo tierno al horno)
+    - Lomito completo (Sándwich con huevo y fiambre)
+    - Queso y dulce (Postre clásico argentino)
+    - Milanesa a caballo (Con huevo frito)
+    - Pastel de choclo (Capa de maíz sobre carne)
+
+
+================================================================================
+Cine y TV (cine_tv)
+================================================================================
+Total: 108 palabras
+
+  FACIL (38):
+    - El secreto de sus ojos
+    - Nueve reinas
+    - Relatos salvajes
+    - Casados con hijos
+    - Los Simuladores
+    - Okupas
+    - Cebollitas
+    - Chiquititas
+    - Rebelde Way
+    - Floricienta
+    - Muñeca Brava
+    - Graduados
+    - La Naranja Mecánica (programa)
+    - ShowMatch
+    - Videomatch
+    - Grande Pa!
+    - Los Simuladores (serie)
+    - La casa del dragón
+    - 100 días para enamorarse
+    - Patito Feo
+    - El Encargado
+    - El Reino
+    - Los Protectores
+    - Monzón
+    - Violetta
+    - Casi Ángeles
+    - El Chavo
+    - El Zorro
+    - Campanas en la noche
+    - Botineras
+    - Son de fierro
+    - El marginal
+    - La Casa de Papel
+    - Stranger Things
+    - Breaking Bad
+    - Game of Thrones
+    - Friends
+    - The Office
+
+  MEDIO (35):
+    - Tiempo de Valientes
+    - El Bonaerense
+    - El Clan
+    - La Historia Oficial
+    - La Mujer de mi Hermano
+    - Un novio para mi mujer
+    - El hombre de tu vida
+    - Carancho
+    - El Marginal
+    - Plata dulce
+    - Esperando la carroza
+    - Gasoleros
+    - Son Amores
+    - Verano del 98
+    - Nano
+    - Poné a Francella
+    - Cha Cha Cha
+    - Peter Capusotto y sus videos
+    - Cha cha chá del ortiba
+    - Grande Pa! (segunda mención)
+    - Un cuento chino
+    - Wakolda
+    - El ciudadano ilustre
+    - La odisea de los giles
+    - El Robo del Siglo
+    - Un gallo para Esculapio
+    - El Puntero
+    - Vientos de agua
+    - Tumberos
+    - Farsantes
+    - Tratame bien
+    - Resistiré
+    - Montecristo
+    - Poliladron
+    - Los Exitosos Pells
+
+  DIFICIL (35):
+    - Pelito (Serie juvenil de los 80 en ATC)
+    - Clave de Sol (Predecesora de Montaña Rusa)
+    - La Noticia Rebelde (Humor político con Guinzburg)
+    - Juana y sus hermanas (Monólogos de Juana Molina)
+    - Brigada Cola (Spin-off de Brigada Z)
+    - Brigada Z (Humor con Francella y Emilio Disi)
+    - Feliz Domingo (Programa de estudiantes y viaje a Bariloche)
+    - Ricos y Famosos (Telenovela de Araceli y Solita)
+    - Los Benvenuto (Sitcom de campana y “Saaaabe”)
+    - El Rafa (Serie de rodilla en el pavimento con Luis Brandoni)
+    - La Banda del Golden Rocket (Autos, Darín joven y Peretti)
+    - Mesa de Noticias (Humor de oficina con Fontova)
+    - El pueblo quiere saber (Entrevistas incómodas de Lalo Mir)
+    - El Garante (Mini serie de suspenso con Lito Cruz)
+    - La caída de Ortiz (Unitario policial 90s)
+    - Atreverse (Unitarios dirigidos por Doria)
+    - Verano del '83 (Película adolescente ochentosa)
+    - La Mary (Filme con Susana y Monzón)
+    - Pubis angelical (Título de Sabato llevado al cine)
+    - Crónica TV placa roja (Breaking news con sirena y tipografía icónica)
+    - La tregua (Película argentina nominada al Oscar)
+    - Nazareno Cruz y el lobo (Clásico de Leonardo Favio)
+    - Tiempo de revancha (Film de suspenso con Darín)
+    - Sur (Película de Pino Solanas)
+    - La Patagonia Rebelde (Film histórico de los 70)
+    - La Ciénaga (Película de Lucrecia Martel)
+    - El Aura (Thriller de Bielinsky)
+    - Plaza de almas (Unitario dramático de los 90)
+    - Mujeres asesinas (Serie de unitarios famosos)
+    - Hermanos y detectives (Serie con Rodrigo De la Serna)
+    - Todos contra Juan (Comedia de Gastón Pauls)
+    - Telecomanda (Concurso retro de TV)
+    - Cocineros argentinos (Programa de cocina diaria)
+    - Cámara oculta (Segmento clásico de noticiero)
+    - Caloi en su tinta (Animación y humor gráfico)
+
+
+================================================================================
+Deportes (deportes)
+================================================================================
+Total: 39 palabras
+
+  FACIL (10):
+    - Fútbol
+    - Básquet
+    - Rugby
+    - Tenis
+    - Natación
+    - Hockey
+    - Boxeo
+    - Vóley
+    - Handball
+    - Atletismo
+
+  MEDIO (10):
+    - Ciclismo
+    - Automovilismo
+    - Motociclismo
+    - Polo
+    - Pato
+    - Remo
+    - Vela
+    - Yachting
+    - Esgrima
+    - Judo
+
+  DIFICIL (19):
+    - Taekwondo (Arte marcial coreano)
+    - Gimnasia artística (Deporte olímpico con barras y anillas)
+    - Waterpolo (Fútbol en el agua)
+    - Futsal (Fútbol de salón)
+    - Pelota a paleta (Deporte con pelota y paleta en cancha)
+    - Gimnasia rítmica (Gimnasia con cinta y aro)
+    - Fútbol 5 (Fútbol de 5 jugadores)
+    - Fútbol 7 (Fútbol de 7 jugadores)
+    - Fútbol playa (Fútbol en arena)
+    - Beach vóley (Vóley en la playa)
+    - Paddle (Tenis con paredes)
+    - Squash (Deporte con raqueta en cancha cerrada)
+    - Rugby 7 (Rugby de 7 jugadores)
+    - Hockey sobre césped (Hockey en campo de pasto)
+    - Softball (Béisbol más suave)
+    - Béisbol (Deporte con bate y pelota)
+    - Karate (Arte marcial japonés)
+    - Boxeo tailandés (Muay Thai)
+    - MMA (Artes marciales mixtas)
+
+
+================================================================================
+Marcas (marcas)
+================================================================================
+Total: 102 palabras
+
+  FACIL (35):
+    - Arcor
+    - Quilmes
+    - Bagley
+    - La Serenísima
+    - Paty
+    - Molinos
+    - Taragüí
+    - Volkswagen
+    - Chevrolet
+    - Coca-Cola
+    - Pepsi
+    - YPF
+    - Shell
+    - Topper
+    - Puma
+    - Adidas
+    - Nike
+    - Andreani
+    - Mercado Libre
+    - Coto
+    - La Paulina
+    - Serenito
+    - Bimbo
+    - Cindor
+    - Don Satur
+    - Terrabusi
+    - Sufur
+    - Gancia
+    - Speed
+    - Patagonia
+    - Musimundo
+    - Grido
+    - McDonald's
+    - Burger King
+    - Dia
+
+  MEDIO (35):
+    - Sancor
+    - Paladini
+    - Bon o Bon
+    - Georgalos
+    - Manaos
+    - Nobleza Gaucha
+    - Playadito
+    - Ala
+    - Asepxia
+    - Farmacity
+    - Mostaza
+    - Havanna
+    - Grimoldi
+    - Mishka
+    - Rasti
+    - Siam
+    - Philco
+    - BGH
+    - Garbarino
+    - Frávega
+    - Artesa
+    - Rex
+    - Sica
+    - Flecha Bus
+    - Plusmar
+    - La Anónima
+    - Tramontina
+    - Stanley
+    - Mamá Lucchetti
+    - Alicante
+    - Dánica
+    - Topline
+    - Coca-Cola Zero
+    - Fanta
+    - Sprite
+
+  DIFICIL (32):
+    - Felfort (Chocolates y el dueño mediático)
+    - Toddy (Galletita de chips made in Argentina)
+    - Poxipol (Pega en 10 minutos)
+    - Fábrica Militar Río Tercero (Escándalo 90s con explosión)
+    - Mimito (Helado barra económica)
+    - Genoud (Juguetes de hojalata vintage)
+    - Gauchito Gil (marca de velas) (Santos populares en góndola)
+    - Colombraro (Todo plástico, baldes y tachos)
+    - Liguria (Aceite mezcla de los 90)
+    - Lepore (Zapatos populares en Av Avellaneda)
+    - Soda Sayón (Sifones de vidrio vintage)
+    - Helados Sei Tu (Cadena porteña ochentosa)
+    - Rexona Teens (Desodorante con stickers)
+    - El Noble Repulgue (Empanadas de delivery pioneras)
+    - Caro Cuore (Lencería de shopping 90s)
+    - Fiorito (Marca de fiambres menos conocida)
+    - Totin (Galletita económica de kiosco)
+    - Lheritier (Miel y caramelos de pote amarillo)
+    - Geniol (Caramelos mentolados clásicos)
+    - Rolo (Cadena de helados noventosa)
+    - La Cumbre (Marca de yerba menos conocida)
+    - Verifarma (Farmacia genérica de los 90)
+    - Noel (Galletitas rosarinas tradicionales)
+    - Mayco (Ferretería argentina histórica)
+    - Minerva (Lápices escolares de antes)
+    - Terrabusi Opera (Galletita oblea icónica)
+    - Jorgito (Alfajor clásico de kiosco)
+    - Mantecol (Dulce de maní clásico)
+    - Cinzano (Vermut de botellas clásicas)
+    - Sobet (Alcohol fino porteño)
+    - Raste (Zapatillas escolares económicas)
+    - NOBLEX (Electrónica nacional)
+
+
+================================================================================
+Animales (animales)
+================================================================================
+Total: 90 palabras
+
+  FACIL (38):
+    - Yaguareté
+    - Ñandú
+    - Guanaco
+    - Carpincho
+    - Puma
+    - Cóndor
+    - Hornero
+    - Vizcacha
+    - Tucán
+    - Flamenco austral
+    - Pato criollo
+    - Mulita
+    - Boitata (serpiente)
+    - Lagarto overo
+    - Monito del monte
+    - Aguará guazú
+    - Piche
+    - Pingüino de Magallanes
+    - Lobo marino
+    - Flamenco
+    - Pato
+    - Lagarto
+    - Pingüino
+    - Golondrina
+    - Tortuga
+    - Araña
+    - Coral
+    - Culebra
+    - Macá
+    - Pava
+    - Monos
+    - Gato
+    - Rana
+    - Sapo
+    - Hurón
+    - Chimango
+    - Gallineta
+    - Yacare
+
+  MEDIO (20):
+    - Tero
+    - Chajá
+    - Martín pescador
+    - Piche llorón
+    - Zorrino
+    - Coipo
+    - Lobito de río
+    - Golondrina patagónica
+    - Taruca
+    - Huillín
+    - Pudú
+    - Tortuga de agua chaqueña
+    - Araña pollito pampeana
+    - Yarará
+    - Coral verdadero
+    - Culebra verde
+    - Carau
+    - Macá tobiano
+    - Pava de monte
+    - Monos caí
+
+  DIFICIL (32):
+    - Lampalagua (Boa constrictora norteña)
+    - Vinchuca (Insecto vector del Chagas)
+    - Chuña patas rojas (Ave corredora cazadora de serpientes)
+    - Gallareta ligas rojas (Ave acuática lagunas pampeanas)
+    - Dolichotis patagonum (Nombre científico de la mara)
+    - Lagartija de las dunas (Endémica de la costa bonaerense)
+    - Falso coral pampeano (Serpiente que imita colores venenosos)
+    - Pericote (Roedor andino nocturno)
+    - Avestruz petiso (suri) (Ñandú cordillerano enano)
+    - Chinche manchada (Insecto rural de verano)
+    - Flamenco de la Puna (Rosa pálido en salares)
+    - Mocho acanalar (Búho pampeano)
+    - Piquituerto austral (Ave patagónica con pico cruzado)
+    - Lagartija de los Colorados (Habitante del Talampaya)
+    - Murciélago pescador (Vuela sobre ríos del Litoral)
+    - Boa arcoíris chaqueña (Brillo iridiscente)
+    - Rata colorada tucumana (Roedor de yungas)
+    - Ñacurutú (Gran búho misionero)
+    - Pato crestudo (Habitante de lagunas pampeanas)
+    - Zarigüeya orejuda (Marsupial norteño)
+    - Monito caí (Primate misionero)
+    - Oso hormiguero (Mamífero de hocico largo)
+    - Caimán del Orinoco (Cocodrilo enorme en peligro)
+    - Ciervo del pantano (Ciervo grande de humedales)
+    - Gato onza (Felino chaqueño difícil de ver)
+    - Pudú del sur (Cervo pequeño patagónico)
+    - Tuco-tuco (Roedor subterráneo)
+    - Pez dorado (Pescado del Paraná)
+    - Coscoroba (Cisne blanco de humedales)
+    - Cauquén (Ganso patagónico)
+    - Hurón mayor (Mustélido pampeano)
+    - Zorzal colorado (Ave cantora urbana)
+
+
+================================================================================
+Historia y Cultura (historia_cultura)
+================================================================================
+Total: 105 palabras
+
+  FACIL (35):
+    - Mayo de 1810
+    - San Martín
+    - Belgrano
+    - Rosario
+    - Evita
+    - Perón
+    - Gaucho
+    - Tango
+    - Zamba
+    - Mate
+    - Gauchito Gil
+    - Virgen de Luján
+    - Malvinas
+    - Bandera celeste y blanca
+    - Himno nacional
+    - Asado
+    - Dulce de leche
+    - Grieta
+    - Fiesta patria
+    - Procer
+    - San Martín cruzando los Andes
+    - Escarapela
+    - Cabildo
+    - Cabildo abierto
+    - Granaderos
+    - Guitarra criolla
+    - La chacarera
+    - Folklore
+    - Pañuelo celeste
+    - Mate cocido
+    - Vuelta de Obligado
+    - Día de la bandera
+    - Día de la tradición
+    - Patria
+    - Soberanía
+
+  MEDIO (35):
+    - Facundo Quiroga
+    - Juan Manuel de Rosas
+    - Batalla de Caseros
+    - Constitución de 1853
+    - Sarmiento
+    - Domingo Faustino
+    - Plan Quinquenal
+    - 17 de Octubre
+    - Cordobazo
+    - Rodrigazo
+    - Convertibilidad
+    - Corralito
+    - Noche de los Lápices
+    - Nunca Más
+    - Juicio a las Juntas
+    - Cacerolazo
+    - Piqueteros
+    - Bicentenario 2010
+    - Voto femenino 1947
+    - Primera Junta
+    - Vuelta de Rocha
+    - Cabildo de 1810
+    - Congreso de Tucumán
+    - Declaración de Independencia
+    - Batalla de Tucumán
+    - Batalla de Salta
+    - Ejército de los Andes
+    - Montevideo colonial
+    - Carreta colonial
+    - Pulpería
+    - Fortín
+    - Malón
+    - Reforma Universitaria
+    - Liga Patriótica
+    - Guerra de Malvinas
+
+  DIFICIL (35):
+    - Operativo Independencia (Accionar militar en Tucumán 1975)
+    - Plan CONINTES (Militarización interna 1960)
+    - Revolución Libertadora (Golpe que derrocó a Perón en 1955)
+    - Semana Trágica (Represión obrera 1919)
+    - Patagonia Rebelde (Huelgas rurales Santa Cruz 1921)
+    - Malón de la Paz (Marcha indígena a Buenos Aires 1946)
+    - Cordobesazo (Pueblada contra López Rega 1974)
+    - Menemismo (Década de privatizaciones y 1 a 1)
+    - Teoría de los dos demonios (Lectura polémica de la violencia 70s)
+    - Ley Sáenz Peña (Voto secreto y obligatorio 1912)
+    - Universidad Reformista 1918 (Autonomía y cogobierno estudiantil)
+    - Revolución del Parque (Alzamiento cívico-militar 1890)
+    - Viborazo (Pueblada cordobesa 1971)
+    - Plan Austral (Programa antiinflacionario 1985)
+    - Semana Santa 1987 (Alzamiento carapintada)
+    - Ley de Obediencia Debida (Limitó juicios a militares)
+    - Siluetazo (Intervención urbana de derechos humanos)
+    - Ni Una Menos (Movilización feminista 2015)
+    - Ley de Medios (Regulación audiovisual 2009)
+    - IMF Stand-by 2001 (Acuerdo previo al default)
+    - Pacto de San Nicolás (Acuerdo previo a Constitución)
+    - Acuerdo de San José de Flores (Unificación con Buenos Aires)
+    - Conquista del Desierto (Campañas militares al sur)
+    - Ley 1420 (Educación común y obligatoria)
+    - Grito de Alcorta (Huelga agraria 1912)
+    - Pacto Roca-Runciman (Tratado comercial 1933)
+    - Día del Cabildo (Festividad del 25 de mayo)
+    - Operación Cóndor (Coordinación de dictaduras 70s)
+    - Plan Trienal (Programa económico de 1974)
+    - Plan Primavera (Medidas económicas de 1988)
+    - Crisis del 2001 (Default y caída del gobierno)
+    - Puente Pueyrredón (Protesta y represión 2002)
+    - Reforma Constitucional 1994 (Nueva constitución)
+    - Ley de Punto Final (Limitó juicios a militares)
+    - Marcha del Orgullo (Evento anual de diversidad)
+
+
+================================================================================
+Random (random)
+================================================================================
+Total: 105 palabras
+
+  FACIL (35):
+    - Carnaval de Gualeguaychú
+    - Charly García
+    - Kiosco
+    - Subte
+    - Pochoclo
+    - Verdulería
+    - Cumbia villera
+    - Tren argentino
+    - Peaje
+    - Chamamé
+    - Pampa
+    - Piquete
+    - Previa
+    - Boliche
+    - Camión hidrante
+    - Murga
+    - Bombos
+    - Choripán
+    - Picada
+    - Paro general
+    - Club de barrio
+    - Kermés
+    - Cancha de fútbol
+    - Chorizo al pan
+    - Adoquines
+    - Bajada a la playa
+    - Feria americana
+    - Plaza de juegos
+    - Mate en la plaza
+    - Canillita
+    - Colectivo
+    - Sube
+    - Día de lluvia
+    - Cortado
+    - Parrillita
+
+  MEDIO (35):
+    - Punilla
+    - Tren a las Nubes
+    - Candombe uruguayo en San Telmo
+    - Fútbol 5 techado
+    - Quiniela
+    - Factura de AFIP
+    - Ticket canasta
+    - Patacón
+    - Lecop
+    - Carnet de la biblioteca
+    - Radio FM trucha
+    - Colectivo 60
+    - Línea B de subte
+    - Palermo Hollywood
+    - Microcentro
+    - Río Paraná
+    - Camalote
+    - Campera de friza
+    - Fila del banco
+    - Elecciones PASO
+    - Reintegro bancario
+    - Cuenta DNI
+    - Tarjeta Alimentar
+    - Mercado Central
+    - Tren Roca
+    - Peaje electrónico
+    - Paseo de compras
+    - DNI viejo
+    - VTV
+    - Ferretería
+    - Polideportivo
+    - Taller mecánico
+    - Carnet de conducir
+    - Sorteo del televisor
+    - Fila del cajero
+
+  DIFICIL (35):
+    - Mionca (Camión militar ochentoso cordobés)
+    - Pato criollo deporte (Deporte nacional a caballo)
+    - Emisión 500 australes (Billete con San Martín montonero)
+    - Vagón Le Grill (Restó en vagón antiguo)
+    - Pelopincho pinchada (Pileta reparada con parches)
+    - Cine Lavalle (Galería de cines del centro)
+    - Pase Libre Multimodal (Beneficio transporte CABA)
+    - Pizzería Güerrín (Muzza de parado en Corrientes)
+    - Bombos de La Chilinga (Escuela de percusión porteña)
+    - Praline de plaza (Maní acaramelado en cucurucho)
+    - Empanadas árabes abiertas (Sfijas al limón)
+    - Campeonato de truco (Torneos de naipes criollos)
+    - Boleta única papel (Formato cordobés de voto)
+    - Tango queer (Milongas inclusivas)
+    - El Reino del Revés (Canción de María Elena Walsh)
+    - Biblioteca Vigil (Institución rosarina intervenida en dictadura)
+    - Campera inflable de Once (Abrigo barato de galería)
+    - Piluso (Sombrero tipo pescador)
+    - Yapa (Extra que da el almacenero)
+    - Pochoclo salado con pimentón (Versión salada de puesto)
+    - Garrafa social (Programa de subsidio de gas)
+    - Paseo La Salada (Feria popular gigante)
+    - Boleto estudiantil (Beneficio de transporte)
+    - Tarifa social (Descuento en servicios)
+    - Centro de jubilados (Espacio de actividades barriales)
+    - Cooperadora escolar (Fondo de ayuda de la escuela)
+    - Guardia del hospital (Sala de espera de urgencias)
+    - Subte Premetro (Ramal corto de CABA)
+    - Colectivo 152 (Línea larga porteña)
+    - Feria de Mataderos (Folk, artesanías y asado)
+    - Parque Rivadavia (Feria de libros usados)
+    - Anses (Organismo de seguridad social)
+    - AFIP (Organismo de impuestos)
+    - PAMI (Obra social de jubilados)
+    - SIME (Sistema de emergencias médicas)
+
+
+================================================================================
+Equipos de Fútbol (equipos_futbol)
+================================================================================
+Total: 43 palabras
+
+  FACIL (7):
+    - Boca Juniors
+    - River Plate
+    - Racing Club
+    - Independiente
+    - San Lorenzo
+    - Selección Argentina
+    - La Scaloneta
+
+  MEDIO (19):
+    - Estudiantes de La Plata
+    - Vélez Sarsfield
+    - Newell's Old Boys
+    - Rosario Central
+    - Huracán
+    - Talleres de Córdoba
+    - Belgrano
+    - Argentinos Juniors
+    - Godoy Cruz
+    - Lanús
+    - Banfield
+    - Colón
+    - Unión
+    - Gimnasia y Esgrima
+    - La B
+    - Defensa y Justicia
+    - Arsenal
+    - Sarmiento
+    - Platense
+
+  DIFICIL (17):
+    - Aldosivi (Equipo de Mar del Plata)
+    - Patronato (Equipo de Paraná)
+    - Almagro (Equipo del Oeste)
+    - Atlético de Rafaela (Equipo santafesino)
+    - Instituto (Equipo de Córdoba)
+    - San Martín de Tucumán (Equipo tucumano)
+    - Gimnasia de Jujuy (Equipo jujeño)
+    - Ferro (Equipo de Caballito)
+    - Chacarita (Equipo de San Martín)
+    - Quilmes (Equipo del Sur)
+    - Tigre (Equipo del Norte)
+    - All Boys (Equipo de Floresta)
+    - Nueva Chicago (Equipo de Mataderos)
+    - Deportivo Morón (Equipo del Oeste)
+    - Brown de Adrogué (Equipo del Sur)
+    - Estudiantes de Caseros (Equipo del Oeste)
+    - Villa Dálmine (Equipo de Campana)
+
+
+================================================================================
+Deportistas (deportistas)
+================================================================================
+Total: 110 palabras
+
+  FACIL (11):
+    - Delfina Pignatiello
+    - Manu Ginóbili
+    - Luis Scola
+    - Gabriel Batistuta
+    - Kun Agüero
+    - Enzo Francescoli
+    - Marcelo Gallardo
+    - Juan Román Riquelme
+    - Ariel Ortega
+    - Oscar Ruggeri
+    - Luciana Aymar
+
+  MEDIO (50):
+    - Palermo (delantero)
+    - Burruchaga
+    - Pato Fillol
+    - Claudio Caniggia
+    - Aimar
+    - Simeone
+    - Pichot
+    - Corleto
+    - Comizzo
+    - Barros Schelotto
+    - Maidana
+    - Chiquito Romero
+    - Paula Pareto
+    - Leo Montero (basquet)
+    - Hugo Porta
+    - Gisela Dulko
+    - Gaby Sabatini
+    - David Nalbandian
+    - Guillermo Vilas
+    - Gastón Gaudio
+    - José Pekerman
+    - Diego Simeone
+    - Aldo Duscher
+    - Walter Samuel
+    - Roberto Ayala
+    - Pablo Zabaleta
+    - Javier Zanetti
+    - Pablo Aimar
+    - Esteban Cambiasso
+    - Matías Almeyda
+    - Ezequiel Lavezzi
+    - Pablo Prigioni
+    - Luis Montaner
+    - Félix Savón
+    - Germán Chiaraviglio
+    - Andrés Nocioni
+    - Fabricio Oberto
+    - Carlos Delfino
+    - Pepe Sánchez
+    - Leo Gutiérrez
+    - Emanuel Ginóbili
+    - Federico Kammerichs
+    - Walter Herrmann
+    - Juan Ignacio Sánchez
+    - Diego Guaita
+    - Marcelo Milanesio
+    - Hernán Jasen
+    - Román González
+    - Felipe Contepomi
+    - Juan Martín Hernández
+
+  DIFICIL (49):
+    - Bichi Fuertes (Goleador de Colón)
+    - Pepe Sand (Delantero eterno de Lanús)
+    - Caruso Lombardi (DT de descensos y anécdotas)
+    - Mostaza Merlo (Pasito y “paso a paso”)
+    - Turco Mohamed (DT con galera en Huracán)
+    - Chanchi Estévez (Delantero de Racing y reality)
+    - Luifa Scola U19 (Capitán dorado en 2004)
+    - Puma Morete (Goleador de River y Boca 70s)
+    - Chatruc (Volante campeón con Racing 2001)
+    - Checho Batista (DT olímpico oro 2008)
+    - Milton Melgar (Boliviano que pasó por Boca)
+    - JJ López (River 70s, descenso como DT)
+    - Kily González (Extremo zurdo de Central y Valencia)
+    - Pocho Lavezzi (Del PSG y Napoli, rosarino)
+    - Puma Carranza (Arquero de Ferro y San Lorenzo)
+    - Beto Márcico (Ídolo de Ferro y Boca)
+    - Chila Romero (Arquero legendario de Paraguay en Racing)
+    - Cachito Vigil (DT histórico de Las Leonas)
+    - Mecha Solís (Hockista de los 90)
+    - Sergio Hernández (DT Generación Dorada en básquet)
+    - Norberto Alonso (Ídolo de River apodado El Beto)
+    - Pedro Troglio (Jugador y DT de Gimnasia)
+    - Carlos Ischia (DT campeón con Boca 2008)
+    - Ricardo Bochini (Ídolo de Independiente)
+    - Enrique Wolff (Periodista y ex jugador)
+    - Héctor Enrique (Campeón 86, pase a Maradona)
+    - José Luis Chilavert (Arquero paraguayo goleador)
+    - Víctor Hugo Morales (Relator del gol del siglo)
+    - Cecilia Carranza (Medalla de oro en yachting)
+    - Paula Retamales (Remera argentina de elite)
+    - Leonas 2002 (Equipo campeón mundial)
+    - Fangio (Quíntuple campeón de F1)
+    - Nicolás Laprovittola (Base de la selección)
+    - Marcos Di Palma (Piloto de TC y showman)
+    - Néstor Pitana (Árbitro del Mundial 2018)
+    - Julio Lamas (DT de básquet)
+    - Rubén Magnano (DT campeón olímpico)
+    - Eduardo Cadillac (Jugador de básquet)
+    - Hugo Sconochini (Jugador de básquet)
+    - Alejandro Montecchia (Base de básquet)
+    - Diego Osella (Jugador de básquet)
+    - Esteban De la Fuente (Jugador de básquet)
+    - Sebastián Vega (Jugador de básquet)
+    - Juan Espil (Jugador de básquet)
+    - Diego Cavaco (Jugador de básquet)
+    - Marcelo Reboledo (Jugador de básquet)
+    - Leandro Bolmaro (Jugador de básquet NBA)
+    - Facundo Campazzo (Base de básquet NBA)
+    - Gabriel Deck (Jugador de básquet NBA)
+
+================================================================================
+RESUMEN TOTAL
+================================================================================
+Total de categorias: 12
+Total de palabras: 1130

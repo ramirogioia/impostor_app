@@ -1,47 +1,128 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:upgrader/upgrader.dart';
 
 import '../../app/settings.dart';
 import '../../app/strings.dart';
 import '../../data/word_pack_repository.dart';
 import '../../domain/models/word_pack.dart';
+import '../widgets/category_item.dart';
 import '../widgets/logo_mark.dart';
 
-class SetupScreen extends ConsumerWidget {
+class SetupScreen extends ConsumerStatefulWidget {
   const SetupScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<SetupScreen> createState() => _SetupScreenState();
+}
+
+class _SetupScreenState extends ConsumerState<SetupScreen> {
+  String? _localCategoryId;
+  late final Upgrader _upgrader;
+
+  @override
+  void initState() {
+    super.initState();
+    _upgrader = Upgrader(
+      debugDisplayAlways: true,
+      debugLogging: true,
+      minAppVersion: '999.0.0',
+      durationUntilAlertAgain: const Duration(seconds: 0),
+    );
+    // Inicializar el upgrader después de que el widget esté construido
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) {
+        _upgrader.initialize();
+      }
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final settingsAsync = ref.watch(settingsNotifierProvider);
     final packAsync = ref.watch(currentWordPackProvider);
     final tooltipStrings = settingsAsync.valueOrNull == null
         ? Strings.fromLocale('es-AR')
         : Strings.fromLocale(settingsAsync.value!.locale);
+    
+    // Sync local state with settings when settings change
+    settingsAsync.whenData((settings) {
+      if (_localCategoryId != settings.categoryId) {
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          if (mounted) {
+            setState(() {
+              _localCategoryId = settings.categoryId;
+            });
+          }
+        });
+      }
+    });
 
-    return Scaffold(
-      body: SafeArea(
-        child: Stack(
-          children: [
-            Positioned(
-              top: 8,
-              left: 8,
-              child: IconButton(
-                icon: const Icon(Icons.arrow_back, color: Colors.white),
-                onPressed: () => context.go('/select-locale'),
-              ),
-            ),
-            Positioned(
-              top: 8,
-              right: 8,
-              child: Tooltip(
-                message: tooltipStrings.isEs ? 'Reglas de juego' : 'Game rules',
+    return UpgradeAlert(
+      upgrader: _upgrader,
+      child: Scaffold(
+        body: SafeArea(
+          child: Stack(
+            children: [
+              Positioned(
+                top: 8,
+                left: 8,
                 child: IconButton(
-                  icon: const Icon(Icons.info_outline, color: Colors.white),
-                  onPressed: () => context.go('/rules'),
+                  icon: const Icon(Icons.arrow_back, color: Colors.white),
+                  onPressed: () => context.go('/select-locale'),
                 ),
               ),
-            ),
+              Positioned(
+                top: 8,
+                right: 8,
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Tooltip(
+                      message: tooltipStrings.isEs ? 'Probar actualización' : 'Test update',
+                      child: IconButton(
+                        icon: const Icon(Icons.system_update, color: Colors.white70, size: 20),
+                        onPressed: () {
+                          showDialog(
+                            context: context,
+                            barrierDismissible: true,
+                            builder: (dialogContext) {
+                              final strings = Strings.fromLocale(
+                                settingsAsync.valueOrNull?.locale ?? 'es-AR',
+                              );
+                              return AlertDialog(
+                                title: Text(strings.updateAvailable),
+                                content: Text(strings.updateMessage),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () => Navigator.of(dialogContext).pop(),
+                                    child: Text(strings.updateLater),
+                                  ),
+                                  ElevatedButton(
+                                    onPressed: () {
+                                      Navigator.of(dialogContext).pop();
+                                      // En producción, esto abriría la tienda
+                                    },
+                                    child: Text(strings.updateButton),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
+                        },
+                      ),
+                    ),
+                    Tooltip(
+                      message: tooltipStrings.isEs ? 'Reglas de juego' : 'Game rules',
+                      child: IconButton(
+                        icon: const Icon(Icons.info_outline, color: Colors.white),
+                        onPressed: () => context.go('/rules'),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             settingsAsync.when(
               loading: () => const Center(child: CircularProgressIndicator()),
               error: (e, _) => Center(child: Text('Failed to load settings: $e')),
@@ -73,19 +154,28 @@ class SetupScreen extends ConsumerWidget {
                   );
                 }
 
-                for (final c in categories) {
+                // Sort categories alphabetically by displayName
+                final sortedCategories = List<WordCategory>.from(categories)
+                  ..sort((a, b) => a.displayName.compareTo(b.displayName));
+
+                for (final c in sortedCategories) {
                   if (seen.add(c.id)) {
                     categoryOptions.add(
                       DropdownMenuItem<String>(
                         value: c.id,
-                        child: Text(c.displayName),
+                        child: CategoryItem(
+                          displayName: c.displayName,
+                          categoryId: c.id,
+                        ),
                       ),
                     );
                   }
                 }
                 final optionValues = categoryOptions.map((e) => e.value).whereType<String>().toList();
-                final selectedCategory = optionValues.contains(settings.categoryId)
-                    ? settings.categoryId
+                // Use local state if available, otherwise use settings
+                final currentCategoryId = _localCategoryId ?? settings.categoryId;
+                final selectedCategory = optionValues.contains(currentCategoryId)
+                    ? currentCategoryId
                     : (optionValues.isNotEmpty ? optionValues.first : null);
 
                 return Padding(
@@ -177,9 +267,7 @@ class SetupScreen extends ConsumerWidget {
                             ),
                             const SizedBox(height: 18),
                             DropdownButtonFormField<String>(
-                              value: optionValues.contains(selectedCategory)
-                                  ? selectedCategory
-                                  : (optionValues.isNotEmpty ? optionValues.first : null),
+                              value: selectedCategory,
                               decoration: InputDecoration(
                                 labelText: strings.categoryFieldLabel,
                               ),
@@ -187,7 +275,14 @@ class SetupScreen extends ConsumerWidget {
                               onChanged: packAsync.isLoading
                                   ? null
                                   : (value) {
-                                      if (value != null) notifier.setCategory(value);
+                                      if (value != null) {
+                                        // Update local state immediately to prevent flicker
+                                        setState(() {
+                                          _localCategoryId = value;
+                                        });
+                                        // Then update persistent state
+                                        notifier.setCategory(value);
+                                      }
                                     },
                             ),
                         const SizedBox(height: 16),
@@ -196,6 +291,7 @@ class SetupScreen extends ConsumerWidget {
                               child: SizedBox(
                                 width: double.infinity,
                                 child: SegmentedButton<Difficulty>(
+                                  showSelectedIcon: false,
                                   segments: [
                                     ButtonSegment(
                                       value: Difficulty.easy,
@@ -248,6 +344,7 @@ class SetupScreen extends ConsumerWidget {
             ),
           ],
         ),
+      ),
       ),
     );
   }

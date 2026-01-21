@@ -49,7 +49,16 @@ class RateUsDialog extends StatelessWidget {
         ElevatedButton(
           onPressed: () async {
             Navigator.of(context).pop();
-            await InAppReview.instance.openStoreListing();
+            final review = InAppReview.instance;
+            
+            // First try to show the native in-app review dialog
+            // This only works if the app is published and the user hasn't reviewed recently
+            if (await review.isAvailable()) {
+              await review.requestReview();
+            } else {
+              // Fallback: open the store listing page
+              await review.openStoreListing();
+            }
           },
           child: Text(primaryLabel),
         ),

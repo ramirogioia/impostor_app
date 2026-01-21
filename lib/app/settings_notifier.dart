@@ -16,8 +16,11 @@ class SettingsNotifier extends AsyncNotifier<SettingsState> {
   Future<SettingsState> build() async {
     _storage = SettingsStorage();
     final loaded = await _storage.load();
+    // Clear cached player names when app starts (app was killed/closed)
+    final cleared = loaded.copyWith(cachedPlayerNames: []);
+    await _storage.save(cleared);
     // Ensure stored values respect constraints.
-    final sanitized = _sanitizeState(loaded);
+    final sanitized = _sanitizeState(cleared);
     return sanitized;
   }
 
@@ -87,6 +90,11 @@ class SettingsNotifier extends AsyncNotifier<SettingsState> {
     final impostors =
         suggestImpostors(players: current.players, difficulty: current.difficulty);
     await _updateState(current.copyWith(impostors: impostors));
+  }
+
+  Future<void> setCachedPlayerNames(List<String> names) async {
+    final current = state.value ?? SettingsState.initial();
+    await _updateState(current.copyWith(cachedPlayerNames: names));
   }
 
   SettingsState _sanitizeState(SettingsState state) {

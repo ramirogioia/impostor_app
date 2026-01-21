@@ -9,6 +9,7 @@ class SettingsStorage {
   static const _keyLocale = 'settings_locale';
   static const _keyCategory = 'settings_category';
   static const _keyAutoImpostors = 'settings_auto_impostors';
+  static const _keyCachedPlayerNames = 'settings_cached_player_names';
 
   Future<SettingsState> load() async {
     final prefs = await SharedPreferences.getInstance();
@@ -17,6 +18,9 @@ class SettingsStorage {
       (d) => d.name == difficultyName,
       orElse: () => SettingsState.initial().difficulty,
     );
+
+    final cachedNames = prefs.getStringList(_keyCachedPlayerNames) ?? 
+        SettingsState.initial().cachedPlayerNames;
 
     final loaded = SettingsState(
       players: prefs.getInt(_keyPlayers) ?? SettingsState.initial().players,
@@ -28,6 +32,7 @@ class SettingsStorage {
           prefs.getString(_keyCategory) ?? SettingsState.initial().categoryId,
       autoImpostors: prefs.getBool(_keyAutoImpostors) ??
           SettingsState.initial().autoImpostors,
+      cachedPlayerNames: cachedNames,
     );
 
     return loaded;
@@ -41,6 +46,7 @@ class SettingsStorage {
     await prefs.setString(_keyLocale, state.locale);
     await prefs.setString(_keyCategory, state.categoryId);
     await prefs.setBool(_keyAutoImpostors, state.autoImpostors);
+    await prefs.setStringList(_keyCachedPlayerNames, state.cachedPlayerNames);
   }
 }
 

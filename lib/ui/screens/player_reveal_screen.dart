@@ -3,18 +3,21 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../app/settings.dart';
 import '../../app/strings.dart';
+import '../widgets/category_pill.dart';
 import '../widgets/logo_mark.dart';
 
 class PlayerRevealArgs {
   const PlayerRevealArgs({
     required this.playerName,
     required this.categoryName,
+    required this.categoryId,
     required this.word,
     required this.isImpostor,
   });
 
   final String playerName;
   final String categoryName;
+  final String categoryId;
   final String word;
   final bool isImpostor;
 }
@@ -94,19 +97,19 @@ class _PlayerRevealScreenState extends ConsumerState<PlayerRevealScreen>
                   children: [
                     Text(
                       strings.wordForPlayer(args.playerName),
-                      style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
                             color: Colors.white70,
                             fontWeight: FontWeight.w600,
+                            fontSize: 18,
                           ),
                       textAlign: TextAlign.center,
                     ),
-                    const SizedBox(height: 6),
-                    Text(
-                      '${strings.categoryLabel}: ${args.categoryName}',
-                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                            fontWeight: FontWeight.w800,
-                          ),
-                      textAlign: TextAlign.center,
+                    const SizedBox(height: 12),
+                    CategoryPill(
+                      categoryName: args.categoryName,
+                      categoryId: args.categoryId,
+                      locale: settings?.locale ?? 'en-US',
+                      fontSize: 20,
                     ),
                     const SizedBox(height: 10),
                     SizedBox(

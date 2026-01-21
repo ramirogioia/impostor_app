@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../ui/screens/home_screen.dart';
+import '../ui/widgets/update_checker.dart';
 import 'router.dart';
 import 'theme.dart';
 
@@ -14,6 +15,7 @@ class ImpostorApp extends ConsumerWidget {
     final router = ref.watch(routerProvider);
     return MaterialApp.router(
       title: 'Impostor',
+      debugShowCheckedModeBanner: false,
       routerConfig: router,
       theme: buildLightTheme(),
       darkTheme: buildDarkTheme(),
@@ -31,7 +33,15 @@ class ImpostorApp extends ConsumerWidget {
         Locale('es', 'MX'),
       ],
       builder: (context, child) {
-        return child ?? const HomeScreen();
+        // UpgradeAlert debe estar dentro del builder para tener acceso al contexto
+        return UpdateChecker(
+          // Modo debug: activar para probar el diálogo de actualización
+          // En producción, siempre debe ser false
+          debugMode: true, // ✅ ACTIVADO para probar - Cambiar a false antes de publicar
+          // Cuando publiques en iOS, descomenta y agrega tu App Store ID:
+          // appStoreId: '1234567890', // Reemplazar con tu App ID real
+          child: child ?? const HomeScreen(),
+        );
       },
     );
   }

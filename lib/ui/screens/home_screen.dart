@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../data/word_pack_repository.dart';
 import '../../domain/validation/word_pack_validation.dart';
+import '../widgets/category_item.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
@@ -81,7 +82,10 @@ class _WordPackView extends StatelessWidget {
           final category = categories[index];
           return Card(
             child: ListTile(
-              title: Text(category.displayName),
+              title: CategoryItem(
+                displayName: category.displayName,
+                categoryId: category.id,
+              ),
               subtitle: Text(
                 '${category.words.length} words · ${category.id}',
               ),

@@ -10,6 +10,7 @@ class SettingsState {
     required this.locale,
     required this.categoryId,
     required this.autoImpostors,
+    this.cachedPlayerNames = const [],
   });
 
   static const int minPlayers = 3;
@@ -26,6 +27,7 @@ class SettingsState {
       locale: 'es-AR',
       categoryId: randomCategory,
       autoImpostors: true,
+      cachedPlayerNames: [],
     );
   }
 
@@ -35,6 +37,7 @@ class SettingsState {
   final String locale;
   final String categoryId;
   final bool autoImpostors;
+  final List<String> cachedPlayerNames;
 
   SettingsState copyWith({
     int? players,
@@ -43,6 +46,7 @@ class SettingsState {
     String? locale,
     String? categoryId,
     bool? autoImpostors,
+    List<String>? cachedPlayerNames,
   }) {
     return SettingsState(
       players: players ?? this.players,
@@ -51,6 +55,7 @@ class SettingsState {
       locale: locale ?? this.locale,
       categoryId: categoryId ?? this.categoryId,
       autoImpostors: autoImpostors ?? this.autoImpostors,
+      cachedPlayerNames: cachedPlayerNames ?? this.cachedPlayerNames,
     );
   }
 
@@ -62,6 +67,7 @@ class SettingsState {
       'locale': locale,
       'categoryId': categoryId,
       'autoImpostors': autoImpostors,
+      'cachedPlayerNames': cachedPlayerNames,
     };
   }
 
@@ -71,6 +77,13 @@ class SettingsState {
       (d) => d.name == difficultyName,
       orElse: () => Difficulty.medium,
     );
+    final cachedNames = json['cachedPlayerNames'];
+    final List<String> playerNames;
+    if (cachedNames is List) {
+      playerNames = cachedNames.map((e) => e.toString()).toList();
+    } else {
+      playerNames = SettingsState.initial().cachedPlayerNames;
+    }
     return SettingsState(
       players: (json['players'] as int?) ?? SettingsState.initial().players,
       impostors:
@@ -81,6 +94,7 @@ class SettingsState {
           (json['categoryId'] as String?) ?? SettingsState.initial().categoryId,
       autoImpostors:
           (json['autoImpostors'] as bool?) ?? SettingsState.initial().autoImpostors,
+      cachedPlayerNames: playerNames,
     );
   }
 

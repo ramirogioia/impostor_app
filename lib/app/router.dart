@@ -4,7 +4,6 @@ import 'package:go_router/go_router.dart';
 import '../ui/screens/home_screen.dart';
 import '../ui/screens/locale_selection_screen.dart';
 import '../ui/screens/settings_screen.dart';
-import '../ui/screens/splash_screen.dart';
 import '../ui/screens/setup_screen.dart';
 import '../ui/screens/game_screen.dart';
 import '../ui/screens/player_names_screen.dart';
@@ -13,13 +12,8 @@ import '../ui/screens/player_reveal_screen.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
   return GoRouter(
-    initialLocation: '/splash',
+    initialLocation: '/select-locale',
     routes: [
-      GoRoute(
-        path: '/splash',
-        name: 'splash',
-        builder: (context, state) => const SplashScreen(),
-      ),
       GoRoute(
         path: '/select-locale',
         name: 'select-locale',
