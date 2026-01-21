@@ -5,6 +5,7 @@ import '../../app/settings.dart';
 import '../../app/strings.dart';
 import '../widgets/category_pill.dart';
 import '../widgets/logo_mark.dart';
+import '../widgets/responsive_helper.dart';
 
 class PlayerRevealArgs {
   const PlayerRevealArgs({
@@ -84,11 +85,24 @@ class _PlayerRevealScreenState extends ConsumerState<PlayerRevealScreen>
         centerTitle: true,
         surfaceTintColor: Colors.transparent,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Stack(
-          children: [
-            Align(
+      body: Builder(
+        builder: (context) {
+          final isTablet = ResponsiveHelper.isTablet(context);
+          final maxWidth = ResponsiveHelper.getMaxContentWidth(context);
+          final horizontalPadding = ResponsiveHelper.getHorizontalPadding(context);
+          final verticalPadding = ResponsiveHelper.getVerticalPadding(context);
+
+          return Center(
+            child: ConstrainedBox(
+              constraints: BoxConstraints(maxWidth: maxWidth),
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: horizontalPadding,
+                  vertical: verticalPadding,
+                ),
+                child: Stack(
+                  children: [
+                    Align(
               alignment: Alignment.topCenter,
               child: Padding(
                 padding: const EdgeInsets.only(top: 12),
@@ -140,13 +154,18 @@ class _PlayerRevealScreenState extends ConsumerState<PlayerRevealScreen>
                   animation: _tapController,
                   builder: (context, child) {
                     final glowStrength = _glow.value;
+                    final isTablet = ResponsiveHelper.isTablet(context);
                     return Transform.scale(
                       scale: _tapScale.value,
                       child: Container(
                         width: double.infinity,
-                        constraints: const BoxConstraints(maxWidth: 320),
-                        padding:
-                            const EdgeInsets.symmetric(horizontal: 16, vertical: 22),
+                        constraints: BoxConstraints(
+                          maxWidth: isTablet ? 480 : 320,
+                        ),
+                        padding: EdgeInsets.symmetric(
+                          horizontal: isTablet ? 24 : 16,
+                          vertical: isTablet ? 32 : 22,
+                        ),
                         decoration: BoxDecoration(
                           color: _revealed
                               ? Theme.of(context).cardColor
@@ -175,7 +194,7 @@ class _PlayerRevealScreenState extends ConsumerState<PlayerRevealScreen>
                           ],
                         ),
                         child: SizedBox(
-                          height: 96,
+                          height: isTablet ? 120 : 96,
                           child: AnimatedSwitcher(
                             duration: const Duration(milliseconds: 260),
                             switchInCurve: Curves.easeOutBack,
@@ -201,6 +220,7 @@ class _PlayerRevealScreenState extends ConsumerState<PlayerRevealScreen>
                                           .titleLarge
                                           ?.copyWith(
                                             fontWeight: FontWeight.w800,
+                                            fontSize: isTablet ? 32 : null,
                                             color: args.isImpostor
                                                 ? Theme.of(context).colorScheme.error
                                                 : const Color(0xFF7DF9FF),
@@ -232,20 +252,34 @@ class _PlayerRevealScreenState extends ConsumerState<PlayerRevealScreen>
                     );
                   },
                 ),
-              ),
-            ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: _revealed ? () => Navigator.of(context).pop(true) : null,
-                  child: Text(strings.understood),
+                    ),
+                  ),
+                    Align(
+                      alignment: Alignment.bottomCenter,
+                      child: SizedBox(
+                        width: double.infinity,
+                        child: ElevatedButton(
+                          onPressed: _revealed ? () => Navigator.of(context).pop(true) : null,
+                          style: ElevatedButton.styleFrom(
+                            padding: EdgeInsets.symmetric(
+                              vertical: isTablet ? 18 : 16,
+                            ),
+                          ),
+                          child: Text(
+                            strings.understood,
+                            style: TextStyle(
+                              fontSize: isTablet ? 18 : null,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
-          ],
-        ),
+          );
+        },
       ),
     );
   }

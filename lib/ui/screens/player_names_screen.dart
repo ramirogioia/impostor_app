@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../../app/settings.dart';
 import '../../app/strings.dart';
 import '../widgets/logo_mark.dart';
+import '../widgets/responsive_helper.dart';
 
 class PlayerNamesScreen extends ConsumerStatefulWidget {
   const PlayerNamesScreen({super.key});
@@ -55,99 +56,161 @@ class _PlayerNamesScreenState extends ConsumerState<PlayerNamesScreen> {
                     FocusScope.of(context).unfocus();
                   },
                   behavior: HitTestBehavior.opaque,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 24, vertical: 16),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        const SizedBox(height: 12),
-                        SizedBox(
-                          height: 140,
-                          child: Image.asset(
-                            'assets/images/icon_square.png',
-                            fit: BoxFit.contain,
-                            errorBuilder: (_, __, ___) =>
-                                const LogoMark(size: 140),
-                          ),
-                        ),
-                        const SizedBox(height: 12),
-                        Text(
-                          strings.setupTitle,
-                          style: Theme.of(context)
-                              .textTheme
-                              .headlineMedium
-                              ?.copyWith(fontWeight: FontWeight.w800),
-                          textAlign: TextAlign.center,
-                        ),
-                        const SizedBox(height: 6),
-                        Text(
-                          strings.enterPlayersSubtitle(players),
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyMedium
-                              ?.copyWith(color: Colors.white70),
-                          textAlign: TextAlign.center,
-                        ),
-                        const SizedBox(height: 24),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            TextButton(
-                              onPressed: _resetUsers,
-                              style: TextButton.styleFrom(
-                                padding: EdgeInsets.zero,
-                                minimumSize: Size.zero,
-                                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                              ),
-                              child: Text(
-                                strings.resetUsers,
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.cyan,
-                                  decoration: TextDecoration.underline,
-                                  decorationColor: Colors.cyan,
-                                ),
-                              ),
+                  child: Builder(
+                    builder: (context) {
+                      final isTablet = ResponsiveHelper.isTablet(context);
+                      final maxWidth = ResponsiveHelper.getMaxContentWidth(context);
+                      final horizontalPadding = ResponsiveHelper.getHorizontalPadding(context);
+                      final verticalPadding = ResponsiveHelper.getVerticalPadding(context);
+
+                      return Center(
+                        child: ConstrainedBox(
+                          constraints: BoxConstraints(maxWidth: maxWidth),
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(
+                              horizontal: horizontalPadding,
+                              vertical: verticalPadding,
                             ),
-                          ],
-                        ),
-                        const SizedBox(height: 8),
-                        Expanded(
-                          child: ListView.separated(
-                            itemCount: players,
-                            separatorBuilder: (_, __) =>
-                                const SizedBox(height: 10),
-                            itemBuilder: (context, index) {
-                              return _PlayerInputCard(
-                                label: '${strings.playerLabel} ${index + 1}',
-                                controller: _controllers[index],
-                                focusNode: _focusNodes[index],
-                                onChanged: () => setState(() {}),
-                                onSubmitted: (value) {
-                                  if (index + 1 < players) {
-                                    _focusNodes[index + 1].requestFocus();
-                                  } else {
-                                    // Only submit if all fields are filled
-                                    if (_allFilled) {
-                                      _submit();
-                                    }
-                                  }
-                                },
-                              );
-                            },
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                SizedBox(height: isTablet ? 20 : 12),
+                                SizedBox(
+                                  height: isTablet ? 160 : 140,
+                                  child: Image.asset(
+                                    'assets/images/icon_square.png',
+                                    fit: BoxFit.contain,
+                                    errorBuilder: (_, __, ___) =>
+                                        LogoMark(size: isTablet ? 160 : 140),
+                                  ),
+                                ),
+                                SizedBox(height: isTablet ? 16 : 12),
+                                Text(
+                                  strings.setupTitle,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headlineMedium
+                                      ?.copyWith(
+                                        fontWeight: FontWeight.w800,
+                                        fontSize: isTablet ? 32 : null,
+                                      ),
+                                  textAlign: TextAlign.center,
+                                ),
+                                SizedBox(height: isTablet ? 10 : 6),
+                                Text(
+                                  strings.enterPlayersSubtitle(players),
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyMedium
+                                      ?.copyWith(
+                                        color: Colors.white70,
+                                        fontSize: isTablet ? 18 : null,
+                                      ),
+                                  textAlign: TextAlign.center,
+                                ),
+                                SizedBox(height: isTablet ? 28 : 24),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    TextButton(
+                                      onPressed: _resetUsers,
+                                      style: TextButton.styleFrom(
+                                        padding: EdgeInsets.zero,
+                                        minimumSize: Size.zero,
+                                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                                      ),
+                                      child: Text(
+                                        strings.resetUsers,
+                                        style: TextStyle(
+                                          fontSize: isTablet ? 14 : 12,
+                                          color: Colors.cyan,
+                                          decoration: TextDecoration.underline,
+                                          decorationColor: Colors.cyan,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: isTablet ? 12 : 8),
+                                Expanded(
+                                  child: isTablet
+                                      ? GridView.builder(
+                                          gridDelegate:
+                                              const SliverGridDelegateWithFixedCrossAxisCount(
+                                            crossAxisCount: 2,
+                                            crossAxisSpacing: 20,
+                                            mainAxisSpacing: 20,
+                                            childAspectRatio: 1.1,
+                                          ),
+                                          itemCount: players,
+                                          itemBuilder: (context, index) {
+                                            return _PlayerInputCard(
+                                              label: '${strings.playerLabel} ${index + 1}',
+                                              controller: _controllers[index],
+                                              focusNode: _focusNodes[index],
+                                              onChanged: () => setState(() {}),
+                                              onSubmitted: (value) {
+                                                if (index + 1 < players) {
+                                                  _focusNodes[index + 1].requestFocus();
+                                                } else {
+                                                  if (_allFilled) {
+                                                    _submit();
+                                                  }
+                                                }
+                                              },
+                                            );
+                                          },
+                                        )
+                                      : ListView.separated(
+                                          itemCount: players,
+                                          separatorBuilder: (_, __) =>
+                                              SizedBox(height: isTablet ? 14 : 10),
+                                          itemBuilder: (context, index) {
+                                            return _PlayerInputCard(
+                                              label: '${strings.playerLabel} ${index + 1}',
+                                              controller: _controllers[index],
+                                              focusNode: _focusNodes[index],
+                                              onChanged: () => setState(() {}),
+                                              onSubmitted: (value) {
+                                                if (index + 1 < players) {
+                                                  _focusNodes[index + 1].requestFocus();
+                                                } else {
+                                                  // Only submit if all fields are filled
+                                                  if (_allFilled) {
+                                                    _submit();
+                                                  }
+                                                }
+                                              },
+                                            );
+                                          },
+                                        ),
+                                ),
+                                SizedBox(height: isTablet ? 20 : 12),
+                                SizedBox(
+                                  width: double.infinity,
+                                  child: ElevatedButton(
+                                    onPressed: _allFilled ? _submit : null,
+                                    style: ElevatedButton.styleFrom(
+                                      padding: EdgeInsets.symmetric(
+                                        vertical: isTablet ? 24 : 16,
+                                      ),
+                                      minimumSize: Size(0, isTablet ? 56 : 48),
+                                    ),
+                                    child: Text(
+                                      strings.start,
+                                      style: TextStyle(
+                                        fontSize: isTablet ? 20 : null,
+                                        fontWeight: isTablet ? FontWeight.w600 : null,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
-                        const SizedBox(height: 12),
-                        SizedBox(
-                          width: double.infinity,
-                          child: ElevatedButton(
-                            onPressed: _allFilled ? _submit : null,
-                            child: Text(strings.start),
-                          ),
-                        ),
-                      ],
-                    ),
+                      );
+                    },
                   ),
                 );
               },
@@ -267,31 +330,72 @@ class _PlayerInputCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isTablet = ResponsiveHelper.isTablet(context);
     return Card(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
       child: Padding(
-        padding: const EdgeInsets.all(12),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              label,
-              style: const TextStyle(fontWeight: FontWeight.w700),
-            ),
-            const SizedBox(height: 8),
-            TextField(
-              controller: controller,
-              focusNode: focusNode,
-              textInputAction: TextInputAction.next,
-              textCapitalization: TextCapitalization.words,
-              onSubmitted: onSubmitted,
-              onChanged: (_) => onChanged(),
-              decoration: const InputDecoration(
-                hintText: 'Escribe un nombre',
+        padding: EdgeInsets.all(isTablet ? 20 : 12),
+        child: isTablet
+            ? Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    label,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 20,
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  Expanded(
+                    child: TextField(
+                      controller: controller,
+                      focusNode: focusNode,
+                      textInputAction: TextInputAction.next,
+                      textCapitalization: TextCapitalization.words,
+                      onSubmitted: onSubmitted,
+                      onChanged: (_) => onChanged(),
+                      style: const TextStyle(fontSize: 20),
+                      decoration: const InputDecoration(
+                        hintText: 'Escribe un nombre',
+                        contentPadding: EdgeInsets.symmetric(
+                          horizontal: 20,
+                          vertical: 24,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              )
+            : Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    label,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  TextField(
+                    controller: controller,
+                    focusNode: focusNode,
+                    textInputAction: TextInputAction.next,
+                    textCapitalization: TextCapitalization.words,
+                    onSubmitted: onSubmitted,
+                    onChanged: (_) => onChanged(),
+                    decoration: const InputDecoration(
+                      hintText: 'Escribe un nombre',
+                      contentPadding: EdgeInsets.symmetric(
+                        horizontal: 12,
+                        vertical: 16,
+                      ),
+                    ),
+                  ),
+                ],
               ),
-            ),
-          ],
-        ),
       ),
     );
   }

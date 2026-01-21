@@ -10,6 +10,7 @@ import '../../data/word_pack_repository.dart';
 import '../../domain/models/word_pack.dart';
 import '../widgets/category_pill.dart';
 import '../widgets/logo_mark.dart';
+import '../widgets/responsive_helper.dart';
 import 'player_reveal_screen.dart';
 
 class GameScreen extends ConsumerStatefulWidget {
@@ -61,25 +62,35 @@ class _GameScreenState extends ConsumerState<GameScreen> {
                     final names = _normalizeNames(session.players);
 
                     final gridItems = List.generate(session.players, (i) => i);
-                    return Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 20, vertical: 16),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const SizedBox(height: 8),
+                    final isTablet = ResponsiveHelper.isTablet(context);
+                    final maxWidth = ResponsiveHelper.getMaxContentWidth(context);
+                    final horizontalPadding = ResponsiveHelper.getHorizontalPadding(context);
+                    final verticalPadding = ResponsiveHelper.getVerticalPadding(context);
+
+                    return Center(
+                      child: ConstrainedBox(
+                        constraints: BoxConstraints(maxWidth: maxWidth),
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: horizontalPadding,
+                            vertical: verticalPadding,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                          SizedBox(height: isTablet ? 24 : 8),
                           Center(
                             child: SizedBox(
-                              height: 120,
+                              height: isTablet ? 180 : 120,
                               child: Image.asset(
                                 'assets/images/icon_square.png',
                                 fit: BoxFit.contain,
                                 errorBuilder: (_, __, ___) =>
-                                    const LogoMark(size: 120),
+                                    LogoMark(size: isTablet ? 180 : 120),
                               ),
                             ),
                           ),
-                          const SizedBox(height: 8),
+                          SizedBox(height: isTablet ? 16 : 8),
                           Center(
                             child: Container(
                               padding: const EdgeInsets.symmetric(
@@ -152,18 +163,26 @@ class _GameScreenState extends ConsumerState<GameScreen> {
                             child: LayoutBuilder(
                               builder: (context, constraints) {
                                 final width = constraints.maxWidth;
-                                final crossAxisCount = width > 900
-                                    ? 4
-                                    : width > 600
-                                        ? 3
-                                        : 2;
+                                // Mejor distribución para tablets
+                                int crossAxisCount;
+                                if (isTablet) {
+                                  if (width > 900) {
+                                    crossAxisCount = 5;
+                                  } else if (width > 700) {
+                                    crossAxisCount = 4;
+                                  } else {
+                                    crossAxisCount = 3;
+                                  }
+                                } else {
+                                  crossAxisCount = width > 600 ? 3 : 2;
+                                }
                                 return GridView.builder(
                                   itemCount: gridItems.length,
                                   gridDelegate:
                                       SliverGridDelegateWithFixedCrossAxisCount(
                                     crossAxisCount: crossAxisCount,
-                                    crossAxisSpacing: 12,
-                                    mainAxisSpacing: 12,
+                                    crossAxisSpacing: isTablet ? 16 : 12,
+                                    mainAxisSpacing: isTablet ? 16 : 12,
                                     childAspectRatio: 1,
                                   ),
                                   itemBuilder: (context, index) {
@@ -194,30 +213,56 @@ class _GameScreenState extends ConsumerState<GameScreen> {
                               },
                             ),
                           ),
-                          const SizedBox(height: 12),
-                          Row(
-                            children: [
-                              Expanded(
-                                child: OutlinedButton(
-                                  onPressed: () => _startNewRandomRound(
-                                      settings, result.pack),
-                                  child: Text(strings.newWord),
-                                ),
-                              ),
-                              const SizedBox(width: 12),
-                              Expanded(
-                                child: OutlinedButton(
-                                  onPressed: () {
-                                    setState(() {
-                                      _revealed.clear();
-                                    });
-                                  },
-                                  child: Text(strings.hideAll),
-                                ),
+                              SizedBox(height: isTablet ? 20 : 12),
+                              Row(
+                                children: [
+                                  Expanded(
+                                    child: OutlinedButton(
+                                      onPressed: () => _startNewRandomRound(
+                                          settings, result.pack),
+                                      style: OutlinedButton.styleFrom(
+                                        padding: EdgeInsets.symmetric(
+                                          vertical: isTablet ? 24 : 16,
+                                        ),
+                                        minimumSize: Size(0, isTablet ? 56 : 48),
+                                      ),
+                                      child: Text(
+                                        strings.newWord,
+                                        style: TextStyle(
+                                          fontSize: isTablet ? 20 : null,
+                                          fontWeight: isTablet ? FontWeight.w600 : null,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(width: isTablet ? 20 : 12),
+                                  Expanded(
+                                    child: OutlinedButton(
+                                      onPressed: () {
+                                        setState(() {
+                                          _revealed.clear();
+                                        });
+                                      },
+                                      style: OutlinedButton.styleFrom(
+                                        padding: EdgeInsets.symmetric(
+                                          vertical: isTablet ? 24 : 16,
+                                        ),
+                                        minimumSize: Size(0, isTablet ? 56 : 48),
+                                      ),
+                                      child: Text(
+                                        strings.hideAll,
+                                        style: TextStyle(
+                                          fontSize: isTablet ? 20 : null,
+                                          fontWeight: isTablet ? FontWeight.w600 : null,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
-                        ],
+                        ),
                       ),
                     );
                   },
@@ -371,6 +416,7 @@ class _PlayerCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     final cardColor = Theme.of(context).cardColor;
+    final isTablet = ResponsiveHelper.isTablet(context);
 
     return GestureDetector(
       onTap: revealed ? null : onTap,
@@ -378,61 +424,115 @@ class _PlayerCard extends StatelessWidget {
         duration: const Duration(milliseconds: 160),
         decoration: BoxDecoration(
           color: revealed ? cardColor.withOpacity(0.7) : cardColor,
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(isTablet ? 20 : 16),
           border: Border.all(
             color:
                 revealed ? colorScheme.primary : Colors.white.withOpacity(0.08),
-            width: 1.4,
+            width: isTablet ? 2 : 1.4,
           ),
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(0.35),
-              blurRadius: 12,
-              offset: const Offset(0, 8),
+              blurRadius: isTablet ? 16 : 12,
+              offset: Offset(0, isTablet ? 12 : 8),
             ),
           ],
         ),
         child: Padding(
-          padding: const EdgeInsets.all(16),
+          padding: EdgeInsets.all(isTablet ? 16 : 12),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
             children: [
-              SizedBox(
-                height: 44,
-                width: 44,
-                child: Image.asset(
-                  'assets/images/player_silhouette.png',
-                  fit: BoxFit.contain,
-                  color: Colors.white70,
-                  errorBuilder: (_, __, ___) => Icon(
-                    Icons.person_outline,
+              Flexible(
+                flex: 2,
+                child: SizedBox(
+                  height: isTablet ? 48 : 40,
+                  width: isTablet ? 48 : 40,
+                  child: Image.asset(
+                    'assets/images/player_silhouette.png',
+                    fit: BoxFit.contain,
                     color: Colors.white70,
-                    size: 32,
+                    errorBuilder: (_, __, ___) => Icon(
+                      Icons.person_outline,
+                      color: Colors.white70,
+                      size: isTablet ? 40 : 28,
+                    ),
                   ),
                 ),
               ),
-              const SizedBox(height: 10),
-              Text(
-                title,
-                style:
-                    const TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
-              ),
-              const SizedBox(height: 12),
-              AnimatedCrossFade(
-                firstChild: Text(revealLabel),
-                secondChild: Text(
-                  revealedLabel,
+              SizedBox(height: isTablet ? 8 : 6),
+              Flexible(
+                flex: 1,
+                child: Text(
+                  title,
                   textAlign: TextAlign.center,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                    color: colorScheme.primary,
+                    fontWeight: FontWeight.w700,
+                    fontSize: isTablet ? 18 : 14,
                   ),
                 ),
-                crossFadeState: revealed
-                    ? CrossFadeState.showSecond
-                    : CrossFadeState.showFirst,
-                duration: const Duration(milliseconds: 140),
+              ),
+              SizedBox(height: isTablet ? 8 : 6),
+              Flexible(
+                flex: 1,
+                child: SizedBox(
+                  height: isTablet ? 22 : 20,
+                  child: AnimatedCrossFade(
+                    firstChild: Center(
+                      child: Text(
+                        revealLabel,
+                        textAlign: TextAlign.center,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: isTablet ? 14 : 12,
+                        ),
+                      ),
+                    ),
+                    secondChild: Center(
+                      child: Text(
+                        revealedLabel,
+                        textAlign: TextAlign.center,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: isTablet ? 16 : 14,
+                          fontWeight: FontWeight.w800,
+                          color: colorScheme.primary,
+                        ),
+                      ),
+                    ),
+                    crossFadeState: revealed
+                        ? CrossFadeState.showSecond
+                        : CrossFadeState.showFirst,
+                    duration: const Duration(milliseconds: 140),
+                    layoutBuilder: (topChild, topChildKey, bottomChild, bottomChildKey) {
+                      return Stack(
+                        clipBehavior: Clip.none,
+                        alignment: Alignment.center,
+                        children: [
+                          Positioned(
+                            key: bottomChildKey,
+                            left: 0,
+                            top: 0,
+                            right: 0,
+                            child: bottomChild,
+                          ),
+                          Positioned(
+                            key: topChildKey,
+                            left: 0,
+                            top: 0,
+                            right: 0,
+                            child: topChild,
+                          ),
+                        ],
+                      );
+                    },
+                  ),
+                ),
               ),
             ],
           ),

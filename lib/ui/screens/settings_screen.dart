@@ -1,7 +1,7 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:upgrader/upgrader.dart';
 
 import '../../app/settings.dart';
 import '../../data/word_pack_repository.dart';
@@ -18,14 +18,7 @@ class SettingsScreen extends ConsumerWidget {
     final settingsAsync = ref.watch(settingsNotifierProvider);
     final packAsync = ref.watch(currentWordPackProvider);
 
-    return UpgradeAlert(
-      upgrader: Upgrader(
-        debugDisplayAlways: true,
-        debugLogging: true,
-        minAppVersion: '999.0.0',
-        durationUntilAlertAgain: const Duration(seconds: 0),
-      ),
-      child: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: const Text('Settings'),
           leading: IconButton(
@@ -191,49 +184,50 @@ class SettingsScreen extends ConsumerWidget {
                     'Failed to load word pack for ${settings.locale}',
                     style: TextStyle(color: Theme.of(context).colorScheme.error),
                   ),
-                // Testing section - siempre visible para probar el diálogo de actualización
-                const SizedBox(height: 24),
-                const Divider(),
-                const SizedBox(height: 12),
-                _Section(
-                  title: 'Testing',
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      OutlinedButton.icon(
-                        onPressed: () {
-                          // Mostrar un diálogo de prueba que simula el diálogo de actualización
-                          showDialog(
-                            context: context,
-                            barrierDismissible: true,
-                            builder: (dialogContext) {
-                              return AlertDialog(
-                                title: const Text('Actualización disponible'),
-                                content: const Text(
-                                  'Hay una nueva versión disponible en la tienda.\n\n'
-                                  '¿Deseas actualizar ahora?',
-                                ),
-                                actions: [
-                                  TextButton(
-                                    onPressed: () => Navigator.of(dialogContext).pop(),
-                                    child: const Text('Más tarde'),
+                // Testing section - solo visible en modo debug
+                if (kDebugMode) ...[
+                  const SizedBox(height: 24),
+                  const Divider(),
+                  const SizedBox(height: 12),
+                  _Section(
+                    title: 'Testing',
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        OutlinedButton.icon(
+                          onPressed: () {
+                            // Mostrar un diálogo de prueba que simula el diálogo de actualización
+                            showDialog(
+                              context: context,
+                              barrierDismissible: true,
+                              builder: (dialogContext) {
+                                return AlertDialog(
+                                  title: const Text('Actualización disponible'),
+                                  content: const Text(
+                                    'Hay una nueva versión disponible en la tienda.\n\n'
+                                    '¿Deseas actualizar ahora?',
                                   ),
-                                  ElevatedButton(
-                                    onPressed: () {
-                                      Navigator.of(dialogContext).pop();
-                                      // En producción, esto abriría la tienda
-                                      // upgrader.launchAppStore();
-                                    },
-                                    child: const Text('Actualizar'),
-                                  ),
-                                ],
-                              );
-                            },
-                          );
-                        },
-                        icon: const Icon(Icons.system_update),
-                        label: const Text('Test Update Dialog'),
-                      ),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () => Navigator.of(dialogContext).pop(),
+                                      child: const Text('Más tarde'),
+                                    ),
+                                    ElevatedButton(
+                                      onPressed: () {
+                                        Navigator.of(dialogContext).pop();
+                                        // En producción, esto abriría la tienda
+                                        // upgrader.launchAppStore();
+                                      },
+                                      child: const Text('Actualizar'),
+                                    ),
+                                  ],
+                                );
+                              },
+                            );
+                          },
+                          icon: const Icon(Icons.system_update),
+                          label: const Text('Test Update Dialog'),
+                        ),
                         const SizedBox(height: 8),
                         Text(
                           'Tap the button above to test the update dialog.\n\nIn production, the dialog will appear automatically when a new version is available.',
@@ -242,11 +236,11 @@ class SettingsScreen extends ConsumerWidget {
                       ],
                     ),
                   ),
+                ],
               ],
             ),
           );
         },
-      ),
       ),
     );
   }
