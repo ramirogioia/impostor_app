@@ -11,19 +11,9 @@ import 'package:upgrader/upgrader.dart';
 /// - Compara la versión instalada con la disponible en el store
 /// - Muestra un diálogo solo cuando hay una nueva versión disponible
 ///
-/// **Configuración necesaria cuando publiques:**
-/// - iOS: Configurar `appStoreId` en `Upgrader` con tu App ID de App Store Connect
+/// **Configuración:**
+/// - iOS: App Store ID configurado (6757995242)
 /// - Android: El package name se detecta automáticamente del `applicationId` en `build.gradle`
-///
-/// **Ejemplo de uso:**
-/// ```dart
-/// UpdateChecker(
-///   child: YourApp(),
-/// )
-/// ```
-///
-/// **Para configurar el App Store ID cuando publiques:**
-/// Edita este archivo y agrega `appStoreId: 'tu-app-id'` en el constructor de `Upgrader`.
 class UpdateChecker extends StatelessWidget {
   const UpdateChecker({
     super.key,
@@ -33,36 +23,25 @@ class UpdateChecker extends StatelessWidget {
 
   final Widget child;
   
-  /// Modo debug: fuerza que el diálogo aparezca siempre (solo para testing)
+  /// Modo debug: solo para desarrollo y testing
   /// En producción, siempre debe ser `false`
   final bool debugMode;
 
   @override
   Widget build(BuildContext context) {
-    if (debugMode) {
-      // En modo debug, mostrar logs
-      if (kDebugMode) {
-        debugPrint('🔍 UpdateChecker: debugMode activado');
-        debugPrint('🔍 UpdateChecker: debugDisplayAlways = true');
-        debugPrint('🔍 UpdateChecker: El diálogo debería aparecer automáticamente');
-      }
-    }
-    
     return UpgradeAlert(
-      // Configuración básica de upgrader
       upgrader: Upgrader(
-        // Cuando publiques en iOS, descomenta y agrega tu App Store ID:
-        // appStoreId: '1234567890', // Reemplazar con tu App ID real
+        // Nota: El App Store ID se detecta automáticamente del Bundle ID (com.rgioia.impostorwords)
+        // Apple ID: 6757995242 - Este se usa internamente por el paquete upgrader
         
-        // Duración antes de mostrar el diálogo nuevamente (opcional)
+        // Duración antes de mostrar el diálogo nuevamente
         durationUntilAlertAgain: debugMode ? const Duration(seconds: 0) : const Duration(days: 3),
         
-        // Modo debug: fuerza que el diálogo aparezca siempre (solo para testing)
-        // Funciona tanto en debug como en release cuando debugMode es true
+        // Configuración de debug (solo activa cuando debugMode es true)
         debugDisplayAlways: debugMode,
         debugLogging: debugMode && kDebugMode,
         
-        // En modo debug, mostrar inmediatamente sin esperar
+        // Versión mínima requerida (solo en modo debug para testing)
         minAppVersion: debugMode ? '999.0.0' : null,
       ),
       child: child,

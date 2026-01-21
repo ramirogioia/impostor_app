@@ -58,8 +58,6 @@ class ImpostorApp extends ConsumerWidget {
           // Modo debug: solo activo en modo debug de Flutter
           // En producción (release), siempre será false automáticamente
           debugMode: kDebugMode,
-          // Cuando publiques en iOS, descomenta y agrega tu App Store ID:
-          // appStoreId: '1234567890', // Reemplazar con tu App ID real de App Store Connect
           child: child ?? const HomeScreen(),
         );
       },
