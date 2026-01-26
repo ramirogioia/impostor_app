@@ -45,10 +45,9 @@ class _PlayerNamesScreenState extends ConsumerState<PlayerNamesScreen> {
               data: (settings) {
                 final strings = Strings.fromLocale(settings.locale);
                 final players = settings.players;
-                // Store cached names if not already stored
-                if (_cachedNames == null) {
-                  _cachedNames = settings.cachedPlayerNames;
-                }
+                // Always reload cached names from settings to ensure we have the latest
+                // This allows users to edit names after playing rounds
+                _cachedNames = settings.cachedPlayerNames;
                 _ensureControllers(players);
                 return GestureDetector(
                   onTap: () {
@@ -148,6 +147,7 @@ class _PlayerNamesScreenState extends ConsumerState<PlayerNamesScreen> {
                                               label: '${strings.playerLabel} ${index + 1}',
                                               controller: _controllers[index],
                                               focusNode: _focusNodes[index],
+                                              strings: strings,
                                               onChanged: () => setState(() {}),
                                               onSubmitted: (value) {
                                                 if (index + 1 < players) {
@@ -170,6 +170,7 @@ class _PlayerNamesScreenState extends ConsumerState<PlayerNamesScreen> {
                                               label: '${strings.playerLabel} ${index + 1}',
                                               controller: _controllers[index],
                                               focusNode: _focusNodes[index],
+                                              strings: strings,
                                               onChanged: () => setState(() {}),
                                               onSubmitted: (value) {
                                                 if (index + 1 < players) {
@@ -258,7 +259,7 @@ class _PlayerNamesScreenState extends ConsumerState<PlayerNamesScreen> {
       final controller = TextEditingController();
       final focusNode = FocusNode();
 
-      // Load cached name if available
+      // Load cached name if available (only when creating new controllers)
       if (_cachedNames != null && index < _cachedNames!.length) {
         controller.text = _cachedNames![index];
       }
@@ -267,17 +268,10 @@ class _PlayerNamesScreenState extends ConsumerState<PlayerNamesScreen> {
       _focusNodes.add(focusNode);
     }
 
-    // If count increased, load cached names for new fields (already done above)
-    // Also ensure existing fields have cached names loaded if they're empty
-    if (_cachedNames != null) {
-      for (int i = 0;
-          i < count && i < _controllers.length && i < _cachedNames!.length;
-          i++) {
-        if (_controllers[i].text.isEmpty) {
-          _controllers[i].text = _cachedNames![i];
-        }
-      }
-    }
+    // Note: We don't restore cached names to existing controllers here
+    // because that would interfere with user editing. Cached names are only
+    // loaded when creating new controllers (above). This allows users to
+    // clear fields and edit names freely.
   }
 
   bool get _allFilled =>
@@ -318,6 +312,7 @@ class _PlayerInputCard extends StatelessWidget {
     required this.label,
     required this.controller,
     required this.focusNode,
+    required this.strings,
     required this.onChanged,
     required this.onSubmitted,
   });
@@ -325,6 +320,7 @@ class _PlayerInputCard extends StatelessWidget {
   final String label;
   final TextEditingController controller;
   final FocusNode focusNode;
+  final Strings strings;
   final VoidCallback onChanged;
   final void Function(String) onSubmitted;
 
@@ -357,9 +353,9 @@ class _PlayerInputCard extends StatelessWidget {
                       onSubmitted: onSubmitted,
                       onChanged: (_) => onChanged(),
                       style: const TextStyle(fontSize: 20),
-                      decoration: const InputDecoration(
-                        hintText: 'Escribe un nombre',
-                        contentPadding: EdgeInsets.symmetric(
+                      decoration: InputDecoration(
+                        hintText: strings.enterNameHint,
+                        contentPadding: const EdgeInsets.symmetric(
                           horizontal: 20,
                           vertical: 24,
                         ),
@@ -386,9 +382,9 @@ class _PlayerInputCard extends StatelessWidget {
                     textCapitalization: TextCapitalization.words,
                     onSubmitted: onSubmitted,
                     onChanged: (_) => onChanged(),
-                    decoration: const InputDecoration(
-                      hintText: 'Escribe un nombre',
-                      contentPadding: EdgeInsets.symmetric(
+                    decoration: InputDecoration(
+                      hintText: strings.enterNameHint,
+                      contentPadding: const EdgeInsets.symmetric(
                         horizontal: 12,
                         vertical: 16,
                       ),

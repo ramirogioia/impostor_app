@@ -1,4 +1,4 @@
-# Configuración de Certificados para iOS Build
+rrr# Configuración de Certificados para iOS Build
 
 ## Problema
 `xcodebuild` necesita certificados de code signing para exportar el IPA. Si ves "0 valid identities found", necesitas instalar los certificados.

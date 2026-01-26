@@ -11,6 +11,7 @@ class SettingsState {
     required this.categoryId,
     required this.autoImpostors,
     this.cachedPlayerNames = const [],
+    this.preventImpostorFirst = false,
   });
 
   static const int minPlayers = 3;
@@ -28,6 +29,7 @@ class SettingsState {
       categoryId: randomCategory,
       autoImpostors: true,
       cachedPlayerNames: [],
+      preventImpostorFirst: false,
     );
   }
 
@@ -38,6 +40,7 @@ class SettingsState {
   final String categoryId;
   final bool autoImpostors;
   final List<String> cachedPlayerNames;
+  final bool preventImpostorFirst;
 
   SettingsState copyWith({
     int? players,
@@ -47,6 +50,7 @@ class SettingsState {
     String? categoryId,
     bool? autoImpostors,
     List<String>? cachedPlayerNames,
+    bool? preventImpostorFirst,
   }) {
     return SettingsState(
       players: players ?? this.players,
@@ -56,6 +60,7 @@ class SettingsState {
       categoryId: categoryId ?? this.categoryId,
       autoImpostors: autoImpostors ?? this.autoImpostors,
       cachedPlayerNames: cachedPlayerNames ?? this.cachedPlayerNames,
+      preventImpostorFirst: preventImpostorFirst ?? this.preventImpostorFirst,
     );
   }
 
@@ -68,6 +73,7 @@ class SettingsState {
       'categoryId': categoryId,
       'autoImpostors': autoImpostors,
       'cachedPlayerNames': cachedPlayerNames,
+      'preventImpostorFirst': preventImpostorFirst,
     };
   }
 
@@ -92,24 +98,33 @@ class SettingsState {
       locale: (json['locale'] as String?) ?? SettingsState.initial().locale,
       categoryId:
           (json['categoryId'] as String?) ?? SettingsState.initial().categoryId,
-      autoImpostors:
-          (json['autoImpostors'] as bool?) ?? SettingsState.initial().autoImpostors,
+      autoImpostors: (json['autoImpostors'] as bool?) ??
+          SettingsState.initial().autoImpostors,
       cachedPlayerNames: playerNames,
+      preventImpostorFirst: (json['preventImpostorFirst'] as bool?) ??
+          SettingsState.initial().preventImpostorFirst,
     );
   }
 
+  // Este método está deprecado - usar Strings.fromLocale(locale).randomCategory en su lugar
+  // Se mantiene solo para compatibilidad, pero debería eliminarse
+  @Deprecated('Use Strings.fromLocale(locale).randomCategory instead')
   String categoryLabel(List<WordCategory> categories) {
-    if (categoryId == randomCategory) return 'Random';
+    // Nota: Este método no puede localizar correctamente porque no tiene acceso al locale
+    // Debería eliminarse o modificarse para recibir el locale como parámetro
+    if (categoryId == randomCategory) {
+      // Retornar un valor genérico - el código que use esto debería usar Strings en su lugar
+      return 'Random'; // Este método está deprecado
+    }
     return categories
         .firstWhere(
           (c) => c.id == categoryId,
           orElse: () => const WordCategory(
             id: randomCategory,
-            displayName: 'Random',
+            displayName: 'Random', // Este método está deprecado
             words: [],
           ),
         )
         .displayName;
   }
 }
-

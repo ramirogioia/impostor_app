@@ -37,7 +37,7 @@ ThemeData buildDarkTheme() {
       foregroundColor: Colors.white,
     ),
     cardColor: _cardDark,
-    cardTheme: CardThemeData(
+    cardTheme: CardTheme(
       color: _cardDark,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
       elevation: 4,

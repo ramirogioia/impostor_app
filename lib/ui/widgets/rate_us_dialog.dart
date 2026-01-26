@@ -50,7 +50,7 @@ class RateUsDialog extends StatelessWidget {
           onPressed: () async {
             Navigator.of(context).pop();
             final review = InAppReview.instance;
-            
+
             // First try to show the native in-app review dialog
             // This only works if the app is published and the user hasn't reviewed recently
             if (await review.isAvailable()) {

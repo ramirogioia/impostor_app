@@ -21,17 +21,24 @@ class _LocaleSelectionScreenState extends ConsumerState<LocaleSelectionScreen> {
   static const Map<String, String> _languages = {
     'es': 'Español',
     'en': 'English',
+    'pt': 'Português',
   };
   static const Map<String, List<String>> _regionsByLanguage = {
-    'es': ['AR', 'ES', 'MX'],
-    'en': ['US', 'GB'],
+    'es': ['AR', 'ES', 'MX', 'UY'],
+    'en': ['US', 'GB', 'AU', 'CA'],
+    'pt': ['BR', 'PT'],
   };
   static const Map<String, String> _regionLabels = {
     'AR': 'Argentina',
     'ES': 'España',
     'MX': 'México',
+    'UY': 'Uruguay',
     'US': 'United States',
     'GB': 'United Kingdom',
+    'AU': 'Australia',
+    'CA': 'Canada',
+    'BR': 'Brasil',
+    'PT': 'Portugal',
   };
 
   String _language = 'es';
@@ -110,10 +117,7 @@ class _LocaleSelectionScreenState extends ConsumerState<LocaleSelectionScreen> {
                   SizedBox(height: isTablet ? 10 : 6),
                   Text(
                     strings.chooseLanguageSub,
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyMedium
-                        ?.copyWith(
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           color: Colors.white70,
                           fontSize: isTablet ? 18 : null,
                         ),
@@ -133,6 +137,8 @@ class _LocaleSelectionScreenState extends ConsumerState<LocaleSelectionScreen> {
                             ),
                           ),
                           dropdownColor: const Color(0xFF0F1628),
+                          menuMaxHeight: 300,
+                          alignment: AlignmentDirectional.bottomStart,
                           items: _languages.entries
                               .map(
                                 (entry) => DropdownMenuItem<String>(
@@ -152,8 +158,9 @@ class _LocaleSelectionScreenState extends ConsumerState<LocaleSelectionScreen> {
                                   if (value == null) return;
                                   setState(() {
                                     _language = value;
-                                    final newRegions = _regionsByLanguage[value] ??
-                                        const <String>['US'];
+                                    final newRegions =
+                                        _regionsByLanguage[value] ??
+                                            const <String>['US'];
                                     _region = newRegions.first;
                                   });
                                 },
@@ -169,13 +176,16 @@ class _LocaleSelectionScreenState extends ConsumerState<LocaleSelectionScreen> {
                             ),
                           ),
                           dropdownColor: const Color(0xFF0F1628),
+                          menuMaxHeight: 300,
+                          alignment: AlignmentDirectional.bottomStart,
                           items: regions
                               .map(
                                 (region) => DropdownMenuItem<String>(
                                   value: region,
                                   child: Row(
                                     mainAxisSize: MainAxisSize.min,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: [
                                       Text(
                                         _regionLabels[region] ?? region,
@@ -192,12 +202,60 @@ class _LocaleSelectionScreenState extends ConsumerState<LocaleSelectionScreen> {
                                 ),
                               )
                               .toList(),
+                          selectedItemBuilder: (context) {
+                            // Mostrar el badge "HOT" cuando Argentina está seleccionada
+                            return regions.map((region) {
+                              final label = _regionLabels[region] ?? region;
+                              if (region == 'AR') {
+                                return Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      label,
+                                      style: TextStyle(
+                                        fontSize: isTablet ? 18 : null,
+                                      ),
+                                    ),
+                                    const SizedBox(width: 6),
+                                    const HotBadge(),
+                                  ],
+                                );
+                              }
+                              return Text(
+                                label,
+                                style: TextStyle(
+                                  fontSize: isTablet ? 18 : null,
+                                ),
+                              );
+                            }).toList();
+                          },
                           onChanged: isLoading
                               ? null
                               : (value) {
                                   if (value == null) return;
                                   setState(() => _region = value);
                                 },
+                        ),
+                        SizedBox(height: isTablet ? 16 : 12),
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.info_outline,
+                              size: isTablet ? 20 : 16,
+                              color: Colors.white70,
+                            ),
+                            SizedBox(width: isTablet ? 8 : 6),
+                            Expanded(
+                              child: Text(
+                                strings.vocabularyAdaptedInfo,
+                                style: TextStyle(
+                                  fontSize: isTablet ? 14 : 12,
+                                  color: Colors.white70,
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                         SizedBox(height: isTablet ? 28 : 22),
                         SizedBox(

@@ -16,23 +16,24 @@ class SettingsNotifier extends AsyncNotifier<SettingsState> {
   Future<SettingsState> build() async {
     _storage = SettingsStorage();
     final loaded = await _storage.load();
-    // Clear cached player names when app starts (app was killed/closed)
-    final cleared = loaded.copyWith(cachedPlayerNames: []);
-    await _storage.save(cleared);
+    // Keep cached player names - don't clear them on app start
+    // Users should be able to edit names after playing rounds
     // Ensure stored values respect constraints.
-    final sanitized = _sanitizeState(cleared);
+    final sanitized = _sanitizeState(loaded);
     return sanitized;
   }
 
   Future<void> setPlayers(int value) async {
     final current = state.value ?? SettingsState.initial();
-    final players = _clamp(value, SettingsState.minPlayers, SettingsState.maxPlayers);
+    final players =
+        _clamp(value, SettingsState.minPlayers, SettingsState.maxPlayers);
     var impostors = current.impostors;
 
     // Do not auto-apply suggested impostors when player count changes.
     // Only clamp if current impostors becomes invalid.
     if (impostors >= players) {
-      impostors = _clamp(players - 1, SettingsState.minImpostors, SettingsState.maxImpostors);
+      impostors = _clamp(
+          players - 1, SettingsState.minImpostors, SettingsState.maxImpostors);
     }
 
     await _updateState(
@@ -56,16 +57,19 @@ class SettingsNotifier extends AsyncNotifier<SettingsState> {
     // Only clamp if the current value becomes invalid.
     var impostors = current.impostors;
     if (impostors >= current.players) {
-      impostors = _clamp(current.players - 1, SettingsState.minImpostors, SettingsState.maxImpostors);
+      impostors = _clamp(current.players - 1, SettingsState.minImpostors,
+          SettingsState.maxImpostors);
     }
-    await _updateState(current.copyWith(difficulty: difficulty, impostors: impostors));
+    await _updateState(
+        current.copyWith(difficulty: difficulty, impostors: impostors));
   }
 
   Future<void> setLocale(String locale) async {
     final current = state.value ?? SettingsState.initial();
     // When locale changes, category may become invalid; reset to random for now.
     await _updateState(
-      current.copyWith(locale: locale, categoryId: SettingsState.randomCategory),
+      current.copyWith(
+          locale: locale, categoryId: SettingsState.randomCategory),
     );
   }
 
@@ -78,17 +82,20 @@ class SettingsNotifier extends AsyncNotifier<SettingsState> {
     final current = state.value ?? SettingsState.initial();
     var impostors = current.impostors;
     if (enabled) {
-      impostors = suggestImpostors(players: current.players, difficulty: current.difficulty);
+      impostors = suggestImpostors(
+          players: current.players, difficulty: current.difficulty);
     } else if (impostors >= current.players) {
-      impostors = _clamp(current.players - 1, SettingsState.minImpostors, SettingsState.maxImpostors);
+      impostors = _clamp(current.players - 1, SettingsState.minImpostors,
+          SettingsState.maxImpostors);
     }
-    await _updateState(current.copyWith(autoImpostors: enabled, impostors: impostors));
+    await _updateState(
+        current.copyWith(autoImpostors: enabled, impostors: impostors));
   }
 
   Future<void> useRecommendedImpostors() async {
     final current = state.value ?? SettingsState.initial();
-    final impostors =
-        suggestImpostors(players: current.players, difficulty: current.difficulty);
+    final impostors = suggestImpostors(
+        players: current.players, difficulty: current.difficulty);
     await _updateState(current.copyWith(impostors: impostors));
   }
 
@@ -97,16 +104,22 @@ class SettingsNotifier extends AsyncNotifier<SettingsState> {
     await _updateState(current.copyWith(cachedPlayerNames: names));
   }
 
+  Future<void> setPreventImpostorFirst(bool value) async {
+    final current = state.value ?? SettingsState.initial();
+    await _updateState(current.copyWith(preventImpostorFirst: value));
+  }
+
   SettingsState _sanitizeState(SettingsState state) {
-    final players =
-        _clamp(state.players, SettingsState.minPlayers, SettingsState.maxPlayers);
+    final players = _clamp(
+        state.players, SettingsState.minPlayers, SettingsState.maxPlayers);
     var impostors = _clamp(
       state.impostors,
       SettingsState.minImpostors,
       _min(SettingsState.maxImpostors, players - 1),
     );
     if (impostors >= players) {
-      impostors = _clamp(players - 1, SettingsState.minImpostors, SettingsState.maxImpostors);
+      impostors = _clamp(
+          players - 1, SettingsState.minImpostors, SettingsState.maxImpostors);
     }
     return state.copyWith(players: players, impostors: impostors);
   }
@@ -124,4 +137,3 @@ int _clamp(int value, int min, int max) {
 }
 
 int _min(int a, int b) => a < b ? a : b;
-

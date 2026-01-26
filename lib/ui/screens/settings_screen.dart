@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../app/settings.dart';
+import '../../app/strings.dart';
 import '../../data/word_pack_repository.dart';
 import '../../domain/models/word_pack.dart';
 import '../widgets/category_item.dart';
@@ -11,7 +12,7 @@ import '../widgets/category_item.dart';
 class SettingsScreen extends ConsumerWidget {
   const SettingsScreen({super.key});
 
-  static const locales = ['es-AR', 'es-ES', 'es-MX', 'en-US', 'en-GB'];
+  static const locales = ['es-AR', 'es-ES', 'es-MX', 'es-UY', 'en-US', 'en-GB', 'en-AU', 'en-CA', 'pt-BR', 'pt-PT'];
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -43,10 +44,25 @@ class SettingsScreen extends ConsumerWidget {
           final sortedCategories = List<WordCategory>.from(categories)
             ..sort((a, b) => a.displayName.compareTo(b.displayName));
 
+          final strings = Strings.fromLocale(settings.locale);
           final List<DropdownMenuItem<String>> categoryOptions = [
-            const DropdownMenuItem<String>(
+            DropdownMenuItem<String>(
               value: SettingsState.randomCategory,
-              child: Text('Random'),
+              child: Row(
+                key: ValueKey('random_category_row_${settings.locale}'),
+                children: [
+                  const Icon(Icons.shuffle, size: 18, color: Colors.orange),
+                  const SizedBox(width: 8),
+                  Text(
+                    strings.randomCategory,
+                    key: ValueKey('random_category_text_${settings.locale}'),
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.orange,
+                    ),
+                  ),
+                ],
+              ),
             ),
             ...sortedCategories.map(
               (c) => DropdownMenuItem<String>(
@@ -75,6 +91,8 @@ class SettingsScreen extends ConsumerWidget {
                   title: 'Locale',
                   child: DropdownButtonFormField<String>(
                     value: settings.locale,
+                    menuMaxHeight: 300,
+                    alignment: AlignmentDirectional.bottomStart,
                     items: locales
                         .map((l) => DropdownMenuItem(
                               value: l,
@@ -167,6 +185,8 @@ class SettingsScreen extends ConsumerWidget {
                   title: 'Category',
                   child: DropdownButtonFormField<String>(
                     value: hasCategory ? settings.categoryId : SettingsState.randomCategory,
+                    menuMaxHeight: 300,
+                    alignment: AlignmentDirectional.bottomStart,
                     items: categoryOptions,
                     onChanged: (value) {
                       if (value != null) notifier.setCategory(value);

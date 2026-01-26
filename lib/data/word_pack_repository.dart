@@ -26,9 +26,13 @@ class WordPackRepository {
     'es-AR': 'assets/words/es-AR.json',
     'es-ES': 'assets/words/es-ES.json',
     'es-MX': 'assets/words/es-MX.json',
+    'es-UY': 'assets/words/es-UY.json',
     'en-US': 'assets/words/en-US.json',
     'en-GB': 'assets/words/en-GB.json',
+    'en-AU': 'assets/words/en-AU.json',
+    'en-CA': 'assets/words/en-CA.json',
     'pt-BR': 'assets/words/pt-BR.json',
+    'pt-PT': 'assets/words/pt-PT.json',
   };
 
   static const Map<String, String> _languageFallback = {
