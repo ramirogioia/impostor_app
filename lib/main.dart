@@ -12,6 +12,9 @@ Future<void> main() async {
     SystemUiMode.immersiveSticky,
   );
 
+  // Delay adicional del splash screen (1 segundo)
+  await Future.delayed(const Duration(seconds: 1));
+
   runApp(const ProviderScope(child: ImpostorApp()));
 }
 
