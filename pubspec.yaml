@@ -33,6 +33,7 @@ flutter_launcher_icons:
   ios: true
   ios_image_path: assets/images/icon_square_ios.png
   remove_alpha_ios: true
+  background_color_ios: "#000000"
   min_sdk_android: 21
   adaptive_icon_background: "#000000"
   adaptive_icon_foreground: assets/images/icon_square_foreground.png
@@ -42,7 +43,4 @@ flutter:
   assets:
     - assets/words/
     - assets/images/
-    - assets/images/splash_portrait.png
-    - assets/images/splash_landscape.png
-    - assets/images/logo_icon.png
 

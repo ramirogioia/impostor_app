@@ -44,5 +44,6 @@ app.*.map.json
 
 # Android signing files (DO NOT COMMIT THESE)
 /android/key.properties
+/android/keystore-passwords.txt
 /android/app/*.jks
 /android/app/*.keystore
