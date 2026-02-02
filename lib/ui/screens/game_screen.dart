@@ -31,6 +31,18 @@ class _GameScreenState extends ConsumerState<GameScreen> {
   Difficulty? _overrideDifficulty;
 
   @override
+  void initState() {
+    super.initState();
+    Future.microtask(() async {
+      await ref.read(settingsNotifierProvider.future);
+      if (!mounted) return;
+      await ref
+          .read(settingsNotifierProvider.notifier)
+          .clearCachedPlayerNamesIfExpired();
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     final settingsAsync = ref.watch(settingsNotifierProvider);
     final packAsync = ref.watch(currentWordPackProvider);
@@ -43,7 +55,7 @@ class _GameScreenState extends ConsumerState<GameScreen> {
               top: 8,
               left: 8,
               child: IconButton(
-                icon: const Icon(Icons.arrow_back, color: Colors.white),
+                icon: const Icon(Icons.arrow_back),
                 onPressed: () => context.go('/players'),
               ),
             ),
@@ -84,12 +96,26 @@ class _GameScreenState extends ConsumerState<GameScreen> {
                           Center(
                             child: SizedBox(
                               height: isTablet ? 180 : 120,
-                              child: Image.asset(
-                                'assets/images/icon_square.png',
-                                fit: BoxFit.contain,
-                                errorBuilder: (_, __, ___) =>
-                                    LogoMark(size: isTablet ? 180 : 120),
-                              ),
+                              child: Theme.of(context).brightness ==
+                                      Brightness.light
+                                  ? Container(
+                                      color: Colors.white,
+                                      child: Image.asset(
+                                        'assets/images/icon_square_foreground.png',
+                                        fit: BoxFit.contain,
+                                        errorBuilder: (_, __, ___) =>
+                                            LogoMark(
+                                              size: isTablet ? 180 : 120,
+                                              isLight: true,
+                                            ),
+                                      ),
+                                    )
+                                  : Image.asset(
+                                      'assets/images/icon_square.png',
+                                      fit: BoxFit.contain,
+                                      errorBuilder: (_, __, ___) =>
+                                          LogoMark(size: isTablet ? 180 : 120),
+                                    ),
                             ),
                           ),
                           SizedBox(height: isTablet ? 16 : 8),
@@ -444,7 +470,7 @@ class _GameScreenState extends ConsumerState<GameScreen> {
                       borderRadius: BorderRadius.circular(12),
                     ),
                   ),
-                  dropdownColor: const Color(0xFF0F1628),
+                  dropdownColor: Theme.of(context).colorScheme.surface,
                   menuMaxHeight: 300,
                   alignment: AlignmentDirectional.bottomStart,
                   style: TextStyle(color: Colors.white),

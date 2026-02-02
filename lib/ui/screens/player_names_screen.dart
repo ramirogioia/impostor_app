@@ -76,12 +76,27 @@ class _PlayerNamesScreenState extends ConsumerState<PlayerNamesScreen> {
                                 SizedBox(height: isTablet ? 20 : 12),
                                 SizedBox(
                                   height: isTablet ? 160 : 140,
-                                  child: Image.asset(
-                                    'assets/images/icon_square.png',
-                                    fit: BoxFit.contain,
-                                    errorBuilder: (_, __, ___) =>
-                                        LogoMark(size: isTablet ? 160 : 140),
-                                  ),
+                                  child: Theme.of(context).brightness ==
+                                          Brightness.light
+                                      ? Container(
+                                          color: Colors.white,
+                                          child: Image.asset(
+                                            'assets/images/icon_square_foreground.png',
+                                            fit: BoxFit.contain,
+                                            errorBuilder: (_, __, ___) =>
+                                                LogoMark(
+                                                  size: isTablet ? 160 : 140,
+                                                  isLight: true,
+                                                ),
+                                          ),
+                                        )
+                                      : Image.asset(
+                                          'assets/images/icon_square.png',
+                                          fit: BoxFit.contain,
+                                          errorBuilder: (_, __, ___) =>
+                                              LogoMark(
+                                                  size: isTablet ? 160 : 140),
+                                        ),
                                 ),
                                 SizedBox(height: isTablet ? 16 : 12),
                                 Text(
@@ -102,7 +117,10 @@ class _PlayerNamesScreenState extends ConsumerState<PlayerNamesScreen> {
                                       .textTheme
                                       .bodyMedium
                                       ?.copyWith(
-                                        color: Colors.white70,
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .onSurface
+                                            .withValues(alpha: 0.7),
                                         fontSize: isTablet ? 18 : null,
                                       ),
                                   textAlign: TextAlign.center,
@@ -230,7 +248,7 @@ class _PlayerNamesScreenState extends ConsumerState<PlayerNamesScreen> {
                     width: 48,
                     height: 48,
                     alignment: Alignment.center,
-                    child: const Icon(Icons.arrow_back, color: Colors.white),
+                    child: const Icon(Icons.arrow_back),
                   ),
                 ),
               ),

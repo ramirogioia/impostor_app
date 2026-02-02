@@ -7,14 +7,66 @@ const Color _cardDark = Color(0xFF111827);
 
 ThemeData buildLightTheme() {
   final base = ThemeData.light(useMaterial3: true);
+  final scheme = ColorScheme.fromSeed(
+    seedColor: _brandBlue,
+    brightness: Brightness.light,
+  );
   return base.copyWith(
-    colorScheme: ColorScheme.fromSeed(
-      seedColor: _brandBlue,
-      brightness: Brightness.light,
-    ),
-    appBarTheme: const AppBarTheme(
+    colorScheme: scheme,
+    scaffoldBackgroundColor: scheme.background,
+    appBarTheme: AppBarTheme(
+      backgroundColor: scheme.background,
+      foregroundColor: scheme.onBackground,
       centerTitle: true,
+      elevation: 0,
     ),
+    cardTheme: CardThemeData(
+      color: scheme.surface,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
+      elevation: 2,
+      shadowColor: _brandBlue.withValues(alpha: 0.12),
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      filled: true,
+      fillColor: scheme.surface,
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(14),
+        borderSide: BorderSide(color: scheme.outline.withValues(alpha: 0.5)),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(14),
+        borderSide: BorderSide(color: scheme.outline.withValues(alpha: 0.4)),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(14),
+        borderSide: const BorderSide(color: _brandBlue, width: 1.4),
+      ),
+      labelStyle: TextStyle(color: scheme.onSurface.withValues(alpha: 0.7)),
+      hintStyle: TextStyle(color: scheme.onSurface.withValues(alpha: 0.55)),
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: _brandBlue,
+        foregroundColor: Colors.white,
+        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+        textStyle: const TextStyle(fontWeight: FontWeight.w700),
+        elevation: 2,
+        shadowColor: _brandBlue.withValues(alpha: 0.25),
+      ),
+    ),
+    outlinedButtonTheme: OutlinedButtonThemeData(
+      style: OutlinedButton.styleFrom(
+        foregroundColor: scheme.onSurface,
+        side: BorderSide(color: scheme.outline.withValues(alpha: 0.6)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+      ),
+    ),
+    textTheme: base.textTheme.apply(
+      bodyColor: scheme.onSurface,
+      displayColor: scheme.onSurface,
+    ),
+    dividerColor: scheme.outline.withValues(alpha: 0.2),
   );
 }
 
@@ -37,7 +89,7 @@ ThemeData buildDarkTheme() {
       foregroundColor: Colors.white,
     ),
     cardColor: _cardDark,
-    cardTheme: CardTheme(
+    cardTheme: CardThemeData(
       color: _cardDark,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
       elevation: 4,

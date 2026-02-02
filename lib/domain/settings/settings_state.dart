@@ -10,7 +10,9 @@ class SettingsState {
     required this.locale,
     required this.categoryId,
     required this.autoImpostors,
+    required this.isDarkTheme,
     this.cachedPlayerNames = const [],
+    this.cachedPlayerNamesLastUsed,
     this.preventImpostorFirst = false,
   });
 
@@ -28,6 +30,7 @@ class SettingsState {
       locale: 'es-AR',
       categoryId: randomCategory,
       autoImpostors: true,
+      isDarkTheme: true,
       cachedPlayerNames: [],
       preventImpostorFirst: false,
     );
@@ -39,7 +42,9 @@ class SettingsState {
   final String locale;
   final String categoryId;
   final bool autoImpostors;
+  final bool isDarkTheme;
   final List<String> cachedPlayerNames;
+  final int? cachedPlayerNamesLastUsed;
   final bool preventImpostorFirst;
 
   SettingsState copyWith({
@@ -49,7 +54,9 @@ class SettingsState {
     String? locale,
     String? categoryId,
     bool? autoImpostors,
+    bool? isDarkTheme,
     List<String>? cachedPlayerNames,
+    int? cachedPlayerNamesLastUsed,
     bool? preventImpostorFirst,
   }) {
     return SettingsState(
@@ -59,7 +66,10 @@ class SettingsState {
       locale: locale ?? this.locale,
       categoryId: categoryId ?? this.categoryId,
       autoImpostors: autoImpostors ?? this.autoImpostors,
+      isDarkTheme: isDarkTheme ?? this.isDarkTheme,
       cachedPlayerNames: cachedPlayerNames ?? this.cachedPlayerNames,
+      cachedPlayerNamesLastUsed:
+          cachedPlayerNamesLastUsed ?? this.cachedPlayerNamesLastUsed,
       preventImpostorFirst: preventImpostorFirst ?? this.preventImpostorFirst,
     );
   }
@@ -72,7 +82,9 @@ class SettingsState {
       'locale': locale,
       'categoryId': categoryId,
       'autoImpostors': autoImpostors,
+      'isDarkTheme': isDarkTheme,
       'cachedPlayerNames': cachedPlayerNames,
+      'cachedPlayerNamesLastUsed': cachedPlayerNamesLastUsed,
       'preventImpostorFirst': preventImpostorFirst,
     };
   }
@@ -84,6 +96,7 @@ class SettingsState {
       orElse: () => Difficulty.medium,
     );
     final cachedNames = json['cachedPlayerNames'];
+    final lastUsed = json['cachedPlayerNamesLastUsed'] as int?;
     final List<String> playerNames;
     if (cachedNames is List) {
       playerNames = cachedNames.map((e) => e.toString()).toList();
@@ -100,7 +113,10 @@ class SettingsState {
           (json['categoryId'] as String?) ?? SettingsState.initial().categoryId,
       autoImpostors: (json['autoImpostors'] as bool?) ??
           SettingsState.initial().autoImpostors,
+      isDarkTheme:
+          (json['isDarkTheme'] as bool?) ?? SettingsState.initial().isDarkTheme,
       cachedPlayerNames: playerNames,
+      cachedPlayerNamesLastUsed: lastUsed,
       preventImpostorFirst: (json['preventImpostorFirst'] as bool?) ??
           SettingsState.initial().preventImpostorFirst,
     );

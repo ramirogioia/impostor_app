@@ -32,13 +32,16 @@ class ImpostorApp extends ConsumerWidget {
     final localeString = settingsAsync.valueOrNull?.locale ?? 'es-AR';
     final locale = _parseLocale(localeString);
     
+    // Tema siempre oscuro por ahora (temporalmente deshabilitado el switch)
+    // final isDarkTheme = settingsAsync.valueOrNull?.isDarkTheme ?? true;
+
     return MaterialApp.router(
       title: 'Impostor',
       debugShowCheckedModeBanner: false,
       routerConfig: router,
       theme: buildLightTheme(),
       darkTheme: buildDarkTheme(),
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.dark, // Siempre oscuro por ahora
       locale: locale, // ✅ Aplicar el locale de los settings
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,

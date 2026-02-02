@@ -3,16 +3,23 @@ import 'package:flutter/material.dart';
 /// Simple, code-drawn version of the provided logo so we don't depend on an
 /// external asset. Replace with Image.asset if you drop in the official file.
 class LogoMark extends StatelessWidget {
-  const LogoMark({super.key, this.size = 260});
+  const LogoMark({super.key, this.size = 260, this.isLight});
 
   final double size;
+  final bool? isLight;
 
   @override
   Widget build(BuildContext context) {
+    final useLight = isLight ?? Theme.of(context).brightness == Brightness.light;
     final hatHeight = size * 0.34;
     final hatWidth = size * 0.92;
     final bodyWidth = size * 0.52;
     final bodyHeight = size * 0.65;
+    final bodyColor = useLight ? Colors.white : const Color(0xFF05070F);
+    final gColor = useLight ? Colors.black : Colors.white;
+    final glowColor =
+        (useLight ? const Color(0xFF2A7BFF) : const Color(0xFF2A7BFF))
+            .withValues(alpha: useLight ? 0.2 : 0.35);
 
     return SizedBox(
       width: size,
@@ -25,7 +32,8 @@ class LogoMark extends StatelessWidget {
               decoration: BoxDecoration(
                 gradient: RadialGradient(
                   colors: [
-                    const Color(0xFF1C2F55).withOpacity(0.5),
+                    const Color(0xFF1C2F55)
+                        .withValues(alpha: useLight ? 0.2 : 0.5),
                     Colors.transparent,
                   ],
                   radius: 0.7,
@@ -106,11 +114,11 @@ class LogoMark extends StatelessWidget {
             width: bodyWidth,
             height: bodyHeight,
             decoration: BoxDecoration(
-              color: const Color(0xFF05070F),
+              color: bodyColor,
               borderRadius: BorderRadius.circular(size * 0.18),
               boxShadow: [
                 BoxShadow(
-                  color: const Color(0xFF2A7BFF).withOpacity(0.35),
+                  color: glowColor,
                   blurRadius: 32,
                   spreadRadius: 1,
                   offset: const Offset(0, 20),
@@ -125,7 +133,7 @@ class LogoMark extends StatelessWidget {
                   style: TextStyle(
                     fontSize: bodyHeight * 0.74,
                     fontWeight: FontWeight.w900,
-                    color: Colors.white,
+                    color: gColor,
                     height: 0.9,
                   ),
                 ),

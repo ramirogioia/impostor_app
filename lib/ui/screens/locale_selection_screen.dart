@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../app/settings.dart';
 import '../../app/strings.dart';
+import '../../app/version_checker_notifier.dart';
 import '../widgets/category_item.dart';
 import '../widgets/logo_mark.dart';
 import '../widgets/rate_us_dialog.dart';
@@ -97,13 +98,25 @@ class _LocaleSelectionScreenState extends ConsumerState<LocaleSelectionScreen> {
                   SizedBox(height: isTablet ? 24 : 12),
                   SizedBox(
                     height: isTablet ? 180 : 140,
-                    child: Image.asset(
-                      'assets/images/icon_square.png',
-                      fit: BoxFit.contain,
-                      errorBuilder: (_, __, ___) => LogoMark(
-                        size: isTablet ? 180 : 140,
-                      ),
-                    ),
+                    child: Theme.of(context).brightness == Brightness.light
+                        ? Container(
+                            color: Colors.white,
+                            child: Image.asset(
+                              'assets/images/icon_square_foreground.png',
+                              fit: BoxFit.contain,
+                              errorBuilder: (_, __, ___) => LogoMark(
+                                size: isTablet ? 180 : 140,
+                                isLight: true,
+                              ),
+                            ),
+                          )
+                        : Image.asset(
+                            'assets/images/icon_square.png',
+                            fit: BoxFit.contain,
+                            errorBuilder: (_, __, ___) => LogoMark(
+                              size: isTablet ? 180 : 140,
+                            ),
+                          ),
                   ),
                   SizedBox(height: isTablet ? 20 : 12),
                   Text(
@@ -118,7 +131,10 @@ class _LocaleSelectionScreenState extends ConsumerState<LocaleSelectionScreen> {
                   Text(
                     strings.chooseLanguageSub,
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          color: Colors.white70,
+                          color: Theme.of(context)
+                              .colorScheme
+                              .onSurface
+                              .withValues(alpha: 0.7),
                           fontSize: isTablet ? 18 : null,
                         ),
                     textAlign: TextAlign.center,
@@ -136,7 +152,7 @@ class _LocaleSelectionScreenState extends ConsumerState<LocaleSelectionScreen> {
                               vertical: isTablet ? 20 : 16,
                             ),
                           ),
-                          dropdownColor: const Color(0xFF0F1628),
+                          dropdownColor: Theme.of(context).colorScheme.surface,
                           menuMaxHeight: 300,
                           alignment: AlignmentDirectional.bottomStart,
                           items: _languages.entries
@@ -175,7 +191,7 @@ class _LocaleSelectionScreenState extends ConsumerState<LocaleSelectionScreen> {
                               vertical: isTablet ? 20 : 16,
                             ),
                           ),
-                          dropdownColor: const Color(0xFF0F1628),
+                          dropdownColor: Theme.of(context).colorScheme.surface,
                           menuMaxHeight: 300,
                           alignment: AlignmentDirectional.bottomStart,
                           items: regions
@@ -193,7 +209,7 @@ class _LocaleSelectionScreenState extends ConsumerState<LocaleSelectionScreen> {
                                           fontSize: isTablet ? 18 : null,
                                         ),
                                       ),
-                                      if (region == 'AR') ...[
+                                      if (region == 'AR' || region == 'US') ...[
                                         const SizedBox(width: 6),
                                         const HotBadge(),
                                       ],
@@ -203,10 +219,10 @@ class _LocaleSelectionScreenState extends ConsumerState<LocaleSelectionScreen> {
                               )
                               .toList(),
                           selectedItemBuilder: (context) {
-                            // Mostrar el badge "HOT" cuando Argentina está seleccionada
+                            // Mostrar el badge "HOT" cuando Argentina/USA está seleccionada
                             return regions.map((region) {
                               final label = _regionLabels[region] ?? region;
-                              if (region == 'AR') {
+                              if (region == 'AR' || region == 'US') {
                                 return Row(
                                   mainAxisSize: MainAxisSize.min,
                                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -243,7 +259,10 @@ class _LocaleSelectionScreenState extends ConsumerState<LocaleSelectionScreen> {
                             Icon(
                               Icons.info_outline,
                               size: isTablet ? 20 : 16,
-                              color: Colors.white70,
+                              color: Theme.of(context)
+                                  .colorScheme
+                                  .onSurface
+                                  .withValues(alpha: 0.7),
                             ),
                             SizedBox(width: isTablet ? 8 : 6),
                             Expanded(
@@ -251,7 +270,10 @@ class _LocaleSelectionScreenState extends ConsumerState<LocaleSelectionScreen> {
                                 strings.vocabularyAdaptedInfo,
                                 style: TextStyle(
                                   fontSize: isTablet ? 14 : 12,
-                                  color: Colors.white70,
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .onSurface
+                                      .withValues(alpha: 0.7),
                                 ),
                               ),
                             ),
@@ -325,6 +347,13 @@ class _LocaleSelectionScreenState extends ConsumerState<LocaleSelectionScreen> {
   Future<void> _saveAndContinue() async {
     setState(() => _isSaving = true);
     final locale = '${_language}-${_region.toUpperCase()}';
+    final strings = Strings.fromLocale(locale);
+    await ref.read(versionCheckerNotifierProvider.notifier).checkForUpdates(
+          context: context,
+          strings: strings,
+          showNoUpdateMessage: false,
+          skipIfSoftShown: true,
+        );
     await ref.read(settingsNotifierProvider.notifier).setLocale(locale);
     if (!mounted) return;
     setState(() => _isSaving = false);

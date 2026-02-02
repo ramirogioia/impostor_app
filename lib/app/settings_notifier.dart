@@ -19,7 +19,14 @@ class SettingsNotifier extends AsyncNotifier<SettingsState> {
     // Keep cached player names - don't clear them on app start
     // Users should be able to edit names after playing rounds
     // Ensure stored values respect constraints.
-    final sanitized = _sanitizeState(loaded);
+    var sanitized = _sanitizeState(loaded);
+    if (sanitized.cachedPlayerNames.isNotEmpty &&
+        sanitized.cachedPlayerNamesLastUsed == null) {
+      sanitized = sanitized.copyWith(
+        cachedPlayerNamesLastUsed: DateTime.now().millisecondsSinceEpoch,
+      );
+      await _storage.save(sanitized);
+    }
     return sanitized;
   }
 
@@ -92,6 +99,11 @@ class SettingsNotifier extends AsyncNotifier<SettingsState> {
         current.copyWith(autoImpostors: enabled, impostors: impostors));
   }
 
+  Future<void> setDarkTheme(bool isDark) async {
+    final current = state.value ?? SettingsState.initial();
+    await _updateState(current.copyWith(isDarkTheme: isDark));
+  }
+
   Future<void> useRecommendedImpostors() async {
     final current = state.value ?? SettingsState.initial();
     final impostors = suggestImpostors(
@@ -101,12 +113,43 @@ class SettingsNotifier extends AsyncNotifier<SettingsState> {
 
   Future<void> setCachedPlayerNames(List<String> names) async {
     final current = state.value ?? SettingsState.initial();
-    await _updateState(current.copyWith(cachedPlayerNames: names));
+    final hasNames = names.isNotEmpty;
+    await _updateState(
+      current.copyWith(
+        cachedPlayerNames: names,
+        cachedPlayerNamesLastUsed:
+            hasNames ? DateTime.now().millisecondsSinceEpoch : null,
+      ),
+    );
   }
 
   Future<void> setPreventImpostorFirst(bool value) async {
     final current = state.value ?? SettingsState.initial();
     await _updateState(current.copyWith(preventImpostorFirst: value));
+  }
+
+  Future<void> clearCachedPlayerNamesIfExpired({
+    Duration maxAge = const Duration(hours: 12),
+  }) async {
+    final current = state.value ?? SettingsState.initial();
+    if (current.cachedPlayerNames.isEmpty) {
+      return;
+    }
+    final lastUsedMillis = current.cachedPlayerNamesLastUsed;
+    if (lastUsedMillis == null) {
+      return;
+    }
+    final lastUsed =
+        DateTime.fromMillisecondsSinceEpoch(lastUsedMillis, isUtc: false);
+    final now = DateTime.now();
+    if (now.difference(lastUsed) >= maxAge) {
+      await _updateState(
+        current.copyWith(
+          cachedPlayerNames: [],
+          cachedPlayerNamesLastUsed: null,
+        ),
+      );
+    }
   }
 
   SettingsState _sanitizeState(SettingsState state) {

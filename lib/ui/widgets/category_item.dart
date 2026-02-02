@@ -1,8 +1,22 @@
 import 'package:flutter/material.dart';
 
-/// Helper function to check if a category is "HOT"
-bool isHotCategory(String categoryId) {
-  return categoryId == 'famosos' || categoryId == 'lugares' || categoryId == 'deportistas';
+/// Helper function to check if a category has a badge
+String? categoryBadgeLabel(String categoryId) {
+  if (categoryId == 'famosos' ||
+      categoryId == 'lugares') {
+    return 'HOT';
+  }
+  if (categoryId == 'futbolistas' ||
+      categoryId == 'anime' ||
+      categoryId == 'bandas_musica' ||
+      categoryId == 'nfl_players' ||
+      categoryId == 'nba_players' ||
+      categoryId == 'us_celebrities' ||
+      categoryId == 'hollywood_actors' ||
+      categoryId == 'tv_shows_usa') {
+    return 'NEW';
+  }
+  return null;
 }
 
 /// Widget to display a category name with optional HOT badge
@@ -18,9 +32,9 @@ class CategoryItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isHot = isHotCategory(categoryId);
-    
-    if (!isHot) {
+    final badgeLabel = categoryBadgeLabel(categoryId);
+
+    if (badgeLabel == null) {
       return Text(displayName);
     }
 
@@ -29,7 +43,7 @@ class CategoryItem extends StatelessWidget {
       children: [
         Text(displayName),
         const SizedBox(width: 6),
-        const HotBadge(),
+        HotBadge(label: badgeLabel),
       ],
     );
   }
@@ -37,7 +51,9 @@ class CategoryItem extends StatelessWidget {
 
 /// Hot badge widget matching the Argentina badge style
 class HotBadge extends StatefulWidget {
-  const HotBadge({super.key});
+  const HotBadge({super.key, this.label = 'HOT'});
+
+  final String label;
 
   @override
   State<HotBadge> createState() => _HotBadgeState();
@@ -106,7 +122,7 @@ class _HotBadgeState extends State<HotBadge>
             ),
             child: Center(
               child: Text(
-                'HOT',
+                widget.label,
                 style: TextStyle(
                   fontSize: 8.5,
                   fontWeight: FontWeight.w800,

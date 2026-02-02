@@ -83,166 +83,6 @@
           "difficulty": "easy"
         },
         {
-          "text": "Tilcara",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Córdoba Capital",
-          "difficulty": "medium"
-        },
-        {
-          "text": "San Rafael",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Pinamar",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Cariló",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Salinas Grandes",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Villa Carlos Paz",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Aconcagua",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Perito Moreno (glaciar)",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Cafayate",
-          "difficulty": "medium"
-        },
-        {
-          "text": "San Martín de los Andes",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Puerto Madryn",
-          "difficulty": "medium"
-        },
-        {
-          "text": "La Quiaca",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Parque Chaco",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Laguna Brava",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Bosque de Arrayanes",
-          "difficulty": "hard",
-          "reveal_hint": "Islote en Nahuel Huapi con árboles canela"
-        },
-        {
-          "text": "Famatina",
-          "difficulty": "hard",
-          "reveal_hint": "Cordón riojano buscado por mineros"
-        },
-        {
-          "text": "Quebrada de las Conchas",
-          "difficulty": "hard",
-          "reveal_hint": "Formaciones rojas camino a Cafayate"
-        },
-        {
-          "text": "Purmamarca",
-          "difficulty": "hard",
-          "reveal_hint": "Pueblo del cerro de los 7 colores"
-        },
-        {
-          "text": "Paso Jama",
-          "difficulty": "hard",
-          "reveal_hint": "Cruce jujeño hacia Atacama"
-        },
-        {
-          "text": "Embalse El Cadillal",
-          "difficulty": "hard",
-          "reveal_hint": "Dique tucumano para deportes náuticos"
-        },
-        {
-          "text": "Villa Pehuenia",
-          "difficulty": "hard",
-          "reveal_hint": "Neuquén, paraíso de pehuenes"
-        },
-        {
-          "text": "Moquehuá",
-          "difficulty": "hard",
-          "reveal_hint": "Localidad bonaerense famosa por salamines"
-        },
-        {
-          "text": "Península Valdés",
-          "difficulty": "hard",
-          "reveal_hint": "Ballenas en Chubut"
-        },
-        {
-          "text": "Los Antiguos",
-          "difficulty": "hard",
-          "reveal_hint": "Capital de la cereza santacruceña"
-        },
-        {
-          "text": "Villa Epecuén",
-          "difficulty": "hard",
-          "reveal_hint": "Pueblo inundado y resurgido"
-        },
-        {
-          "text": "La Angostura (Tucumán)",
-          "difficulty": "hard",
-          "reveal_hint": "Portal a los Valles Calchaquíes"
-        },
-        {
-          "text": "Bialet Massé",
-          "difficulty": "hard",
-          "reveal_hint": "Localidad cordobesa del Dique San Roque"
-        },
-        {
-          "text": "Concordia",
-          "difficulty": "hard",
-          "reveal_hint": "Termas y citrus en Entre Ríos"
-        },
-        {
-          "text": "Esquina",
-          "difficulty": "hard",
-          "reveal_hint": "Pesca deportiva en Corrientes"
-        },
-        {
-          "text": "Saldungaray",
-          "difficulty": "hard",
-          "reveal_hint": "Pórtico circular del cementerio"
-        },
-        {
-          "text": "Gaiman",
-          "difficulty": "hard",
-          "reveal_hint": "Té galés en el valle del Chubut"
-        },
-        {
-          "text": "Rafaela",
-          "difficulty": "hard",
-          "reveal_hint": "Ciudad santafesina del TC"
-        },
-        {
-          "text": "Chascomús",
-          "difficulty": "hard",
-          "reveal_hint": "Laguna famosa para escapadas"
-        },
-        {
-          "text": "Roque Pérez",
-          "difficulty": "hard",
-          "reveal_hint": "Pueblo bonaerense de turismo rural"
-        },
-        {
           "text": "Rosario",
           "difficulty": "easy"
         },
@@ -303,6 +143,66 @@
           "difficulty": "easy"
         },
         {
+          "text": "Tilcara",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Córdoba Capital",
+          "difficulty": "medium"
+        },
+        {
+          "text": "San Rafael",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Pinamar",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Cariló",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Salinas Grandes",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Villa Carlos Paz",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Aconcagua",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Perito Moreno (glaciar)",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Cafayate",
+          "difficulty": "medium"
+        },
+        {
+          "text": "San Martín de los Andes",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Puerto Madryn",
+          "difficulty": "medium"
+        },
+        {
+          "text": "La Quiaca",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Parque Chaco",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Laguna Brava",
+          "difficulty": "medium"
+        },
+        {
           "text": "Villa La Angostura",
           "difficulty": "medium"
         },
@@ -355,79 +255,144 @@
           "difficulty": "medium"
         },
         {
-          "text": "Ischigualasto",
-          "difficulty": "hard",
-          "reveal_hint": "Parque de Valle de la Luna sanjuanino"
+          "text": "Plaza de Mayo",
+          "difficulty": "hard"
         },
         {
-          "text": "Isla Martín García",
-          "difficulty": "hard",
-          "reveal_hint": "Isla histórica en el Río de la Plata"
+          "text": "Cabildo",
+          "difficulty": "hard"
         },
         {
-          "text": "Sierras de la Ventana",
-          "difficulty": "hard",
-          "reveal_hint": "Cordón serrano bonaerense"
+          "text": "Cementerio de Recoleta",
+          "difficulty": "hard"
         },
         {
-          "text": "Volcán Lanín",
-          "difficulty": "hard",
-          "reveal_hint": "Nevado neuquino del parque nacional"
+          "text": "La Boca",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Retiro",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Constitución",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Ezeiza",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Aeroparque",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Puente de la Mujer",
+          "difficulty": "hard"
+        },
+        {
+          "text": "La Rural",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Purmamarca",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Península Valdés",
+          "difficulty": "hard"
         },
         {
           "text": "Parque Nacional Iberá",
-          "difficulty": "hard",
-          "reveal_hint": "Esteros correntinos y yacarés"
+          "difficulty": "hard"
+        },
+        {
+          "text": "Volcán Lanín",
+          "difficulty": "hard"
         },
         {
           "text": "Cerro Uritorco",
-          "difficulty": "hard",
-          "reveal_hint": "Cerro místico de Capilla del Monte"
+          "difficulty": "hard"
         },
         {
-          "text": "Campo de Piedra Pómez",
-          "difficulty": "hard",
-          "reveal_hint": "Paisaje blanco volcánico en Catamarca"
+          "text": "Bosque de Arrayanes",
+          "difficulty": "hard"
         },
         {
-          "text": "Sierra de las Quijadas",
-          "difficulty": "hard",
-          "reveal_hint": "Parque de cañones en San Luis"
+          "text": "Sierras de la Ventana",
+          "difficulty": "hard"
         },
         {
-          "text": "Quebrada del Condorito",
-          "difficulty": "hard",
-          "reveal_hint": "Avistaje de cóndores en Córdoba"
-        },
-        {
-          "text": "Valle de Uco",
-          "difficulty": "hard",
-          "reveal_hint": "Zona vitivinícola mendocina"
-        },
-        {
-          "text": "Dique Los Molinos",
-          "difficulty": "hard",
-          "reveal_hint": "Embalse turístico cordobés"
-        },
-        {
-          "text": "Laguna de los Tres",
-          "difficulty": "hard",
-          "reveal_hint": "Sendero al Fitz Roy"
-        },
-        {
-          "text": "Bahía Lapataia",
-          "difficulty": "hard",
-          "reveal_hint": "Fin de la Ruta 3 en Tierra del Fuego"
+          "text": "Ischigualasto",
+          "difficulty": "hard"
         },
         {
           "text": "Cueva de las Manos",
-          "difficulty": "hard",
-          "reveal_hint": "Arte rupestre en Santa Cruz"
+          "difficulty": "hard"
         },
         {
-          "text": "Salto del Agrio",
-          "difficulty": "hard",
-          "reveal_hint": "Cascada con anfiteatro basáltico"
+          "text": "Gualeguaychú",
+          "difficulty": "hard"
+        },
+        {
+          "text": "San Antonio de Areco",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Bahía Blanca",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Necochea",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Miramar",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Mar de Ajó",
+          "difficulty": "hard"
+        },
+        {
+          "text": "San Bernardo",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Termas de Río Hondo",
+          "difficulty": "hard"
+        },
+        {
+          "text": "San Nicolás",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Zárate",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Campana",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Villa María",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Río Cuarto",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Rafaela",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Concordia",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Chascomús",
+          "difficulty": "hard"
         }
       ]
     },
@@ -2616,6 +2581,66 @@
           "difficulty": "easy"
         },
         {
+          "text": "La Paulina",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Serenito",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Bimbo",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Cindor",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Don Satur",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Terrabusi",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Sufur",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Gancia",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Speed",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Patagonia",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Musimundo",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Grido",
+          "difficulty": "easy"
+        },
+        {
+          "text": "McDonald's",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Burger King",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Dia",
+          "difficulty": "easy"
+        },
+        {
           "text": "Sancor",
           "difficulty": "medium"
         },
@@ -2696,156 +2721,6 @@
           "difficulty": "medium"
         },
         {
-          "text": "Felfort",
-          "difficulty": "hard",
-          "reveal_hint": "Chocolates y el dueño mediático"
-        },
-        {
-          "text": "Toddy",
-          "difficulty": "hard",
-          "reveal_hint": "Galletita de chips made in Argentina"
-        },
-        {
-          "text": "Poxipol",
-          "difficulty": "hard",
-          "reveal_hint": "Pega en 10 minutos"
-        },
-        {
-          "text": "Fábrica Militar Río Tercero",
-          "difficulty": "hard",
-          "reveal_hint": "Escándalo 90s con explosión"
-        },
-        {
-          "text": "Mimito",
-          "difficulty": "hard",
-          "reveal_hint": "Helado barra económica"
-        },
-        {
-          "text": "Genoud",
-          "difficulty": "hard",
-          "reveal_hint": "Juguetes de hojalata vintage"
-        },
-        {
-          "text": "Gauchito Gil (marca de velas)",
-          "difficulty": "hard",
-          "reveal_hint": "Santos populares en góndola"
-        },
-        {
-          "text": "Colombraro",
-          "difficulty": "hard",
-          "reveal_hint": "Todo plástico, baldes y tachos"
-        },
-        {
-          "text": "Liguria",
-          "difficulty": "hard",
-          "reveal_hint": "Aceite mezcla de los 90"
-        },
-        {
-          "text": "Lepore",
-          "difficulty": "hard",
-          "reveal_hint": "Zapatos populares en Av Avellaneda"
-        },
-        {
-          "text": "Soda Sayón",
-          "difficulty": "hard",
-          "reveal_hint": "Sifones de vidrio vintage"
-        },
-        {
-          "text": "Helados Sei Tu",
-          "difficulty": "hard",
-          "reveal_hint": "Cadena porteña ochentosa"
-        },
-        {
-          "text": "Rexona Teens",
-          "difficulty": "hard",
-          "reveal_hint": "Desodorante con stickers"
-        },
-        {
-          "text": "El Noble Repulgue",
-          "difficulty": "hard",
-          "reveal_hint": "Empanadas de delivery pioneras"
-        },
-        {
-          "text": "Caro Cuore",
-          "difficulty": "hard",
-          "reveal_hint": "Lencería de shopping 90s"
-        },
-        {
-          "text": "Fiorito",
-          "difficulty": "hard",
-          "reveal_hint": "Marca de fiambres menos conocida"
-        },
-        {
-          "text": "Totin",
-          "difficulty": "hard",
-          "reveal_hint": "Galletita económica de kiosco"
-        },
-        {
-          "text": "Lheritier",
-          "difficulty": "hard",
-          "reveal_hint": "Miel y caramelos de pote amarillo"
-        },
-        {
-          "text": "La Paulina",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Serenito",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Bimbo",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Cindor",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Don Satur",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Terrabusi",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Sufur",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Gancia",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Speed",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Patagonia",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Musimundo",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Grido",
-          "difficulty": "easy"
-        },
-        {
-          "text": "McDonald's",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Burger King",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Dia",
-          "difficulty": "easy"
-        },
-        {
           "text": "Artesa",
           "difficulty": "medium"
         },
@@ -2906,74 +2781,132 @@
           "difficulty": "medium"
         },
         {
+          "text": "Felfort",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Toddy",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Poxipol",
+          "difficulty": "hard"
+        },
+        {
           "text": "Geniol",
-          "difficulty": "hard",
-          "reveal_hint": "Caramelos mentolados clásicos"
-        },
-        {
-          "text": "Rolo",
-          "difficulty": "hard",
-          "reveal_hint": "Cadena de helados noventosa"
-        },
-        {
-          "text": "La Cumbre",
-          "difficulty": "hard",
-          "reveal_hint": "Marca de yerba menos conocida"
-        },
-        {
-          "text": "Verifarma",
-          "difficulty": "hard",
-          "reveal_hint": "Farmacia genérica de los 90"
-        },
-        {
-          "text": "Noel",
-          "difficulty": "hard",
-          "reveal_hint": "Galletitas rosarinas tradicionales"
-        },
-        {
-          "text": "Mayco",
-          "difficulty": "hard",
-          "reveal_hint": "Ferretería argentina histórica"
-        },
-        {
-          "text": "Minerva",
-          "difficulty": "hard",
-          "reveal_hint": "Lápices escolares de antes"
-        },
-        {
-          "text": "Terrabusi Opera",
-          "difficulty": "hard",
-          "reveal_hint": "Galletita oblea icónica"
-        },
-        {
-          "text": "Jorgito",
-          "difficulty": "hard",
-          "reveal_hint": "Alfajor clásico de kiosco"
+          "difficulty": "hard"
         },
         {
           "text": "Mantecol",
-          "difficulty": "hard",
-          "reveal_hint": "Dulce de maní clásico"
+          "difficulty": "hard"
+        },
+        {
+          "text": "Jorgito",
+          "difficulty": "hard"
         },
         {
           "text": "Cinzano",
-          "difficulty": "hard",
-          "reveal_hint": "Vermut de botellas clásicas"
+          "difficulty": "hard"
         },
         {
-          "text": "Sobet",
-          "difficulty": "hard",
-          "reveal_hint": "Alcohol fino porteño"
+          "text": "Noblex",
+          "difficulty": "hard"
         },
         {
-          "text": "Raste",
-          "difficulty": "hard",
-          "reveal_hint": "Zapatillas escolares económicas"
+          "text": "La Gotita",
+          "difficulty": "hard"
         },
         {
-          "text": "NOBLEX",
-          "difficulty": "hard",
-          "reveal_hint": "Electrónica nacional"
+          "text": "La Salteña",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Knorr",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Hellmann's",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Savora",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Baggio",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Cepita",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Levité",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Villavicencio",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Eco de los Andes",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Ser",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Villa del Sur",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Ayudín",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Cif",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Skip",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Poett",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Head & Shoulders",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Pantene",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Colgate",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Oral-B",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Dove",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Rexona",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Axe",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Samsung",
+          "difficulty": "hard"
         }
       ]
     },
@@ -2982,323 +2915,35 @@
       "displayName": "Animales",
       "words": [
         {
-          "text": "Yaguareté",
+          "text": "Perro",
           "difficulty": "easy"
         },
         {
-          "text": "Ñandú",
+          "text": "Gato",
           "difficulty": "easy"
         },
         {
-          "text": "Guanaco",
+          "text": "Caballo",
           "difficulty": "easy"
         },
         {
-          "text": "Carpincho",
+          "text": "Vaca",
           "difficulty": "easy"
         },
         {
-          "text": "Puma",
+          "text": "Oveja",
           "difficulty": "easy"
         },
         {
-          "text": "Cóndor",
+          "text": "Cerdo",
           "difficulty": "easy"
         },
         {
-          "text": "Hornero",
+          "text": "Gallina",
           "difficulty": "easy"
         },
         {
-          "text": "Vizcacha",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Tucán",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Flamenco austral",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Pato criollo",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Mulita",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Boitata (serpiente)",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Lagarto overo",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Monito del monte",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Aguará guazú",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Piche",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Pingüino de Magallanes",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Tero",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Chajá",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Martín pescador",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Piche llorón",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Zorrino",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Coipo",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Lobito de río",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Golondrina patagónica",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Taruca",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Huillín",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Pudú",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Tortuga de agua chaqueña",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Araña pollito pampeana",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Yarará",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Coral verdadero",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Culebra verde",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Carau",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Macá tobiano",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Pava de monte",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Monos caí",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Lampalagua",
-          "difficulty": "hard",
-          "reveal_hint": "Boa constrictora norteña"
-        },
-        {
-          "text": "Vinchuca",
-          "difficulty": "hard",
-          "reveal_hint": "Insecto vector del Chagas"
-        },
-        {
-          "text": "Chuña patas rojas",
-          "difficulty": "hard",
-          "reveal_hint": "Ave corredora cazadora de serpientes"
-        },
-        {
-          "text": "Gallareta ligas rojas",
-          "difficulty": "hard",
-          "reveal_hint": "Ave acuática lagunas pampeanas"
-        },
-        {
-          "text": "Dolichotis patagonum",
-          "difficulty": "hard",
-          "reveal_hint": "Nombre científico de la mara"
-        },
-        {
-          "text": "Lagartija de las dunas",
-          "difficulty": "hard",
-          "reveal_hint": "Endémica de la costa bonaerense"
-        },
-        {
-          "text": "Falso coral pampeano",
-          "difficulty": "hard",
-          "reveal_hint": "Serpiente que imita colores venenosos"
-        },
-        {
-          "text": "Pericote",
-          "difficulty": "hard",
-          "reveal_hint": "Roedor andino nocturno"
-        },
-        {
-          "text": "Avestruz petiso (suri)",
-          "difficulty": "hard",
-          "reveal_hint": "Ñandú cordillerano enano"
-        },
-        {
-          "text": "Chinche manchada",
-          "difficulty": "hard",
-          "reveal_hint": "Insecto rural de verano"
-        },
-        {
-          "text": "Flamenco de la Puna",
-          "difficulty": "hard",
-          "reveal_hint": "Rosa pálido en salares"
-        },
-        {
-          "text": "Mocho acanalar",
-          "difficulty": "hard",
-          "reveal_hint": "Búho pampeano"
-        },
-        {
-          "text": "Piquituerto austral",
-          "difficulty": "hard",
-          "reveal_hint": "Ave patagónica con pico cruzado"
-        },
-        {
-          "text": "Lagartija de los Colorados",
-          "difficulty": "hard",
-          "reveal_hint": "Habitante del Talampaya"
-        },
-        {
-          "text": "Murciélago pescador",
-          "difficulty": "hard",
-          "reveal_hint": "Vuela sobre ríos del Litoral"
-        },
-        {
-          "text": "Boa arcoíris chaqueña",
-          "difficulty": "hard",
-          "reveal_hint": "Brillo iridiscente"
-        },
-        {
-          "text": "Rata colorada tucumana",
-          "difficulty": "hard",
-          "reveal_hint": "Roedor de yungas"
-        },
-        {
-          "text": "Ñacurutú",
-          "difficulty": "hard",
-          "reveal_hint": "Gran búho misionero"
-        },
-        {
-          "text": "Pato crestudo",
-          "difficulty": "hard",
-          "reveal_hint": "Habitante de lagunas pampeanas"
-        },
-        {
-          "text": "Zarigüeya orejuda",
-          "difficulty": "hard",
-          "reveal_hint": "Marsupial norteño"
-        },
-        {
-          "text": "Lobo marino",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Monito caí",
-          "difficulty": "hard",
-          "reveal_hint": "Primate misionero"
-        },
-        {
-          "text": "Oso hormiguero",
-          "difficulty": "hard",
-          "reveal_hint": "Mamífero de hocico largo"
-        },
-        {
-          "text": "Caimán del Orinoco",
-          "difficulty": "hard",
-          "reveal_hint": "Cocodrilo enorme en peligro"
-        },
-        {
-          "text": "Ciervo del pantano",
-          "difficulty": "hard",
-          "reveal_hint": "Ciervo grande de humedales"
-        },
-        {
-          "text": "Gato onza",
-          "difficulty": "hard",
-          "reveal_hint": "Felino chaqueño difícil de ver"
-        },
-        {
-          "text": "Pudú del sur",
-          "difficulty": "hard",
-          "reveal_hint": "Cervo pequeño patagónico"
-        },
-        {
-          "text": "Tuco-tuco",
-          "difficulty": "hard",
-          "reveal_hint": "Roedor subterráneo"
-        },
-        {
-          "text": "Pez dorado",
-          "difficulty": "hard",
-          "reveal_hint": "Pescado del Paraná"
-        },
-        {
-          "text": "Coscoroba",
-          "difficulty": "hard",
-          "reveal_hint": "Cisne blanco de humedales"
-        },
-        {
-          "text": "Cauquén",
-          "difficulty": "hard",
-          "reveal_hint": "Ganso patagónico"
-        },
-        {
-          "text": "Hurón mayor",
-          "difficulty": "hard",
-          "reveal_hint": "Mustélido pampeano"
-        },
-        {
-          "text": "Zorzal colorado",
-          "difficulty": "hard",
-          "reveal_hint": "Ave cantora urbana"
-        },
-        {
-          "text": "Flamenco",
+          "text": "Gallo",
           "difficulty": "easy"
         },
         {
@@ -3306,47 +2951,19 @@
           "difficulty": "easy"
         },
         {
-          "text": "Lagarto",
+          "text": "Conejo",
           "difficulty": "easy"
         },
         {
-          "text": "Pingüino",
+          "text": "Ratón",
           "difficulty": "easy"
         },
         {
-          "text": "Golondrina",
+          "text": "Pez",
           "difficulty": "easy"
         },
         {
           "text": "Tortuga",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Araña",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Coral",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Culebra",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Macá",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Pava",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Monos",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Gato",
           "difficulty": "easy"
         },
         {
@@ -3358,20 +2975,304 @@
           "difficulty": "easy"
         },
         {
-          "text": "Hurón",
+          "text": "Araña",
           "difficulty": "easy"
         },
         {
-          "text": "Chimango",
+          "text": "Mariposa",
           "difficulty": "easy"
         },
         {
-          "text": "Gallineta",
+          "text": "Abeja",
           "difficulty": "easy"
         },
         {
-          "text": "Yacare",
+          "text": "Hormiga",
           "difficulty": "easy"
+        },
+        {
+          "text": "Mosquito",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Cucaracha",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Serpiente",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Lagarto",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Loro",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Paloma",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Pingüino",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Delfín",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Ballena",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Tiburón",
+          "difficulty": "easy"
+        },
+        {
+          "text": "León",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Tigre",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Elefante",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Jirafa",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Cebra",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Oso",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Zorro",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Puma",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Cóndor",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Carpincho",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Yaguareté",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Ñandú",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Guanaco",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Llama",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Vicuña",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Jabalí",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Ciervo",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Gato montés",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Zorrino",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Comadreja",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Tatú",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Vizcacha",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Coatí",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Yacaré",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Flamenco",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Tucán",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Hornero",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Oso hormiguero",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Chajá",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Cocodrilo",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Hipopótamo",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Rinoceronte",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Panda",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Koala",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Canguro",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Gorila",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Chimpancé",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Orangután",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Leopardo",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Guepardo",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Pantera",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Hiena",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Lobo",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Mapache",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Ardilla",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Castor",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Nutria",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Foca",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Morsa",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Camello",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Avestruz",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Búho",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Águila",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Halcón",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Cisne",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Pavo real",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Pavo",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Ganso",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Cabra",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Burro",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Mula",
+          "difficulty": "hard"
         }
       ]
     },
@@ -3837,6 +3738,858 @@
       ]
     },
     {
+      "id": "anime",
+      "displayName": "Anime",
+      "words": [
+        {
+          "text": "Dragon Ball",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Naruto",
+          "difficulty": "easy"
+        },
+        {
+          "text": "One Piece",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Pokemon",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Sailor Moon",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Naruto Uzumaki",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Goku",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Vegeta",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Pikachu",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Ash Ketchum",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Charizard",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Totoro",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Studio Ghibli",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Spirited Away",
+          "difficulty": "easy"
+        },
+        {
+          "text": "My Hero Academia",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Demon Slayer",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Tanjiro Kamado",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Nezuko Kamado",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Attack on Titan",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Eren Yeager",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Mikasa Ackerman",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Death Note",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Light Yagami",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Luffy",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Zoro",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Doraemon",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Yu-Gi-Oh",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Beyblade",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Digimon",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Hello Kitty",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Bleach",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Ichigo Kurosaki",
+          "difficulty": "medium"
+        },
+        {
+          "text": "One Punch Man",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Saitama",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Jujutsu Kaisen",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Gojo Satoru",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Fullmetal Alchemist",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Edward Elric",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Hunter x Hunter",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Gon Freecss",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Killua Zoldyck",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Tokyo Ghoul",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Ken Kaneki",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Neon Genesis Evangelion",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Shinji Ikari",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Cowboy Bebop",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Spike Spiegel",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Inuyasha",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Rurouni Kenshin",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Cardcaptor Sakura",
+          "difficulty": "medium"
+        },
+        {
+          "text": "JoJo Bizarre Adventure",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Jotaro Kujo",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Haikyuu",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Kuroko Basketball",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Fairy Tail",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Natsu Dragneel",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Black Clover",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Asta",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Sword Art Online",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Kirito",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Akira",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Ghost in the Shell",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Motoko Kusanagi",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Code Geass",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Lelouch Lamperouge",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Gurren Lagann",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Kamina",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Trigun",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Vash the Stampede",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Hellsing",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Alucard (Hellsing)",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Samurai Champloo",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Mugen",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Yu Yu Hakusho",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Yusuke Urameshi",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Saint Seiya",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Seiya",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Ranma 1/2",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Ranma Saotome",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Detective Conan",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Dr. Stone",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Senku Ishigami",
+          "difficulty": "hard"
+        },
+        {
+          "text": "D.Gray-man",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Allen Walker",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Fist of the North Star",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Kenshiro",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Black Lagoon",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Revy",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Mobile Suit Gundam",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Gundam",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "id": "bandas_musica",
+      "displayName": "Bandas de Música",
+      "words": [
+        {
+          "text": "Soda Stereo",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Los Fabulosos Cadillacs",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Los Auténticos Decadentes",
+          "difficulty": "easy"
+        },
+        {
+          "text": "La Renga",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Los Piojos",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Divididos",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Sumo",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Virus",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Babasónicos",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Bersuit Vergarabat",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Patricio Rey y sus Redonditos de Ricota",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Los Abuelos de la Nada",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Los Ratones Paranoicos",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Los Enanitos Verdes",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Los Pericos",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Attaque 77",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Miranda!",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Tan Biónica",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Airbag",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Catupecu Machu",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Las Pelotas",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Turf",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Los Tipitos",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Guasones",
+          "difficulty": "easy"
+        },
+        {
+          "text": "La Beriso",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Callejeros",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Intoxicados",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Viejas Locas",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Los Palmeras",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Damas Gratis",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Ráfaga",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Los Caligaris",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Los Nocheros",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Los Tekis",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Kapanga",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Bandana",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Erreway",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Rata Blanca",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Los Chalchaleros",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Los Manseros Santiagueños",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Hermética",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Almafuerte",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Los Violadores",
+          "difficulty": "medium"
+        },
+        {
+          "text": "2 Minutos",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Massacre",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Los Brujos",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Los Twist",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Illya Kuryaki and the Valderramas",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Los Caballeros de la Quema",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Los Gardelitos",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Las Pastillas del Abuelo",
+          "difficulty": "medium"
+        },
+        {
+          "text": "La Mississippi",
+          "difficulty": "medium"
+        },
+        {
+          "text": "La Mancha de Rolando",
+          "difficulty": "medium"
+        },
+        {
+          "text": "La 25",
+          "difficulty": "medium"
+        },
+        {
+          "text": "El Bordo",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Don Osvaldo",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Bandalos Chinos",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Cruzando el Charco",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Los Cafres",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Los Fundamentalistas del Aire Acondicionado",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Agapornis",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Los Totora",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Mala Fama",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Los Pibes Chorros",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Los Charros",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Los del Fuego",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Los Sultanes",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Amar Azul",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Banda XXI",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Los Rancheros",
+          "difficulty": "medium"
+        },
+        {
+          "text": "La Portuaria",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Comanche",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Yerba Brava",
+          "difficulty": "medium"
+        },
+        {
+          "text": "El Polaco",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Los Cafres (Argentina)",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Los Rancheros (Argentina)",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Vilma Palma e Vampiros",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Estelares",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Kapanga (Argentina)",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Turf (Argentina)",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Almendra",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Pescado Rabioso",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Serú Girán",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Sui Generis",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Invisible",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Manal",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Vox Dei",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Los Gatos",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Pappo's Blues",
+          "difficulty": "hard"
+        },
+        {
+          "text": "La Máquina de Hacer Pájaros",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Riff",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Memphis La Blusera",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Los Visitantes",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Los Carabajal",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Los Fronterizos",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Los Tucu Tucu",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Los Cantores del Alba",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Los Huayra",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Los Alonsitos",
+          "difficulty": "hard"
+        },
+        {
+          "text": "La Konga",
+          "difficulty": "hard"
+        },
+        {
+          "text": "La Barra",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Trulalá",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Sabroso",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Dale Q' Va",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Q' Lokura",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Ke Personajes",
+          "difficulty": "hard"
+        },
+        {
+          "text": "La Delio Valdez",
+          "difficulty": "hard"
+        },
+        {
+          "text": "El Mató a un Policía Motorizado",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Los Espíritus",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Eruca Sativa",
+          "difficulty": "hard"
+        },
+        {
+          "text": "El Kuelgue",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Banda de Turistas",
+          "difficulty": "hard"
+        },
+        {
+          "text": "La Franela",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Pier",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Salta la Banca",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Las Manos de Filippi",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Los Tipitos (otra etapa)",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Bersuit (otra etapa)",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Los Pericos (otra etapa)",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Los Enanitos Verdes (otra etapa)",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
       "id": "random",
       "displayName": "Random",
       "words": [
@@ -3921,6 +4674,66 @@
           "difficulty": "easy"
         },
         {
+          "text": "Club de barrio",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Kermés",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Cancha de fútbol",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Chorizo al pan",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Adoquines",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Bajada a la playa",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Feria americana",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Plaza de juegos",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Mate en la plaza",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Canillita",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Colectivo",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Sube",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Día de lluvia",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Cortado",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Parrillita",
+          "difficulty": "easy"
+        },
+        {
           "text": "Punilla",
           "difficulty": "medium"
         },
@@ -4001,166 +4814,6 @@
           "difficulty": "medium"
         },
         {
-          "text": "Mionca",
-          "difficulty": "hard",
-          "reveal_hint": "Camión militar ochentoso cordobés"
-        },
-        {
-          "text": "Pato criollo deporte",
-          "difficulty": "hard",
-          "reveal_hint": "Deporte nacional a caballo"
-        },
-        {
-          "text": "Emisión 500 australes",
-          "difficulty": "hard",
-          "reveal_hint": "Billete con San Martín montonero"
-        },
-        {
-          "text": "Vagón Le Grill",
-          "difficulty": "hard",
-          "reveal_hint": "Restó en vagón antiguo"
-        },
-        {
-          "text": "Pelopincho pinchada",
-          "difficulty": "hard",
-          "reveal_hint": "Pileta reparada con parches"
-        },
-        {
-          "text": "Cine Lavalle",
-          "difficulty": "hard",
-          "reveal_hint": "Galería de cines del centro"
-        },
-        {
-          "text": "Pase Libre Multimodal",
-          "difficulty": "hard",
-          "reveal_hint": "Beneficio transporte CABA"
-        },
-        {
-          "text": "Pizzería Güerrín",
-          "difficulty": "hard",
-          "reveal_hint": "Muzza de parado en Corrientes"
-        },
-        {
-          "text": "Bombos de La Chilinga",
-          "difficulty": "hard",
-          "reveal_hint": "Escuela de percusión porteña"
-        },
-        {
-          "text": "Praline de plaza",
-          "difficulty": "hard",
-          "reveal_hint": "Maní acaramelado en cucurucho"
-        },
-        {
-          "text": "Empanadas árabes abiertas",
-          "difficulty": "hard",
-          "reveal_hint": "Sfijas al limón"
-        },
-        {
-          "text": "Campeonato de truco",
-          "difficulty": "hard",
-          "reveal_hint": "Torneos de naipes criollos"
-        },
-        {
-          "text": "Boleta única papel",
-          "difficulty": "hard",
-          "reveal_hint": "Formato cordobés de voto"
-        },
-        {
-          "text": "Tango queer",
-          "difficulty": "hard",
-          "reveal_hint": "Milongas inclusivas"
-        },
-        {
-          "text": "El Reino del Revés",
-          "difficulty": "hard",
-          "reveal_hint": "Canción de María Elena Walsh"
-        },
-        {
-          "text": "Biblioteca Vigil",
-          "difficulty": "hard",
-          "reveal_hint": "Institución rosarina intervenida en dictadura"
-        },
-        {
-          "text": "Campera inflable de Once",
-          "difficulty": "hard",
-          "reveal_hint": "Abrigo barato de galería"
-        },
-        {
-          "text": "Piluso",
-          "difficulty": "hard",
-          "reveal_hint": "Sombrero tipo pescador"
-        },
-        {
-          "text": "Yapa",
-          "difficulty": "hard",
-          "reveal_hint": "Extra que da el almacenero"
-        },
-        {
-          "text": "Pochoclo salado con pimentón",
-          "difficulty": "hard",
-          "reveal_hint": "Versión salada de puesto"
-        },
-        {
-          "text": "Club de barrio",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Kermés",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Cancha de fútbol",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Chorizo al pan",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Adoquines",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Bajada a la playa",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Feria americana",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Plaza de juegos",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Mate en la plaza",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Canillita",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Colectivo",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Sube",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Día de lluvia",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Cortado",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Parrillita",
-          "difficulty": "easy"
-        },
-        {
           "text": "Reintegro bancario",
           "difficulty": "medium"
         },
@@ -4221,79 +4874,144 @@
           "difficulty": "medium"
         },
         {
-          "text": "Garrafa social",
-          "difficulty": "hard",
-          "reveal_hint": "Programa de subsidio de gas"
-        },
-        {
-          "text": "Paseo La Salada",
-          "difficulty": "hard",
-          "reveal_hint": "Feria popular gigante"
-        },
-        {
-          "text": "Boleto estudiantil",
-          "difficulty": "hard",
-          "reveal_hint": "Beneficio de transporte"
-        },
-        {
-          "text": "Tarifa social",
-          "difficulty": "hard",
-          "reveal_hint": "Descuento en servicios"
-        },
-        {
-          "text": "Centro de jubilados",
-          "difficulty": "hard",
-          "reveal_hint": "Espacio de actividades barriales"
-        },
-        {
-          "text": "Cooperadora escolar",
-          "difficulty": "hard",
-          "reveal_hint": "Fondo de ayuda de la escuela"
-        },
-        {
-          "text": "Guardia del hospital",
-          "difficulty": "hard",
-          "reveal_hint": "Sala de espera de urgencias"
-        },
-        {
-          "text": "Subte Premetro",
-          "difficulty": "hard",
-          "reveal_hint": "Ramal corto de CABA"
-        },
-        {
-          "text": "Colectivo 152",
-          "difficulty": "hard",
-          "reveal_hint": "Línea larga porteña"
-        },
-        {
-          "text": "Feria de Mataderos",
-          "difficulty": "hard",
-          "reveal_hint": "Folk, artesanías y asado"
-        },
-        {
-          "text": "Parque Rivadavia",
-          "difficulty": "hard",
-          "reveal_hint": "Feria de libros usados"
-        },
-        {
-          "text": "Anses",
-          "difficulty": "hard",
-          "reveal_hint": "Organismo de seguridad social"
+          "text": "ANSES",
+          "difficulty": "hard"
         },
         {
           "text": "AFIP",
-          "difficulty": "hard",
-          "reveal_hint": "Organismo de impuestos"
+          "difficulty": "hard"
         },
         {
           "text": "PAMI",
-          "difficulty": "hard",
-          "reveal_hint": "Obra social de jubilados"
+          "difficulty": "hard"
         },
         {
-          "text": "SIME",
-          "difficulty": "hard",
-          "reveal_hint": "Sistema de emergencias médicas"
+          "text": "Piluso",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Yapa",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Campeonato de truco",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Chinchón",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Cooperadora escolar",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Centro de jubilados",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Guardia del hospital",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Tarifa social",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Boleto estudiantil",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Garrafa social",
+          "difficulty": "hard"
+        },
+        {
+          "text": "La Salada",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Feria de Mataderos",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Parque Rivadavia",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Registro civil",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Pago Fácil",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Rapipago",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Turno online",
+          "difficulty": "hard"
+        },
+        {
+          "text": "DNI vencido",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Libreta sanitaria",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Certificado de domicilio",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Multa de tránsito",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Boleta de luz",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Boleta de gas",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Expensas",
+          "difficulty": "hard"
+        },
+        {
+          "text": "ABL",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Patente del auto",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Voto obligatorio",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Boleta sábana",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Cacerolazo",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Corte de ruta",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Tren Sarmiento",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Tren Mitre",
+          "difficulty": "hard"
         }
       ]
     },
@@ -4493,11 +5211,501 @@
       ]
     },
     {
+      "id": "futbolistas",
+      "displayName": "Futbolistas",
+      "words": [
+        {
+          "text": "Lionel Andres Messi",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Diego Armando Maradona",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Juan Roman Riquelme",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Gabriel Omar Batistuta",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Sergio Kun Aguero",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Angel Di Maria",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Javier Mascherano",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Carlos Tevez",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Gonzalo Higuain",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Javier Zanetti",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Hernan Crespo",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Diego Simeone",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Ariel Ortega",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Claudio Caniggia",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Mario Alberto Kempes",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Daniel Passarella",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Oscar Ruggeri",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Jorge Burruchaga",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Ubaldo Fillol",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Roberto Ayala",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Walter Samuel",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Esteban Cambiasso",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Pablo Aimar",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Juan Sebastian Veron",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Javier Saviola",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Marcelo Gallardo",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Fernando Redondo",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Ricardo Bochini",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Matias Almeyda",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Ezequiel Lavezzi",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Ever Banega",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Nicolas Otamendi",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Leandro Paredes",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Emiliano Martinez",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Lisandro Martinez",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Lautaro Martinez",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Julian Alvarez",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Alexis Mac Allister",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Enzo Fernandez",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Lionel Scaloni",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Sergio Goycochea",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Sergio Romero",
+          "difficulty": "medium"
+        },
+        {
+          "text": "German Burgos",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Pablo Zabaleta",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Pablo Sorin",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Nicolas Burdisso",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Fabricio Coloccini",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Martin Demichelis",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Cristian Romero",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Marcos Rojo",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Gabriel Heinze",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Fernando Gago",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Javier Pastore",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Lucas Biglia",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Erik Lamela",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Giovanni Lo Celso",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Angel Correa",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Paulo Dybala",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Mauro Icardi",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Rodrigo Palacio",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Diego Milito",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Gabriel Milito",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Omar Sivori",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Ramon Diaz",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Claudio Lopez",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Maxi Rodriguez",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Rodrigo De Paul",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Nicolas Gonzalez",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Alejandro Garnacho",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Exequiel Palacios",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Enzo Perez",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Mariano Andujar",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Nahuel Guzman",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Pablo Perez",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Jonathan Maidana",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Ezequiel Garay",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Federico Fernandez",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Gonzalo Rodriguez",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Javier Pinola",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Lisandro Lopez",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Amadeo Carrizo",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Antonio Rattin",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Norberto Alonso",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Osvaldo Ardiles",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Daniel Bertoni",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Leopoldo Luque",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Jorge Valdano",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Ricardo Giusti",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Nery Pumpido",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Sergio Batista",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Ricardo Gallego",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Claudio Borghi",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Ricardo Gareca",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Abel Balbo",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Roberto Abbondanzieri",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Fernando Cavenaghi",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Diego Placente",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Andres D'Alessandro",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Hugo Gatti",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Sebastian Battaglia",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Guillermo Barros Schelotto",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Gustavo Barros Schelotto",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Rodolfo Arruabarrena",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Ignacio Scocco",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Lucas Alario",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Dario Benedetto",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Lucas Ocampos",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Nicolas Tagliafico",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Marcos Acuna",
+          "difficulty": "hard"
+        },
+        {
+          "text": "German Pezzella",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Nicolas Pareja",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Mauro Zarate",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Jose Luis Brown",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Martin Palermo",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Franco Armani",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Lucas Pratto",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Esteban Andrada",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Julio Cruz",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Claudio Husain",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Roberto Sensini",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
       "id": "deportistas",
       "displayName": "Deportistas",
       "words": [
         {
-          "text": "Delfina Pignatiello",
+          "text": "Lionel Messi",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Diego Armando Maradona",
           "difficulty": "easy"
         },
         {
@@ -4509,31 +5717,15 @@
           "difficulty": "easy"
         },
         {
-          "text": "Gabriel Batistuta",
+          "text": "Juan Martín del Potro",
           "difficulty": "easy"
         },
         {
-          "text": "Kun Agüero",
+          "text": "Gabriela Sabatini",
           "difficulty": "easy"
         },
         {
-          "text": "Enzo Francescoli",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Marcelo Gallardo",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Juan Román Riquelme",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Ariel Ortega",
-          "difficulty": "easy"
-        },
-        {
-          "text": "Oscar Ruggeri",
+          "text": "Guillermo Vilas",
           "difficulty": "easy"
         },
         {
@@ -4541,199 +5733,47 @@
           "difficulty": "easy"
         },
         {
-          "text": "Palermo (delantero)",
-          "difficulty": "medium"
+          "text": "Kun Agüero",
+          "difficulty": "easy"
         },
         {
-          "text": "Burruchaga",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Pato Fillol",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Claudio Caniggia",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Aimar",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Simeone",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Pichot",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Corleto",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Comizzo",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Barros Schelotto",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Maidana",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Chiquito Romero",
-          "difficulty": "medium"
+          "text": "Ángel Di María",
+          "difficulty": "easy"
         },
         {
           "text": "Paula Pareto",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Carlos Tevez",
           "difficulty": "medium"
         },
         {
-          "text": "Leo Montero (basquet)",
+          "text": "Juan Román Riquelme",
           "difficulty": "medium"
         },
         {
-          "text": "Hugo Porta",
+          "text": "Gabriel Batistuta",
           "difficulty": "medium"
         },
         {
-          "text": "Gisela Dulko",
+          "text": "Ariel Ortega",
           "difficulty": "medium"
         },
         {
-          "text": "Gaby Sabatini",
+          "text": "Martín Palermo",
           "difficulty": "medium"
         },
         {
-          "text": "David Nalbandian",
+          "text": "Hernán Crespo",
           "difficulty": "medium"
         },
         {
-          "text": "Guillermo Vilas",
+          "text": "Javier Mascherano",
           "difficulty": "medium"
         },
         {
-          "text": "Gastón Gaudio",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Bichi Fuertes",
-          "difficulty": "hard",
-          "reveal_hint": "Goleador de Colón"
-        },
-        {
-          "text": "Pepe Sand",
-          "difficulty": "hard",
-          "reveal_hint": "Delantero eterno de Lanús"
-        },
-        {
-          "text": "Caruso Lombardi",
-          "difficulty": "hard",
-          "reveal_hint": "DT de descensos y anécdotas"
-        },
-        {
-          "text": "Mostaza Merlo",
-          "difficulty": "hard",
-          "reveal_hint": "Pasito y “paso a paso”"
-        },
-        {
-          "text": "Turco Mohamed",
-          "difficulty": "hard",
-          "reveal_hint": "DT con galera en Huracán"
-        },
-        {
-          "text": "Chanchi Estévez",
-          "difficulty": "hard",
-          "reveal_hint": "Delantero de Racing y reality"
-        },
-        {
-          "text": "Luifa Scola U19",
-          "difficulty": "hard",
-          "reveal_hint": "Capitán dorado en 2004"
-        },
-        {
-          "text": "Puma Morete",
-          "difficulty": "hard",
-          "reveal_hint": "Goleador de River y Boca 70s"
-        },
-        {
-          "text": "Chatruc",
-          "difficulty": "hard",
-          "reveal_hint": "Volante campeón con Racing 2001"
-        },
-        {
-          "text": "Checho Batista",
-          "difficulty": "hard",
-          "reveal_hint": "DT olímpico oro 2008"
-        },
-        {
-          "text": "Milton Melgar",
-          "difficulty": "hard",
-          "reveal_hint": "Boliviano que pasó por Boca"
-        },
-        {
-          "text": "JJ López",
-          "difficulty": "hard",
-          "reveal_hint": "River 70s, descenso como DT"
-        },
-        {
-          "text": "Kily González",
-          "difficulty": "hard",
-          "reveal_hint": "Extremo zurdo de Central y Valencia"
-        },
-        {
-          "text": "Pocho Lavezzi",
-          "difficulty": "hard",
-          "reveal_hint": "Del PSG y Napoli, rosarino"
-        },
-        {
-          "text": "Puma Carranza",
-          "difficulty": "hard",
-          "reveal_hint": "Arquero de Ferro y San Lorenzo"
-        },
-        {
-          "text": "Beto Márcico",
-          "difficulty": "hard",
-          "reveal_hint": "Ídolo de Ferro y Boca"
-        },
-        {
-          "text": "Chila Romero",
-          "difficulty": "hard",
-          "reveal_hint": "Arquero legendario de Paraguay en Racing"
-        },
-        {
-          "text": "Cachito Vigil",
-          "difficulty": "hard",
-          "reveal_hint": "DT histórico de Las Leonas"
-        },
-        {
-          "text": "Mecha Solís",
-          "difficulty": "hard",
-          "reveal_hint": "Hockista de los 90"
-        },
-        {
-          "text": "Sergio Hernández",
-          "difficulty": "hard",
-          "reveal_hint": "DT Generación Dorada en básquet"
-        },
-        {
-          "text": "José Pekerman",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Diego Simeone",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Aldo Duscher",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Walter Samuel",
+          "text": "Javier Zanetti",
           "difficulty": "medium"
         },
         {
@@ -4741,11 +5781,7 @@
           "difficulty": "medium"
         },
         {
-          "text": "Pablo Zabaleta",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Javier Zanetti",
+          "text": "Walter Samuel",
           "difficulty": "medium"
         },
         {
@@ -4757,7 +5793,83 @@
           "difficulty": "medium"
         },
         {
-          "text": "Matías Almeyda",
+          "text": "Fernando Redondo",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Mario Kempes",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Daniel Passarella",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Oscar Ruggeri",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Claudio Caniggia",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Jorge Burruchaga",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Ubaldo Fillol",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Sergio Goycochea",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Carlos Bilardo",
+          "difficulty": "medium"
+        },
+        {
+          "text": "César Luis Menotti",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Marcelo Bielsa",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Alejandro Sabella",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Marcelo Gallardo",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Carlos Bianchi",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Ramón Díaz",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Ricardo Bochini",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Juan Sebastián Verón",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Javier Saviola",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Pablo Zabaleta",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Sergio Romero",
           "difficulty": "medium"
         },
         {
@@ -4765,225 +5877,268 @@
           "difficulty": "medium"
         },
         {
-          "text": "Pablo Prigioni",
+          "text": "Gonzalo Higuaín",
           "difficulty": "medium"
         },
         {
-          "text": "Luis Montaner",
+          "text": "Ever Banega",
           "difficulty": "medium"
         },
         {
-          "text": "Félix Savón",
+          "text": "Paulo Dybala",
           "difficulty": "medium"
         },
         {
-          "text": "Germán Chiaraviglio",
+          "text": "Mauro Icardi",
           "difficulty": "medium"
         },
         {
-          "text": "Norberto Alonso",
-          "difficulty": "hard",
-          "reveal_hint": "Ídolo de River apodado El Beto"
-        },
-        {
-          "text": "Pedro Troglio",
-          "difficulty": "hard",
-          "reveal_hint": "Jugador y DT de Gimnasia"
-        },
-        {
-          "text": "Carlos Ischia",
-          "difficulty": "hard",
-          "reveal_hint": "DT campeón con Boca 2008"
-        },
-        {
-          "text": "Ricardo Bochini",
-          "difficulty": "hard",
-          "reveal_hint": "Ídolo de Independiente"
-        },
-        {
-          "text": "Enrique Wolff",
-          "difficulty": "hard",
-          "reveal_hint": "Periodista y ex jugador"
-        },
-        {
-          "text": "Héctor Enrique",
-          "difficulty": "hard",
-          "reveal_hint": "Campeón 86, pase a Maradona"
-        },
-        {
-          "text": "José Luis Chilavert",
-          "difficulty": "hard",
-          "reveal_hint": "Arquero paraguayo goleador"
-        },
-        {
-          "text": "Víctor Hugo Morales",
-          "difficulty": "hard",
-          "reveal_hint": "Relator del gol del siglo"
-        },
-        {
-          "text": "Cecilia Carranza",
-          "difficulty": "hard",
-          "reveal_hint": "Medalla de oro en yachting"
-        },
-        {
-          "text": "Paula Retamales",
-          "difficulty": "hard",
-          "reveal_hint": "Remera argentina de elite"
-        },
-        {
-          "text": "Leonas 2002",
-          "difficulty": "hard",
-          "reveal_hint": "Equipo campeón mundial"
-        },
-        {
-          "text": "Fangio",
-          "difficulty": "hard",
-          "reveal_hint": "Quíntuple campeón de F1"
-        },
-        {
-          "text": "Nicolás Laprovittola",
-          "difficulty": "hard",
-          "reveal_hint": "Base de la selección"
-        },
-        {
-          "text": "Marcos Di Palma",
-          "difficulty": "hard",
-          "reveal_hint": "Piloto de TC y showman"
-        },
-        {
-          "text": "Néstor Pitana",
-          "difficulty": "hard",
-          "reveal_hint": "Árbitro del Mundial 2018"
-        },
-        {
-          "text": "Andrés Nocioni",
+          "text": "Emiliano Martínez",
           "difficulty": "medium"
         },
         {
-          "text": "Fabricio Oberto",
+          "text": "Rodrigo De Paul",
           "difficulty": "medium"
         },
         {
-          "text": "Carlos Delfino",
+          "text": "Leandro Paredes",
           "difficulty": "medium"
         },
         {
-          "text": "Pepe Sánchez",
+          "text": "Enzo Fernández",
           "difficulty": "medium"
         },
         {
-          "text": "Leo Gutiérrez",
+          "text": "Julián Álvarez",
           "difficulty": "medium"
         },
         {
-          "text": "Emanuel Ginóbili",
+          "text": "Lautaro Martínez",
           "difficulty": "medium"
         },
         {
-          "text": "Federico Kammerichs",
+          "text": "Alexis Mac Allister",
           "difficulty": "medium"
         },
         {
-          "text": "Walter Herrmann",
+          "text": "Nicolás Otamendi",
           "difficulty": "medium"
         },
         {
-          "text": "Juan Ignacio Sánchez",
+          "text": "Lisandro Martínez",
           "difficulty": "medium"
         },
         {
-          "text": "Diego Guaita",
+          "text": "Marcos Acuña",
           "difficulty": "medium"
         },
         {
-          "text": "Marcelo Milanesio",
+          "text": "Nicolás Tagliafico",
           "difficulty": "medium"
         },
         {
-          "text": "Hernán Jasen",
+          "text": "Agustín Pichot",
           "difficulty": "medium"
-        },
-        {
-          "text": "Román González",
-          "difficulty": "medium"
-        },
-        {
-          "text": "Julio Lamas",
-          "difficulty": "hard",
-          "reveal_hint": "DT de básquet"
-        },
-        {
-          "text": "Rubén Magnano",
-          "difficulty": "hard",
-          "reveal_hint": "DT campeón olímpico"
-        },
-        {
-          "text": "Eduardo Cadillac",
-          "difficulty": "hard",
-          "reveal_hint": "Jugador de básquet"
-        },
-        {
-          "text": "Hugo Sconochini",
-          "difficulty": "hard",
-          "reveal_hint": "Jugador de básquet"
-        },
-        {
-          "text": "Alejandro Montecchia",
-          "difficulty": "hard",
-          "reveal_hint": "Base de básquet"
-        },
-        {
-          "text": "Diego Osella",
-          "difficulty": "hard",
-          "reveal_hint": "Jugador de básquet"
-        },
-        {
-          "text": "Esteban De la Fuente",
-          "difficulty": "hard",
-          "reveal_hint": "Jugador de básquet"
-        },
-        {
-          "text": "Sebastián Vega",
-          "difficulty": "hard",
-          "reveal_hint": "Jugador de básquet"
-        },
-        {
-          "text": "Juan Espil",
-          "difficulty": "hard",
-          "reveal_hint": "Jugador de básquet"
-        },
-        {
-          "text": "Diego Cavaco",
-          "difficulty": "hard",
-          "reveal_hint": "Jugador de básquet"
-        },
-        {
-          "text": "Marcelo Reboledo",
-          "difficulty": "hard",
-          "reveal_hint": "Jugador de básquet"
         },
         {
           "text": "Felipe Contepomi",
           "difficulty": "medium"
         },
         {
-          "text": "Juan Martín Hernández",
-          "difficulty": "medium"
+          "text": "David Nalbandian",
+          "difficulty": "hard"
         },
         {
-          "text": "Leandro Bolmaro",
-          "difficulty": "hard",
-          "reveal_hint": "Jugador de básquet NBA"
+          "text": "Gastón Gaudio",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Guillermo Coria",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Diego Schwartzman",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Juan Mónaco",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Guillermo Cañas",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Gisela Dulko",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Marcos Maidana",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Sergio Maravilla Martínez",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Carlos Monzón",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Nicolino Locche",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Juan Manuel Fangio",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Carlos Reutemann",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Diego Milito",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Gabriel Milito",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Javier Pastore",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Ángel Correa",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Giovanni Lo Celso",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Cristian Romero",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Marcos Rojo",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Germán Pezzella",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Exequiel Palacios",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Alejandro Garnacho",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Nicolás González",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Nahuel Molina",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Enzo Pérez",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Fernando Gago",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Juan Pablo Sorín",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Gabriel Heinze",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Martín Demichelis",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Nicolás Burdisso",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Kily González",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Pablo Prigioni",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Andrés Nocioni",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Carlos Delfino",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Fabricio Oberto",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Pepe Sánchez",
+          "difficulty": "hard"
         },
         {
           "text": "Facundo Campazzo",
-          "difficulty": "hard",
-          "reveal_hint": "Base de básquet NBA"
+          "difficulty": "hard"
         },
         {
           "text": "Gabriel Deck",
-          "difficulty": "hard",
-          "reveal_hint": "Jugador de básquet NBA"
+          "difficulty": "hard"
+        },
+        {
+          "text": "Andrés D'Alessandro",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Ricardo Gareca",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Alfio Basile",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Sergio Batista",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Jorge Valdano",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Osvaldo Ardiles",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Norberto Alonso",
+          "difficulty": "hard"
+        },
+        {
+          "text": "René Houseman",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Amadeo Carrizo",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Antonio Rattin",
+          "difficulty": "hard"
         }
       ]
     }

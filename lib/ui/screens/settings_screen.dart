@@ -1,262 +1,274 @@
-import 'package:flutter/foundation.dart';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:package_info_plus/package_info_plus.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../app/settings.dart';
 import '../../app/strings.dart';
-import '../../data/word_pack_repository.dart';
-import '../../domain/models/word_pack.dart';
-import '../widgets/category_item.dart';
+import '../../app/version_checker_notifier.dart';
+import '../widgets/rate_us_dialog.dart';
 
 class SettingsScreen extends ConsumerWidget {
   const SettingsScreen({super.key});
 
-  static const locales = ['es-AR', 'es-ES', 'es-MX', 'es-UY', 'en-US', 'en-GB', 'en-AU', 'en-CA', 'pt-BR', 'pt-PT'];
+  static final Uri _legalUrl = Uri.parse(
+    'https://www.notion.so/Pol-tica-de-Privacidad-Impostor-2f89fd95a62b80c5969df8e44411aaca',
+  );
+  static final Future<PackageInfo> _packageInfo = PackageInfo.fromPlatform();
+  static const String _feedbackEmail = 'info@giftera-store.com';
+  static const String _feedbackSubject = 'Impostor Words - Sugerencia';
+
+  static String _formatTimestamp(DateTime value) {
+    String twoDigits(int number) => number.toString().padLeft(2, '0');
+    return '${value.year}-${twoDigits(value.month)}-${twoDigits(value.day)} '
+        '${twoDigits(value.hour)}:${twoDigits(value.minute)}';
+  }
+
+  static String _buildFeedbackBody({
+    required PackageInfo info,
+    required String locale,
+    required String platform,
+    required DateTime timestamp,
+  }) {
+    return 'Hola, dejo mi sugerencia:\n\n'
+        '[Escribí acá]\n\n'
+        '---\n'
+        'App: Impostor Words\n'
+        'Versión: ${info.version} (build ${info.buildNumber})\n'
+        'Plataforma: $platform\n'
+        'Idioma: $locale\n'
+        'Fecha: ${_formatTimestamp(timestamp)}';
+  }
+
+  static Uri _buildFeedbackUri({required String body}) {
+    return Uri(
+      scheme: 'mailto',
+      path: _feedbackEmail,
+      queryParameters: {
+        'subject': _feedbackSubject,
+        'body': body,
+      },
+    );
+  }
+
+  static Future<void> _showFeedbackFallbackDialog({
+    required BuildContext context,
+    required Strings strings,
+    required String body,
+  }) {
+    return showDialog<void>(
+      context: context,
+      barrierDismissible: true,
+      builder: (dialogContext) {
+        return AlertDialog(
+          backgroundColor: Theme.of(context).cardColor,
+          title: Text(strings.feedbackDialogTitle),
+          content: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text('${strings.feedbackEmailLabel}: $_feedbackEmail'),
+                const SizedBox(height: 12),
+                SelectableText(body),
+              ],
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () async {
+                await Clipboard.setData(ClipboardData(text: body));
+                if (dialogContext.mounted) {
+                  Navigator.of(dialogContext).pop();
+                }
+              },
+              child: Text(strings.feedbackCopy),
+            ),
+          ],
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final settingsAsync = ref.watch(settingsNotifierProvider);
-    final packAsync = ref.watch(currentWordPackProvider);
+    final strings = Strings.fromLocale(
+      settingsAsync.valueOrNull?.locale ?? 'es-AR',
+    );
 
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Settings'),
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back),
-            onPressed: () => context.pop(),
-          ),
+      appBar: AppBar(
+        title: Text(strings.settingsTitle),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () => context.pop(),
         ),
-        body: settingsAsync.when(
+      ),
+      body: settingsAsync.when(
         loading: () => const Center(child: CircularProgressIndicator()),
         error: (e, _) => Center(child: Text('Failed to load settings: $e')),
         data: (settings) {
-          final List<WordCategory> categories = packAsync.maybeWhen(
-            data: (result) => result.pack.categories,
-            orElse: () => const <WordCategory>[],
-          );
-          final recommended = suggestImpostors(
-            players: settings.players,
-            difficulty: settings.difficulty,
-          );
-          final invalidImpostors = settings.impostors >= settings.players;
-          // Sort categories alphabetically by displayName
-          final sortedCategories = List<WordCategory>.from(categories)
-            ..sort((a, b) => a.displayName.compareTo(b.displayName));
-
-          final strings = Strings.fromLocale(settings.locale);
-          final List<DropdownMenuItem<String>> categoryOptions = [
-            DropdownMenuItem<String>(
-              value: SettingsState.randomCategory,
-              child: Row(
-                key: ValueKey('random_category_row_${settings.locale}'),
-                children: [
-                  const Icon(Icons.shuffle, size: 18, color: Colors.orange),
-                  const SizedBox(width: 8),
-                  Text(
-                    strings.randomCategory,
-                    key: ValueKey('random_category_text_${settings.locale}'),
-                    style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.orange,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            ...sortedCategories.map(
-              (c) => DropdownMenuItem<String>(
-                value: c.id,
-                child: CategoryItem(
-                  displayName: c.displayName,
-                  categoryId: c.id,
-                ),
-              ),
-            ),
-          ];
-
-          final notifier = ref.read(settingsNotifierProvider.notifier);
-
-          // Auto-fix category if locale changed and current category missing.
-          final hasCategory = categories.any((c) => c.id == settings.categoryId);
-          if (!hasCategory && settings.categoryId != SettingsState.randomCategory) {
-            notifier.setCategory(SettingsState.randomCategory);
-          }
-
           return Padding(
             padding: const EdgeInsets.all(16),
-            child: ListView(
+            child: Column(
               children: [
-                _Section(
-                  title: 'Locale',
-                  child: DropdownButtonFormField<String>(
-                    value: settings.locale,
-                    menuMaxHeight: 300,
-                    alignment: AlignmentDirectional.bottomStart,
-                    items: locales
-                        .map((l) => DropdownMenuItem(
-                              value: l,
-                              child: Text(l),
-                            ))
-                        .toList(),
-                    onChanged: (value) {
-                      if (value != null) notifier.setLocale(value);
-                    },
-                  ),
-                ),
-                const SizedBox(height: 12),
-                _Section(
-                  title: 'Difficulty',
-                  child: SegmentedButton<Difficulty>(
-                    showSelectedIcon: false,
-                    segments: const [
-                      ButtonSegment(
-                        value: Difficulty.easy,
-                        label: Text('Easy'),
-                      ),
-                      ButtonSegment(
-                        value: Difficulty.medium,
-                        label: Text('Medium'),
-                      ),
-                      ButtonSegment(
-                        value: Difficulty.hard,
-                        label: Text('Hard'),
-                      ),
-                    ],
-                    selected: {settings.difficulty},
-                    onSelectionChanged: (selection) =>
-                        notifier.setDifficulty(selection.first),
-                  ),
-                ),
-                const SizedBox(height: 12),
-                _Section(
-                  title: 'Players',
-                  child: _StepperRow(
-                    value: settings.players,
-                    min: SettingsState.minPlayers,
-                    max: SettingsState.maxPlayers,
-                    onChanged: notifier.setPlayers,
-                  ),
-                ),
-                const SizedBox(height: 12),
-                _Section(
-                  title: 'Impostors',
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                Expanded(
+                  child: ListView(
                     children: [
-                      _StepperRow(
-                        value: settings.impostors,
-                        min: SettingsState.minImpostors,
-                        max: SettingsState.maxImpostors,
-                        onChanged: notifier.setImpostors,
-                      ),
-                      const SizedBox(height: 8),
-                      Text('Recommended: $recommended'),
-                      const SizedBox(height: 4),
-                      OutlinedButton(
-                        onPressed: settings.impostors == recommended
-                            ? null
-                            : notifier.useRecommendedImpostors,
-                        child: const Text('Use recommended'),
-                      ),
-                      const SizedBox(height: 4),
-                      if (invalidImpostors)
-                        Text(
-                          'Impostors must be less than players.',
-                          style: TextStyle(
-                            color: Theme.of(context).colorScheme.error,
+                      // Sección de tema temporalmente deshabilitada
+                      // _Section(
+                      //   title: strings.themeSectionTitle,
+                      //   child: SwitchListTile(
+                      //     contentPadding: EdgeInsets.zero,
+                      //     value: settings.isDarkTheme,
+                      //     onChanged: (value) => ref
+                      //         .read(settingsNotifierProvider.notifier)
+                      //         .setDarkTheme(value),
+                      //     secondary: Icon(
+                      //       settings.isDarkTheme
+                      //           ? Icons.dark_mode_outlined
+                      //           : Icons.light_mode_outlined,
+                      //     ),
+                      //     title: Text(strings.themeDarkLabel),
+                      //   ),
+                      // ),
+                      // const SizedBox(height: 12),
+                      _Section(
+                        title: strings.contactSectionTitle,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 16),
+                          child: Column(
+                            children: [
+                              ListTile(
+                                contentPadding: EdgeInsets.zero,
+                                leading: const Icon(Icons.mail_outline),
+                                title: Text(strings.feedbackTitle),
+                                trailing: const Icon(Icons.chevron_right, size: 18),
+                                onTap: () async {
+                                  final info = await _packageInfo;
+                                  final locale =
+                                      Localizations.localeOf(context).toLanguageTag();
+                                  final platform = Platform.isIOS ? 'ios' : 'android';
+                                  final body = _buildFeedbackBody(
+                                    info: info,
+                                    locale: locale,
+                                    platform: platform,
+                                    timestamp: DateTime.now(),
+                                  );
+                                  final uri = _buildFeedbackUri(body: body);
+                                  final launched = await launchUrl(
+                                    uri,
+                                    mode: LaunchMode.externalApplication,
+                                  );
+                                  if (!launched && context.mounted) {
+                                    await _showFeedbackFallbackDialog(
+                                      context: context,
+                                      strings: strings,
+                                      body: body,
+                                    );
+                                  }
+                                },
+                              ),
+                              ListTile(
+                                contentPadding: EdgeInsets.zero,
+                                leading: const Icon(Icons.star_outline),
+                                title: Text(strings.rateUsSettingsTitle),
+                                trailing: const Icon(Icons.chevron_right, size: 18),
+                                onTap: () {
+                                  RateUsDialog.show(
+                                    context: context,
+                                    title: strings.rateUsTitle,
+                                    message: strings.rateUsMessage,
+                                    primaryLabel: strings.rateUsCta,
+                                    secondaryLabel: strings.rateUsLater,
+                                  );
+                                },
+                              ),
+                            ],
                           ),
                         ),
+                      ),
+                      const SizedBox(height: 12),
+                      _Section(
+                        title: strings.legalSectionTitle,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 16),
+                          child: Column(
+                            children: [
+                              ListTile(
+                                contentPadding: EdgeInsets.zero,
+                                leading: const Icon(Icons.menu_book_outlined),
+                                title: Text(strings.legalGuideTitle),
+                                trailing:
+                                    const Icon(Icons.chevron_right, size: 18),
+                                onTap: () => context.push('/rules'),
+                              ),
+                              ListTile(
+                                contentPadding: EdgeInsets.zero,
+                                leading: const Icon(Icons.gavel_outlined),
+                                title: Text(strings.legalLinkTitle),
+                                trailing: const Icon(Icons.open_in_new, size: 18),
+                                onTap: () async {
+                                  final launched = await launchUrl(
+                                    _legalUrl,
+                                    mode: LaunchMode.externalApplication,
+                                  );
+                                  if (!launched && context.mounted) {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      const SnackBar(
+                                        content:
+                                            Text('No se pudo abrir el enlace.'),
+                                      ),
+                                    );
+                                  }
+                                },
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+                      ListTile(
+                        contentPadding: EdgeInsets.zero,
+                        leading: const Icon(Icons.system_update_alt),
+                        title: Text(strings.checkUpdatesTitle),
+                        trailing: const Icon(Icons.chevron_right, size: 18),
+                        onTap: () {
+                          ref.read(versionCheckerNotifierProvider.notifier).checkForUpdates(
+                            context: context,
+                            strings: strings,
+                            showNoUpdateMessage: true,
+                          );
+                        },
+                      ),
                     ],
                   ),
                 ),
-                const SizedBox(height: 12),
-                _Section(
-                  title: 'Auto impostors',
-                  child: SwitchListTile(
-                    contentPadding: EdgeInsets.zero,
-                    value: settings.autoImpostors,
-                    onChanged: notifier.setAutoImpostors,
-                    title: const Text('Auto adjust based on players & difficulty'),
-                  ),
+                const SizedBox(height: 8),
+                FutureBuilder<PackageInfo>(
+                  future: _packageInfo,
+                  builder: (context, snapshot) {
+                    final info = snapshot.data;
+                    final versionText = info == null 
+                        ? '' 
+                        : 'Version: ${info.version}';
+                    return Text(
+                      versionText,
+                      textAlign: TextAlign.center,
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                            color: Theme.of(context)
+                                .colorScheme
+                                .onSurface
+                                .withValues(alpha: 0.6),
+                          ),
+                    );
+                  },
                 ),
-                const SizedBox(height: 12),
-                _Section(
-                  title: 'Category',
-                  child: DropdownButtonFormField<String>(
-                    value: hasCategory ? settings.categoryId : SettingsState.randomCategory,
-                    menuMaxHeight: 300,
-                    alignment: AlignmentDirectional.bottomStart,
-                    items: categoryOptions,
-                    onChanged: (value) {
-                      if (value != null) notifier.setCategory(value);
-                    },
-                  ),
-                ),
-                const SizedBox(height: 12),
-                if (packAsync.isLoading)
-                  const Padding(
-                    padding: EdgeInsets.only(top: 8),
-                    child: LinearProgressIndicator(),
-                  )
-                else if (packAsync.hasError)
-                  Text(
-                    'Failed to load word pack for ${settings.locale}',
-                    style: TextStyle(color: Theme.of(context).colorScheme.error),
-                  ),
-                // Testing section - solo visible en modo debug
-                if (kDebugMode) ...[
-                  const SizedBox(height: 24),
-                  const Divider(),
-                  const SizedBox(height: 12),
-                  _Section(
-                    title: 'Testing',
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        OutlinedButton.icon(
-                          onPressed: () {
-                            // Mostrar un diálogo de prueba que simula el diálogo de actualización
-                            showDialog(
-                              context: context,
-                              barrierDismissible: true,
-                              builder: (dialogContext) {
-                                return AlertDialog(
-                                  title: const Text('Actualización disponible'),
-                                  content: const Text(
-                                    'Hay una nueva versión disponible en la tienda.\n\n'
-                                    '¿Deseas actualizar ahora?',
-                                  ),
-                                  actions: [
-                                    TextButton(
-                                      onPressed: () => Navigator.of(dialogContext).pop(),
-                                      child: const Text('Más tarde'),
-                                    ),
-                                    ElevatedButton(
-                                      onPressed: () {
-                                        Navigator.of(dialogContext).pop();
-                                        // En producción, esto abriría la tienda
-                                        // upgrader.launchAppStore();
-                                      },
-                                      child: const Text('Actualizar'),
-                                    ),
-                                  ],
-                                );
-                              },
-                            );
-                          },
-                          icon: const Icon(Icons.system_update),
-                          label: const Text('Test Update Dialog'),
-                        ),
-                        const SizedBox(height: 8),
-                        Text(
-                          'Tap the button above to test the update dialog.\n\nIn production, the dialog will appear automatically when a new version is available.',
-                          style: Theme.of(context).textTheme.bodySmall,
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
               ],
             ),
           );
@@ -287,42 +299,3 @@ class _Section extends StatelessWidget {
     );
   }
 }
-
-class _StepperRow extends StatelessWidget {
-  const _StepperRow({
-    required this.value,
-    required this.min,
-    required this.max,
-    required this.onChanged,
-  });
-
-  final int value;
-  final int min;
-  final int max;
-  final void Function(int) onChanged;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        IconButton(
-          onPressed: value > min ? () => onChanged(value - 1) : null,
-          icon: const Icon(Icons.remove),
-        ),
-        Expanded(
-          child: Center(
-            child: Text(
-              '$value',
-              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
-            ),
-          ),
-        ),
-        IconButton(
-          onPressed: value < max ? () => onChanged(value + 1) : null,
-          icon: const Icon(Icons.add),
-        ),
-      ],
-    );
-  }
-}
-

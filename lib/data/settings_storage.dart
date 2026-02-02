@@ -9,7 +9,10 @@ class SettingsStorage {
   static const _keyLocale = 'settings_locale';
   static const _keyCategory = 'settings_category';
   static const _keyAutoImpostors = 'settings_auto_impostors';
+  static const _keyDarkTheme = 'settings_dark_theme';
   static const _keyCachedPlayerNames = 'settings_cached_player_names';
+  static const _keyCachedPlayerNamesLastUsed =
+      'settings_cached_player_names_last_used';
   static const _keyPreventImpostorFirst = 'settings_prevent_impostor_first';
 
   Future<SettingsState> load() async {
@@ -22,6 +25,8 @@ class SettingsStorage {
 
     final cachedNames = prefs.getStringList(_keyCachedPlayerNames) ??
         SettingsState.initial().cachedPlayerNames;
+    final cachedNamesLastUsed =
+        prefs.getInt(_keyCachedPlayerNamesLastUsed);
 
     final loaded = SettingsState(
       players: prefs.getInt(_keyPlayers) ?? SettingsState.initial().players,
@@ -33,7 +38,10 @@ class SettingsStorage {
           prefs.getString(_keyCategory) ?? SettingsState.initial().categoryId,
       autoImpostors: prefs.getBool(_keyAutoImpostors) ??
           SettingsState.initial().autoImpostors,
+      isDarkTheme:
+          prefs.getBool(_keyDarkTheme) ?? SettingsState.initial().isDarkTheme,
       cachedPlayerNames: cachedNames,
+      cachedPlayerNamesLastUsed: cachedNamesLastUsed,
       preventImpostorFirst: prefs.getBool(_keyPreventImpostorFirst) ??
           SettingsState.initial().preventImpostorFirst,
     );
@@ -49,7 +57,14 @@ class SettingsStorage {
     await prefs.setString(_keyLocale, state.locale);
     await prefs.setString(_keyCategory, state.categoryId);
     await prefs.setBool(_keyAutoImpostors, state.autoImpostors);
+    await prefs.setBool(_keyDarkTheme, state.isDarkTheme);
     await prefs.setStringList(_keyCachedPlayerNames, state.cachedPlayerNames);
+    if (state.cachedPlayerNamesLastUsed == null) {
+      await prefs.remove(_keyCachedPlayerNamesLastUsed);
+    } else {
+      await prefs.setInt(
+          _keyCachedPlayerNamesLastUsed, state.cachedPlayerNamesLastUsed!);
+    }
     await prefs.setBool(_keyPreventImpostorFirst, state.preventImpostorFirst);
   }
 }

@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -17,15 +16,14 @@ import '../widgets/responsive_helper.dart';
 final _categoryDropdownWidgetKey = GlobalKey();
 
 // Provider para memoizar categoryOptions
-final _categoryOptionsProvider = Provider.family<List<DropdownMenuItem<String>>, ({String locale, AsyncValue<WordPackLoadResult> packAsync})>((ref, params) {
+final _categoryOptionsProvider = Provider.family<List<DropdownMenuItem<String>>,
+    ({String locale, AsyncValue<WordPackLoadResult> packAsync})>((ref, params) {
   final categories = params.packAsync.when(
     data: (result) => result.pack.categories,
     loading: () =>
-        params.packAsync.value?.pack.categories ??
-        const <WordCategory>[],
+        params.packAsync.value?.pack.categories ?? const <WordCategory>[],
     error: (_, __) =>
-        params.packAsync.value?.pack.categories ??
-        const <WordCategory>[],
+        params.packAsync.value?.pack.categories ?? const <WordCategory>[],
   );
 
   final strings = Strings.fromLocale(params.locale);
@@ -35,8 +33,7 @@ final _categoryOptionsProvider = Provider.family<List<DropdownMenuItem<String>>,
   final categoryOptions = <DropdownMenuItem<String>>[];
   final seen = <String>{};
 
-  if (!hasRandomCategory &&
-      seen.add(SettingsState.randomCategory)) {
+  if (!hasRandomCategory && seen.add(SettingsState.randomCategory)) {
     categoryOptions.add(
       DropdownMenuItem<String>(
         value: SettingsState.randomCategory,
@@ -74,7 +71,7 @@ final _categoryOptionsProvider = Provider.family<List<DropdownMenuItem<String>>,
       );
     }
   }
-  
+
   return categoryOptions;
 });
 
@@ -87,6 +84,18 @@ class SetupScreen extends ConsumerStatefulWidget {
 
 class _SetupScreenState extends ConsumerState<SetupScreen> {
   String? _localCategoryId;
+
+  @override
+  void initState() {
+    super.initState();
+    Future.microtask(() async {
+      await ref.read(settingsNotifierProvider.future);
+      if (!mounted) return;
+      await ref
+          .read(settingsNotifierProvider.notifier)
+          .clearCachedPlayerNamesIfExpired();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -117,65 +126,19 @@ class _SetupScreenState extends ConsumerState<SetupScreen> {
               top: 8,
               left: 8,
               child: IconButton(
-                icon: const Icon(Icons.arrow_back, color: Colors.white),
+                icon: const Icon(Icons.arrow_back),
                 onPressed: () => context.go('/select-locale'),
               ),
             ),
             Positioned(
               top: 8,
               right: 8,
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  // Botón de test update solo visible en modo debug
-                  if (kDebugMode)
-                    Tooltip(
-                      message: tooltipStrings.isEs
-                          ? 'Probar actualización'
-                          : 'Test update',
-                      child: IconButton(
-                        icon: const Icon(Icons.system_update,
-                            color: Colors.white70, size: 20),
-                        onPressed: () {
-                          showDialog(
-                            context: context,
-                            barrierDismissible: true,
-                            builder: (dialogContext) {
-                              final strings = Strings.fromLocale(
-                                settingsAsync.valueOrNull?.locale ?? 'es-AR',
-                              );
-                              return AlertDialog(
-                                title: Text(strings.updateAvailable),
-                                content: Text(strings.updateMessage),
-                                actions: [
-                                  TextButton(
-                                    onPressed: () =>
-                                        Navigator.of(dialogContext).pop(),
-                                    child: Text(strings.updateLater),
-                                  ),
-                                  ElevatedButton(
-                                    onPressed: () {
-                                      Navigator.of(dialogContext).pop();
-                                      // En producción, esto abriría la tienda
-                                    },
-                                    child: Text(strings.updateButton),
-                                  ),
-                                ],
-                              );
-                            },
-                          );
-                        },
-                      ),
-                    ),
-                  Tooltip(
-                    message:
-                        tooltipStrings.isEs ? 'Reglas de juego' : 'Game rules',
-                    child: IconButton(
-                      icon: const Icon(Icons.info_outline, color: Colors.white),
-                      onPressed: () => context.go('/rules'),
-                    ),
-                  ),
-                ],
+              child: Tooltip(
+                message: tooltipStrings.isEs ? 'Configuración' : 'Settings',
+                child: IconButton(
+                  icon: const Icon(Icons.settings),
+                  onPressed: () => context.push('/settings'),
+                ),
               ),
             ),
             Consumer(
@@ -188,18 +151,21 @@ class _SetupScreenState extends ConsumerState<SetupScreen> {
                   settingsNotifierProvider.select((state) => state.hasError),
                 );
                 final error = ref.watch(
-                  settingsNotifierProvider.select((state) => state.hasError ? state.error : null),
+                  settingsNotifierProvider
+                      .select((state) => state.hasError ? state.error : null),
                 );
-                
+
                 if (isLoading) {
                   return const Center(child: CircularProgressIndicator());
                 }
                 if (hasError) {
                   return Center(child: Text('Failed to load settings: $error'));
                 }
-                
+
                 // Obtener el valor inicial una sola vez
-                final initialSettings = ref.read(settingsNotifierProvider).valueOrNull ?? SettingsState.initial();
+                final initialSettings =
+                    ref.read(settingsNotifierProvider).valueOrNull ??
+                        SettingsState.initial();
                 return _SetupContent(
                   initialSettings: initialSettings,
                   packAsync: packAsync,
@@ -209,7 +175,9 @@ class _SetupScreenState extends ConsumerState<SetupScreen> {
                       setState(() {
                         _localCategoryId = value;
                       });
-                      ref.read(settingsNotifierProvider.notifier).setCategory(value);
+                      ref
+                          .read(settingsNotifierProvider.notifier)
+                          .setCategory(value);
                     }
                   },
                 );
@@ -239,7 +207,6 @@ class _SetupContent extends ConsumerStatefulWidget {
   ConsumerState<_SetupContent> createState() => _SetupContentState();
 }
 
-
 class _SetupContentState extends ConsumerState<_SetupContent> {
   // Memoizar categoryOptions para evitar recalcular en cada rebuild
   List<DropdownMenuItem<String>>? _cachedCategoryOptions;
@@ -252,9 +219,10 @@ class _SetupContentState extends ConsumerState<_SetupContent> {
   InputDecoration? _cachedCategoryDecoration;
   String? _lastDecorationLocale;
 
-  List<DropdownMenuItem<String>> _buildCategoryOptions(String locale, List<WordCategory> categories) {
+  List<DropdownMenuItem<String>> _buildCategoryOptions(
+      String locale, List<WordCategory> categories) {
     final strings = Strings.fromLocale(locale);
-    
+
     final categoryOptions = <DropdownMenuItem<String>>[];
     final seen = <String>{};
 
@@ -284,9 +252,8 @@ class _SetupContentState extends ConsumerState<_SetupContent> {
 
     // Filtrar categorías que tengan ID "random" para evitar duplicados
     // y usar solo nuestra opción personalizada "Aleatoria"
-    final filteredCategories = categories
-        .where((c) => c.id != SettingsState.randomCategory)
-        .toList();
+    final filteredCategories =
+        categories.where((c) => c.id != SettingsState.randomCategory).toList();
 
     // Sort categories alphabetically by displayName
     final sortedCategories = List<WordCategory>.from(filteredCategories)
@@ -305,7 +272,7 @@ class _SetupContentState extends ConsumerState<_SetupContent> {
         );
       }
     }
-    
+
     return categoryOptions;
   }
 
@@ -313,9 +280,11 @@ class _SetupContentState extends ConsumerState<_SetupContent> {
   void didUpdateWidget(_SetupContent oldWidget) {
     super.didUpdateWidget(oldWidget);
     // Sincronizar _localCategoryValue cuando cambia widget.localCategoryId externamente
-    if (oldWidget.localCategoryId != widget.localCategoryId && widget.localCategoryId != null) {
+    if (oldWidget.localCategoryId != widget.localCategoryId &&
+        widget.localCategoryId != null) {
       final optionValues = _cachedOptionValues;
-      if (optionValues != null && optionValues.contains(widget.localCategoryId)) {
+      if (optionValues != null &&
+          optionValues.contains(widget.localCategoryId)) {
         _localCategoryValue = widget.localCategoryId;
       }
     }
@@ -329,15 +298,13 @@ class _SetupContentState extends ConsumerState<_SetupContent> {
         (state) => state.valueOrNull?.locale ?? widget.initialSettings.locale,
       ),
     );
-    
+
     final categories = widget.packAsync.when(
       data: (result) => result.pack.categories,
       loading: () =>
-          widget.packAsync.value?.pack.categories ??
-          const <WordCategory>[],
+          widget.packAsync.value?.pack.categories ?? const <WordCategory>[],
       error: (_, __) =>
-          widget.packAsync.value?.pack.categories ??
-          const <WordCategory>[],
+          widget.packAsync.value?.pack.categories ?? const <WordCategory>[],
     );
 
     // Recalcular categoryOptions solo si cambió el locale o el pack
@@ -362,16 +329,21 @@ class _SetupContentState extends ConsumerState<_SetupContent> {
     final notifier = ref.read(settingsNotifierProvider.notifier);
     // Inicializar el valor local del dropdown una sola vez
     if (_localCategoryValue == null) {
-      final initialCategoryId = ref.read(settingsNotifierProvider).valueOrNull?.categoryId;
-      final currentCategoryId = widget.localCategoryId ?? initialCategoryId ?? SettingsState.randomCategory;
+      final initialCategoryId =
+          ref.read(settingsNotifierProvider).valueOrNull?.categoryId;
+      final currentCategoryId = widget.localCategoryId ??
+          initialCategoryId ??
+          SettingsState.randomCategory;
       // Asegurar que si no hay categoría válida, use randomCategory como default
       _localCategoryValue = optionValues.contains(currentCategoryId)
           ? currentCategoryId
           : (optionValues.contains(SettingsState.randomCategory)
               ? SettingsState.randomCategory
-              : (optionValues.isNotEmpty ? optionValues.first : SettingsState.randomCategory));
+              : (optionValues.isNotEmpty
+                  ? optionValues.first
+                  : SettingsState.randomCategory));
     }
-    
+
     // Memoizar InputDecoration solo cuando cambia el locale
     if (_cachedCategoryDecoration == null || _lastDecorationLocale != locale) {
       _lastDecorationLocale = locale;
@@ -379,15 +351,13 @@ class _SetupContentState extends ConsumerState<_SetupContent> {
         labelText: strings.categoryFieldLabel,
       );
     }
-    
+
     // Asegurar que siempre tengamos un decoration válido
     final categoryDecoration = _cachedCategoryDecoration!;
     final isTablet = ResponsiveHelper.isTablet(context);
     final maxWidth = ResponsiveHelper.getMaxContentWidth(context);
-    final horizontalPadding =
-        ResponsiveHelper.getHorizontalPadding(context);
-    final verticalPadding =
-        ResponsiveHelper.getVerticalPadding(context);
+    final horizontalPadding = ResponsiveHelper.getHorizontalPadding(context);
+    final verticalPadding = ResponsiveHelper.getVerticalPadding(context);
 
     return Center(
       child: ConstrainedBox(
@@ -404,23 +374,32 @@ class _SetupContentState extends ConsumerState<_SetupContent> {
               Center(
                 child: SizedBox(
                   height: isTablet ? 160 : 120,
-                  child: Image.asset(
-                    'assets/images/icon_square.png',
-                    fit: BoxFit.contain,
-                    errorBuilder: (_, __, ___) => LogoMark(
-                      size: isTablet ? 160 : 120,
-                    ),
-                  ),
+                  child: Theme.of(context).brightness == Brightness.light
+                      ? Container(
+                          color: Colors.white,
+                          child: Image.asset(
+                            'assets/images/icon_square_foreground.png',
+                            fit: BoxFit.contain,
+                            errorBuilder: (_, __, ___) => LogoMark(
+                              size: isTablet ? 160 : 120,
+                              isLight: true,
+                            ),
+                          ),
+                        )
+                      : Image.asset(
+                          'assets/images/icon_square.png',
+                          fit: BoxFit.contain,
+                          errorBuilder: (_, __, ___) => LogoMark(
+                            size: isTablet ? 160 : 120,
+                          ),
+                        ),
                 ),
               ),
               SizedBox(height: isTablet ? 16 : 8),
               Center(
                 child: Text(
                   strings.setupTitle,
-                  style: Theme.of(context)
-                      .textTheme
-                      .headlineMedium
-                      ?.copyWith(
+                  style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                         fontWeight: FontWeight.w800,
                         fontSize: isTablet ? 32 : null,
                       ),
@@ -430,11 +409,11 @@ class _SetupContentState extends ConsumerState<_SetupContent> {
               Center(
                 child: Text(
                   strings.setupSub,
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyMedium
-                      ?.copyWith(
-                        color: Colors.white70,
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                        color: Theme.of(context)
+                            .colorScheme
+                            .onSurface
+                            .withValues(alpha: 0.7),
                         fontSize: isTablet ? 18 : null,
                       ),
                 ),
@@ -500,9 +479,7 @@ class _SetupContentState extends ConsumerState<_SetupContent> {
                               child: Text(
                                 '${strings.loadingFailed} ($locale)',
                                 style: TextStyle(
-                                  color: Theme.of(context)
-                                      .colorScheme
-                                      .error,
+                                  color: Theme.of(context).colorScheme.error,
                                 ),
                               ),
                             ),
@@ -511,7 +488,10 @@ class _SetupContentState extends ConsumerState<_SetupContent> {
                             builder: (context, ref, _) {
                               final preventImpostorFirst = ref.watch(
                                 settingsNotifierProvider.select(
-                                  (state) => state.valueOrNull?.preventImpostorFirst ?? widget.initialSettings.preventImpostorFirst,
+                                  (state) =>
+                                      state.valueOrNull?.preventImpostorFirst ??
+                                      widget
+                                          .initialSettings.preventImpostorFirst,
                                 ),
                               );
                               return CheckboxListTile(
@@ -524,7 +504,8 @@ class _SetupContentState extends ConsumerState<_SetupContent> {
                                 value: preventImpostorFirst,
                                 onChanged: (value) {
                                   if (value != null) {
-                                    ref.read(settingsNotifierProvider.notifier)
+                                    ref
+                                        .read(settingsNotifierProvider.notifier)
                                         .setPreventImpostorFirst(value);
                                   }
                                 },
@@ -607,7 +588,8 @@ class _PlayersStepperTablet extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final players = ref.watch(
       settingsNotifierProvider.select(
-        (state) => state.valueOrNull?.players ?? SettingsState.initial().players,
+        (state) =>
+            state.valueOrNull?.players ?? SettingsState.initial().players,
       ),
     );
     return _Section(
@@ -639,17 +621,20 @@ class _ImpostorsStepperTablet extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final impostors = ref.watch(
       settingsNotifierProvider.select(
-        (state) => state.valueOrNull?.impostors ?? SettingsState.initial().impostors,
+        (state) =>
+            state.valueOrNull?.impostors ?? SettingsState.initial().impostors,
       ),
     );
     final players = ref.watch(
       settingsNotifierProvider.select(
-        (state) => state.valueOrNull?.players ?? SettingsState.initial().players,
+        (state) =>
+            state.valueOrNull?.players ?? SettingsState.initial().players,
       ),
     );
     final difficulty = ref.watch(
       settingsNotifierProvider.select(
-        (state) => state.valueOrNull?.difficulty ?? SettingsState.initial().difficulty,
+        (state) =>
+            state.valueOrNull?.difficulty ?? SettingsState.initial().difficulty,
       ),
     );
     final recommended = suggestImpostors(
@@ -657,7 +642,7 @@ class _ImpostorsStepperTablet extends ConsumerWidget {
       difficulty: difficulty,
     );
     final invalid = impostors >= players;
-    
+
     return _Section(
       title: title,
       isTablet: true,
@@ -724,17 +709,16 @@ class _CategoryDropdownTablet extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     // No escuchar el provider - usar estado local como en locale_selection_screen
     // Solo leer el valor inicial una vez
-    final optionValues = categoryOptions
-        .map((e) => e.value)
-        .whereType<String>()
-        .toList();
-    
+    final optionValues =
+        categoryOptions.map((e) => e.value).whereType<String>().toList();
+
     // Leer el valor actual sin watch para evitar reconstrucciones
-    final categoryId = ref.read(settingsNotifierProvider).valueOrNull?.categoryId;
+    final categoryId =
+        ref.read(settingsNotifierProvider).valueOrNull?.categoryId;
     final selectedCategory = optionValues.contains(categoryId)
         ? categoryId
         : (optionValues.isNotEmpty ? optionValues.first : null);
-    
+
     return RepaintBoundary(
       child: _CategoryDropdownTabletInternal(
         key: const ValueKey('category_dropdown_tablet'),
@@ -799,7 +783,7 @@ class _CategoryDropdownTabletInternalState
           vertical: 20,
         ),
       ),
-      dropdownColor: const Color(0xFF0F1628),
+      dropdownColor: Theme.of(context).colorScheme.surface,
       menuMaxHeight: 300,
       alignment: AlignmentDirectional.bottomStart,
       items: widget.categoryOptions,
@@ -831,7 +815,8 @@ class _DifficultySelectorTablet extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final difficulty = ref.watch(
       settingsNotifierProvider.select(
-        (state) => state.valueOrNull?.difficulty ?? SettingsState.initial().difficulty,
+        (state) =>
+            state.valueOrNull?.difficulty ?? SettingsState.initial().difficulty,
       ),
     );
     return _Section(
@@ -955,7 +940,9 @@ class _TabletLayout extends ConsumerWidget {
                     // Solo escuchar el campo preventImpostorFirst para evitar reconstrucciones innecesarias
                     final preventImpostorFirst = ref.watch(
                       settingsNotifierProvider.select(
-                        (state) => state.valueOrNull?.preventImpostorFirst ?? settings.preventImpostorFirst,
+                        (state) =>
+                            state.valueOrNull?.preventImpostorFirst ??
+                            settings.preventImpostorFirst,
                       ),
                     );
                     return CheckboxListTile(
@@ -969,7 +956,8 @@ class _TabletLayout extends ConsumerWidget {
                       value: preventImpostorFirst,
                       onChanged: (value) {
                         if (value != null) {
-                          ref.read(settingsNotifierProvider.notifier)
+                          ref
+                              .read(settingsNotifierProvider.notifier)
                               .setPreventImpostorFirst(value);
                         }
                       },
@@ -1011,7 +999,8 @@ class _IsolatedCategoryDropdown extends StatefulWidget {
   final String? initialCategoryId;
 
   @override
-  State<_IsolatedCategoryDropdown> createState() => _IsolatedCategoryDropdownState();
+  State<_IsolatedCategoryDropdown> createState() =>
+      _IsolatedCategoryDropdownState();
 }
 
 class _IsolatedCategoryDropdownState extends State<_IsolatedCategoryDropdown> {
@@ -1023,7 +1012,8 @@ class _IsolatedCategoryDropdownState extends State<_IsolatedCategoryDropdown> {
   void initState() {
     super.initState();
     // Inicializar con el valor inicial pasado como parámetro
-    final currentCategoryId = widget.localCategoryId ?? widget.initialCategoryId;
+    final currentCategoryId =
+        widget.localCategoryId ?? widget.initialCategoryId;
     _selectedCategory = widget.optionValues.contains(currentCategoryId)
         ? currentCategoryId
         : (widget.optionValues.isNotEmpty ? widget.optionValues.first : null);
@@ -1044,7 +1034,8 @@ class _IsolatedCategoryDropdownState extends State<_IsolatedCategoryDropdown> {
     if (oldWidget.localCategoryId != widget.localCategoryId ||
         oldWidget.initialCategoryId != widget.initialCategoryId ||
         oldWidget.optionValues != widget.optionValues) {
-      final currentCategoryId = widget.localCategoryId ?? widget.initialCategoryId;
+      final currentCategoryId =
+          widget.localCategoryId ?? widget.initialCategoryId;
       final newSelected = widget.optionValues.contains(currentCategoryId)
           ? currentCategoryId
           : (widget.optionValues.isNotEmpty ? widget.optionValues.first : null);
@@ -1068,7 +1059,7 @@ class _IsolatedCategoryDropdownState extends State<_IsolatedCategoryDropdown> {
         key: ValueKey('category_dropdown_${_selectedCategory}'),
         value: _selectedCategory,
         decoration: _decoration,
-        dropdownColor: const Color(0xFF0F1628),
+        dropdownColor: Theme.of(context).colorScheme.surface,
         menuMaxHeight: 300,
         alignment: AlignmentDirectional.bottomStart,
         items: widget.categoryOptions,
@@ -1120,7 +1111,8 @@ class _CategoryDropdownState extends State<_CategoryDropdown> {
   void initState() {
     super.initState();
     // Inicializar con el valor inicial pasado como parámetro
-    final currentCategoryId = widget.localCategoryId ?? widget.initialCategoryId;
+    final currentCategoryId =
+        widget.localCategoryId ?? widget.initialCategoryId;
     _selectedCategory = widget.optionValues.contains(currentCategoryId)
         ? currentCategoryId
         : (widget.optionValues.isNotEmpty ? widget.optionValues.first : null);
@@ -1137,7 +1129,8 @@ class _CategoryDropdownState extends State<_CategoryDropdown> {
     if (oldWidget.localCategoryId != widget.localCategoryId ||
         oldWidget.initialCategoryId != widget.initialCategoryId ||
         oldWidget.optionValues != widget.optionValues) {
-      final currentCategoryId = widget.localCategoryId ?? widget.initialCategoryId;
+      final currentCategoryId =
+          widget.localCategoryId ?? widget.initialCategoryId;
       final newSelected = widget.optionValues.contains(currentCategoryId)
           ? currentCategoryId
           : (widget.optionValues.isNotEmpty ? widget.optionValues.first : null);
@@ -1156,7 +1149,7 @@ class _CategoryDropdownState extends State<_CategoryDropdown> {
         child: DropdownButtonFormField<String>(
           value: _selectedCategory,
           decoration: _decoration,
-          dropdownColor: const Color(0xFF0F1628),
+          dropdownColor: Theme.of(context).colorScheme.surface,
           menuMaxHeight: 300,
           alignment: AlignmentDirectional.bottomStart,
           items: widget.categoryOptions,
@@ -1191,7 +1184,8 @@ class _PlayersStepper extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final players = ref.watch(
       settingsNotifierProvider.select(
-        (state) => state.valueOrNull?.players ?? SettingsState.initial().players,
+        (state) =>
+            state.valueOrNull?.players ?? SettingsState.initial().players,
       ),
     );
     return _Section(
@@ -1223,17 +1217,20 @@ class _ImpostorsStepper extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final impostors = ref.watch(
       settingsNotifierProvider.select(
-        (state) => state.valueOrNull?.impostors ?? SettingsState.initial().impostors,
+        (state) =>
+            state.valueOrNull?.impostors ?? SettingsState.initial().impostors,
       ),
     );
     final players = ref.watch(
       settingsNotifierProvider.select(
-        (state) => state.valueOrNull?.players ?? SettingsState.initial().players,
+        (state) =>
+            state.valueOrNull?.players ?? SettingsState.initial().players,
       ),
     );
     final difficulty = ref.watch(
       settingsNotifierProvider.select(
-        (state) => state.valueOrNull?.difficulty ?? SettingsState.initial().difficulty,
+        (state) =>
+            state.valueOrNull?.difficulty ?? SettingsState.initial().difficulty,
       ),
     );
     final recommended = suggestImpostors(
@@ -1241,7 +1238,7 @@ class _ImpostorsStepper extends ConsumerWidget {
       difficulty: difficulty,
     );
     final invalid = impostors >= players;
-    
+
     return _Section(
       title: title,
       isTablet: false,
@@ -1297,7 +1294,8 @@ class _DifficultySelector extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final difficulty = ref.watch(
       settingsNotifierProvider.select(
-        (state) => state.valueOrNull?.difficulty ?? SettingsState.initial().difficulty,
+        (state) =>
+            state.valueOrNull?.difficulty ?? SettingsState.initial().difficulty,
       ),
     );
     return _Section(
@@ -1351,8 +1349,12 @@ class _StepperRow extends StatelessWidget {
   Widget build(BuildContext context) {
     final canDecrease = value > min;
     final canIncrease = value < max;
-    final iconColor = Colors.white;
-    
+    final iconColor = Theme.of(context).colorScheme.onSurface;
+    final splashColor =
+        Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.1);
+    final highlightColor =
+        Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.05);
+
     return RepaintBoundary(
       child: Row(
         children: [
@@ -1362,8 +1364,8 @@ class _StepperRow extends StatelessWidget {
               child: InkWell(
                 onTap: canDecrease ? () => onChanged(value - 1) : null,
                 borderRadius: BorderRadius.circular((isTablet ? 32 : 24) / 2),
-                splashColor: Colors.white.withOpacity(0.1),
-                highlightColor: Colors.white.withOpacity(0.05),
+                splashColor: splashColor,
+                highlightColor: highlightColor,
                 child: Container(
                   padding: EdgeInsets.all(isTablet ? 16 : 8),
                   child: AnimatedOpacity(
@@ -1396,8 +1398,8 @@ class _StepperRow extends StatelessWidget {
               child: InkWell(
                 onTap: canIncrease ? () => onChanged(value + 1) : null,
                 borderRadius: BorderRadius.circular((isTablet ? 32 : 24) / 2),
-                splashColor: Colors.white.withOpacity(0.1),
-                highlightColor: Colors.white.withOpacity(0.05),
+                splashColor: splashColor,
+                highlightColor: highlightColor,
                 child: Container(
                   padding: EdgeInsets.all(isTablet ? 16 : 8),
                   child: AnimatedOpacity(
@@ -1439,10 +1441,12 @@ class _IsolatedCategoryDropdownMobile extends StatefulWidget {
   final String locale;
 
   @override
-  State<_IsolatedCategoryDropdownMobile> createState() => _IsolatedCategoryDropdownMobileState();
+  State<_IsolatedCategoryDropdownMobile> createState() =>
+      _IsolatedCategoryDropdownMobileState();
 }
 
-class _IsolatedCategoryDropdownMobileState extends State<_IsolatedCategoryDropdownMobile> {
+class _IsolatedCategoryDropdownMobileState
+    extends State<_IsolatedCategoryDropdownMobile> {
   String? _localValue;
   InputDecoration? _cachedDecoration;
   // No cachear items - usar siempre widget.items directamente para asegurar
@@ -1466,7 +1470,7 @@ class _IsolatedCategoryDropdownMobileState extends State<_IsolatedCategoryDropdo
   void didUpdateWidget(_IsolatedCategoryDropdownMobile oldWidget) {
     super.didUpdateWidget(oldWidget);
     bool needsRebuild = false;
-    
+
     // Solo actualizar si realmente cambió el valor
     if (oldWidget.value != widget.value) {
       _localValue = widget.value;
@@ -1480,7 +1484,7 @@ class _IsolatedCategoryDropdownMobileState extends State<_IsolatedCategoryDropdo
     if (oldWidget.items != widget.items || oldWidget.locale != widget.locale) {
       needsRebuild = true;
     }
-    
+
     // Solo reconstruir selected items si es necesario
     if (needsRebuild) {
       _buildSelectedItems();
@@ -1552,7 +1556,7 @@ class _IsolatedCategoryDropdownMobileState extends State<_IsolatedCategoryDropdo
     if (_cachedSelectedItems == null) {
       _buildSelectedItems();
     }
-    
+
     // Usar GlobalKey para mantener la identidad del RepaintBoundary y del dropdown
     // Esto previene que Flutter recree estos widgets cuando el padre se reconstruye
     // Envolver en un Builder para aislar el contexto
@@ -1563,7 +1567,7 @@ class _IsolatedCategoryDropdownMobileState extends State<_IsolatedCategoryDropdo
           key: _dropdownKey,
           value: _localValue,
           decoration: _cachedDecoration ?? widget.decoration,
-          dropdownColor: const Color(0xFF0F1628),
+          dropdownColor: Theme.of(context).colorScheme.surface,
           menuMaxHeight: 300,
           alignment: AlignmentDirectional.bottomStart,
           // Siempre usar los items del widget directamente, no los cacheados

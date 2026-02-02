@@ -14,6 +14,7 @@ class RateUsDialog extends StatelessWidget {
   final String message;
   final String primaryLabel;
   final String secondaryLabel;
+  static const String _appStoreId = '6757995242';
 
   static Future<void> show({
     required BuildContext context,
@@ -53,11 +54,16 @@ class RateUsDialog extends StatelessWidget {
 
             // First try to show the native in-app review dialog
             // This only works if the app is published and the user hasn't reviewed recently
-            if (await review.isAvailable()) {
-              await review.requestReview();
-            } else {
-              // Fallback: open the store listing page
-              await review.openStoreListing();
+            try {
+              if (await review.isAvailable()) {
+                await review.requestReview();
+              } else {
+                // Fallback: open the store listing page
+                await review.openStoreListing(appStoreId: _appStoreId);
+              }
+            } catch (_) {
+              // Last resort: try opening store listing directly
+              await review.openStoreListing(appStoreId: _appStoreId);
             }
           },
           child: Text(primaryLabel),

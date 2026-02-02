@@ -2,55 +2,5647 @@
   "locale": "en-US",
   "version": 1,
   "categories": [
-    {"id":"lugares","displayName":"Places","words":[
-      {"text":"Statue of Liberty","difficulty":"easy"},{"text":"Grand Canyon","difficulty":"easy"},{"text":"Times Square","difficulty":"easy"},{"text":"Golden Gate Bridge","difficulty":"easy"},{"text":"Yellowstone","difficulty":"easy"},{"text":"Yosemite","difficulty":"easy"},{"text":"Disney World","difficulty":"easy"},{"text":"Las Vegas Strip","difficulty":"easy"},{"text":"Hollywood Sign","difficulty":"easy"},{"text":"Central Park","difficulty":"easy"},{"text":"White House","difficulty":"easy"},{"text":"Mount Rushmore","difficulty":"easy"},{"text":"Niagara Falls","difficulty":"easy"},{"text":"National Mall","difficulty":"easy"},{"text":"Brooklyn Bridge","difficulty":"easy"},{"text":"Miami Beach","difficulty":"easy"},{"text":"Waikiki","difficulty":"easy"},{"text":"Route 66","difficulty":"easy"},{"text":"Alcatraz","difficulty":"easy"},{"text":"French Quarter","difficulty":"easy"},
-      {"text":"Zion National Park","difficulty":"medium"},{"text":"Sedona","difficulty":"medium"},{"text":"Big Sur","difficulty":"medium"},{"text":"Badlands","difficulty":"medium"},{"text":"Glacier National Park","difficulty":"medium"},{"text":"Acadia","difficulty":"medium"},{"text":"Everglades","difficulty":"medium"},{"text":"Lake Tahoe","difficulty":"medium"},{"text":"Savannah Historic District","difficulty":"medium"},{"text":"Charleston Battery","difficulty":"medium"},{"text":"Jackson Hole","difficulty":"medium"},{"text":"Big Bend","difficulty":"medium"},{"text":"Joshua Tree","difficulty":"medium"},{"text":"Outer Banks","difficulty":"medium"},{"text":"Napa Valley","difficulty":"medium"},{"text":"Finger Lakes","difficulty":"medium"},{"text":"Crater Lake","difficulty":"medium"},{"text":"Lake Powell","difficulty":"medium"},{"text":"Catskills","difficulty":"medium"},{"text":"Smoky Mountains","difficulty":"medium"},
-      {"text":"Mammoth Cave","difficulty":"hard","reveal_hint":"World’s longest cave system in Kentucky"},{"text":"Horseshoe Bend","difficulty":"hard","reveal_hint":"Colorado River U-turn in Arizona"},{"text":"Antelope Canyon","difficulty":"hard","reveal_hint":"Slot canyon with light beams"},{"text":"Marfa Lights","difficulty":"hard","reveal_hint":"Texas desert mystery orbs"},{"text":"Carlsbad Caverns","difficulty":"hard","reveal_hint":"New Mexico bat flights"},{"text":"Dry Tortugas","difficulty":"hard","reveal_hint":"Fort Jefferson in Gulf waters"},{"text":"Great Sand Dunes","difficulty":"hard","reveal_hint":"Tall dunes in Colorado"},{"text":"Hoh Rain Forest","difficulty":"hard","reveal_hint":"Mossy Olympic NP rainforest"},{"text":"Voyageurs","difficulty":"hard","reveal_hint":"Houseboat-lake park in Minnesota"},{"text":"Isle Royale","difficulty":"hard","reveal_hint":"Remote Michigan island with wolves"},{"text":"Kennecott Mine","difficulty":"hard","reveal_hint":"Ghost copper town in Alaska"},{"text":"Devils Tower","difficulty":"hard","reveal_hint":"Monolith from “Close Encounters”"},{"text":"Petrified Forest","difficulty":"hard","reveal_hint":"Stone logs on Route 66"},{"text":"Great Basin","difficulty":"hard","reveal_hint":"Bristlecone pines in Nevada"},{"text":"Apostle Islands","difficulty":"hard","reveal_hint":"Sea caves on Lake Superior"},{"text":"Natchez Trace","difficulty":"hard","reveal_hint":"Historic trail from Mississippi to Tennessee"},{"text":"Mackinac Island","difficulty":"hard","reveal_hint":"No cars, just bikes and fudge"},{"text":"Pictured Rocks","difficulty":"hard","reveal_hint":"Painted cliffs in Michigan"},{"text":"Catalina Island","difficulty":"hard","reveal_hint":"Avalon bay getaway off California"},{"text":"Great River Road","difficulty":"hard","reveal_hint":"Scenic drive along the Mississippi"}
-    ]},
-    {"id":"famosos","displayName":"Famous","words":[
-      {"text":"Beyoncé","difficulty":"easy"},{"text":"Taylor Swift","difficulty":"easy"},{"text":"Miley Cyrus","difficulty":"easy"},{"text":"Dwayne Johnson","difficulty":"easy"},{"text":"Tom Hanks","difficulty":"easy"},{"text":"Oprah Winfrey","difficulty":"easy"},{"text":"Elon Musk","difficulty":"easy"},{"text":"Bill Gates","difficulty":"easy"},{"text":"Steve Jobs","difficulty":"easy"},{"text":"Michael Jordan","difficulty":"easy"},{"text":"LeBron James","difficulty":"easy"},{"text":"Serena Williams","difficulty":"easy"},{"text":"Madonna","difficulty":"easy"},{"text":"Kanye West","difficulty":"easy"},{"text":"Kim Kardashian","difficulty":"easy"},{"text":"Eminem","difficulty":"easy"},{"text":"Lady Gaga","difficulty":"easy"},{"text":"Rihanna","difficulty":"easy"},{"text":"Morgan Freeman","difficulty":"easy"},{"text":"Johnny Depp","difficulty":"easy"},
-      {"text":"Zendaya","difficulty":"medium"},{"text":"Timothée Chalamet","difficulty":"medium"},{"text":"Pedro Pascal","difficulty":"medium"},{"text":"Florence Pugh","difficulty":"medium"},{"text":"Donald Glover","difficulty":"medium"},{"text":"Billie Eilish","difficulty":"medium"},{"text":"Post Malone","difficulty":"medium"},{"text":"Doja Cat","difficulty":"medium"},{"text":"Ariana Grande","difficulty":"medium"},{"text":"Halsey","difficulty":"medium"},{"text":"Lizzo","difficulty":"medium"},{"text":"Chris Pratt","difficulty":"medium"},{"text":"Chris Evans","difficulty":"medium"},{"text":"Scarlett Johansson","difficulty":"medium"},{"text":"Brie Larson","difficulty":"medium"},{"text":"Stephen Curry","difficulty":"medium"},{"text":"Patrick Mahomes","difficulty":"medium"},{"text":"Lamar Jackson","difficulty":"medium"},{"text":"Simone Biles","difficulty":"medium"},{"text":"Chloe Kim","difficulty":"medium"},
-      {"text":"Guy Fieri","difficulty":"hard","reveal_hint":"Flavortown mayor with frosted tips"},{"text":"Pauly D","difficulty":"hard","reveal_hint":"Jersey Shore DJ with blowout"},{"text":"Neal Caffrey","difficulty":"hard","reveal_hint":"Con man from White Collar"},{"text":"Ken Bone","difficulty":"hard","reveal_hint":"Red sweater undecided voter 2016"},{"text":"Joe Exotic","difficulty":"hard","reveal_hint":"Tiger King mullet"},{"text":"Carole Baskin","difficulty":"hard","reveal_hint":"Big Cat Rescue rival"},{"text":"Lil Nas X","difficulty":"hard","reveal_hint":"Old Town Road meets Montero"},{"text":"Andrew Tate","difficulty":"hard","reveal_hint":"Viral hustlers and controversy"},{"text":"Gritty","difficulty":"hard","reveal_hint":"Orange Flyers mascot googly eyes"},{"text":"Alexandria Ocasio-Cortez","difficulty":"hard","reveal_hint":"AOC initials in politics"},{"text":"Jordan Peterson","difficulty":"hard","reveal_hint":"12 rules pundit"},{"text":"Ben Shapiro","difficulty":"hard","reveal_hint":"Fast-talking conservative debater"},{"text":"MrBeast","difficulty":"hard","reveal_hint":"YouTube millionaire challenges"},{"text":"Logan Paul","difficulty":"hard","reveal_hint":"Vlogger turned boxer"},{"text":"Jake Paul","difficulty":"hard","reveal_hint":"YouTube brother turned fighter"},{"text":"Rachel Maddow","difficulty":"hard","reveal_hint":"MSNBC host with signature glasses"},{"text":"Sean Hannity","difficulty":"hard","reveal_hint":"Fox News primetime"},{"text":"Ann Coulter","difficulty":"hard","reveal_hint":"Provocative conservative author"},{"text":"Michael Avenatti","difficulty":"hard","reveal_hint":"Stormy Daniels’ ex-lawyer"},{"text":"Stormy Daniels","difficulty":"hard","reveal_hint":"Adult actress in political headlines"}
-    ]},
-    {"id":"objetos","displayName":"Objects","words":[
-      {"text":"Baseball cap","difficulty":"easy"},{"text":"Red Solo cup","difficulty":"easy"},{"text":"Pumpkin spice latte","difficulty":"easy"},{"text":"iPhone","difficulty":"easy"},{"text":"AirPods","difficulty":"easy"},{"text":"Smartwatch","difficulty":"easy"},{"text":"BBQ grill","difficulty":"easy"},{"text":"Pickup truck","difficulty":"easy"},{"text":"Snow shovel","difficulty":"easy"},{"text":"Snowblower","difficulty":"easy"},{"text":"BBQ tongs","difficulty":"easy"},{"text":"Yoga mat","difficulty":"easy"},{"text":"Hydro Flask","difficulty":"easy"},{"text":"Stanley tumbler","difficulty":"easy"},{"text":"Fanny pack","difficulty":"easy"},{"text":"Reusable straw","difficulty":"easy"},{"text":"College hoodie","difficulty":"easy"},{"text":"Letterman jacket","difficulty":"easy"},{"text":"Food truck","difficulty":"easy"},{"text":"Lunchbox","difficulty":"easy"},
-      {"text":"Instant Pot","difficulty":"medium"},{"text":"Crock-Pot","difficulty":"medium"},{"text":"Cast-iron skillet","difficulty":"medium"},{"text":"Dutch oven","difficulty":"medium"},{"text":"Smoker","difficulty":"medium"},{"text":"Tupperware","difficulty":"medium"},{"text":"Mason jar","difficulty":"medium"},{"text":"Corn dog stick","difficulty":"medium"},{"text":"Tailgate cooler","difficulty":"medium"},{"text":"Apple pie dish","difficulty":"medium"},{"text":"Cornbread pan","difficulty":"medium"},{"text":"S'mores kit","difficulty":"medium"},{"text":"Charcuterie board","difficulty":"medium"},{"text":"Pressure washer","difficulty":"medium"},{"text":"Leaf blower","difficulty":"medium"},{"text":"Snow chains","difficulty":"medium"},{"text":"Folding chair","difficulty":"medium"},{"text":"Camping stove","difficulty":"medium"},{"text":"Drive-thru headset","difficulty":"medium"},{"text":"Grocery coupon","difficulty":"medium"},
-      {"text":"Bidet attachment","difficulty":"hard","reveal_hint":"Euro import for your toilet"},{"text":"Keurig pod drawer","difficulty":"hard","reveal_hint":"Capsule organizer under the machine"},{"text":"Yard Flamingo","difficulty":"hard","reveal_hint":"Pink plastic bird on lawns"},{"text":"Elf on the Shelf","difficulty":"hard","reveal_hint":"Christmas tattletale doll"},{"text":"Pool noodle chair","difficulty":"hard","reveal_hint":"DIY floaty seat"},{"text":"Snow crab cracker","difficulty":"hard","reveal_hint":"Tool for legs at a boil"},{"text":"Driveway heat tape","difficulty":"hard","reveal_hint":"Melts ice on roof/gutter"},{"text":"Bug-out bag","difficulty":"hard","reveal_hint":"Preppers’ go-kit"},{"text":"Window AC support bracket","difficulty":"hard","reveal_hint":"Keeps unit from falling"},{"text":"Air fryer parchment liner","difficulty":"hard","reveal_hint":"Keeps basket nonstick"},{"text":"Cornhole board","difficulty":"hard","reveal_hint":"Beanbags into hole at BBQs"},{"text":"Pickleball paddle","difficulty":"hard","reveal_hint":"Wiffle-ball tennis hybrid"},{"text":"Stanley Thermos green","difficulty":"hard","reveal_hint":"Iconic metal bottle since 1913"},{"text":"Thanksgiving turkey baster","difficulty":"hard","reveal_hint":"Squeeze bulb for drippings"},{"text":"Jelly shoes","difficulty":"hard","reveal_hint":"Translucent plastic 90s footwear"},{"text":"Fidget spinner","difficulty":"hard","reveal_hint":"2017 desk toy craze"},{"text":"Flip cup table","difficulty":"hard","reveal_hint":"Long beer game table"},{"text":"Instant-read thermometer","difficulty":"hard","reveal_hint":"Probe for meat doneness"},{"text":"Tiny desk humidifier","difficulty":"hard","reveal_hint":"USB mist on cubicles"},{"text":"Weighted blanket","difficulty":"hard","reveal_hint":"Heavy throw for anxiety"}
-    ]},
-    {"id":"comida_bebida","displayName":"Food & Drink","words":[
-      {"text":"Burger","difficulty":"easy"},{"text":"Hot dog","difficulty":"easy"},{"text":"Pizza slice","difficulty":"easy"},{"text":"Mac and cheese","difficulty":"easy"},{"text":"Fried chicken","difficulty":"easy"},{"text":"BBQ ribs","difficulty":"easy"},{"text":"Apple pie","difficulty":"easy"},{"text":"Pancakes","difficulty":"easy"},{"text":"Maple syrup","difficulty":"easy"},{"text":"Bagel with cream cheese","difficulty":"easy"},{"text":"Donut","difficulty":"easy"},{"text":"Coffee to-go","difficulty":"easy"},{"text":"Iced tea","difficulty":"easy"},{"text":"Lemonade","difficulty":"easy"},{"text":"Milkshake","difficulty":"easy"},{"text":"Corn dog","difficulty":"easy"},{"text":"Nachos","difficulty":"easy"},{"text":"Buffalo wings","difficulty":"easy"},{"text":"Caesar salad","difficulty":"easy"},{"text":"Tater tots","difficulty":"easy"},
-      {"text":"Clam chowder","difficulty":"medium"},{"text":"Lobster roll","difficulty":"medium"},{"text":"Philly cheesesteak","difficulty":"medium"},{"text":"Chicago deep dish","difficulty":"medium"},{"text":"Kansas City burnt ends","difficulty":"medium"},{"text":"Texas brisket","difficulty":"medium"},{"text":"Gumbo","difficulty":"medium"},{"text":"Jambalaya","difficulty":"medium"},{"text":"Po' boy","difficulty":"medium"},{"text":"Beignet","difficulty":"medium"},{"text":"Key lime pie","difficulty":"medium"},{"text":"Grits","difficulty":"medium"},{"text":"Biscuits and gravy","difficulty":"medium"},{"text":"Chicken and waffles","difficulty":"medium"},{"text":"Cobb salad","difficulty":"medium"},{"text":"Reuben sandwich","difficulty":"medium"},{"text":"Bagel lox","difficulty":"medium"},{"text":"Avocado toast","difficulty":"medium"},{"text":"Cold brew","difficulty":"medium"},{"text":"Craft IPA","difficulty":"medium"},
-      {"text":"Scrapple","difficulty":"hard","reveal_hint":"Pennsylvania Dutch pork mush"},{"text":"Ambrosia salad","difficulty":"hard","reveal_hint":"Marshmallow fruit potluck"},{"text":"Lutefisk","difficulty":"hard","reveal_hint":"Lye-soaked cod in Midwest Norwegian homes"},{"text":"Frito pie","difficulty":"hard","reveal_hint":"Chili poured into a chips bag"},{"text":"Cincinnati chili","difficulty":"hard","reveal_hint":"Spaghetti topped with cinnamon meat sauce"},{"text":"Hushpuppies","difficulty":"hard","reveal_hint":"Fried cornmeal balls with seafood"},{"text":"Spam musubi","difficulty":"hard","reveal_hint":"Hawaii rice block with canned meat"},{"text":"Geoduck","difficulty":"hard","reveal_hint":"Giant clam from Pacific Northwest"},{"text":"Burgoo","difficulty":"hard","reveal_hint":"Kentucky stew of whatever's on hand"},{"text":"Gooey butter cake","difficulty":"hard","reveal_hint":"St. Louis sugar bomb"},{"text":"Funeral potatoes","difficulty":"hard","reveal_hint":"Cheesy hashbrown casserole Mormon potlucks"},{"text":"Shoofly pie","difficulty":"hard","reveal_hint":"Molasses pie Amish country"},{"text":"Chitlins","difficulty":"hard","reveal_hint":"Stewed pig intestines soul food"},{"text":"Sno-ball","difficulty":"hard","reveal_hint":"New Orleans shaved ice with cream"},{"text":"Taylor ham","difficulty":"hard","reveal_hint":"NJ breakfast meat also called pork roll"},{"text":"Spam casserole","difficulty":"hard","reveal_hint":"Midwest church supper classic"},{"text":"Navajo taco","difficulty":"hard","reveal_hint":"Frybread topped with chili"},{"text":"Hotdish","difficulty":"hard","reveal_hint":"Minnesota casserole tater tots"},{"text":"Walleye sandwich","difficulty":"hard","reveal_hint":"Great Lakes fish on a bun"},{"text":"Eskimo ice cream","difficulty":"hard","reveal_hint":"Alaskan akutaq with berries and fat"}
-    ]},
-    {"id":"cine_tv","displayName":"Film & TV","words":[
-      {"text":"Friends","difficulty":"easy"},{"text":"The Office","difficulty":"easy"},{"text":"Breaking Bad","difficulty":"easy"},{"text":"Game of Thrones","difficulty":"easy"},{"text":"Stranger Things","difficulty":"easy"},{"text":"Marvel Cinematic Universe","difficulty":"easy"},{"text":"Star Wars","difficulty":"easy"},{"text":"Harry Potter","difficulty":"easy"},{"text":"Avengers","difficulty":"easy"},{"text":"Spider-Man","difficulty":"easy"},{"text":"The Simpsons","difficulty":"easy"},{"text":"Family Guy","difficulty":"easy"},{"text":"Saturday Night Live","difficulty":"easy"},{"text":"Late Night with Jimmy Fallon","difficulty":"easy"},{"text":"CNN","difficulty":"easy"},{"text":"Fox News","difficulty":"easy"},{"text":"HBO","difficulty":"easy"},{"text":"Netflix","difficulty":"easy"},{"text":"Disney+","difficulty":"easy"},{"text":"Hulu","difficulty":"easy"},
-      {"text":"Parks and Recreation","difficulty":"medium"},{"text":"The Wire","difficulty":"medium"},{"text":"The Sopranos","difficulty":"medium"},{"text":"Mad Men","difficulty":"medium"},{"text":"Seinfeld","difficulty":"medium"},{"text":"Curb Your Enthusiasm","difficulty":"medium"},{"text":"Better Call Saul","difficulty":"medium"},{"text":"Succession","difficulty":"medium"},{"text":"The Bear","difficulty":"medium"},{"text":"Atlanta","difficulty":"medium"},{"text":"Euphoria","difficulty":"medium"},{"text":"Abbott Elementary","difficulty":"medium"},{"text":"The Tonight Show","difficulty":"medium"},{"text":"Jeopardy!","difficulty":"medium"},{"text":"Wheel of Fortune","difficulty":"medium"},{"text":"The Price Is Right","difficulty":"medium"},{"text":"The Bachelor","difficulty":"medium"},{"text":"Survivor","difficulty":"medium"},{"text":"American Idol","difficulty":"medium"},{"text":"The Voice","difficulty":"medium"},
-      {"text":"Mystery Science Theater 3000","difficulty":"hard","reveal_hint":"Silhouettes riffing on B-movies"},{"text":"Twin Peaks","difficulty":"hard","reveal_hint":"Who killed Laura Palmer?"},{"text":"The X-Files","difficulty":"hard","reveal_hint":"Mulder believes, Scully doubts"},{"text":"Buffy the Vampire Slayer","difficulty":"hard","reveal_hint":"Sunnydale slaying"},{"text":"Firefly","difficulty":"hard","reveal_hint":"Space western canceled too soon"},{"text":"The Twilight Zone","difficulty":"hard","reveal_hint":"You're traveling through another dimension"},{"text":"Freaks and Geeks","difficulty":"hard","reveal_hint":"Short-lived high school dramedy"},{"text":"Veronica Mars","difficulty":"hard","reveal_hint":"Teen PI in Neptune"},{"text":"Community","difficulty":"hard","reveal_hint":"Greendale study group"},{"text":"Arrested Development","difficulty":"hard","reveal_hint":"There's always money in the banana stand"},{"text":"Clerks","difficulty":"hard","reveal_hint":"Black-and-white convenience store duo"},{"text":"Napoleon Dynamite","difficulty":"hard","reveal_hint":"Vote for Pedro llama"},{"text":"Donnie Darko","difficulty":"hard","reveal_hint":"Frank the rabbit and tangent universe"},{"text":"The Room","difficulty":"hard","reveal_hint":"Oh hi Mark cult classic"},{"text":"Office Space","difficulty":"hard","reveal_hint":"TPS reports and red stapler"},{"text":"Mad TV","difficulty":"hard","reveal_hint":"Sketch show rival to SNL"},{"text":"Key & Peele","difficulty":"hard","reveal_hint":"Substitute teacher A-A-Ron"},{"text":"Sharknado","difficulty":"hard","reveal_hint":"Flying sharks camp"},{"text":"Trailer Park Boys","difficulty":"hard","reveal_hint":"Canadian mockumentary in Sunnyvale"},{"text":"Whose Line Is It Anyway?","difficulty":"hard","reveal_hint":"Improv points don’t matter"}
-    ]},
-    {"id":"deportes","displayName":"Sports","words":[
-      {"text":"NFL","difficulty":"easy"},{"text":"NBA","difficulty":"easy"},{"text":"MLB","difficulty":"easy"},{"text":"NHL","difficulty":"easy"},{"text":"MLS","difficulty":"easy"},{"text":"Super Bowl","difficulty":"easy"},{"text":"World Series","difficulty":"easy"},{"text":"Stanley Cup","difficulty":"easy"},{"text":"March Madness","difficulty":"easy"},{"text":"Final Four","difficulty":"easy"},{"text":"College Football","difficulty":"easy"},{"text":"Alabama Crimson Tide","difficulty":"easy"},{"text":"Ohio State Buckeyes","difficulty":"easy"},{"text":"New York Yankees","difficulty":"easy"},{"text":"Los Angeles Lakers","difficulty":"easy"},{"text":"Golden State Warriors","difficulty":"easy"},{"text":"Dallas Cowboys","difficulty":"easy"},{"text":"New England Patriots","difficulty":"easy"},{"text":"Kansas City Chiefs","difficulty":"easy"},{"text":"LA Dodgers","difficulty":"easy"},
-      {"text":"Green Bay Packers","difficulty":"medium"},{"text":"Chicago Bears","difficulty":"medium"},{"text":"Miami Dolphins","difficulty":"medium"},{"text":"Seattle Seahawks","difficulty":"medium"},{"text":"Portland Trail Blazers","difficulty":"medium"},{"text":"Houston Rockets","difficulty":"medium"},{"text":"Phoenix Suns","difficulty":"medium"},{"text":"Philadelphia 76ers","difficulty":"medium"},{"text":"Boston Red Sox","difficulty":"medium"},{"text":"St. Louis Cardinals","difficulty":"medium"},{"text":"San Francisco Giants","difficulty":"medium"},{"text":"Vegas Golden Knights","difficulty":"medium"},{"text":"Chicago Blackhawks","difficulty":"medium"},{"text":"Colorado Avalanche","difficulty":"medium"},{"text":"Austin FC","difficulty":"medium"},{"text":"LAFC","difficulty":"medium"},{"text":"Inter Miami","difficulty":"medium"},{"text":"NWSL","difficulty":"medium"},{"text":"WNBA","difficulty":"medium"},{"text":"PGA Tour","difficulty":"medium"},
-      {"text":"USFL","difficulty":"hard","reveal_hint":"Spring football league revival"},{"text":"XFL","difficulty":"hard","reveal_hint":"Alt-football relaunched by The Rock"},{"text":"Madden curse","difficulty":"hard","reveal_hint":"Cover athlete bad luck"},{"text":"Heisman pose","difficulty":"hard","reveal_hint":"Arm outstretched trophy stance"},{"text":"Flutie Flakes","difficulty":"hard","reveal_hint":"Cereal from a short QB"},{"text":"Butt Fumble","difficulty":"hard","reveal_hint":"Jets QB ran into lineman"},{"text":"Malice at the Palace","difficulty":"hard","reveal_hint":"Pacers vs Pistons brawl"},{"text":"Crying Jordan meme","difficulty":"hard","reveal_hint":"Tearful Hall of Fame face"},{"text":"Linsanity","difficulty":"hard","reveal_hint":"Harvard guard Knicks 2012"},{"text":"Tuck Rule","difficulty":"hard","reveal_hint":"Brady vs Raiders snow game"},{"text":"Philly Special","difficulty":"hard","reveal_hint":"Trick play Super Bowl LII"},{"text":"Hockey enforcer","difficulty":"hard","reveal_hint":"Role to fight on ice"},{"text":"Octopus on ice","difficulty":"hard","reveal_hint":"Red Wings playoff tradition"},{"text":"Beer snake","difficulty":"hard","reveal_hint":"Stacked cups in stands"},{"text":"Fog Bowl","difficulty":"hard","reveal_hint":"1988 Bears-Eagles visibility zero"},{"text":"Kirk Cousins chains","difficulty":"hard","reveal_hint":"QB viral necklace plane"},{"text":"Mr. Irrelevant","difficulty":"hard","reveal_hint":"Last pick of NFL draft"},{"text":"Process Sixers","difficulty":"hard","reveal_hint":"Trust the rebuild mantra"},{"text":"Bird rights","difficulty":"hard","reveal_hint":"NBA cap exception name"},{"text":"Designated hitter","difficulty":"hard","reveal_hint":"AL batter who skips the field"}
-    ]},
-    {"id":"marcas","displayName":"Brands","words":[
-      {"text":"Apple","difficulty":"easy"},{"text":"Google","difficulty":"easy"},{"text":"Amazon","difficulty":"easy"},{"text":"Microsoft","difficulty":"easy"},{"text":"Coca-Cola","difficulty":"easy"},{"text":"Pepsi","difficulty":"easy"},{"text":"McDonald's","difficulty":"easy"},{"text":"Starbucks","difficulty":"easy"},{"text":"Walmart","difficulty":"easy"},{"text":"Target","difficulty":"easy"},{"text":"Nike","difficulty":"easy"},{"text":"Adidas","difficulty":"easy"},{"text":"Under Armour","difficulty":"easy"},{"text":"Costco","difficulty":"easy"},{"text":"Best Buy","difficulty":"easy"},{"text":"Home Depot","difficulty":"easy"},{"text":"Lowe's","difficulty":"easy"},{"text":"Kroger","difficulty":"easy"},{"text":"Whole Foods","difficulty":"easy"},{"text":"Subway","difficulty":"easy"},
-      {"text":"Chipotle","difficulty":"medium"},{"text":"Shake Shack","difficulty":"medium"},{"text":"In-N-Out","difficulty":"medium"},{"text":"Five Guys","difficulty":"medium"},{"text":"Trader Joe's","difficulty":"medium"},{"text":"Publix","difficulty":"medium"},{"text":"H-E-B","difficulty":"medium"},{"text":"Aldi","difficulty":"medium"},{"text":"Chick-fil-A","difficulty":"medium"},{"text":"Popeyes","difficulty":"medium"},{"text":"Wendy's","difficulty":"medium"},{"text":"Arby's","difficulty":"medium"},{"text":"Jersey Mike's","difficulty":"medium"},{"text":"Panera","difficulty":"medium"},{"text":"Buffalo Wild Wings","difficulty":"medium"},{"text":"Dunkin'","difficulty":"medium"},{"text":"Krispy Kreme","difficulty":"medium"},{"text":"REI","difficulty":"medium"},{"text":"Carhartt","difficulty":"medium"},{"text":"Yeti","difficulty":"medium"},
-      {"text":"Waffle House","difficulty":"hard","reveal_hint":"Scattered smothered diner"},{"text":"Piggly Wiggly","difficulty":"hard","reveal_hint":"Southern grocery chain"},{"text":"Raising Cane's","difficulty":"hard","reveal_hint":"Chicken fingers Cane the dog"},{"text":"Whataburger","difficulty":"hard","reveal_hint":"Texas orange-and-white burger"},{"text":"Buc-ee's","difficulty":"hard","reveal_hint":"Giant gas stops with beaver"},{"text":"Sheetz","difficulty":"hard","reveal_hint":"Mid-Atlantic gas station hoagies"},{"text":"Wawa","difficulty":"hard","reveal_hint":"Philly area gas station hoagies"},{"text":"Popeyes chicken sandwich","difficulty":"hard","reveal_hint":"Fast-food craze 2019"},{"text":"Cinnabon","difficulty":"hard","reveal_hint":"Airport cinnamon smell"},{"text":"Cracker Barrel","difficulty":"hard","reveal_hint":"Country store rocking chairs"},{"text":"Hobby Lobby","difficulty":"hard","reveal_hint":"Craft chain with controversies"},{"text":"Bass Pro Shops","difficulty":"hard","reveal_hint":"Outdoor megastore with aquarium"},{"text":"Harbor Freight","difficulty":"hard","reveal_hint":"Discount tools with coupons"},{"text":"Spirit Halloween","difficulty":"hard","reveal_hint":"Pop-up spooky stores"},{"text":"Old Navy","difficulty":"hard","reveal_hint":"Fourth of July flag tees"},{"text":"Talbots","difficulty":"hard","reveal_hint":"Preppy women’s clothing chain"},{"text":"Bed Bath & Beyond","difficulty":"hard","reveal_hint":"20% off blue coupons"},{"text":"Sharper Image","difficulty":"hard","reveal_hint":"Massage chairs and gadgets mall"},{"text":"RadioShack","difficulty":"hard","reveal_hint":"Defunct mall electronics"},{"text":"Kmart","difficulty":"hard","reveal_hint":"Blue light specials"}
-    ]},
-    {"id":"animales","displayName":"Animals","words":[
-      {"text":"Bald eagle","difficulty":"easy"},{"text":"Bison","difficulty":"easy"},{"text":"Alligator","difficulty":"easy"},{"text":"Grizzly bear","difficulty":"easy"},{"text":"Moose","difficulty":"easy"},{"text":"Raccoon","difficulty":"easy"},{"text":"Skunk","difficulty":"easy"},{"text":"Squirrel","difficulty":"easy"},{"text":"Cardinal bird","difficulty":"easy"},{"text":"Blue jay","difficulty":"easy"},{"text":"Hawk","difficulty":"easy"},{"text":"Deer","difficulty":"easy"},{"text":"Coyote","difficulty":"easy"},{"text":"Rattlesnake","difficulty":"easy"},{"text":"Roadrunner","difficulty":"easy"},{"text":"Dolphin","difficulty":"easy"},{"text":"Sea turtle","difficulty":"easy"},{"text":"Pelican","difficulty":"easy"},{"text":"Humpback whale","difficulty":"easy"},{"text":"Opossum","difficulty":"easy"},
-      {"text":"Prairie dog","difficulty":"medium"},{"text":"Sandhill crane","difficulty":"medium"},{"text":"Snowy owl","difficulty":"medium"},{"text":"Wolverine animal","difficulty":"medium"},{"text":"American pika","difficulty":"medium"},{"text":"Jackalope (myth)","difficulty":"medium"},{"text":"Gila monster","difficulty":"medium"},{"text":"Javelina","difficulty":"medium"},{"text":"Manatee","difficulty":"medium"},{"text":"Red wolf","difficulty":"medium"},{"text":"Florida panther","difficulty":"medium"},{"text":"Elk","difficulty":"medium"},{"text":"Pronghorn","difficulty":"medium"},{"text":"Whooping crane","difficulty":"medium"},{"text":"Wild turkey","difficulty":"medium"},{"text":"Snapping turtle","difficulty":"medium"},{"text":"Copperhead","difficulty":"medium"},{"text":"Catfish","difficulty":"medium"},{"text":"Tarpon","difficulty":"medium"},{"text":"Striped bass","difficulty":"medium"},
-      {"text":"Hellbender","difficulty":"hard","reveal_hint":"Giant salamander in Appalachia"},{"text":"Axolotl (pet trade)","difficulty":"hard","reveal_hint":"Mexican salamander popular in US tanks"},{"text":"Snot otter","difficulty":"hard","reveal_hint":"Slime nickname for hellbender"},{"text":"Mudpuppy","difficulty":"hard","reveal_hint":"Aquatic salamander with feathery gills"},{"text":"Sage grouse","difficulty":"hard","reveal_hint":"Bird with booming chest in lek"},{"text":"California condor","difficulty":"hard","reveal_hint":"Critically endangered vulture"},{"text":"Gopher tortoise","difficulty":"hard","reveal_hint":"Burrowing reptile in Southeast"},{"text":"Kirtland’s warbler","difficulty":"hard","reveal_hint":"Songbird saved by jack pine burns"},{"text":"Red-cockaded woodpecker","difficulty":"hard","reveal_hint":"Lives in longleaf pines"},{"text":"American burying beetle","difficulty":"hard","reveal_hint":"Endangered carrion bug"},{"text":"Pallid sturgeon","difficulty":"hard","reveal_hint":"Ancient fish of the Missouri"},{"text":"Devils Hole pupfish","difficulty":"hard","reveal_hint":"Tiny fish in a single Nevada pool"},{"text":"Ozark big-eared bat","difficulty":"hard","reveal_hint":"Huge ears, cave dweller"},{"text":"Attwater's prairie chicken","difficulty":"hard","reveal_hint":"Endangered Texas grouse"},{"text":"Bog turtle","difficulty":"hard","reveal_hint":"Tiny orange-patched turtle"},{"text":"Spotted skunk handstand","difficulty":"hard","reveal_hint":"Does a handstand to spray"},{"text":"Wood stork","difficulty":"hard","reveal_hint":"Bald-headed wader in Florida"},{"text":"Leatherback nesting","difficulty":"hard","reveal_hint":"Massive turtle on East Coast beaches"},{"text":"Wolf reintroduction Yellowstone","difficulty":"hard","reveal_hint":"Changed elk behavior"},{"text":"Loon call","difficulty":"hard","reveal_hint":"Haunting cry on northern lakes"}
-    ]},
-    {"id":"historia_cultura","displayName":"History & Culture","words":[
-      {"text":"Fourth of July","difficulty":"easy"},{"text":"Thanksgiving","difficulty":"easy"},{"text":"Halloween","difficulty":"easy"},{"text":"Black Friday","difficulty":"easy"},{"text":"Labor Day","difficulty":"easy"},{"text":"Memorial Day","difficulty":"easy"},{"text":"Veterans Day","difficulty":"easy"},{"text":"Super Bowl Sunday","difficulty":"easy"},{"text":"Prom night","difficulty":"easy"},{"text":"Homecoming","difficulty":"easy"},{"text":"Spring Break","difficulty":"easy"},{"text":"Road trip","difficulty":"easy"},{"text":"College football Saturday","difficulty":"easy"},{"text":"Tailgate","difficulty":"easy"},{"text":"March Madness brackets","difficulty":"easy"},{"text":"Girl Scouts cookies","difficulty":"easy"},{"text":"Apple picking","difficulty":"easy"},{"text":"County fair","difficulty":"easy"},{"text":"State fair","difficulty":"easy"},{"text":"County sheriff","difficulty":"easy"},
-      {"text":"Civil War","difficulty":"medium"},{"text":"Revolutionary War","difficulty":"medium"},{"text":"Declaration of Independence","difficulty":"medium"},{"text":"Constitution","difficulty":"medium"},{"text":"Bill of Rights","difficulty":"medium"},{"text":"Great Depression","difficulty":"medium"},{"text":"New Deal","difficulty":"medium"},{"text":"Roaring Twenties","difficulty":"medium"},{"text":"Vietnam War","difficulty":"medium"},{"text":"Watergate","difficulty":"medium"},{"text":"Civil Rights Movement","difficulty":"medium"},{"text":"Harlem Renaissance","difficulty":"medium"},{"text":"Prohibition","difficulty":"medium"},{"text":"Space Race","difficulty":"medium"},{"text":"Moon landing","difficulty":"medium"},{"text":"9/11","difficulty":"medium"},{"text":"Patriot Act","difficulty":"medium"},{"text":"Affordable Care Act","difficulty":"medium"},{"text":"Red Scare","difficulty":"medium"},{"text":"McCarthyism","difficulty":"medium"},
-      {"text":"Trail of Tears","difficulty":"hard","reveal_hint":"Forced removal of Cherokee"},{"text":"Jim Crow laws","difficulty":"hard","reveal_hint":"Segregation legal framework"},{"text":"Tulsa Race Massacre","difficulty":"hard","reveal_hint":"Greenwood destroyed 1921"},{"text":"COINTELPRO","difficulty":"hard","reveal_hint":"FBI surveillance of activists"},{"text":"Church Committee","difficulty":"hard","reveal_hint":"Senate probe on intelligence abuses"},{"text":"Iran-Contra","difficulty":"hard","reveal_hint":"Secret arms-for-hostages scandal"},{"text":"Alien and Sedition Acts","difficulty":"hard","reveal_hint":"1798 crackdown on dissent"},{"text":"Whiskey Rebellion","difficulty":"hard","reveal_hint":"Tax protest under Washington"},{"text":"Chinese Exclusion Act","difficulty":"hard","reveal_hint":"1882 ban on Asian immigration"},{"text":"Bracero Program","difficulty":"hard","reveal_hint":"Guest farm workers mid-1900s"},{"text":"Operation Paperclip","difficulty":"hard","reveal_hint":"Nazi scientists recruited"},{"text":"Manhattan Project","difficulty":"hard","reveal_hint":"Built the atomic bomb"},{"text":"GI Bill","difficulty":"hard","reveal_hint":"Education benefits for veterans"},{"text":"Electoral College","difficulty":"hard","reveal_hint":"Indirect presidential voting system"},{"text":"Citizens United","difficulty":"hard","reveal_hint":"Supreme Court unleashed corporate spending"},{"text":"Miranda rights","difficulty":"hard","reveal_hint":"You have the right to remain silent"},{"text":"Brown v. Board","difficulty":"hard","reveal_hint":"Desegregated schools 1954"},{"text":"Voting Rights Act 1965","difficulty":"hard","reveal_hint":"Outlawed literacy tests"},{"text":"Stonewall riots","difficulty":"hard","reveal_hint":"LGBTQ uprising in NYC"},{"text":"Patriot missiles Gulf War","difficulty":"hard","reveal_hint":"Air defense became household term"}
-    ]},
-    {"id":"random","displayName":"Random","words":[
-      {"text":"Pumpkin patch","difficulty":"easy"},{"text":"Corn maze","difficulty":"easy"},{"text":"Haunted house","difficulty":"easy"},{"text":"County fair funnel cake","difficulty":"easy"},{"text":"Black Friday line","difficulty":"easy"},{"text":"Yard sale","difficulty":"easy"},{"text":"Garage sale","difficulty":"easy"},{"text":"Snow day","difficulty":"easy"},{"text":"Beach bonfire","difficulty":"easy"},{"text":"Fourth fireworks","difficulty":"easy"},{"text":"School bus","difficulty":"easy"},{"text":"PB&J","difficulty":"easy"},{"text":"Science fair","difficulty":"easy"},{"text":"Field trip","difficulty":"easy"},{"text":"Report card","difficulty":"easy"},{"text":"Promposal","difficulty":"easy"},{"text":"Homecoming dance","difficulty":"easy"},{"text":"Thanksgiving parade","difficulty":"easy"},{"text":"Snowman","difficulty":"easy"},{"text":"Carving pumpkin","difficulty":"easy"},
-      {"text":"Lemonade stand","difficulty":"medium"},{"text":"Girl Scout cookies","difficulty":"medium"},{"text":"S'mores campfire","difficulty":"medium"},{"text":"Tailgate BBQ","difficulty":"medium"},{"text":"College dorm move-in","difficulty":"medium"},{"text":"Red cup beer pong","difficulty":"medium"},{"text":"Fourth backyard pool","difficulty":"medium"},{"text":"Pick-up basketball","difficulty":"medium"},{"text":"Little League","difficulty":"medium"},{"text":"PTA meeting","difficulty":"medium"},{"text":"Detention","difficulty":"medium"},{"text":"SAT prep","difficulty":"medium"},{"text":"School spirit week","difficulty":"medium"},{"text":"Suburban HOA","difficulty":"medium"},{"text":"BBQ potluck","difficulty":"medium"},{"text":"Super Bowl squares","difficulty":"medium"},{"text":"Fantasy football draft","difficulty":"medium"},{"text":"March Madness office pool","difficulty":"medium"},{"text":"Friendsgiving","difficulty":"medium"},{"text":"Ugly sweater party","difficulty":"medium"},
-      {"text":"Turkey trot","difficulty":"hard","reveal_hint":"5K run on Thanksgiving morning"},{"text":"Elf on the Shelf panic","difficulty":"hard","reveal_hint":"Parents forget to move the doll"},{"text":"PTA bake sale","difficulty":"hard","reveal_hint":"Cupcakes for fundraiser"},{"text":"Trunk-or-treat","difficulty":"hard","reveal_hint":"Candy from decorated car trunks"},{"text":"Polar plunge","difficulty":"hard","reveal_hint":"Jumping into icy water for charity"},{"text":"Cornhole league","difficulty":"hard","reveal_hint":"Beanbag sport with brackets"},{"text":"Aldi quarter cart","difficulty":"hard","reveal_hint":"Deposit coin to unlock trolley"},{"text":"Spirit Halloween empty Sears","difficulty":"hard","reveal_hint":"Seasonal store in dead mall"},{"text":"Snowbird","difficulty":"hard","reveal_hint":"Retiree fleeing winter to Florida"},{"text":"Leaf peeping","difficulty":"hard","reveal_hint":"Fall foliage tourism"},{"text":"Pumpkin spice mania","difficulty":"hard","reveal_hint":"Every product flavored in fall"},{"text":"Scout Pinewood Derby","difficulty":"hard","reveal_hint":"DIY wooden cars racing"},{"text":"School drop-off line","difficulty":"hard","reveal_hint":"Morning traffic chaos"},{"text":"Sheet cake from Costco","difficulty":"hard","reveal_hint":"Giant party dessert with roses"},{"text":"Parent-teacher conference","difficulty":"hard","reveal_hint":"Discuss report cards with teacher"},{"text":"RV boondocking","difficulty":"hard","reveal_hint":"Camping off-grid in Walmart lot"},{"text":"Gas station pizza slice","difficulty":"hard","reveal_hint":"Late-night road snack"},{"text":"Drive-thru graduation","difficulty":"hard","reveal_hint":"Pandemic-style ceremony"},{"text":"HOA violation notice","difficulty":"hard","reveal_hint":"Letter about your lawn"},{"text":"Kegerator in garage","difficulty":"hard","reveal_hint":"Beer tap fridge at home"}
-    ]}
+    {
+      "id": "lugares",
+      "displayName": "Places",
+      "words": [
+        {
+          "text": "Statue of Liberty",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Grand Canyon",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Times Square",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Golden Gate Bridge",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Yellowstone",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Yosemite",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Disney World",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Las Vegas Strip",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Hollywood Sign",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Central Park",
+          "difficulty": "easy"
+        },
+        {
+          "text": "White House",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Mount Rushmore",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Niagara Falls",
+          "difficulty": "easy"
+        },
+        {
+          "text": "National Mall",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Brooklyn Bridge",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Miami Beach",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Waikiki",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Route 66",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Alcatraz",
+          "difficulty": "easy"
+        },
+        {
+          "text": "French Quarter",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Zion National Park",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Sedona",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Big Sur",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Badlands",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Glacier National Park",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Acadia",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Everglades",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Lake Tahoe",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Savannah Historic District",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Charleston Battery",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Jackson Hole",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Big Bend",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Joshua Tree",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Outer Banks",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Napa Valley",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Finger Lakes",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Crater Lake",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Lake Powell",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Catskills",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Smoky Mountains",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Mammoth Cave",
+          "difficulty": "hard",
+          "reveal_hint": "World’s longest cave system in Kentucky"
+        },
+        {
+          "text": "Horseshoe Bend",
+          "difficulty": "hard",
+          "reveal_hint": "Colorado River U-turn in Arizona"
+        },
+        {
+          "text": "Antelope Canyon",
+          "difficulty": "hard",
+          "reveal_hint": "Slot canyon with light beams"
+        },
+        {
+          "text": "Marfa Lights",
+          "difficulty": "hard",
+          "reveal_hint": "Texas desert mystery orbs"
+        },
+        {
+          "text": "Carlsbad Caverns",
+          "difficulty": "hard",
+          "reveal_hint": "New Mexico bat flights"
+        },
+        {
+          "text": "Dry Tortugas",
+          "difficulty": "hard",
+          "reveal_hint": "Fort Jefferson in Gulf waters"
+        },
+        {
+          "text": "Great Sand Dunes",
+          "difficulty": "hard",
+          "reveal_hint": "Tall dunes in Colorado"
+        },
+        {
+          "text": "Hoh Rain Forest",
+          "difficulty": "hard",
+          "reveal_hint": "Mossy Olympic NP rainforest"
+        },
+        {
+          "text": "Voyageurs",
+          "difficulty": "hard",
+          "reveal_hint": "Houseboat-lake park in Minnesota"
+        },
+        {
+          "text": "Isle Royale",
+          "difficulty": "hard",
+          "reveal_hint": "Remote Michigan island with wolves"
+        },
+        {
+          "text": "Kennecott Mine",
+          "difficulty": "hard",
+          "reveal_hint": "Ghost copper town in Alaska"
+        },
+        {
+          "text": "Devils Tower",
+          "difficulty": "hard",
+          "reveal_hint": "Monolith from “Close Encounters”"
+        },
+        {
+          "text": "Petrified Forest",
+          "difficulty": "hard",
+          "reveal_hint": "Stone logs on Route 66"
+        },
+        {
+          "text": "Great Basin",
+          "difficulty": "hard",
+          "reveal_hint": "Bristlecone pines in Nevada"
+        },
+        {
+          "text": "Apostle Islands",
+          "difficulty": "hard",
+          "reveal_hint": "Sea caves on Lake Superior"
+        },
+        {
+          "text": "Natchez Trace",
+          "difficulty": "hard",
+          "reveal_hint": "Historic trail from Mississippi to Tennessee"
+        },
+        {
+          "text": "Mackinac Island",
+          "difficulty": "hard",
+          "reveal_hint": "No cars, just bikes and fudge"
+        },
+        {
+          "text": "Pictured Rocks",
+          "difficulty": "hard",
+          "reveal_hint": "Painted cliffs in Michigan"
+        },
+        {
+          "text": "Catalina Island",
+          "difficulty": "hard",
+          "reveal_hint": "Avalon bay getaway off California"
+        },
+        {
+          "text": "Great River Road",
+          "difficulty": "hard",
+          "reveal_hint": "Scenic drive along the Mississippi"
+        }
+      ]
+    },
+    {
+      "id": "famosos",
+      "displayName": "Famous",
+      "words": [
+        {
+          "text": "Beyoncé",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Taylor Swift",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Miley Cyrus",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Dwayne Johnson",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Tom Hanks",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Oprah Winfrey",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Elon Musk",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Bill Gates",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Steve Jobs",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Michael Jordan",
+          "difficulty": "easy"
+        },
+        {
+          "text": "LeBron James",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Serena Williams",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Madonna",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Kanye West",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Kim Kardashian",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Eminem",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Lady Gaga",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Rihanna",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Morgan Freeman",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Johnny Depp",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Zendaya",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Timothée Chalamet",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Pedro Pascal",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Florence Pugh",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Donald Glover",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Billie Eilish",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Post Malone",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Doja Cat",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Ariana Grande",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Halsey",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Lizzo",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Chris Pratt",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Chris Evans",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Scarlett Johansson",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Brie Larson",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Stephen Curry",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Patrick Mahomes",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Lamar Jackson",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Simone Biles",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Chloe Kim",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Guy Fieri",
+          "difficulty": "hard",
+          "reveal_hint": "Flavortown mayor with frosted tips"
+        },
+        {
+          "text": "Pauly D",
+          "difficulty": "hard",
+          "reveal_hint": "Jersey Shore DJ with blowout"
+        },
+        {
+          "text": "Neal Caffrey",
+          "difficulty": "hard",
+          "reveal_hint": "Con man from White Collar"
+        },
+        {
+          "text": "Ken Bone",
+          "difficulty": "hard",
+          "reveal_hint": "Red sweater undecided voter 2016"
+        },
+        {
+          "text": "Joe Exotic",
+          "difficulty": "hard",
+          "reveal_hint": "Tiger King mullet"
+        },
+        {
+          "text": "Carole Baskin",
+          "difficulty": "hard",
+          "reveal_hint": "Big Cat Rescue rival"
+        },
+        {
+          "text": "Lil Nas X",
+          "difficulty": "hard",
+          "reveal_hint": "Old Town Road meets Montero"
+        },
+        {
+          "text": "Andrew Tate",
+          "difficulty": "hard",
+          "reveal_hint": "Viral hustlers and controversy"
+        },
+        {
+          "text": "Gritty",
+          "difficulty": "hard",
+          "reveal_hint": "Orange Flyers mascot googly eyes"
+        },
+        {
+          "text": "Alexandria Ocasio-Cortez",
+          "difficulty": "hard",
+          "reveal_hint": "AOC initials in politics"
+        },
+        {
+          "text": "Jordan Peterson",
+          "difficulty": "hard",
+          "reveal_hint": "12 rules pundit"
+        },
+        {
+          "text": "Ben Shapiro",
+          "difficulty": "hard",
+          "reveal_hint": "Fast-talking conservative debater"
+        },
+        {
+          "text": "MrBeast",
+          "difficulty": "hard",
+          "reveal_hint": "YouTube millionaire challenges"
+        },
+        {
+          "text": "Logan Paul",
+          "difficulty": "hard",
+          "reveal_hint": "Vlogger turned boxer"
+        },
+        {
+          "text": "Jake Paul",
+          "difficulty": "hard",
+          "reveal_hint": "YouTube brother turned fighter"
+        },
+        {
+          "text": "Rachel Maddow",
+          "difficulty": "hard",
+          "reveal_hint": "MSNBC host with signature glasses"
+        },
+        {
+          "text": "Sean Hannity",
+          "difficulty": "hard",
+          "reveal_hint": "Fox News primetime"
+        },
+        {
+          "text": "Ann Coulter",
+          "difficulty": "hard",
+          "reveal_hint": "Provocative conservative author"
+        },
+        {
+          "text": "Michael Avenatti",
+          "difficulty": "hard",
+          "reveal_hint": "Stormy Daniels’ ex-lawyer"
+        },
+        {
+          "text": "Stormy Daniels",
+          "difficulty": "hard",
+          "reveal_hint": "Adult actress in political headlines"
+        }
+      ]
+    },
+    {
+      "id": "objetos",
+      "displayName": "Objects",
+      "words": [
+        {
+          "text": "Baseball cap",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Red Solo cup",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Pumpkin spice latte",
+          "difficulty": "easy"
+        },
+        {
+          "text": "iPhone",
+          "difficulty": "easy"
+        },
+        {
+          "text": "AirPods",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Smartwatch",
+          "difficulty": "easy"
+        },
+        {
+          "text": "BBQ grill",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Pickup truck",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Snow shovel",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Snowblower",
+          "difficulty": "easy"
+        },
+        {
+          "text": "BBQ tongs",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Yoga mat",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Hydro Flask",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Stanley tumbler",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Fanny pack",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Reusable straw",
+          "difficulty": "easy"
+        },
+        {
+          "text": "College hoodie",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Letterman jacket",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Food truck",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Lunchbox",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Instant Pot",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Crock-Pot",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Cast-iron skillet",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Dutch oven",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Smoker",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Tupperware",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Mason jar",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Corn dog stick",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Tailgate cooler",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Apple pie dish",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Cornbread pan",
+          "difficulty": "medium"
+        },
+        {
+          "text": "S'mores kit",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Charcuterie board",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Pressure washer",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Leaf blower",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Snow chains",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Folding chair",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Camping stove",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Drive-thru headset",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Grocery coupon",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Bidet attachment",
+          "difficulty": "hard",
+          "reveal_hint": "Euro import for your toilet"
+        },
+        {
+          "text": "Keurig pod drawer",
+          "difficulty": "hard",
+          "reveal_hint": "Capsule organizer under the machine"
+        },
+        {
+          "text": "Yard Flamingo",
+          "difficulty": "hard",
+          "reveal_hint": "Pink plastic bird on lawns"
+        },
+        {
+          "text": "Elf on the Shelf",
+          "difficulty": "hard",
+          "reveal_hint": "Christmas tattletale doll"
+        },
+        {
+          "text": "Pool noodle chair",
+          "difficulty": "hard",
+          "reveal_hint": "DIY floaty seat"
+        },
+        {
+          "text": "Snow crab cracker",
+          "difficulty": "hard",
+          "reveal_hint": "Tool for legs at a boil"
+        },
+        {
+          "text": "Driveway heat tape",
+          "difficulty": "hard",
+          "reveal_hint": "Melts ice on roof/gutter"
+        },
+        {
+          "text": "Bug-out bag",
+          "difficulty": "hard",
+          "reveal_hint": "Preppers’ go-kit"
+        },
+        {
+          "text": "Window AC support bracket",
+          "difficulty": "hard",
+          "reveal_hint": "Keeps unit from falling"
+        },
+        {
+          "text": "Air fryer parchment liner",
+          "difficulty": "hard",
+          "reveal_hint": "Keeps basket nonstick"
+        },
+        {
+          "text": "Cornhole board",
+          "difficulty": "hard",
+          "reveal_hint": "Beanbags into hole at BBQs"
+        },
+        {
+          "text": "Pickleball paddle",
+          "difficulty": "hard",
+          "reveal_hint": "Wiffle-ball tennis hybrid"
+        },
+        {
+          "text": "Stanley Thermos green",
+          "difficulty": "hard",
+          "reveal_hint": "Iconic metal bottle since 1913"
+        },
+        {
+          "text": "Thanksgiving turkey baster",
+          "difficulty": "hard",
+          "reveal_hint": "Squeeze bulb for drippings"
+        },
+        {
+          "text": "Jelly shoes",
+          "difficulty": "hard",
+          "reveal_hint": "Translucent plastic 90s footwear"
+        },
+        {
+          "text": "Fidget spinner",
+          "difficulty": "hard",
+          "reveal_hint": "2017 desk toy craze"
+        },
+        {
+          "text": "Flip cup table",
+          "difficulty": "hard",
+          "reveal_hint": "Long beer game table"
+        },
+        {
+          "text": "Instant-read thermometer",
+          "difficulty": "hard",
+          "reveal_hint": "Probe for meat doneness"
+        },
+        {
+          "text": "Tiny desk humidifier",
+          "difficulty": "hard",
+          "reveal_hint": "USB mist on cubicles"
+        },
+        {
+          "text": "Weighted blanket",
+          "difficulty": "hard",
+          "reveal_hint": "Heavy throw for anxiety"
+        }
+      ]
+    },
+    {
+      "id": "comida_bebida",
+      "displayName": "Food & Drink",
+      "words": [
+        {
+          "text": "Burger",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Hot dog",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Pizza slice",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Mac and cheese",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Fried chicken",
+          "difficulty": "easy"
+        },
+        {
+          "text": "BBQ ribs",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Apple pie",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Pancakes",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Maple syrup",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Bagel with cream cheese",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Donut",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Coffee to-go",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Iced tea",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Lemonade",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Milkshake",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Corn dog",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Nachos",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Buffalo wings",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Caesar salad",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Tater tots",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Clam chowder",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Lobster roll",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Philly cheesesteak",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Chicago deep dish",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Kansas City burnt ends",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Texas brisket",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Gumbo",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Jambalaya",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Po' boy",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Beignet",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Key lime pie",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Grits",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Biscuits and gravy",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Chicken and waffles",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Cobb salad",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Reuben sandwich",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Bagel lox",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Avocado toast",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Cold brew",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Craft IPA",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Scrapple",
+          "difficulty": "hard",
+          "reveal_hint": "Pennsylvania Dutch pork mush"
+        },
+        {
+          "text": "Ambrosia salad",
+          "difficulty": "hard",
+          "reveal_hint": "Marshmallow fruit potluck"
+        },
+        {
+          "text": "Lutefisk",
+          "difficulty": "hard",
+          "reveal_hint": "Lye-soaked cod in Midwest Norwegian homes"
+        },
+        {
+          "text": "Frito pie",
+          "difficulty": "hard",
+          "reveal_hint": "Chili poured into a chips bag"
+        },
+        {
+          "text": "Cincinnati chili",
+          "difficulty": "hard",
+          "reveal_hint": "Spaghetti topped with cinnamon meat sauce"
+        },
+        {
+          "text": "Hushpuppies",
+          "difficulty": "hard",
+          "reveal_hint": "Fried cornmeal balls with seafood"
+        },
+        {
+          "text": "Spam musubi",
+          "difficulty": "hard",
+          "reveal_hint": "Hawaii rice block with canned meat"
+        },
+        {
+          "text": "Geoduck",
+          "difficulty": "hard",
+          "reveal_hint": "Giant clam from Pacific Northwest"
+        },
+        {
+          "text": "Burgoo",
+          "difficulty": "hard",
+          "reveal_hint": "Kentucky stew of whatever's on hand"
+        },
+        {
+          "text": "Gooey butter cake",
+          "difficulty": "hard",
+          "reveal_hint": "St. Louis sugar bomb"
+        },
+        {
+          "text": "Funeral potatoes",
+          "difficulty": "hard",
+          "reveal_hint": "Cheesy hashbrown casserole Mormon potlucks"
+        },
+        {
+          "text": "Shoofly pie",
+          "difficulty": "hard",
+          "reveal_hint": "Molasses pie Amish country"
+        },
+        {
+          "text": "Chitlins",
+          "difficulty": "hard",
+          "reveal_hint": "Stewed pig intestines soul food"
+        },
+        {
+          "text": "Sno-ball",
+          "difficulty": "hard",
+          "reveal_hint": "New Orleans shaved ice with cream"
+        },
+        {
+          "text": "Taylor ham",
+          "difficulty": "hard",
+          "reveal_hint": "NJ breakfast meat also called pork roll"
+        },
+        {
+          "text": "Spam casserole",
+          "difficulty": "hard",
+          "reveal_hint": "Midwest church supper classic"
+        },
+        {
+          "text": "Navajo taco",
+          "difficulty": "hard",
+          "reveal_hint": "Frybread topped with chili"
+        },
+        {
+          "text": "Hotdish",
+          "difficulty": "hard",
+          "reveal_hint": "Minnesota casserole tater tots"
+        },
+        {
+          "text": "Walleye sandwich",
+          "difficulty": "hard",
+          "reveal_hint": "Great Lakes fish on a bun"
+        },
+        {
+          "text": "Eskimo ice cream",
+          "difficulty": "hard",
+          "reveal_hint": "Alaskan akutaq with berries and fat"
+        }
+      ]
+    },
+    {
+      "id": "cine_tv",
+      "displayName": "Film & TV",
+      "words": [
+        {
+          "text": "Friends",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Office",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Breaking Bad",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Game of Thrones",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Stranger Things",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Marvel Cinematic Universe",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Star Wars",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Harry Potter",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Avengers",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Spider-Man",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Simpsons",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Family Guy",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Saturday Night Live",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Late Night with Jimmy Fallon",
+          "difficulty": "easy"
+        },
+        {
+          "text": "CNN",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Fox News",
+          "difficulty": "easy"
+        },
+        {
+          "text": "HBO",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Netflix",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Disney+",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Hulu",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Parks and Recreation",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Wire",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Sopranos",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Mad Men",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Seinfeld",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Curb Your Enthusiasm",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Better Call Saul",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Succession",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Bear",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Atlanta",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Euphoria",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Abbott Elementary",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Tonight Show",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Jeopardy!",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Wheel of Fortune",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Price Is Right",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Bachelor",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Survivor",
+          "difficulty": "medium"
+        },
+        {
+          "text": "American Idol",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Voice",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Mystery Science Theater 3000",
+          "difficulty": "hard",
+          "reveal_hint": "Silhouettes riffing on B-movies"
+        },
+        {
+          "text": "Twin Peaks",
+          "difficulty": "hard",
+          "reveal_hint": "Who killed Laura Palmer?"
+        },
+        {
+          "text": "The X-Files",
+          "difficulty": "hard",
+          "reveal_hint": "Mulder believes, Scully doubts"
+        },
+        {
+          "text": "Buffy the Vampire Slayer",
+          "difficulty": "hard",
+          "reveal_hint": "Sunnydale slaying"
+        },
+        {
+          "text": "Firefly",
+          "difficulty": "hard",
+          "reveal_hint": "Space western canceled too soon"
+        },
+        {
+          "text": "The Twilight Zone",
+          "difficulty": "hard",
+          "reveal_hint": "You're traveling through another dimension"
+        },
+        {
+          "text": "Freaks and Geeks",
+          "difficulty": "hard",
+          "reveal_hint": "Short-lived high school dramedy"
+        },
+        {
+          "text": "Veronica Mars",
+          "difficulty": "hard",
+          "reveal_hint": "Teen PI in Neptune"
+        },
+        {
+          "text": "Community",
+          "difficulty": "hard",
+          "reveal_hint": "Greendale study group"
+        },
+        {
+          "text": "Arrested Development",
+          "difficulty": "hard",
+          "reveal_hint": "There's always money in the banana stand"
+        },
+        {
+          "text": "Clerks",
+          "difficulty": "hard",
+          "reveal_hint": "Black-and-white convenience store duo"
+        },
+        {
+          "text": "Napoleon Dynamite",
+          "difficulty": "hard",
+          "reveal_hint": "Vote for Pedro llama"
+        },
+        {
+          "text": "Donnie Darko",
+          "difficulty": "hard",
+          "reveal_hint": "Frank the rabbit and tangent universe"
+        },
+        {
+          "text": "The Room",
+          "difficulty": "hard",
+          "reveal_hint": "Oh hi Mark cult classic"
+        },
+        {
+          "text": "Office Space",
+          "difficulty": "hard",
+          "reveal_hint": "TPS reports and red stapler"
+        },
+        {
+          "text": "Mad TV",
+          "difficulty": "hard",
+          "reveal_hint": "Sketch show rival to SNL"
+        },
+        {
+          "text": "Key & Peele",
+          "difficulty": "hard",
+          "reveal_hint": "Substitute teacher A-A-Ron"
+        },
+        {
+          "text": "Sharknado",
+          "difficulty": "hard",
+          "reveal_hint": "Flying sharks camp"
+        },
+        {
+          "text": "Trailer Park Boys",
+          "difficulty": "hard",
+          "reveal_hint": "Canadian mockumentary in Sunnyvale"
+        },
+        {
+          "text": "Whose Line Is It Anyway?",
+          "difficulty": "hard",
+          "reveal_hint": "Improv points don’t matter"
+        }
+      ]
+    },
+    {
+      "id": "deportes",
+      "displayName": "Sports",
+      "words": [
+        {
+          "text": "NFL",
+          "difficulty": "easy"
+        },
+        {
+          "text": "NBA",
+          "difficulty": "easy"
+        },
+        {
+          "text": "MLB",
+          "difficulty": "easy"
+        },
+        {
+          "text": "NHL",
+          "difficulty": "easy"
+        },
+        {
+          "text": "MLS",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Super Bowl",
+          "difficulty": "easy"
+        },
+        {
+          "text": "World Series",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Stanley Cup",
+          "difficulty": "easy"
+        },
+        {
+          "text": "March Madness",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Final Four",
+          "difficulty": "easy"
+        },
+        {
+          "text": "College Football",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Alabama Crimson Tide",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Ohio State Buckeyes",
+          "difficulty": "easy"
+        },
+        {
+          "text": "New York Yankees",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Los Angeles Lakers",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Golden State Warriors",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Dallas Cowboys",
+          "difficulty": "easy"
+        },
+        {
+          "text": "New England Patriots",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Kansas City Chiefs",
+          "difficulty": "easy"
+        },
+        {
+          "text": "LA Dodgers",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Green Bay Packers",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Chicago Bears",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Miami Dolphins",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Seattle Seahawks",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Portland Trail Blazers",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Houston Rockets",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Phoenix Suns",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Philadelphia 76ers",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Boston Red Sox",
+          "difficulty": "medium"
+        },
+        {
+          "text": "St. Louis Cardinals",
+          "difficulty": "medium"
+        },
+        {
+          "text": "San Francisco Giants",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Vegas Golden Knights",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Chicago Blackhawks",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Colorado Avalanche",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Austin FC",
+          "difficulty": "medium"
+        },
+        {
+          "text": "LAFC",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Inter Miami",
+          "difficulty": "medium"
+        },
+        {
+          "text": "NWSL",
+          "difficulty": "medium"
+        },
+        {
+          "text": "WNBA",
+          "difficulty": "medium"
+        },
+        {
+          "text": "PGA Tour",
+          "difficulty": "medium"
+        },
+        {
+          "text": "USFL",
+          "difficulty": "hard",
+          "reveal_hint": "Spring football league revival"
+        },
+        {
+          "text": "XFL",
+          "difficulty": "hard",
+          "reveal_hint": "Alt-football relaunched by The Rock"
+        },
+        {
+          "text": "Madden curse",
+          "difficulty": "hard",
+          "reveal_hint": "Cover athlete bad luck"
+        },
+        {
+          "text": "Heisman pose",
+          "difficulty": "hard",
+          "reveal_hint": "Arm outstretched trophy stance"
+        },
+        {
+          "text": "Flutie Flakes",
+          "difficulty": "hard",
+          "reveal_hint": "Cereal from a short QB"
+        },
+        {
+          "text": "Butt Fumble",
+          "difficulty": "hard",
+          "reveal_hint": "Jets QB ran into lineman"
+        },
+        {
+          "text": "Malice at the Palace",
+          "difficulty": "hard",
+          "reveal_hint": "Pacers vs Pistons brawl"
+        },
+        {
+          "text": "Crying Jordan meme",
+          "difficulty": "hard",
+          "reveal_hint": "Tearful Hall of Fame face"
+        },
+        {
+          "text": "Linsanity",
+          "difficulty": "hard",
+          "reveal_hint": "Harvard guard Knicks 2012"
+        },
+        {
+          "text": "Tuck Rule",
+          "difficulty": "hard",
+          "reveal_hint": "Brady vs Raiders snow game"
+        },
+        {
+          "text": "Philly Special",
+          "difficulty": "hard",
+          "reveal_hint": "Trick play Super Bowl LII"
+        },
+        {
+          "text": "Hockey enforcer",
+          "difficulty": "hard",
+          "reveal_hint": "Role to fight on ice"
+        },
+        {
+          "text": "Octopus on ice",
+          "difficulty": "hard",
+          "reveal_hint": "Red Wings playoff tradition"
+        },
+        {
+          "text": "Beer snake",
+          "difficulty": "hard",
+          "reveal_hint": "Stacked cups in stands"
+        },
+        {
+          "text": "Fog Bowl",
+          "difficulty": "hard",
+          "reveal_hint": "1988 Bears-Eagles visibility zero"
+        },
+        {
+          "text": "Kirk Cousins chains",
+          "difficulty": "hard",
+          "reveal_hint": "QB viral necklace plane"
+        },
+        {
+          "text": "Mr. Irrelevant",
+          "difficulty": "hard",
+          "reveal_hint": "Last pick of NFL draft"
+        },
+        {
+          "text": "Process Sixers",
+          "difficulty": "hard",
+          "reveal_hint": "Trust the rebuild mantra"
+        },
+        {
+          "text": "Bird rights",
+          "difficulty": "hard",
+          "reveal_hint": "NBA cap exception name"
+        },
+        {
+          "text": "Designated hitter",
+          "difficulty": "hard",
+          "reveal_hint": "AL batter who skips the field"
+        }
+      ]
+    },
+    {
+      "id": "marcas",
+      "displayName": "Brands",
+      "words": [
+        {
+          "text": "Apple",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Google",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Amazon",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Microsoft",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Coca-Cola",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Pepsi",
+          "difficulty": "easy"
+        },
+        {
+          "text": "McDonald's",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Starbucks",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Walmart",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Target",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Nike",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Adidas",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Under Armour",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Costco",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Best Buy",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Home Depot",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Lowe's",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Kroger",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Whole Foods",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Subway",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Chipotle",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Shake Shack",
+          "difficulty": "medium"
+        },
+        {
+          "text": "In-N-Out",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Five Guys",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Trader Joe's",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Publix",
+          "difficulty": "medium"
+        },
+        {
+          "text": "H-E-B",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Aldi",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Chick-fil-A",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Popeyes",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Wendy's",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Arby's",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Jersey Mike's",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Panera",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Buffalo Wild Wings",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Dunkin'",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Krispy Kreme",
+          "difficulty": "medium"
+        },
+        {
+          "text": "REI",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Carhartt",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Yeti",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Waffle House",
+          "difficulty": "hard",
+          "reveal_hint": "Scattered smothered diner"
+        },
+        {
+          "text": "Piggly Wiggly",
+          "difficulty": "hard",
+          "reveal_hint": "Southern grocery chain"
+        },
+        {
+          "text": "Raising Cane's",
+          "difficulty": "hard",
+          "reveal_hint": "Chicken fingers Cane the dog"
+        },
+        {
+          "text": "Whataburger",
+          "difficulty": "hard",
+          "reveal_hint": "Texas orange-and-white burger"
+        },
+        {
+          "text": "Buc-ee's",
+          "difficulty": "hard",
+          "reveal_hint": "Giant gas stops with beaver"
+        },
+        {
+          "text": "Sheetz",
+          "difficulty": "hard",
+          "reveal_hint": "Mid-Atlantic gas station hoagies"
+        },
+        {
+          "text": "Wawa",
+          "difficulty": "hard",
+          "reveal_hint": "Philly area gas station hoagies"
+        },
+        {
+          "text": "Popeyes chicken sandwich",
+          "difficulty": "hard",
+          "reveal_hint": "Fast-food craze 2019"
+        },
+        {
+          "text": "Cinnabon",
+          "difficulty": "hard",
+          "reveal_hint": "Airport cinnamon smell"
+        },
+        {
+          "text": "Cracker Barrel",
+          "difficulty": "hard",
+          "reveal_hint": "Country store rocking chairs"
+        },
+        {
+          "text": "Hobby Lobby",
+          "difficulty": "hard",
+          "reveal_hint": "Craft chain with controversies"
+        },
+        {
+          "text": "Bass Pro Shops",
+          "difficulty": "hard",
+          "reveal_hint": "Outdoor megastore with aquarium"
+        },
+        {
+          "text": "Harbor Freight",
+          "difficulty": "hard",
+          "reveal_hint": "Discount tools with coupons"
+        },
+        {
+          "text": "Spirit Halloween",
+          "difficulty": "hard",
+          "reveal_hint": "Pop-up spooky stores"
+        },
+        {
+          "text": "Old Navy",
+          "difficulty": "hard",
+          "reveal_hint": "Fourth of July flag tees"
+        },
+        {
+          "text": "Talbots",
+          "difficulty": "hard",
+          "reveal_hint": "Preppy women’s clothing chain"
+        },
+        {
+          "text": "Bed Bath & Beyond",
+          "difficulty": "hard",
+          "reveal_hint": "20% off blue coupons"
+        },
+        {
+          "text": "Sharper Image",
+          "difficulty": "hard",
+          "reveal_hint": "Massage chairs and gadgets mall"
+        },
+        {
+          "text": "RadioShack",
+          "difficulty": "hard",
+          "reveal_hint": "Defunct mall electronics"
+        },
+        {
+          "text": "Kmart",
+          "difficulty": "hard",
+          "reveal_hint": "Blue light specials"
+        }
+      ]
+    },
+    {
+      "id": "animales",
+      "displayName": "Animals",
+      "words": [
+        {
+          "text": "Bald eagle",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Bison",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Alligator",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Grizzly bear",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Moose",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Raccoon",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Skunk",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Squirrel",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Cardinal bird",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Blue jay",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Hawk",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Deer",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Coyote",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Rattlesnake",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Roadrunner",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Dolphin",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Sea turtle",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Pelican",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Humpback whale",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Opossum",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Prairie dog",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Sandhill crane",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Snowy owl",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Wolverine animal",
+          "difficulty": "medium"
+        },
+        {
+          "text": "American pika",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Jackalope (myth)",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Gila monster",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Javelina",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Manatee",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Red wolf",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Florida panther",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Elk",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Pronghorn",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Whooping crane",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Wild turkey",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Snapping turtle",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Copperhead",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Catfish",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Tarpon",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Striped bass",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Hellbender",
+          "difficulty": "hard",
+          "reveal_hint": "Giant salamander in Appalachia"
+        },
+        {
+          "text": "Axolotl (pet trade)",
+          "difficulty": "hard",
+          "reveal_hint": "Mexican salamander popular in US tanks"
+        },
+        {
+          "text": "Snot otter",
+          "difficulty": "hard",
+          "reveal_hint": "Slime nickname for hellbender"
+        },
+        {
+          "text": "Mudpuppy",
+          "difficulty": "hard",
+          "reveal_hint": "Aquatic salamander with feathery gills"
+        },
+        {
+          "text": "Sage grouse",
+          "difficulty": "hard",
+          "reveal_hint": "Bird with booming chest in lek"
+        },
+        {
+          "text": "California condor",
+          "difficulty": "hard",
+          "reveal_hint": "Critically endangered vulture"
+        },
+        {
+          "text": "Gopher tortoise",
+          "difficulty": "hard",
+          "reveal_hint": "Burrowing reptile in Southeast"
+        },
+        {
+          "text": "Kirtland’s warbler",
+          "difficulty": "hard",
+          "reveal_hint": "Songbird saved by jack pine burns"
+        },
+        {
+          "text": "Red-cockaded woodpecker",
+          "difficulty": "hard",
+          "reveal_hint": "Lives in longleaf pines"
+        },
+        {
+          "text": "American burying beetle",
+          "difficulty": "hard",
+          "reveal_hint": "Endangered carrion bug"
+        },
+        {
+          "text": "Pallid sturgeon",
+          "difficulty": "hard",
+          "reveal_hint": "Ancient fish of the Missouri"
+        },
+        {
+          "text": "Devils Hole pupfish",
+          "difficulty": "hard",
+          "reveal_hint": "Tiny fish in a single Nevada pool"
+        },
+        {
+          "text": "Ozark big-eared bat",
+          "difficulty": "hard",
+          "reveal_hint": "Huge ears, cave dweller"
+        },
+        {
+          "text": "Attwater's prairie chicken",
+          "difficulty": "hard",
+          "reveal_hint": "Endangered Texas grouse"
+        },
+        {
+          "text": "Bog turtle",
+          "difficulty": "hard",
+          "reveal_hint": "Tiny orange-patched turtle"
+        },
+        {
+          "text": "Spotted skunk handstand",
+          "difficulty": "hard",
+          "reveal_hint": "Does a handstand to spray"
+        },
+        {
+          "text": "Wood stork",
+          "difficulty": "hard",
+          "reveal_hint": "Bald-headed wader in Florida"
+        },
+        {
+          "text": "Leatherback nesting",
+          "difficulty": "hard",
+          "reveal_hint": "Massive turtle on East Coast beaches"
+        },
+        {
+          "text": "Wolf reintroduction Yellowstone",
+          "difficulty": "hard",
+          "reveal_hint": "Changed elk behavior"
+        },
+        {
+          "text": "Loon call",
+          "difficulty": "hard",
+          "reveal_hint": "Haunting cry on northern lakes"
+        }
+      ]
+    },
+    {
+      "id": "historia_cultura",
+      "displayName": "History & Culture",
+      "words": [
+        {
+          "text": "Fourth of July",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Thanksgiving",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Halloween",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Black Friday",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Labor Day",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Memorial Day",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Veterans Day",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Super Bowl Sunday",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Prom night",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Homecoming",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Spring Break",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Road trip",
+          "difficulty": "easy"
+        },
+        {
+          "text": "College football Saturday",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Tailgate",
+          "difficulty": "easy"
+        },
+        {
+          "text": "March Madness brackets",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Girl Scouts cookies",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Apple picking",
+          "difficulty": "easy"
+        },
+        {
+          "text": "County fair",
+          "difficulty": "easy"
+        },
+        {
+          "text": "State fair",
+          "difficulty": "easy"
+        },
+        {
+          "text": "County sheriff",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Civil War",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Revolutionary War",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Declaration of Independence",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Constitution",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Bill of Rights",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Great Depression",
+          "difficulty": "medium"
+        },
+        {
+          "text": "New Deal",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Roaring Twenties",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Vietnam War",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Watergate",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Civil Rights Movement",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Harlem Renaissance",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Prohibition",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Space Race",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Moon landing",
+          "difficulty": "medium"
+        },
+        {
+          "text": "9/11",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Patriot Act",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Affordable Care Act",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Red Scare",
+          "difficulty": "medium"
+        },
+        {
+          "text": "McCarthyism",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Trail of Tears",
+          "difficulty": "hard",
+          "reveal_hint": "Forced removal of Cherokee"
+        },
+        {
+          "text": "Jim Crow laws",
+          "difficulty": "hard",
+          "reveal_hint": "Segregation legal framework"
+        },
+        {
+          "text": "Tulsa Race Massacre",
+          "difficulty": "hard",
+          "reveal_hint": "Greenwood destroyed 1921"
+        },
+        {
+          "text": "COINTELPRO",
+          "difficulty": "hard",
+          "reveal_hint": "FBI surveillance of activists"
+        },
+        {
+          "text": "Church Committee",
+          "difficulty": "hard",
+          "reveal_hint": "Senate probe on intelligence abuses"
+        },
+        {
+          "text": "Iran-Contra",
+          "difficulty": "hard",
+          "reveal_hint": "Secret arms-for-hostages scandal"
+        },
+        {
+          "text": "Alien and Sedition Acts",
+          "difficulty": "hard",
+          "reveal_hint": "1798 crackdown on dissent"
+        },
+        {
+          "text": "Whiskey Rebellion",
+          "difficulty": "hard",
+          "reveal_hint": "Tax protest under Washington"
+        },
+        {
+          "text": "Chinese Exclusion Act",
+          "difficulty": "hard",
+          "reveal_hint": "1882 ban on Asian immigration"
+        },
+        {
+          "text": "Bracero Program",
+          "difficulty": "hard",
+          "reveal_hint": "Guest farm workers mid-1900s"
+        },
+        {
+          "text": "Operation Paperclip",
+          "difficulty": "hard",
+          "reveal_hint": "Nazi scientists recruited"
+        },
+        {
+          "text": "Manhattan Project",
+          "difficulty": "hard",
+          "reveal_hint": "Built the atomic bomb"
+        },
+        {
+          "text": "GI Bill",
+          "difficulty": "hard",
+          "reveal_hint": "Education benefits for veterans"
+        },
+        {
+          "text": "Electoral College",
+          "difficulty": "hard",
+          "reveal_hint": "Indirect presidential voting system"
+        },
+        {
+          "text": "Citizens United",
+          "difficulty": "hard",
+          "reveal_hint": "Supreme Court unleashed corporate spending"
+        },
+        {
+          "text": "Miranda rights",
+          "difficulty": "hard",
+          "reveal_hint": "You have the right to remain silent"
+        },
+        {
+          "text": "Brown v. Board",
+          "difficulty": "hard",
+          "reveal_hint": "Desegregated schools 1954"
+        },
+        {
+          "text": "Voting Rights Act 1965",
+          "difficulty": "hard",
+          "reveal_hint": "Outlawed literacy tests"
+        },
+        {
+          "text": "Stonewall riots",
+          "difficulty": "hard",
+          "reveal_hint": "LGBTQ uprising in NYC"
+        },
+        {
+          "text": "Patriot missiles Gulf War",
+          "difficulty": "hard",
+          "reveal_hint": "Air defense became household term"
+        }
+      ]
+    },
+    {
+      "id": "anime",
+      "displayName": "Anime",
+      "words": [
+        {
+          "text": "Dragon Ball",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Naruto",
+          "difficulty": "easy"
+        },
+        {
+          "text": "One Piece",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Pokemon",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Sailor Moon",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Naruto Uzumaki",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Goku",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Vegeta",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Pikachu",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Ash Ketchum",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Charizard",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Totoro",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Studio Ghibli",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Spirited Away",
+          "difficulty": "easy"
+        },
+        {
+          "text": "My Hero Academia",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Demon Slayer",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Tanjiro Kamado",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Nezuko Kamado",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Attack on Titan",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Eren Yeager",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Mikasa Ackerman",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Death Note",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Light Yagami",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Luffy",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Zoro",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Doraemon",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Yu-Gi-Oh",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Beyblade",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Digimon",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Hello Kitty",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Bleach",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Ichigo Kurosaki",
+          "difficulty": "medium"
+        },
+        {
+          "text": "One Punch Man",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Saitama",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Jujutsu Kaisen",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Gojo Satoru",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Fullmetal Alchemist",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Edward Elric",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Hunter x Hunter",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Gon Freecss",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Killua Zoldyck",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Tokyo Ghoul",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Ken Kaneki",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Neon Genesis Evangelion",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Shinji Ikari",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Cowboy Bebop",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Spike Spiegel",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Inuyasha",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Rurouni Kenshin",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Cardcaptor Sakura",
+          "difficulty": "medium"
+        },
+        {
+          "text": "JoJo Bizarre Adventure",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Jotaro Kujo",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Haikyuu",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Kuroko Basketball",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Fairy Tail",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Natsu Dragneel",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Black Clover",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Asta",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Sword Art Online",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Kirito",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Akira",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Ghost in the Shell",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Motoko Kusanagi",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Code Geass",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Lelouch Lamperouge",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Gurren Lagann",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Kamina",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Trigun",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Vash the Stampede",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Hellsing",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Alucard (Hellsing)",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Samurai Champloo",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Mugen",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Yu Yu Hakusho",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Yusuke Urameshi",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Saint Seiya",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Seiya",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Ranma 1/2",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Ranma Saotome",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Detective Conan",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Dr. Stone",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Senku Ishigami",
+          "difficulty": "hard"
+        },
+        {
+          "text": "D.Gray-man",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Allen Walker",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Fist of the North Star",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Kenshiro",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Black Lagoon",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Revy",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Mobile Suit Gundam",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Gundam",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "id": "bandas_musica",
+      "displayName": "Bands",
+      "words": [
+        {
+          "text": "Eagles",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Metallica",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Nirvana",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Pearl Jam",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Guns N' Roses",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Bon Jovi",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Red Hot Chili Peppers",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Green Day",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Foo Fighters",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Linkin Park",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Imagine Dragons",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Maroon 5",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Beach Boys",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Doors",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Aerosmith",
+          "difficulty": "easy"
+        },
+        {
+          "text": "KISS",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Journey",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Chicago",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Jackson 5",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Destiny's Child",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Black Eyed Peas",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Backstreet Boys",
+          "difficulty": "easy"
+        },
+        {
+          "text": "NSYNC",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Blink-182",
+          "difficulty": "easy"
+        },
+        {
+          "text": "My Chemical Romance",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Fall Out Boy",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Panic! at the Disco",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Paramore",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Twenty One Pilots",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Killers",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Offspring",
+          "difficulty": "easy"
+        },
+        {
+          "text": "No Doubt",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Weezer",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Smashing Pumpkins",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Santana",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Creedence Clearwater Revival",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Earth, Wind & Fire",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Supremes",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Temptations",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Van Halen",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Talking Heads",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Ramones",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Strokes",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The White Stripes",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Black Keys",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Kings of Leon",
+          "difficulty": "medium"
+        },
+        {
+          "text": "OneRepublic",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Evanescence",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Chainsmokers",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Lumineers",
+          "difficulty": "medium"
+        },
+        {
+          "text": "R.E.M.",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Boston",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Foreigner",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Toto",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Lynyrd Skynyrd",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Doobie Brothers",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Allman Brothers Band",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Heart",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Carpenters",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Simon & Garfunkel",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Hall & Oates",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Mamas & the Papas",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Jefferson Airplane",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Byrds",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Monkees",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Cars",
+          "difficulty": "medium"
+        },
+        {
+          "text": "REO Speedwagon",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Grateful Dead",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Counting Crows",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Matchbox Twenty",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Fray",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Boyz II Men",
+          "difficulty": "medium"
+        },
+        {
+          "text": "TLC",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Wu-Tang Clan",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Public Enemy",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Run-D.M.C.",
+          "difficulty": "medium"
+        },
+        {
+          "text": "A Tribe Called Quest",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Roots",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Goo Goo Dolls",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Dave Matthews Band",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Megadeth",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Slayer",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Pantera",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Tool",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Soundgarden",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Alice in Chains",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Stone Temple Pilots",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Nine Inch Nails",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Korn",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Slipknot",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Rage Against the Machine",
+          "difficulty": "hard"
+        },
+        {
+          "text": "System of a Down",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Jane's Addiction",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Faith No More",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Pixies",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Sonic Youth",
+          "difficulty": "hard"
+        },
+        {
+          "text": "The Velvet Underground",
+          "difficulty": "hard"
+        },
+        {
+          "text": "The Flaming Lips",
+          "difficulty": "hard"
+        },
+        {
+          "text": "MGMT",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Yeah Yeah Yeahs",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Outkast",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Beastie Boys",
+          "difficulty": "hard"
+        },
+        {
+          "text": "The Fugees",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Deftones",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Incubus",
+          "difficulty": "hard"
+        },
+        {
+          "text": "The Black Crowes",
+          "difficulty": "hard"
+        },
+        {
+          "text": "The Pussycat Dolls",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Jonas Brothers",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Zac Brown Band",
+          "difficulty": "hard"
+        },
+        {
+          "text": "The Avett Brothers",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Dixie Chicks",
+          "difficulty": "hard"
+        },
+        {
+          "text": "The Stooges",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Vampire Weekend",
+          "difficulty": "hard"
+        },
+        {
+          "text": "The National",
+          "difficulty": "hard"
+        },
+        {
+          "text": "LCD Soundsystem",
+          "difficulty": "hard"
+        },
+        {
+          "text": "The Shins",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Foster the People",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Death Cab for Cutie",
+          "difficulty": "hard"
+        },
+        {
+          "text": "The XX (US popular)",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Haim",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "id": "nfl_players",
+      "displayName": "NFL Players",
+      "words": [
+        {
+          "text": "Tom Brady",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Patrick Mahomes",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Aaron Rodgers",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Joe Burrow",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Josh Allen",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Lamar Jackson",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Travis Kelce",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Rob Gronkowski",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Christian McCaffrey",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Derrick Henry",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Saquon Barkley",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Tyreek Hill",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Justin Jefferson",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Stefon Diggs",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Davante Adams",
+          "difficulty": "easy"
+        },
+        {
+          "text": "DeAndre Hopkins",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Cooper Kupp",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Odell Beckham Jr.",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Jalen Hurts",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Tua Tagovailoa",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Brock Purdy",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Peyton Manning",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Eli Manning",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Jerry Rice",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Randy Moss",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Emmitt Smith",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Terrell Owens",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Tony Gonzalez",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Von Miller",
+          "difficulty": "easy"
+        },
+        {
+          "text": "J.J. Watt",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Aaron Donald",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Ray Lewis",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Troy Polamalu",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Michael Vick",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Larry Fitzgerald",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Drew Brees",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Ben Roethlisberger",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Brett Favre",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Kurt Warner",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Russell Wilson",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Matthew Stafford",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Dak Prescott",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Justin Herbert",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Kirk Cousins",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Cam Newton",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Deshaun Watson",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Trevor Lawrence",
+          "difficulty": "medium"
+        },
+        {
+          "text": "C.J. Stroud",
+          "difficulty": "medium"
+        },
+        {
+          "text": "A.J. Brown",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Mike Evans",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Keenan Allen",
+          "difficulty": "medium"
+        },
+        {
+          "text": "CeeDee Lamb",
+          "difficulty": "medium"
+        },
+        {
+          "text": "George Kittle",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Mark Andrews",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Myles Garrett",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Micah Parsons",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Nick Bosa",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Joey Bosa",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Khalil Mack",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Bobby Wagner",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Fred Warner",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Jalen Ramsey",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Sauce Gardner",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Patrick Surtain II",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Justin Tucker",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Adam Vinatieri",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Marshawn Lynch",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Julio Jones",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Calvin Johnson",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Michael Strahan",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Dan Marino",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Joe Montana",
+          "difficulty": "hard"
+        },
+        {
+          "text": "John Elway",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Terry Bradshaw",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Roger Staubach",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Jim Brown",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Walter Payton",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Barry Sanders",
+          "difficulty": "hard"
+        },
+        {
+          "text": "LaDainian Tomlinson",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Gale Sayers",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Reggie White",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Lawrence Taylor",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Deion Sanders",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Rod Woodson",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Darrelle Revis",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Ed Reed",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Brian Urlacher",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Dick Butkus",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Mean Joe Greene",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Franco Harris",
+          "difficulty": "hard"
+        },
+        {
+          "text": "John Riggins",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Marcus Allen",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Steve Young",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Bo Jackson",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Earl Campbell",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Warren Moon",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Michael Irvin",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Steve Largent",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Cris Carter",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Tim Brown",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Curtis Martin",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Aeneas Williams",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Kevin Greene",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Andre Reed",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Ronnie Lott",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "id": "nba_players",
+      "displayName": "NBA Players",
+      "words": [
+        {
+          "text": "LeBron James",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Michael Jordan",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Kobe Bryant",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Stephen Curry",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Kevin Durant",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Shaquille O'Neal",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Magic Johnson",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Larry Bird",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Tim Duncan",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Kareem Abdul-Jabbar",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Giannis Antetokounmpo",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Luka Doncic",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Nikola Jokic",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Joel Embiid",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Kawhi Leonard",
+          "difficulty": "easy"
+        },
+        {
+          "text": "James Harden",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Chris Paul",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Russell Westbrook",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Damian Lillard",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Jayson Tatum",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Kevin Garnett",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Allen Iverson",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Dwyane Wade",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Dirk Nowitzki",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Vince Carter",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Charles Barkley",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Karl Malone",
+          "difficulty": "easy"
+        },
+        {
+          "text": "John Stockton",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Scottie Pippen",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Tracy McGrady",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Ray Allen",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Paul Pierce",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Carmelo Anthony",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Anthony Davis",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Zion Williamson",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Steve Nash",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Jason Kidd",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Gary Payton",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Patrick Ewing",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Reggie Miller",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Alonzo Mourning",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Grant Hill",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Yao Ming",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Dwight Howard",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Chris Bosh",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Tony Parker",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Manu Ginobili",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Pau Gasol",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Kyrie Irving",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Klay Thompson",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Draymond Green",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Devin Booker",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Ja Morant",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Jimmy Butler",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Paul George",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Rudy Gobert",
+          "difficulty": "medium"
+        },
+        {
+          "text": "DeMar DeRozan",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Bradley Beal",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Blake Griffin",
+          "difficulty": "medium"
+        },
+        {
+          "text": "LaMarcus Aldridge",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Ben Simmons",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Trae Young",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Donovan Mitchell",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Jamal Murray",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Jaylen Brown",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Tyrese Haliburton",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Khris Middleton",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Brook Lopez",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Karl-Anthony Towns",
+          "difficulty": "medium"
+        },
+        {
+          "text": "De'Aaron Fox",
+          "difficulty": "medium"
+        },
+        {
+          "text": "George Mikan",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Bill Russell",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Wilt Chamberlain",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Oscar Robertson",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Jerry West",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Elgin Baylor",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Bob Cousy",
+          "difficulty": "hard"
+        },
+        {
+          "text": "John Havlicek",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Isiah Thomas",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Dominique Wilkins",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Clyde Drexler",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Hakeem Olajuwon",
+          "difficulty": "hard"
+        },
+        {
+          "text": "David Robinson",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Moses Malone",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Bob Pettit",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Rick Barry",
+          "difficulty": "hard"
+        },
+        {
+          "text": "George Gervin",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Willis Reed",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Walt Frazier",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Pete Maravich",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Dennis Rodman",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Sidney Moncrief",
+          "difficulty": "hard"
+        },
+        {
+          "text": "James Worthy",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Kevin McHale",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Robert Parish",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Chris Mullin",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Dikembe Mutombo",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Chauncey Billups",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Ben Wallace",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Rasheed Wallace",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Toni Kukoc",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Arvydas Sabonis",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Mark Price",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Bernard King",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Elvin Hayes",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "id": "us_celebrities",
+      "displayName": "US Celebrities",
+      "words": [
+        {
+          "text": "Taylor Swift",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Beyoncé",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Lady Gaga",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Ariana Grande",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Kanye West",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Billie Eilish",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Katy Perry",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Miley Cyrus",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Selena Gomez",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Jennifer Lopez",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Bruno Mars",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Eminem",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Snoop Dogg",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Jay-Z",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Nicki Minaj",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Cardi B",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Post Malone",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Travis Scott",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Justin Timberlake",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Dwayne Johnson",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Kim Kardashian",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Kylie Jenner",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Kendall Jenner",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Khloe Kardashian",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Oprah Winfrey",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Ellen DeGeneres",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Tom Cruise",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Will Smith",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Leonardo DiCaprio",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Brad Pitt",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Angelina Jolie",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Jennifer Aniston",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Scarlett Johansson",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Robert Downey Jr.",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Chris Evans",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Doja Cat",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Halsey",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Lizzo",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Megan Thee Stallion",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Lil Wayne",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Kendrick Lamar",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Usher",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Alicia Keys",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Demi Lovato",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Zendaya",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Timothée Chalamet",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Blake Lively",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Gigi Hadid",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Bella Hadid",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Hailey Bieber",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Dolly Parton",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Reese Witherspoon",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Matthew McConaughey",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Samuel L. Jackson",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Denzel Washington",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Morgan Freeman",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Jennifer Lawrence",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Emma Stone",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Anne Hathaway",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Natalie Portman",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Mark Wahlberg",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Ben Affleck",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Matt Damon",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Kristen Stewart",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Jennifer Garner",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Chris Pratt",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Jonah Hill",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Paul Rudd",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Steve Carell",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Tina Fey",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Meryl Streep",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Al Pacino",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Robert De Niro",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Jack Nicholson",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Marlon Brando",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Clint Eastwood",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Sean Penn",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Dustin Hoffman",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Gene Hackman",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Harrison Ford",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Johnny Depp",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Robin Williams",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Bruce Willis",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Sylvester Stallone",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Arnold Schwarzenegger",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Whoopi Goldberg",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Bette Midler",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Barbra Streisand",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Madonna",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Janet Jackson",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Prince",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Stevie Wonder",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Bob Dylan",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Bruce Springsteen",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Billy Joel",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Garth Brooks",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Cher",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Tina Turner",
+          "difficulty": "hard"
+        },
+        {
+          "text": "George Clooney",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Julia Roberts",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Sandra Bullock",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Steven Spielberg",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Quentin Tarantino",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Halle Berry",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Frank Sinatra",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "id": "hollywood_actors",
+      "displayName": "Hollywood Actors",
+      "words": [
+        {
+          "text": "Tom Hanks",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Brad Pitt",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Leonardo DiCaprio",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Will Smith",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Denzel Washington",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Morgan Freeman",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Johnny Depp",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Robert Downey Jr.",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Tom Cruise",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Chris Evans",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Chris Hemsworth",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Chris Pratt",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Scarlett Johansson",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Jennifer Lawrence",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Emma Stone",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Anne Hathaway",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Natalie Portman",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Julia Roberts",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Sandra Bullock",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Angelina Jolie",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Matt Damon",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Ben Affleck",
+          "difficulty": "easy"
+        },
+        {
+          "text": "George Clooney",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Meryl Streep",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Hugh Jackman",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Keanu Reeves",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Ryan Reynolds",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Ryan Gosling",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Margot Robbie",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Jim Carrey",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Adam Sandler",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Jennifer Aniston",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Courteney Cox",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Matthew McConaughey",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Reese Witherspoon",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Christian Bale",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Joaquin Phoenix",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Javier Bardem",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Penélope Cruz",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Salma Hayek",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Antonio Banderas",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Charlize Theron",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Cate Blanchett",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Nicole Kidman",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Amy Adams",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Viola Davis",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Octavia Spencer",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Emma Thompson",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Daniel Day-Lewis",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Gary Oldman",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Ralph Fiennes",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Benedict Cumberbatch",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Cillian Murphy",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Harrison Ford",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Liam Neeson",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Robin Williams",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Naomi Watts",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Ethan Hawke",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Edward Norton",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Mark Ruffalo",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Jeremy Renner",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Idris Elba",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Daisy Ridley",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Emily Blunt",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Michelle Williams",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Saoirse Ronan",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Anya Taylor-Joy",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Timothée Chalamet",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Florence Pugh",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Zendaya",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Al Pacino",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Robert De Niro",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Marlon Brando",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Jack Nicholson",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Dustin Hoffman",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Gene Hackman",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Sean Penn",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Clint Eastwood",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Gregory Peck",
+          "difficulty": "hard"
+        },
+        {
+          "text": "James Stewart",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Katharine Hepburn",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Ingrid Bergman",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Audrey Hepburn",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Humphrey Bogart",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Bette Davis",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Grace Kelly",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Laurence Olivier",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Spencer Tracy",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Paul Newman",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Steve McQueen",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Gary Cooper",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Faye Dunaway",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Shirley MacLaine",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Glenn Close",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Sissy Spacek",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Sigourney Weaver",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Susan Sarandon",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Jodie Foster",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Michael Douglas",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Jeff Bridges",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Tommy Lee Jones",
+          "difficulty": "hard"
+        },
+        {
+          "text": "William Hurt",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Christopher Walken",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Nick Nolte",
+          "difficulty": "hard"
+        },
+        {
+          "text": "John Malkovich",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "id": "tv_shows_usa",
+      "displayName": "TV Shows (USA)",
+      "words": [
+        {
+          "text": "Friends",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Office",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Breaking Bad",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Game of Thrones",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Stranger Things",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Simpsons",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Family Guy",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Seinfeld",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Big Bang Theory",
+          "difficulty": "easy"
+        },
+        {
+          "text": "How I Met Your Mother",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Walking Dead",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Grey's Anatomy",
+          "difficulty": "easy"
+        },
+        {
+          "text": "NCIS",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Law & Order",
+          "difficulty": "easy"
+        },
+        {
+          "text": "CSI",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Modern Family",
+          "difficulty": "easy"
+        },
+        {
+          "text": "South Park",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Sopranos",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Wire",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Saturday Night Live",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Mandalorian",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Survivor",
+          "difficulty": "easy"
+        },
+        {
+          "text": "American Idol",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Voice",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Jeopardy!",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Wheel of Fortune",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Shark Tank",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Price Is Right",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Bachelor",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Tonight Show",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Late Show with Stephen Colbert",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Daily Show",
+          "difficulty": "easy"
+        },
+        {
+          "text": "SpongeBob SquarePants",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Rick and Morty",
+          "difficulty": "easy"
+        },
+        {
+          "text": "The Ellen Show",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Parks and Recreation",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Brooklyn Nine-Nine",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Good Place",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Better Call Saul",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Ozark",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Westworld",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Boys",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Succession",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Bear",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Euphoria",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Abbott Elementary",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Yellowstone",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Curb Your Enthusiasm",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Fargo",
+          "difficulty": "medium"
+        },
+        {
+          "text": "True Detective",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Mad Men",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Dexter",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Lost",
+          "difficulty": "medium"
+        },
+        {
+          "text": "24",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Glee",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The X-Files",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Twin Peaks",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Hannibal",
+          "difficulty": "medium"
+        },
+        {
+          "text": "House of Cards",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Handmaid's Tale",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Americans",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Boardwalk Empire",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Leftovers",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Six Feet Under",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Newsroom",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Amazing Race",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Project Runway",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Top Chef",
+          "difficulty": "medium"
+        },
+        {
+          "text": "RuPaul's Drag Race",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Jimmy Kimmel Live",
+          "difficulty": "medium"
+        },
+        {
+          "text": "The Twilight Zone",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Mystery Science Theater 3000",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Arrested Development",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Veronica Mars",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Community",
+          "difficulty": "hard"
+        },
+        {
+          "text": "The West Wing",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Friday Night Lights",
+          "difficulty": "hard"
+        },
+        {
+          "text": "The Shield",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Justified",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Homicide: Life on the Street",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Cheers",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Frasier",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Scrubs",
+          "difficulty": "hard"
+        },
+        {
+          "text": "ER",
+          "difficulty": "hard"
+        },
+        {
+          "text": "The Cosby Show",
+          "difficulty": "hard"
+        },
+        {
+          "text": "The Fresh Prince of Bel-Air",
+          "difficulty": "hard"
+        },
+        {
+          "text": "The Golden Girls",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Boy Meets World",
+          "difficulty": "hard"
+        },
+        {
+          "text": "The Wonder Years",
+          "difficulty": "hard"
+        },
+        {
+          "text": "The Andy Griffith Show",
+          "difficulty": "hard"
+        },
+        {
+          "text": "I Love Lucy",
+          "difficulty": "hard"
+        },
+        {
+          "text": "The Mary Tyler Moore Show",
+          "difficulty": "hard"
+        },
+        {
+          "text": "All in the Family",
+          "difficulty": "hard"
+        },
+        {
+          "text": "M*A*S*H",
+          "difficulty": "hard"
+        },
+        {
+          "text": "The Brady Bunch",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Happy Days",
+          "difficulty": "hard"
+        },
+        {
+          "text": "The Carol Burnett Show",
+          "difficulty": "hard"
+        },
+        {
+          "text": "The Dick Van Dyke Show",
+          "difficulty": "hard"
+        },
+        {
+          "text": "The Addams Family",
+          "difficulty": "hard"
+        },
+        {
+          "text": "The Jeffersons",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Columbo",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Taxi",
+          "difficulty": "hard"
+        },
+        {
+          "text": "The A-Team",
+          "difficulty": "hard"
+        },
+        {
+          "text": "MacGyver",
+          "difficulty": "hard"
+        },
+        {
+          "text": "Magnum P.I.",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "id": "random",
+      "displayName": "Random",
+      "words": [
+        {
+          "text": "Pumpkin patch",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Corn maze",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Haunted house",
+          "difficulty": "easy"
+        },
+        {
+          "text": "County fair funnel cake",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Black Friday line",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Yard sale",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Garage sale",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Snow day",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Beach bonfire",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Fourth fireworks",
+          "difficulty": "easy"
+        },
+        {
+          "text": "School bus",
+          "difficulty": "easy"
+        },
+        {
+          "text": "PB&J",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Science fair",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Field trip",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Report card",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Promposal",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Homecoming dance",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Thanksgiving parade",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Snowman",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Carving pumpkin",
+          "difficulty": "easy"
+        },
+        {
+          "text": "Lemonade stand",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Girl Scout cookies",
+          "difficulty": "medium"
+        },
+        {
+          "text": "S'mores campfire",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Tailgate BBQ",
+          "difficulty": "medium"
+        },
+        {
+          "text": "College dorm move-in",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Red cup beer pong",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Fourth backyard pool",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Pick-up basketball",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Little League",
+          "difficulty": "medium"
+        },
+        {
+          "text": "PTA meeting",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Detention",
+          "difficulty": "medium"
+        },
+        {
+          "text": "SAT prep",
+          "difficulty": "medium"
+        },
+        {
+          "text": "School spirit week",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Suburban HOA",
+          "difficulty": "medium"
+        },
+        {
+          "text": "BBQ potluck",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Super Bowl squares",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Fantasy football draft",
+          "difficulty": "medium"
+        },
+        {
+          "text": "March Madness office pool",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Friendsgiving",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Ugly sweater party",
+          "difficulty": "medium"
+        },
+        {
+          "text": "Turkey trot",
+          "difficulty": "hard",
+          "reveal_hint": "5K run on Thanksgiving morning"
+        },
+        {
+          "text": "Elf on the Shelf panic",
+          "difficulty": "hard",
+          "reveal_hint": "Parents forget to move the doll"
+        },
+        {
+          "text": "PTA bake sale",
+          "difficulty": "hard",
+          "reveal_hint": "Cupcakes for fundraiser"
+        },
+        {
+          "text": "Trunk-or-treat",
+          "difficulty": "hard",
+          "reveal_hint": "Candy from decorated car trunks"
+        },
+        {
+          "text": "Polar plunge",
+          "difficulty": "hard",
+          "reveal_hint": "Jumping into icy water for charity"
+        },
+        {
+          "text": "Cornhole league",
+          "difficulty": "hard",
+          "reveal_hint": "Beanbag sport with brackets"
+        },
+        {
+          "text": "Aldi quarter cart",
+          "difficulty": "hard",
+          "reveal_hint": "Deposit coin to unlock trolley"
+        },
+        {
+          "text": "Spirit Halloween empty Sears",
+          "difficulty": "hard",
+          "reveal_hint": "Seasonal store in dead mall"
+        },
+        {
+          "text": "Snowbird",
+          "difficulty": "hard",
+          "reveal_hint": "Retiree fleeing winter to Florida"
+        },
+        {
+          "text": "Leaf peeping",
+          "difficulty": "hard",
+          "reveal_hint": "Fall foliage tourism"
+        },
+        {
+          "text": "Pumpkin spice mania",
+          "difficulty": "hard",
+          "reveal_hint": "Every product flavored in fall"
+        },
+        {
+          "text": "Scout Pinewood Derby",
+          "difficulty": "hard",
+          "reveal_hint": "DIY wooden cars racing"
+        },
+        {
+          "text": "School drop-off line",
+          "difficulty": "hard",
+          "reveal_hint": "Morning traffic chaos"
+        },
+        {
+          "text": "Sheet cake from Costco",
+          "difficulty": "hard",
+          "reveal_hint": "Giant party dessert with roses"
+        },
+        {
+          "text": "Parent-teacher conference",
+          "difficulty": "hard",
+          "reveal_hint": "Discuss report cards with teacher"
+        },
+        {
+          "text": "RV boondocking",
+          "difficulty": "hard",
+          "reveal_hint": "Camping off-grid in Walmart lot"
+        },
+        {
+          "text": "Gas station pizza slice",
+          "difficulty": "hard",
+          "reveal_hint": "Late-night road snack"
+        },
+        {
+          "text": "Drive-thru graduation",
+          "difficulty": "hard",
+          "reveal_hint": "Pandemic-style ceremony"
+        },
+        {
+          "text": "HOA violation notice",
+          "difficulty": "hard",
+          "reveal_hint": "Letter about your lawn"
+        },
+        {
+          "text": "Kegerator in garage",
+          "difficulty": "hard",
+          "reveal_hint": "Beer tap fridge at home"
+        }
+      ]
+    }
   ]
 }

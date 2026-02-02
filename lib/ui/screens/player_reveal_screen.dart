@@ -78,6 +78,8 @@ class _PlayerRevealScreenState extends ConsumerState<PlayerRevealScreen>
     final strings = Strings.fromLocale(settings?.locale ?? 'en-US');
     final args = widget.args;
     final revealText = args.isImpostor ? strings.impostorRole : args.word;
+    final isLight = Theme.of(context).brightness == Brightness.light;
+    final colorScheme = Theme.of(context).colorScheme;
 
     return Scaffold(
       appBar: AppBar(
@@ -112,7 +114,8 @@ class _PlayerRevealScreenState extends ConsumerState<PlayerRevealScreen>
                     Text(
                       strings.wordForPlayer(args.playerName),
                       style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                            color: Colors.white70,
+                            color:
+                                colorScheme.onSurface.withValues(alpha: 0.7),
                             fontWeight: FontWeight.w600,
                             fontSize: 18,
                           ),
@@ -128,11 +131,22 @@ class _PlayerRevealScreenState extends ConsumerState<PlayerRevealScreen>
                     const SizedBox(height: 10),
                     SizedBox(
                       height: 120,
-                      child: Image.asset(
-                        'assets/images/icon_square.png',
-                        fit: BoxFit.contain,
-                        errorBuilder: (_, __, ___) => const LogoMark(size: 120),
-                      ),
+                      child: isLight
+                          ? Container(
+                              color: Colors.white,
+                              child: Image.asset(
+                                'assets/images/icon_square_foreground.png',
+                                fit: BoxFit.contain,
+                                errorBuilder: (_, __, ___) =>
+                                    const LogoMark(size: 120, isLight: true),
+                              ),
+                            )
+                          : Image.asset(
+                              'assets/images/icon_square.png',
+                              fit: BoxFit.contain,
+                              errorBuilder: (_, __, ___) =>
+                                  const LogoMark(size: 120),
+                            ),
                     ),
                   ],
                 ),
@@ -169,25 +183,29 @@ class _PlayerRevealScreenState extends ConsumerState<PlayerRevealScreen>
                         decoration: BoxDecoration(
                           color: _revealed
                               ? Theme.of(context).cardColor
-                              : Colors.white.withOpacity(0.06),
+                              : (isLight
+                                  ? colorScheme.surface
+                                  : Colors.white.withOpacity(0.06)),
                           borderRadius: BorderRadius.circular(18),
                           border: Border.all(
                             color: _revealed
-                                ? Theme.of(context).colorScheme.primary
-                                : Colors.white.withOpacity(0.2),
+                                ? colorScheme.primary
+                                : (isLight
+                                    ? colorScheme.outline
+                                        .withValues(alpha: 0.4)
+                                    : Colors.white.withOpacity(0.2)),
                             width: 1.4,
                           ),
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.black.withOpacity(0.35),
+                              color: Colors.black
+                                  .withValues(alpha: isLight ? 0.12 : 0.35),
                               blurRadius: 14,
                               offset: const Offset(0, 10),
                             ),
                             BoxShadow(
-                              color: Theme.of(context)
-                                  .colorScheme
-                                  .primary
-                                  .withOpacity(0.35 * glowStrength),
+                              color: colorScheme.primary.withOpacity(
+                                  (isLight ? 0.2 : 0.35) * glowStrength),
                               blurRadius: 22 * glowStrength,
                               spreadRadius: 2 * glowStrength,
                             ),
@@ -222,8 +240,10 @@ class _PlayerRevealScreenState extends ConsumerState<PlayerRevealScreen>
                                             fontWeight: FontWeight.w800,
                                             fontSize: isTablet ? 32 : null,
                                             color: args.isImpostor
-                                                ? Theme.of(context).colorScheme.error
-                                                : const Color(0xFF7DF9FF),
+                                                ? colorScheme.error
+                                                : (isLight
+                                                    ? colorScheme.onSurface
+                                                    : const Color(0xFF7DF9FF)),
                                           ),
                                     ),
                                   )
@@ -240,7 +260,8 @@ class _PlayerRevealScreenState extends ConsumerState<PlayerRevealScreen>
                                             .textTheme
                                             .bodyMedium
                                             ?.copyWith(
-                                              color: Colors.white70,
+                                              color: colorScheme.onSurface
+                                                  .withValues(alpha: 0.7),
                                               fontWeight: FontWeight.w600,
                                             ),
                                       ),
