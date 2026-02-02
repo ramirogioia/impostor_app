@@ -19,7 +19,7 @@ class LogoMark extends StatelessWidget {
     final gColor = useLight ? Colors.black : Colors.white;
     final glowColor =
         (useLight ? const Color(0xFF2A7BFF) : const Color(0xFF2A7BFF))
-            .withValues(alpha: useLight ? 0.2 : 0.35);
+            .withOpacity(useLight ? 0.2 : 0.35);
 
     return SizedBox(
       width: size,
@@ -33,7 +33,7 @@ class LogoMark extends StatelessWidget {
                 gradient: RadialGradient(
                   colors: [
                     const Color(0xFF1C2F55)
-                        .withValues(alpha: useLight ? 0.2 : 0.5),
+                        .withOpacity(useLight ? 0.2 : 0.5),
                     Colors.transparent,
                   ],
                   radius: 0.7,

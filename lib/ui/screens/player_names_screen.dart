@@ -120,7 +120,7 @@ class _PlayerNamesScreenState extends ConsumerState<PlayerNamesScreen> {
                                         color: Theme.of(context)
                                             .colorScheme
                                             .onSurface
-                                            .withValues(alpha: 0.7),
+                                            .withOpacity(0.7),
                                         fontSize: isTablet ? 18 : null,
                                       ),
                                   textAlign: TextAlign.center,

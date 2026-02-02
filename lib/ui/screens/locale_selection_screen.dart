@@ -134,7 +134,7 @@ class _LocaleSelectionScreenState extends ConsumerState<LocaleSelectionScreen> {
                           color: Theme.of(context)
                               .colorScheme
                               .onSurface
-                              .withValues(alpha: 0.7),
+                              .withOpacity(0.7),
                           fontSize: isTablet ? 18 : null,
                         ),
                     textAlign: TextAlign.center,
@@ -262,7 +262,7 @@ class _LocaleSelectionScreenState extends ConsumerState<LocaleSelectionScreen> {
                               color: Theme.of(context)
                                   .colorScheme
                                   .onSurface
-                                  .withValues(alpha: 0.7),
+                                  .withOpacity(0.7),
                             ),
                             SizedBox(width: isTablet ? 8 : 6),
                             Expanded(
@@ -273,7 +273,7 @@ class _LocaleSelectionScreenState extends ConsumerState<LocaleSelectionScreen> {
                                   color: Theme.of(context)
                                       .colorScheme
                                       .onSurface
-                                      .withValues(alpha: 0.7),
+                                      .withOpacity(0.7),
                                 ),
                               ),
                             ),

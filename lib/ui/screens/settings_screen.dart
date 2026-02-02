@@ -45,14 +45,10 @@ class SettingsScreen extends ConsumerWidget {
   }
 
   static Uri _buildFeedbackUri({required String body}) {
-    return Uri(
-      scheme: 'mailto',
-      path: _feedbackEmail,
-      queryParameters: {
-        'subject': _feedbackSubject,
-        'body': body,
-      },
-    );
+    // Codificar con encodeComponent para que espacios sean %20 y el cliente de correo muestre bien título y cuerpo
+    final subjectEnc = Uri.encodeComponent(_feedbackSubject);
+    final bodyEnc = Uri.encodeComponent(body);
+    return Uri.parse('mailto:$_feedbackEmail?subject=$subjectEnc&body=$bodyEnc');
   }
 
   static Future<void> _showFeedbackFallbackDialog({
@@ -264,7 +260,7 @@ class SettingsScreen extends ConsumerWidget {
                             color: Theme.of(context)
                                 .colorScheme
                                 .onSurface
-                                .withValues(alpha: 0.6),
+                                .withOpacity(0.6),
                           ),
                     );
                   },

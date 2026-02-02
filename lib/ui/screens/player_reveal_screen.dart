@@ -115,7 +115,7 @@ class _PlayerRevealScreenState extends ConsumerState<PlayerRevealScreen>
                       strings.wordForPlayer(args.playerName),
                       style: Theme.of(context).textTheme.titleMedium?.copyWith(
                             color:
-                                colorScheme.onSurface.withValues(alpha: 0.7),
+                                colorScheme.onSurface.withOpacity(0.7),
                             fontWeight: FontWeight.w600,
                             fontSize: 18,
                           ),
@@ -192,14 +192,14 @@ class _PlayerRevealScreenState extends ConsumerState<PlayerRevealScreen>
                                 ? colorScheme.primary
                                 : (isLight
                                     ? colorScheme.outline
-                                        .withValues(alpha: 0.4)
+                                        .withOpacity(0.4)
                                     : Colors.white.withOpacity(0.2)),
                             width: 1.4,
                           ),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black
-                                  .withValues(alpha: isLight ? 0.12 : 0.35),
+                                  .withOpacity(isLight ? 0.12 : 0.35),
                               blurRadius: 14,
                               offset: const Offset(0, 10),
                             ),
@@ -261,7 +261,7 @@ class _PlayerRevealScreenState extends ConsumerState<PlayerRevealScreen>
                                             .bodyMedium
                                             ?.copyWith(
                                               color: colorScheme.onSurface
-                                                  .withValues(alpha: 0.7),
+                                                  .withOpacity(0.7),
                                               fontWeight: FontWeight.w600,
                                             ),
                                       ),

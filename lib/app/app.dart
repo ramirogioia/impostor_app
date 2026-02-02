@@ -1,10 +1,8 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
+cimport 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../ui/screens/home_screen.dart';
-import '../ui/widgets/update_checker.dart';
 import 'router.dart';
 import 'settings_notifier.dart';
 import 'theme.dart';
@@ -27,11 +25,11 @@ class ImpostorApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final router = ref.watch(routerProvider);
     final settingsAsync = ref.watch(settingsNotifierProvider);
-    
+
     // Obtener el locale de los settings, con fallback a es-AR
     final localeString = settingsAsync.valueOrNull?.locale ?? 'es-AR';
     final locale = _parseLocale(localeString);
-    
+
     // Tema siempre oscuro por ahora (temporalmente deshabilitado el switch)
     // final isDarkTheme = settingsAsync.valueOrNull?.isDarkTheme ?? true;
 
@@ -55,16 +53,7 @@ class ImpostorApp extends ConsumerWidget {
         Locale('es', 'ES'),
         Locale('es', 'MX'),
       ],
-      builder: (context, child) {
-        // UpgradeAlert debe estar dentro del builder para tener acceso al contexto
-        return UpdateChecker(
-          // Modo debug: solo activo en modo debug de Flutter
-          // En producción (release), siempre será false automáticamente
-          debugMode: kDebugMode,
-          child: child ?? const HomeScreen(),
-        );
-      },
+      builder: (context, child) => child ?? const HomeScreen(),
     );
   }
 }
-

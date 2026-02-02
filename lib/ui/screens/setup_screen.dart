@@ -413,7 +413,7 @@ class _SetupContentState extends ConsumerState<_SetupContent> {
                         color: Theme.of(context)
                             .colorScheme
                             .onSurface
-                            .withValues(alpha: 0.7),
+                            .withOpacity(0.7),
                         fontSize: isTablet ? 18 : null,
                       ),
                 ),
@@ -1351,9 +1351,9 @@ class _StepperRow extends StatelessWidget {
     final canIncrease = value < max;
     final iconColor = Theme.of(context).colorScheme.onSurface;
     final splashColor =
-        Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.1);
+        Theme.of(context).colorScheme.onSurface.withOpacity(0.1);
     final highlightColor =
-        Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.05);
+        Theme.of(context).colorScheme.onSurface.withOpacity(0.05);
 
     return RepaintBoundary(
       child: Row(

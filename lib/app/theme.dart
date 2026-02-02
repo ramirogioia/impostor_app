@@ -20,29 +20,29 @@ ThemeData buildLightTheme() {
       centerTitle: true,
       elevation: 0,
     ),
-    cardTheme: CardThemeData(
+    cardTheme: CardTheme(
       color: scheme.surface,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
       elevation: 2,
-      shadowColor: _brandBlue.withValues(alpha: 0.12),
+      shadowColor: _brandBlue.withOpacity(0.12),
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
       fillColor: scheme.surface,
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(14),
-        borderSide: BorderSide(color: scheme.outline.withValues(alpha: 0.5)),
+        borderSide: BorderSide(color: scheme.outline.withOpacity(0.5)),
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(14),
-        borderSide: BorderSide(color: scheme.outline.withValues(alpha: 0.4)),
+        borderSide: BorderSide(color: scheme.outline.withOpacity(0.4)),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(14),
         borderSide: const BorderSide(color: _brandBlue, width: 1.4),
       ),
-      labelStyle: TextStyle(color: scheme.onSurface.withValues(alpha: 0.7)),
-      hintStyle: TextStyle(color: scheme.onSurface.withValues(alpha: 0.55)),
+      labelStyle: TextStyle(color: scheme.onSurface.withOpacity(0.7)),
+      hintStyle: TextStyle(color: scheme.onSurface.withOpacity(0.55)),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
@@ -52,13 +52,13 @@ ThemeData buildLightTheme() {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
         textStyle: const TextStyle(fontWeight: FontWeight.w700),
         elevation: 2,
-        shadowColor: _brandBlue.withValues(alpha: 0.25),
+        shadowColor: _brandBlue.withOpacity(0.25),
       ),
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
         foregroundColor: scheme.onSurface,
-        side: BorderSide(color: scheme.outline.withValues(alpha: 0.6)),
+        side: BorderSide(color: scheme.outline.withOpacity(0.6)),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
       ),
     ),
@@ -66,7 +66,7 @@ ThemeData buildLightTheme() {
       bodyColor: scheme.onSurface,
       displayColor: scheme.onSurface,
     ),
-    dividerColor: scheme.outline.withValues(alpha: 0.2),
+    dividerColor: scheme.outline.withOpacity(0.2),
   );
 }
 
@@ -89,7 +89,7 @@ ThemeData buildDarkTheme() {
       foregroundColor: Colors.white,
     ),
     cardColor: _cardDark,
-    cardTheme: CardThemeData(
+    cardTheme: CardTheme(
       color: _cardDark,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
       elevation: 4,

@@ -240,9 +240,9 @@ class _TipCallout extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: Colors.white.withValues(alpha: 0.06),
+        color: Colors.white.withOpacity(0.06),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: Colors.white.withValues(alpha: 0.10)),
+        border: Border.all(color: Colors.white.withOpacity(0.10)),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -250,7 +250,7 @@ class _TipCallout extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 1),
             child: Icon(Icons.lightbulb_outline_rounded,
-                color: Colors.white.withValues(alpha: 0.9)),
+                color: Colors.white.withOpacity(0.9)),
           ),
           const SizedBox(width: 10),
           Expanded(
@@ -293,14 +293,14 @@ class _BulletList extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: Colors.white.withValues(alpha: 0.04),
+        color: Colors.white.withOpacity(0.04),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: Colors.white.withValues(alpha: 0.08)),
+        border: Border.all(color: Colors.white.withOpacity(0.08)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(icon, color: Colors.white.withValues(alpha: 0.9), size: 20),
+          Icon(icon, color: Colors.white.withOpacity(0.9), size: 20),
           const SizedBox(height: 10),
           for (final line in bullets) ...[
             _Bullet(line),
@@ -328,7 +328,7 @@ class _Bullet extends StatelessWidget {
             width: 6,
             height: 6,
             decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.65),
+              color: Colors.white.withOpacity(0.65),
               shape: BoxShape.circle,
             ),
           ),
