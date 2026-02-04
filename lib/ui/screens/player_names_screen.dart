@@ -171,7 +171,7 @@ class _PlayerNamesScreenState extends ConsumerState<PlayerNamesScreen> {
                                                 if (index + 1 < players) {
                                                   _focusNodes[index + 1].requestFocus();
                                                 } else {
-                                                  if (_allFilled) {
+                                                  if (_allFilled && !_hasDuplicateNames) {
                                                     _submit();
                                                   }
                                                 }
@@ -194,8 +194,7 @@ class _PlayerNamesScreenState extends ConsumerState<PlayerNamesScreen> {
                                                 if (index + 1 < players) {
                                                   _focusNodes[index + 1].requestFocus();
                                                 } else {
-                                                  // Only submit if all fields are filled
-                                                  if (_allFilled) {
+                                                  if (_allFilled && !_hasDuplicateNames) {
                                                     _submit();
                                                   }
                                                 }
@@ -205,10 +204,27 @@ class _PlayerNamesScreenState extends ConsumerState<PlayerNamesScreen> {
                                         ),
                                 ),
                                 SizedBox(height: isTablet ? 20 : 12),
+                                if (_hasDuplicateNames)
+                                  Padding(
+                                    padding: const EdgeInsets.only(bottom: 8),
+                                    child: Text(
+                                      strings.duplicateNamesError,
+                                      style: TextStyle(
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .error,
+                                        fontSize: isTablet ? 15 : 13,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                if (_hasDuplicateNames) const SizedBox(height: 4),
                                 SizedBox(
                                   width: double.infinity,
                                   child: ElevatedButton(
-                                    onPressed: _allFilled ? _submit : null,
+                                    onPressed: (_allFilled && !_hasDuplicateNames)
+                                        ? _submit
+                                        : null,
                                     style: ElevatedButton.styleFrom(
                                       padding: EdgeInsets.symmetric(
                                         vertical: isTablet ? 24 : 16,
@@ -295,6 +311,16 @@ class _PlayerNamesScreenState extends ConsumerState<PlayerNamesScreen> {
   bool get _allFilled =>
       _controllers.isNotEmpty &&
       _controllers.every((c) => c.text.trim().isNotEmpty);
+
+  /// True si hay al menos dos nombres iguales (comparación sin distinguir mayúsculas/minúsculas).
+  bool get _hasDuplicateNames {
+    final names = _controllers
+        .map((c) => c.text.trim())
+        .where((t) => t.isNotEmpty)
+        .toList();
+    final lower = names.map((n) => n.toLowerCase()).toList();
+    return lower.length != lower.toSet().length;
+  }
 
   void _submit() async {
     final names = _controllers

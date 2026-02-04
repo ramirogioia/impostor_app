@@ -184,6 +184,7 @@ class _GameScreenState extends ConsumerState<GameScreen> {
                               categoryName: session.categoryName,
                               categoryId: session.categoryId,
                               locale: settings.locale,
+                              isRandomCategory: _overrideCategoryId == SettingsState.randomCategory,
                             ),
                           ),
                           const SizedBox(height: 18),
@@ -305,6 +306,7 @@ class _GameScreenState extends ConsumerState<GameScreen> {
 
   void _ensureSession(SettingsState settings, WordPack pack) {
     if (_session != null) return;
+    _overrideCategoryId ??= settings.categoryId;
     _session = _createSession(settings, pack);
   }
 
@@ -346,7 +348,9 @@ class _GameScreenState extends ConsumerState<GameScreen> {
             _NewRoundOption(
               icon: Icons.refresh,
               title: strings.sameCategory,
-              subtitle: _session?.categoryName ?? '',
+              subtitle: _overrideCategoryId == SettingsState.randomCategory
+                  ? strings.randomCategory
+                  : (_session?.categoryName ?? ''),
               onTap: () => Navigator.of(dialogContext).pop('same'),
               isTablet: isTablet,
             ),
@@ -366,8 +370,8 @@ class _GameScreenState extends ConsumerState<GameScreen> {
     if (!mounted) return;
 
     if (result == 'same') {
-      // Usar la misma categoría de la sesión actual
-      _startNewRound(settings, pack, _session?.categoryId);
+      // Misma intención: si era Random, volver a sortear; si era categoría fija, repetirla
+      _startNewRound(settings, pack, _overrideCategoryId ?? settings.categoryId);
     } else if (result == 'change') {
       // Mostrar selector de categoría
       await _showCategorySelector(context, settings, pack, strings);
@@ -555,19 +559,41 @@ class _GameScreenState extends ConsumerState<GameScreen> {
     String categoryId;
     
     if (effectiveCategoryId == SettingsState.randomCategory) {
-      // Aleatoria: elegir palabra de TODAS las categorías
-      final allWords = <WordEntry>[];
+      // Aleatoria: elegir palabra de categorías reales (excluir la categoría "random" del pack) y mostrar la que salió sorteada
+      final wordWithCategory = <({WordEntry entry, WordCategory category})>[];
       for (final category in categories) {
+        if (category.id == SettingsState.randomCategory) continue;
         final filtered = category.words
             .where((w) => w.difficulty == effectiveDifficulty)
             .toList();
-        allWords.addAll(filtered.isNotEmpty ? filtered : category.words);
+        final pool = filtered.isNotEmpty ? filtered : category.words;
+        for (final w in pool) {
+          wordWithCategory.add((entry: w, category: category));
+        }
       }
-      entry = allWords[rand.nextInt(allWords.length)];
-      // Mostrar "Aleatoria" como categoría, no la categoría real
-      final strings = Strings.fromLocale(settings.locale);
-      categoryName = strings.randomCategory;
-      categoryId = SettingsState.randomCategory;
+      if (wordWithCategory.isEmpty) {
+        for (final category in categories) {
+          if (category.id == SettingsState.randomCategory) continue;
+          for (final w in category.words) {
+            wordWithCategory.add((entry: w, category: category));
+          }
+        }
+      }
+      if (wordWithCategory.isEmpty) {
+        final fallback = categories.firstWhere(
+          (c) => c.id != SettingsState.randomCategory,
+          orElse: () => categories.first,
+        );
+        final pool = fallback.words;
+        entry = pool[rand.nextInt(pool.length)];
+        categoryName = fallback.displayName;
+        categoryId = fallback.id;
+      } else {
+        final chosen = wordWithCategory[rand.nextInt(wordWithCategory.length)];
+        entry = chosen.entry;
+        categoryName = chosen.category.displayName;
+        categoryId = chosen.category.id;
+      }
     } else {
       // Categoría específica: comportamiento normal
       final category = categories.firstWhere(
@@ -646,6 +672,7 @@ class _GameScreenState extends ConsumerState<GameScreen> {
         categoryId: categoryId,
         word: word,
         isImpostor: isImpostor,
+        isRandomCategory: _overrideCategoryId == SettingsState.randomCategory,
       ),
     );
     if (!mounted) return;

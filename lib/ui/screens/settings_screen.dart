@@ -20,7 +20,6 @@ class SettingsScreen extends ConsumerWidget {
   );
   static final Future<PackageInfo> _packageInfo = PackageInfo.fromPlatform();
   static const String _feedbackEmail = 'info@giftera-store.com';
-  static const String _feedbackSubject = 'Impostor Words - Sugerencia';
 
   static String _formatTimestamp(DateTime value) {
     String twoDigits(int number) => number.toString().padLeft(2, '0');
@@ -29,24 +28,28 @@ class SettingsScreen extends ConsumerWidget {
   }
 
   static String _buildFeedbackBody({
+    required Strings strings,
     required PackageInfo info,
     required String locale,
     required String platform,
     required DateTime timestamp,
   }) {
-    return 'Hola, dejo mi sugerencia:\n\n'
-        '[Escribí acá]\n\n'
+    return '${strings.feedbackBodyIntro}\n\n'
+        '${strings.feedbackBodyPlaceholder}\n\n'
         '---\n'
-        'App: Impostor Words\n'
-        'Versión: ${info.version} (build ${info.buildNumber})\n'
-        'Plataforma: $platform\n'
-        'Idioma: $locale\n'
-        'Fecha: ${_formatTimestamp(timestamp)}';
+        '${strings.feedbackBodyApp}: Impostor Words\n'
+        '${strings.feedbackBodyVersion}: ${info.version} (build ${info.buildNumber})\n'
+        '${strings.feedbackBodyPlatform}: $platform\n'
+        '${strings.feedbackBodyLanguage}: $locale\n'
+        '${strings.feedbackBodyDate}: ${_formatTimestamp(timestamp)}';
   }
 
-  static Uri _buildFeedbackUri({required String body}) {
+  static Uri _buildFeedbackUri({
+    required String subject,
+    required String body,
+  }) {
     // Codificar con encodeComponent para que espacios sean %20 y el cliente de correo muestre bien título y cuerpo
-    final subjectEnc = Uri.encodeComponent(_feedbackSubject);
+    final subjectEnc = Uri.encodeComponent(subject);
     final bodyEnc = Uri.encodeComponent(body);
     return Uri.parse('mailto:$_feedbackEmail?subject=$subjectEnc&body=$bodyEnc');
   }
@@ -151,12 +154,16 @@ class SettingsScreen extends ConsumerWidget {
                                       Localizations.localeOf(context).toLanguageTag();
                                   final platform = Platform.isIOS ? 'ios' : 'android';
                                   final body = _buildFeedbackBody(
+                                    strings: strings,
                                     info: info,
                                     locale: locale,
                                     platform: platform,
                                     timestamp: DateTime.now(),
                                   );
-                                  final uri = _buildFeedbackUri(body: body);
+                                  final uri = _buildFeedbackUri(
+                                    subject: strings.feedbackSubject,
+                                    body: body,
+                                  );
                                   final launched = await launchUrl(
                                     uri,
                                     mode: LaunchMode.externalApplication,

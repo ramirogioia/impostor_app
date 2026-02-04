@@ -14,7 +14,8 @@ class VersionCheckerService {
     try {
       final response = await http.get(Uri.parse(_versionUrl));
       if (response.statusCode == 200) {
-        final Map<String, dynamic> data = jsonDecode(response.body) as Map<String, dynamic>;
+        final Map<String, dynamic> data =
+            jsonDecode(response.body) as Map<String, dynamic>;
         return AppVersionInfo.fromJson(data);
       }
       return null;
@@ -30,9 +31,11 @@ class VersionCheckerService {
     if (versionInfo == null) return null;
 
     final packageInfo = await PackageInfo.fromPlatform();
-    final currentVersion = packageInfo.version.split('+').first; // Remover build number
+    final currentVersion =
+        packageInfo.version.split('+').first; // Remover build number
 
-    final needsUpdate = _compareVersions(currentVersion, versionInfo.version) < 0;
+    final needsUpdate =
+        _compareVersions(currentVersion, versionInfo.version) < 0;
     final requiresUpdate = _compareVersions(
           currentVersion,
           versionInfo.versionMinima,
@@ -76,6 +79,4 @@ class VersionCheckerService {
     }
     return 0;
   }
-
 }
-

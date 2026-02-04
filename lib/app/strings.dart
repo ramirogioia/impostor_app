@@ -447,6 +447,11 @@ class Strings {
       : isPt
           ? 'Escreva um nome'
           : 'Enter a name';
+  String get duplicateNamesError => isEs
+      ? 'No puede haber dos jugadores con el mismo nombre.'
+      : isPt
+          ? 'Não pode haver dois jogadores com o mesmo nome.'
+          : 'Two players cannot have the same name.';
 
   // Category dropdown label
   String get categoryFieldLabel => isEs
@@ -612,4 +617,26 @@ class Strings {
       : isPt
           ? 'E-mail'
           : 'Email';
+
+  // Email feedback template (subject and body)
+  String get feedbackSubject => isEs
+      ? 'Impostor Words - Sugerencia'
+      : isPt
+          ? 'Impostor Words - Sugestão'
+          : 'Impostor Words - Feedback';
+  String get feedbackBodyIntro => isEs
+      ? 'Hola, dejo mi sugerencia:'
+      : isPt
+          ? 'Olá, deixo minha sugestão:'
+          : "Hi, here's my feedback:";
+  String get feedbackBodyPlaceholder => isEs
+      ? '[Escribí acá]'
+      : isPt
+          ? '[Escreva aqui]'
+          : '[Write here]';
+  String get feedbackBodyApp => isEs ? 'App' : isPt ? 'App' : 'App';
+  String get feedbackBodyVersion => isEs ? 'Versión' : isPt ? 'Versão' : 'Version';
+  String get feedbackBodyPlatform => isEs ? 'Plataforma' : isPt ? 'Plataforma' : 'Platform';
+  String get feedbackBodyLanguage => isEs ? 'Idioma' : isPt ? 'Idioma' : 'Language';
+  String get feedbackBodyDate => isEs ? 'Fecha' : isPt ? 'Data' : 'Date';
 }

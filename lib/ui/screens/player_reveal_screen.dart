@@ -14,6 +14,7 @@ class PlayerRevealArgs {
     required this.categoryId,
     required this.word,
     required this.isImpostor,
+    this.isRandomCategory = false,
   });
 
   final String playerName;
@@ -21,6 +22,7 @@ class PlayerRevealArgs {
   final String categoryId;
   final String word;
   final bool isImpostor;
+  final bool isRandomCategory;
 }
 
 class PlayerRevealScreen extends ConsumerStatefulWidget {
@@ -127,6 +129,7 @@ class _PlayerRevealScreenState extends ConsumerState<PlayerRevealScreen>
                       categoryId: args.categoryId,
                       locale: settings?.locale ?? 'en-US',
                       fontSize: 20,
+                      isRandomCategory: args.isRandomCategory,
                     ),
                     const SizedBox(height: 10),
                     SizedBox(
