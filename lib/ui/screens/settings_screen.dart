@@ -15,9 +15,26 @@ import '../widgets/rate_us_dialog.dart';
 class SettingsScreen extends ConsumerWidget {
   const SettingsScreen({super.key});
 
-  static final Uri _legalUrl = Uri.parse(
-    'https://www.notion.so/Pol-tica-de-Privacidad-Impostor-2f89fd95a62b80c5969df8e44411aaca',
-  );
+  static Uri _getLegalUrl(String locale) {
+    final languageCode = locale.split('-').first.toLowerCase();
+    
+    switch (languageCode) {
+      case 'pt':
+        return Uri.parse(
+          'https://www.notion.so/Pol-tica-de-Privacidade-Impostor-Words-Party-Game-pt-2fd9fd95a62b8036b1cddc6d9a3564f5',
+        );
+      case 'en':
+        return Uri.parse(
+          'https://www.notion.so/Privacy-Policy-Impostor-Words-Party-Game-en-2fd9fd95a62b8083b0f3e38445d76c7a',
+        );
+      case 'es':
+      default:
+        return Uri.parse(
+          'https://www.notion.so/Pol-tica-de-Privacidad-Impostor-Words-Party-Game-es-2f89fd95a62b80c5969df8e44411aaca',
+        );
+    }
+  }
+
   static final Future<PackageInfo> _packageInfo = PackageInfo.fromPlatform();
   static const String _feedbackEmail = 'info@giftera-store.com';
 
@@ -218,7 +235,7 @@ class SettingsScreen extends ConsumerWidget {
                                 trailing: const Icon(Icons.open_in_new, size: 18),
                                 onTap: () async {
                                   final launched = await launchUrl(
-                                    _legalUrl,
+                                    _getLegalUrl(settings.locale),
                                     mode: LaunchMode.externalApplication,
                                   );
                                   if (!launched && context.mounted) {
