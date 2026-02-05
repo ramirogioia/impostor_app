@@ -1,7 +1,7 @@
 name: impostor_app
 description: Offline party word game (pass-and-play) with local word packs.
 publish_to: "none"
-version: 1.1.0+8
+version: 1.2.0+9
 
 environment:
   sdk: ">=3.4.0 <4.0.0"
@@ -19,6 +19,8 @@ dependencies:
   upgrader: ^10.1.0
   package_info_plus: ^8.3.1
   http: ^1.2.0
+  share_plus: ^11.1.0
+  path_provider: ^2.1.5
 
 dev_dependencies:
   flutter_test:
@@ -44,4 +46,5 @@ flutter:
   assets:
     - assets/words/
     - assets/images/
+    - assets/images/sharing/
 

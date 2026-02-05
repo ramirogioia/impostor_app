@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../app/share_moment_notifier.dart';
+import '../../app/share_moment_service.dart';
 import '../../app/settings.dart';
 import '../../app/strings.dart';
 import '../../data/word_pack_repository.dart';
@@ -46,6 +48,8 @@ class _GameScreenState extends ConsumerState<GameScreen> {
   Widget build(BuildContext context) {
     final settingsAsync = ref.watch(settingsNotifierProvider);
     final packAsync = ref.watch(currentWordPackProvider);
+    // Warm up share-moment state (cooldown + threshold) for dialog usage.
+    ref.watch(shareMomentNotifierProvider);
 
     return Scaffold(
       body: SafeArea(
@@ -327,6 +331,8 @@ class _GameScreenState extends ConsumerState<GameScreen> {
     Strings strings,
   ) async {
     final isTablet = ResponsiveHelper.isTablet(context);
+    final shareState = ref.read(shareMomentNotifierProvider).valueOrNull;
+    final showShareOption = shareState?.shouldShowInNewRoundDialog ?? false;
     final result = await showDialog<String>(
       context: context,
       builder: (dialogContext) => AlertDialog(
@@ -362,6 +368,18 @@ class _GameScreenState extends ConsumerState<GameScreen> {
               onTap: () => Navigator.of(dialogContext).pop('change'),
               isTablet: isTablet,
             ),
+            if (showShareOption) ...[
+              SizedBox(height: isTablet ? 12 : 10),
+              _NewRoundOption(
+                icon: Icons.send_rounded,
+                title: strings.shareMomentOptionTitle,
+                subtitle: strings.shareMomentOptionSubtitle,
+                onTap: () => Navigator.of(dialogContext).pop('share'),
+                isTablet: isTablet,
+                subtle: true,
+                compact: true,
+              ),
+            ],
           ],
         ),
       ),
@@ -370,11 +388,32 @@ class _GameScreenState extends ConsumerState<GameScreen> {
     if (!mounted) return;
 
     if (result == 'same') {
+      if (showShareOption) {
+        ref.read(shareMomentNotifierProvider.notifier).onPromptIgnored();
+      }
       // Misma intención: si era Random, volver a sortear; si era categoría fija, repetirla
       _startNewRound(settings, pack, _overrideCategoryId ?? settings.categoryId);
+      ref.read(shareMomentNotifierProvider.notifier).onNewRoundStarted();
     } else if (result == 'change') {
       // Mostrar selector de categoría
-      await _showCategorySelector(context, settings, pack, strings);
+      await _showCategorySelector(
+        context,
+        settings,
+        pack,
+        strings,
+        shareOptionWasShown: showShareOption,
+      );
+    } else if (result == 'share') {
+      final players = _session?.players ?? settings.players;
+      final didShare =
+          await ShareMomentService.shareMoment(strings: strings, players: players);
+      if (didShare) {
+        ref.read(shareMomentNotifierProvider.notifier).onShared();
+      } else if (showShareOption) {
+        // If the option was shown and the user cancelled the native sheet,
+        // treat it as "ignored" so it can re-appear after 2-4 rounds.
+        ref.read(shareMomentNotifierProvider.notifier).onPromptIgnored();
+      }
     }
   }
 
@@ -383,6 +422,7 @@ class _GameScreenState extends ConsumerState<GameScreen> {
     SettingsState settings,
     WordPack pack,
     Strings strings,
+    {required bool shareOptionWasShown}
   ) async {
     final isTablet = ResponsiveHelper.isTablet(context);
     final categories = pack.categories;
@@ -527,7 +567,11 @@ class _GameScreenState extends ConsumerState<GameScreen> {
     if (!mounted || result == null) return;
 
     // Crear nueva ronda con la categoría seleccionada
+    if (shareOptionWasShown) {
+      ref.read(shareMomentNotifierProvider.notifier).onPromptIgnored();
+    }
     _startNewRound(settings, pack, result);
+    ref.read(shareMomentNotifierProvider.notifier).onNewRoundStarted();
   }
 
   void _startNewRound(SettingsState settings, WordPack pack, String? categoryId) {
@@ -856,6 +900,8 @@ class _NewRoundOption extends StatelessWidget {
     required this.subtitle,
     required this.onTap,
     this.isTablet = false,
+    this.subtle = false,
+    this.compact = false,
   });
 
   final IconData icon;
@@ -863,35 +909,54 @@ class _NewRoundOption extends StatelessWidget {
   final String subtitle;
   final VoidCallback onTap;
   final bool isTablet;
+  final bool subtle;
+  final bool compact;
 
   @override
   Widget build(BuildContext context) {
+    final padding = compact
+        ? EdgeInsets.all(isTablet ? 14 : 12)
+        : EdgeInsets.all(isTablet ? 20 : 16);
+    final radius = BorderRadius.circular(isTablet ? 16 : 12);
+    final borderOpacity = subtle ? 0.07 : 0.10;
+    final borderWidth = subtle ? 1.0 : 1.5;
+    final iconBgOpacity = subtle ? 0.10 : 0.20;
+    final iconSize = subtle ? (isTablet ? 22.0 : 20.0) : (isTablet ? 28.0 : 24.0);
+    final titleSize = subtle ? (isTablet ? 16.0 : 14.0) : (isTablet ? 18.0 : 16.0);
+    final subtitleSize = subtle ? (isTablet ? 13.0 : 11.0) : (isTablet ? 14.0 : 12.0);
+    final titleColor = subtle ? Colors.white70 : Colors.white;
+    final subtitleColor = subtle ? Colors.white38 : Colors.white70;
+    final iconColor = subtle ? Colors.white54 : const Color(0xFF1E88E5);
+    final iconBgColor = subtle
+        ? Colors.white.withOpacity(iconBgOpacity)
+        : const Color(0xFF1E88E5).withOpacity(iconBgOpacity);
+
     return Material(
       color: Colors.transparent,
       child: InkWell(
         onTap: onTap,
-        borderRadius: BorderRadius.circular(isTablet ? 16 : 12),
+        borderRadius: radius,
         child: Container(
-          padding: EdgeInsets.all(isTablet ? 20 : 16),
+          padding: padding,
           decoration: BoxDecoration(
             border: Border.all(
-              color: Colors.white.withOpacity(0.1),
-              width: 1.5,
+              color: Colors.white.withOpacity(borderOpacity),
+              width: borderWidth,
             ),
-            borderRadius: BorderRadius.circular(isTablet ? 16 : 12),
+            borderRadius: radius,
           ),
           child: Row(
             children: [
               Container(
                 padding: EdgeInsets.all(isTablet ? 12 : 10),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF1E88E5).withOpacity(0.2),
+                  color: iconBgColor,
                   borderRadius: BorderRadius.circular(isTablet ? 12 : 10),
                 ),
                 child: Icon(
                   icon,
-                  color: const Color(0xFF1E88E5),
-                  size: isTablet ? 28 : 24,
+                  color: iconColor,
+                  size: iconSize,
                 ),
               ),
               SizedBox(width: isTablet ? 16 : 12),
@@ -902,17 +967,17 @@ class _NewRoundOption extends StatelessWidget {
                     Text(
                       title,
                       style: TextStyle(
-                        fontSize: isTablet ? 18 : 16,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.white,
+                        fontSize: titleSize,
+                        fontWeight: subtle ? FontWeight.w600 : FontWeight.w700,
+                        color: titleColor,
                       ),
                     ),
                     SizedBox(height: isTablet ? 4 : 2),
                     Text(
                       subtitle,
                       style: TextStyle(
-                        fontSize: isTablet ? 14 : 12,
-                        color: Colors.white70,
+                        fontSize: subtitleSize,
+                        color: subtitleColor,
                       ),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
@@ -920,11 +985,12 @@ class _NewRoundOption extends StatelessWidget {
                   ],
                 ),
               ),
-              Icon(
-                Icons.chevron_right,
-                color: Colors.white54,
-                size: isTablet ? 28 : 24,
-              ),
+              if (!subtle)
+                Icon(
+                  Icons.chevron_right,
+                  color: Colors.white54,
+                  size: isTablet ? 28 : 24,
+                ),
             ],
           ),
         ),

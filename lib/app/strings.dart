@@ -504,6 +504,39 @@ class Strings {
           ? 'Cancelar'
           : 'Cancel';
 
+  // Share moment
+  String get shareMomentOptionTitle => isEs
+      ? 'Compartir momento'
+      : isPt
+          ? 'Compartilhar momento'
+          : 'Share moment';
+  String get shareMomentOptionSubtitle => isEs
+      ? 'Mandalo a tus amigos.'
+      : isPt
+          ? 'Mande para seus amigos.'
+          : 'Send it to your friends.';
+
+  String get shareMomentCta => isEs
+      ? '📲 Bajalo acá:'
+      : isPt
+          ? '📲 Baixe aqui:'
+          : '📲 Get it here:';
+
+  String shareMomentShareText(int players) => isEs
+      ? '😈 Jugamos Impostor Words\n'
+          '🎭 Éramos $players\n'
+          '🤫 El impostor casi zafa\n'
+          '😂 Nadie estaba seguro de nada'
+      : isPt
+          ? '😈 Jogamos Impostor Words\n'
+              '🎭 Éramos $players\n'
+              '🤫 O impostor quase escapou\n'
+              '😂 Ninguém tinha certeza de nada'
+          : '😈 We played Impostor Words\n'
+              '🎭 We were $players players\n'
+              '🤫 The impostor almost got away with it\n'
+              '😂 Nobody was sure of anything';
+
   // Update
   String get updateAvailable => isEs
       ? 'Actualización disponible'
